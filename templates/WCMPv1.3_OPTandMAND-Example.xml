@@ -1,0 +1,707 @@
+﻿<gmd:MD_Metadata xmlns:gmd="http://www.isotc211.org/2005/gmd"
+                 xmlns:gco="http://www.isotc211.org/2005/gco"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 xmlns:gmx="http://www.isotc211.org/2005/gmx"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xmlns:gts="http://www.isotc211.org/2005/gts"
+                 xmlns:gml="http://www.opengis.net/gml/3.2"
+                 xmlns:geonet="http://www.fao.org/geonetwork"
+                 xsi:schemaLocation="http://www.isotc211.org/2005/gmd   http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gmd/gmd.xsd http://www.isotc211.org/2005/gmx  http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gmx/gmx.xsd">
+
+	<!-- ABOUT THIS FILE:     -->
+	<!-- This file is part of the WMCP Guidance suite, from WMO.  Version 2.1  v2016-0804
+	     It is a valid XML file.
+     	The intent of this document is that each of the important fields contains some example content, which can be replaced by a metadata editor.
+		The content in each field is fictional example conent.  NOte that there is no logical relationship between the filler-content in each field.
+		-->
+
+	
+   <!-- 9.1.14   this is the WMCP IDENTIFIER block. It is MANDATORY, so DO NOT delete it    -->				 
+   <gmd:fileIdentifier xmlns:gn-fn-metadata="http://geonetwork-opensource.org/xsl/functions/metadata"
+                       xmlns:gmi="http://www.isotc211.org/2005/gmi">
+      <gco:CharacterString>urn:x-wmo:md:int.eumetsat:EO:EUM:DAT:MSG:BXHRSEVIRI</gco:CharacterString>
+   </gmd:fileIdentifier>
+   <gmd:language>
+      <gmd:LanguageCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#LanguageCode"
+                        codeListValue="eng"/>
+   </gmd:language>
+   <gmd:characterSet>
+      <gmd:MD_CharacterSetCode codeListValue="utf8"
+                               codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#MD_CharacterSetCode"/>
+  </gmd:characterSet>
+   <gmd:parentIdentifier xmlns:gn-fn-metadata="http://geonetwork-opensource.org/xsl/functions/metadata"
+                         xmlns:gmi="http://www.isotc211.org/2005/gmi">
+      <gco:CharacterString/>
+   </gmd:parentIdentifier>
+   <gmd:hierarchyLevel>
+      <gmd:MD_ScopeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#MD_ScopeCode"
+                        codeListValue="dataset"/>
+   </gmd:hierarchyLevel>
+
+   <!-- 9.1.3   this is the Metadata Contact block. It is MANDATORY, so do not delete it.    -->
+   <gmd:contact>
+      <gmd:CI_ResponsibleParty>
+         <gmd:organisationName>
+            <gco:CharacterString>EUMETSAT</gco:CharacterString>
+         </gmd:organisationName>
+         <gmd:contactInfo>
+            <gmd:CI_Contact>
+               <gmd:address>
+                  <gmd:CI_Address>
+                     <gmd:deliveryPoint>
+                        <gco:CharacterString>Eumetsat-Allee 1</gco:CharacterString>
+                     </gmd:deliveryPoint>
+                     <gmd:city>
+                        <gco:CharacterString>Darmstadt</gco:CharacterString>
+                     </gmd:city>
+                     <gmd:administrativeArea>
+                        <gco:CharacterString>Hessen</gco:CharacterString>
+                     </gmd:administrativeArea>
+                     <gmd:postalCode>
+                        <gco:CharacterString>64295</gco:CharacterString>
+                     </gmd:postalCode>
+                     <gmd:country>
+                        <gco:CharacterString>Germany</gco:CharacterString>
+                     </gmd:country>
+                     <gmd:electronicMailAddress>
+                        <gco:CharacterString>ops@eumetsat.int</gco:CharacterString>
+                     </gmd:electronicMailAddress>
+                  </gmd:CI_Address>
+               </gmd:address>
+               <gmd:onlineResource>
+                  <gmd:CI_OnlineResource>
+                     <gmd:linkage>
+                        <gmd:URL>http://www.eumetsat.int</gmd:URL>
+                     </gmd:linkage>
+                     <gmd:protocol>
+                        <gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString>
+                     </gmd:protocol>
+                  </gmd:CI_OnlineResource>
+               </gmd:onlineResource>
+            </gmd:CI_Contact>
+         </gmd:contactInfo>
+         <gmd:role>
+            <gmd:CI_RoleCode codeListValue="pointOfContact"
+                             codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#CI_RoleCode"/>
+         </gmd:role>
+      </gmd:CI_ResponsibleParty>
+  </gmd:contact>
+  <!-- 9.1.15    this is the Metadata datestamp block. It is MANDATORY, so do not delete it.    -->
+  <gmd:dateStamp>
+      <gco:DateTime>2016-08-02T20:56:56</gco:DateTime>
+   </gmd:dateStamp>
+   <gmd:metadataStandardName>
+      <gco:CharacterString xmlns:gn-fn-metadata="http://geonetwork-opensource.org/xsl/functions/metadata"
+                           xmlns:gmi="http://www.isotc211.org/2005/gmi">WMO Core Metadata Profile of ISO19115 (WMO Core), 2003/Cor.1:2006 (ISO 19115), 2007 (ISO/TS 19139)</gco:CharacterString>
+   </gmd:metadataStandardName>
+   <gmd:metadataStandardVersion>
+      <gco:CharacterString xmlns:gn-fn-metadata="http://geonetwork-opensource.org/xsl/functions/metadata"
+                           xmlns:gmi="http://www.isotc211.org/2005/gmi">1.3</gco:CharacterString>
+   </gmd:metadataStandardVersion>
+   <gmd:referenceSystemInfo>
+      <gmd:MD_ReferenceSystem>
+         <gmd:referenceSystemIdentifier>
+            <gmd:RS_Identifier>
+               <gmd:code>
+                  <gco:CharacterString>WGS 1984</gco:CharacterString>
+               </gmd:code>
+            </gmd:RS_Identifier>
+         </gmd:referenceSystemIdentifier>
+      </gmd:MD_ReferenceSystem>
+  </gmd:referenceSystemInfo>
+   <gmd:identificationInfo>
+      <gmd:MD_DataIdentification>
+         <gmd:citation>
+            <gmd:CI_Citation>
+		<!-- 9.1.1   this is the Resource title block. It is MANDATORY, so do not delete it.    -->
+               <gmd:title>
+                  <gco:CharacterString>IASI Atmospheric Temperature Water Vapour and Surface Skin Temperature - Metop ( BXHRSEVIRI ) daily forecasts</gco:CharacterString>
+               </gmd:title>
+			   <!-- 9.1.16    this is the PRODUCT creation date block. It is MANDATORY, so do not delete it.    -->
+
+               <gmd:date>
+                  <gmd:CI_Date>
+                     <gmd:date>
+                        <gco:Date>2013-05-06</gco:Date>
+                     </gmd:date>
+                     <gmd:dateType>
+                        <gmd:CI_DateTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#CI_DateTypeCode"
+                                             codeListValue="creation"/>
+                     </gmd:dateType>
+                  </gmd:CI_Date>
+               </gmd:date>
+
+               <gmd:date>
+                  <gmd:CI_Date>
+                     <gmd:date>
+                        <gco:Date>2016-06-12</gco:Date>
+                     </gmd:date>
+                     <gmd:dateType>
+                        <gmd:CI_DateTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#CI_DateTypeCode"
+                                             codeListValue="revision"/>
+                     </gmd:dateType>
+                  </gmd:CI_Date>
+               </gmd:date>
+			   <!-- 9.x.x   this is the PRODUCT IDENTIFIER block. It is OPTIONAL.  If not used, delete it.    -->			   
+               <gmd:identifier>
+                  <gmd:MD_Identifier>
+                     <gmd:code>
+                        <gco:CharacterString>EUMETSAT_7-98765</gco:CharacterString>
+                     </gmd:code>
+                  </gmd:MD_Identifier>
+               </gmd:identifier>
+			   <!-- 9.1.12   this is the ADD-CITED-RESPONSIBLE-PARTY-ORGANISATION block. It is OPTIONAL.  If not used, delete it.    -->
+               <gmd:citedResponsibleParty>
+                  <gmd:CI_ResponsibleParty>
+                     <gmd:organisationName>
+                        <gco:CharacterString>EUMETSAT</gco:CharacterString>
+                     </gmd:organisationName>
+                     <gmd:role>
+                        <gmd:CI_RoleCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#CI_RoleCode"
+                                         codeListValue="originator"/>
+                     </gmd:role>
+                  </gmd:CI_ResponsibleParty>
+               </gmd:citedResponsibleParty>
+               <gmd:otherCitationDetails>
+                  <gco:CharacterString>Refer to our website at http://eumetsat.org/citing  for citation instructions</gco:CharacterString>
+               </gmd:otherCitationDetails>
+            </gmd:CI_Citation>
+         </gmd:citation>
+
+		 <!-- 9.1.2   this is the Resource absract block. It is MANDATORY, so do not delete it.    -->
+         <gmd:abstract>
+            <gco:CharacterString>
+			The Atmospheric Temperature, Water Vapour and Surface Skin Temperature (TWT) product contains the vertical profiles of atmospheric 
+			temperature and humidity, with a vertical sampling at 101 pressure levels, and surface skin temperature. 
+			The vertical profiles are retrieved from the IASI sounder measurements (of IASI L1C product) together with collocated
+			microwave measurements (AMSU and MHS 1B) when available. The main objective of the Infrared Atmospheric Sounding Interferometer (IASI)
+			is to provide high-resolution atmospheric emission spectra to derive temperature and humidity profiles with high spectral and vertical
+			resolution and accuracy. Additionally it is used for the determination of trace gases, as well as land and sea surface temperature, 
+			emissivity and cloud properties. The products are provided at the single IASI footprint resolution (which is about 12 km with a spatial 
+			sampling of about 25 km at Nadir). The quality and yield of the vertical profiles retrieved in cloudy 
+			IFOVs is strongly related to the cloud properties available in the IASI CLP product and the availability of collocated microwave
+			measurements
+			</gco:CharacterString>
+         </gmd:abstract>
+         <gmd:purpose gco:nilReason="missing">
+            <gco:CharacterString/>
+         </gmd:purpose>
+         <gmd:status>
+            <gmd:MD_ProgressCode codeListValue="onGoing"
+                                 codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#MD_ProgressCode"/>
+         </gmd:status>
+         <!-- 9.1.4   this is the Resource Contact block. It is MANDATORY, so do not delete it.    -->
+         <gmd:pointOfContact>
+            <gmd:CI_ResponsibleParty>
+               <gmd:individualName>
+                  <gco:CharacterString>EUMETSAT-longName</gco:CharacterString>
+               </gmd:individualName>
+               <gmd:organisationName>
+                  <gco:CharacterString>EUMETSAT</gco:CharacterString>
+               </gmd:organisationName>
+               <gmd:contactInfo>
+                  <gmd:CI_Contact>
+                     <gmd:phone>
+                        <gmd:CI_Telephone>
+                           <gmd:voice>
+                              <gco:CharacterString>45 875-04-321</gco:CharacterString>
+                           </gmd:voice>
+                        </gmd:CI_Telephone>
+                     </gmd:phone>
+                     <gmd:address>
+                        <gmd:CI_Address>
+                           <gmd:deliveryPoint>
+                              <gco:CharacterString>EUMETSAT Allee 1</gco:CharacterString>
+                           </gmd:deliveryPoint>
+                           <gmd:city>
+                              <gco:CharacterString>Darmstadt</gco:CharacterString>
+                           </gmd:city>
+                           <gmd:administrativeArea>
+                              <gco:CharacterString>Hessen</gco:CharacterString>
+                           </gmd:administrativeArea>
+                           <gmd:postalCode>
+                              <gco:CharacterString>64295</gco:CharacterString>
+                           </gmd:postalCode>
+                           <gmd:country>
+                              <gco:CharacterString>Germany</gco:CharacterString>
+                           </gmd:country>
+                           <gmd:electronicMailAddress>
+                              <gco:CharacterString>ops@eumetsat.int</gco:CharacterString>
+                           </gmd:electronicMailAddress>
+                        </gmd:CI_Address>
+                     </gmd:address>
+                     <gmd:onlineResource>
+                        <gmd:CI_OnlineResource>
+                           <gmd:linkage>
+                              <gmd:URL>http://www/eumetsat.org</gmd:URL>
+                           </gmd:linkage>
+                           <gmd:protocol>
+                              <gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString>
+                           </gmd:protocol>
+                           <gmd:description gco:nilReason="missing">
+                              <gco:CharacterString/>
+                           </gmd:description>
+                        </gmd:CI_OnlineResource>
+                     </gmd:onlineResource>
+                  </gmd:CI_Contact>
+               </gmd:contactInfo>
+               <gmd:role>
+                  <gmd:CI_RoleCode codeListValue="pointOfContact"
+                                   codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#CI_RoleCode"/>
+               </gmd:role>
+            </gmd:CI_ResponsibleParty>
+         </gmd:pointOfContact>
+         <!-- 9.1.4.x   this is the Resource Contact block, for the data /product owner. It is OPTIONAL, so delete it, if not used.    -->
+         <gmd:pointOfContact>
+            <gmd:CI_ResponsibleParty>
+               <gmd:organisationName>
+                  <gco:CharacterString>EUMETSAT</gco:CharacterString>
+               </gmd:organisationName>
+               <gmd:role>
+                  <gmd:CI_RoleCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#CI_RoleCode"
+                                   codeListValue="owner"/>
+               </gmd:role>
+            </gmd:CI_ResponsibleParty>
+         </gmd:pointOfContact>
+		         <!-- 9.1.4.x   this is the Resource Contact block, for the data custodian.  It is OPTIONAL, so delete it, if not used.    -->
+         <gmd:pointOfContact>
+            <gmd:CI_ResponsibleParty>
+               <gmd:individualName gco:nilReason="missing">
+                  <gco:CharacterString/>
+               </gmd:individualName>
+               <gmd:organisationName>
+                  <gco:CharacterString>EUMETSAT</gco:CharacterString>
+               </gmd:organisationName>
+               <gmd:positionName gco:nilReason="missing">
+                  <gco:CharacterString/>
+               </gmd:positionName>
+               <gmd:role>
+                  <gmd:CI_RoleCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#CI_RoleCode"
+                                   codeListValue="custodian"/>
+               </gmd:role>
+            </gmd:CI_ResponsibleParty>
+         </gmd:pointOfContact>
+         <!-- 9.1.13   this is the Resource Update Frequency block. It is OPTIONAL, so delete it, if not populated.    -->
+         <gmd:resourceMaintenance>
+            <gmd:MD_MaintenanceInformation>
+               <gmd:maintenanceAndUpdateFrequency>
+                  <gmd:MD_MaintenanceFrequencyCode codeListValue="ADD-maintenanceAndUpdateFrequencyCode*C eg irregular   "
+                                                   codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#MD_MaintenanceFrequencyCode"/>
+               </gmd:maintenanceAndUpdateFrequency>
+               <gmd:userDefinedMaintenanceFrequency>
+                  <gts:TM_PeriodDuration>P0Y0M1DT6H0M0S</gts:TM_PeriodDuration>
+               </gmd:userDefinedMaintenanceFrequency>
+               <gmd:updateScope>
+                  <gmd:MD_ScopeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#MD_ScopeCode"
+                                    codeListValue=""/>
+               </gmd:updateScope>
+               <gmd:updateScopeDescription/>
+               <gmd:maintenanceNote>
+                  <gco:CharacterString>Instances of bulletin SIKB20NGTT are available every 6 hours starting at 3 UTC</gco:CharacterString>
+               </gmd:maintenanceNote>
+            </gmd:MD_MaintenanceInformation>
+         </gmd:resourceMaintenance>
+		 <!-- 9.1.9   this is the Resource Product Imagery preview block. It is OPTIONAL, so delete it, if not populated.    -->
+         <gmd:graphicOverview>
+            <gmd:MD_BrowseGraphic>
+               <gmd:fileName>
+                  <gco:CharacterString>http://navigator.eumetsat.int:80/smartEditor/preview/msg-level-1-5.jpg</gco:CharacterString>
+               </gmd:fileName>
+               <gmd:fileDescription>
+                  <gco:CharacterString>Preview</gco:CharacterString>
+               </gmd:fileDescription>
+            </gmd:MD_BrowseGraphic>
+         </gmd:graphicOverview>
+		 
+		 <!-- 9.1.8.1   this is the WMO_CAtegoryCode keyword(s) block. It is MANDATORY, so do not delete it.    -->
+         <gmd:descriptiveKeywords>
+            <gmd:MD_Keywords xmlns:srv="http://www.isotc211.org/2005/srv">
+               <gmd:keyword>
+                  <gco:CharacterString>climatology</gco:CharacterString>
+               </gmd:keyword>
+               <gmd:type>
+                  <gmd:MD_KeywordTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#MD_KeywordTypeCode"
+                                          codeListValue="theme"/>
+               </gmd:type>
+               <gmd:thesaurusName>
+                  <gmd:CI_Citation>
+                     <gmd:title>
+                        <gco:CharacterString>WMO_CategoryCode</gco:CharacterString>
+                     </gmd:title>
+                     <gmd:date>
+                        <gmd:CI_Date>
+                           <gmd:date>
+                              <gco:Date>2015-08-20</gco:Date>
+                           </gmd:date>
+                           <gmd:dateType>
+                              <gmd:CI_DateTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#CI_DateTypeCode"
+                                                   codeListValue="publication"/>
+                           </gmd:dateType>
+                        </gmd:CI_Date>
+                     </gmd:date>
+                     <gmd:identifier>
+                        <gmd:MD_Identifier>
+                           <gmd:code>
+                              <gco:CharacterString>WMO_CategoryCode</gco:CharacterString>
+                           </gmd:code>
+                        </gmd:MD_Identifier>
+                     </gmd:identifier>
+                  </gmd:CI_Citation>
+               </gmd:thesaurusName>
+            </gmd:MD_Keywords>
+         </gmd:descriptiveKeywords>
+         <!-- 9.1.8.2   this is the DISTRIBUTION-SCOPE Code keyword(s) block. It is CONDITIONALLY MANDATORY.  Delete it, if not used    -->
+        <gmd:descriptiveKeywords>
+            <gmd:MD_Keywords>
+               <gmd:keyword>
+                  <gco:CharacterString>OriginatingCentre</gco:CharacterString>
+               </gmd:keyword>
+               <gmd:type>
+                  <gmd:MD_KeywordTypeCode codeList="http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#MD_KeywordTypeCode"
+                                          codeListValue="dataCentre"/>
+               </gmd:type>
+               <gmd:thesaurusName>
+                  <gmd:CI_Citation>
+                     <gmd:title>
+                        <gco:CharacterString>WMO_DistributionScopeCode, WMOCodelists dictionary Version 1.3 [ http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_DistributionScopeCode ]</gco:CharacterString>
+                     </gmd:title>
+                     <gmd:date>
+                        <gmd:CI_Date>
+                           <gmd:date>
+                              <gco:Date>2013-02-14</gco:Date>
+                           </gmd:date>
+                           <gmd:dateType>
+                              <gmd:CI_DateTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#CI_DateTypeCode"
+                                                   codeListValue="revision"/>
+                           </gmd:dateType>
+                        </gmd:CI_Date>
+                     </gmd:date>
+                  </gmd:CI_Citation>
+               </gmd:thesaurusName>
+            </gmd:MD_Keywords>
+         </gmd:descriptiveKeywords>
+         <!-- 9.1.8.3   this is the ADD-WIGOS-STATION-IDENTIFIER (s) keyword block. It is OPTIONAL.  Delete it, if not used.    -->
+         <gmd:descriptiveKeywords>
+            <gmd:MD_Keywords>
+               <gmd:keyword>
+                  <gco:CharacterString>0-20000-0-94287; CAIRNS AERO [ http://data.wmo.int/wigosid=0-20000-0-94287 ]</gco:CharacterString>
+               </gmd:keyword>
+               <gmd:keyword>
+                  <gco:CharacterString>0-20000-0-94374; ROCKHAMPTON AERO [ http://data.wmo.int/wigosid=0-20000-0-94374 ] </gco:CharacterString>
+               </gmd:keyword>
+               <gmd:keyword>
+                  <gco:CharacterString>0-20000-0-94294; TOWNSVILLE AERO [ http://data.wmo.int/wigosid=0-20000-0-94294 ] </gco:CharacterString>
+               </gmd:keyword>
+               <gmd:type>
+                  <gmd:MD_KeywordTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#MD_KeywordTypeCode"
+                                          codeListValue="place"/>
+               </gmd:type>
+               <gmd:thesaurusName>
+                  <gmd:CI_Citation>
+                     <gmd:title>
+                        <gco:CharacterString>WIGOS-STATION-IDENTIFIER register [ https://wiswiki.wmo.int/tiki-index.php?page=WIGOS-Identifiers]</gco:CharacterString>
+                     </gmd:title>
+                     <gmd:date>
+                        <gmd:CI_Date>
+                           <gmd:date>
+                              <gco:Date>2013-12-08</gco:Date>
+                           </gmd:date>
+                           <gmd:dateType>
+                              <gmd:CI_DateTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#CI_DateTypeCode"
+                                                   codeListValue="revision"/>
+                           </gmd:dateType>
+                        </gmd:CI_Date>
+                     </gmd:date>
+                  </gmd:CI_Citation>
+               </gmd:thesaurusName>
+            </gmd:MD_Keywords>
+         </gmd:descriptiveKeywords>
+		 <!-- 9.1.8.4   this is the Data Parameters keyword(s) block. It is OPTIONAL.  Delete it, if not used.    -->
+         <gmd:descriptiveKeywords>
+            <gmd:MD_Keywords>
+               <gmd:keyword>
+                  <gco:CharacterString>Dewpoint temperature</gco:CharacterString>
+               </gmd:keyword>
+               <gmd:type>
+                  <gmd:MD_KeywordTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#MD_KeywordTypeCode"
+                                          codeListValue="dataParam"/>
+               </gmd:type>
+            </gmd:MD_Keywords>
+         </gmd:descriptiveKeywords>
+
+		 
+	     <!-- 9.1.10   this is the DATA POLICY block. It is MANDATORY for data with a DISTRIBUTIONscopeCODE of ..globalExchange.., 
+         and highly recommended for all other data.  However, if not used, delete it.    -->      
+         <gmd:resourceConstraints>
+            <gmd:MD_LegalConstraints>
+               <!-- x.x.DATA-POLICY USE-LIMITATION.O block. It is OPTIONAL.  However, if not used, delete it.    -->      
+               <gmd:useLimitation>
+                  <gco:CharacterString>Data is not quality-controlled.</gco:CharacterString>
+               </gmd:useLimitation>
+     			<gmd:accessConstraints>
+                  <gmd:MD_RestrictionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#MD_RestrictionCode"
+                                          codeListValue="otherRestrictions"/>
+               </gmd:accessConstraints>
+               <gmd:useConstraints>
+                  <gmd:MD_RestrictionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#MD_RestrictionCode"
+                                          codeListValue="otherRestrictions"/>
+               </gmd:useConstraints>
+			   <!-- 9.1.10   this is the DATA POLICY ..CODE.-characterString. block. It is MANDATORY for data with a DISTRIBUTIONscopeCODE of ..globalExchange.., 
+                       and highly recommended for all other data.  However, if not used, delete it.    -->      
+               <gmd:otherConstraints>
+                  <gco:CharacterString>WMOOther</gco:CharacterString>
+               </gmd:otherConstraints>
+
+			   <!-- 9.1.10   this is an additional block, to provide more details about a DATA licence. It is OPTIONAL.  If not used, delete it.    -->
+               <gmd:otherConstraints>
+                  <gco:CharacterString>Data Licence is available from http://www.awebsite.gov/aDoc.pdf ) </gco:CharacterString>
+               </gmd:otherConstraints>
+            </gmd:MD_LegalConstraints>
+         </gmd:resourceConstraints>
+
+         <!-- 9.1.10   this is the GTSpriorityCode block. It is MANDATORY for data with a DISTRIBUTIONscopeCODE of ..globalExchange.., 
+                       and otherwise OPTIONAL.  If not used, delete it.    -->      
+         <gmd:resourceConstraints>
+            <gmd:MD_LegalConstraints>
+               <gmd:accessConstraints>
+                  <gmd:MD_RestrictionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#MD_RestrictionCode"
+                                          codeListValue="otherRestrictions"/>
+               </gmd:accessConstraints>
+               <gmd:useConstraints>
+                  <gmd:MD_RestrictionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#MD_RestrictionCode"
+                                          codeListValue="otherRestrictions"/>
+               </gmd:useConstraints>
+               <gmd:otherConstraints>
+                  <gmx:Anchor xlink:href="http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_GTSProductCategoryCode">GTSPriority3</gmx:Anchor>
+               </gmd:otherConstraints>
+            </gmd:MD_LegalConstraints>
+         </gmd:resourceConstraints>
+
+
+		 
+         <gmd:spatialRepresentationType>
+            <gmd:MD_SpatialRepresentationTypeCode codeListValue="textTable"
+                                                  codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#MD_SpatialRepresentationTypeCode"/>
+         </gmd:spatialRepresentationType>
+         <gmd:language>
+            <gco:CharacterString>eng</gco:CharacterString>
+         </gmd:language>
+         <gmd:characterSet>
+            <gmd:MD_CharacterSetCode codeListValue="utf8"
+                                     codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#MD_CharacterSetCode"/>
+         </gmd:characterSet>
+         <gmd:topicCategory>
+            <gmd:MD_TopicCategoryCode>climatologyMeteorologyAtmosphere</gmd:MD_TopicCategoryCode>
+         </gmd:topicCategory>
+         <!-- 9.1.6   this is the ADD-GEOSPATIAL-INFORMATION.  It is MANDATORY if the dataset is geospatial.  If not used, delete it.  -->
+         <gmd:extent>
+            <gmd:EX_Extent>
+               <gmd:geographicElement>
+                  <gmd:EX_GeographicBoundingBox>
+                     <gmd:westBoundLongitude>
+                        <gco:Decimal>-180</gco:Decimal>
+                     </gmd:westBoundLongitude>
+                     <gmd:eastBoundLongitude>
+                        <gco:Decimal>180</gco:Decimal>
+                     </gmd:eastBoundLongitude>
+                     <gmd:southBoundLatitude>
+                        <gco:Decimal>-90</gco:Decimal>
+                     </gmd:southBoundLatitude>
+                     <gmd:northBoundLatitude>
+                        <gco:Decimal>90</gco:Decimal>
+                     </gmd:northBoundLatitude>
+                  </gmd:EX_GeographicBoundingBox>
+               </gmd:geographicElement>
+               <!-- 9.1.7   this is the ADD-GEOGRAPHIC-IDENTIFIER block.  It is OPTIONAL.  If not used, delete it.    -->
+               <gmd:geographicElement>
+                  <gmd:EX_GeographicDescription id="SouthAustralia__allGensRegister">
+                     <gmd:geographicIdentifier>
+                        <gmd:MD_Identifier>
+                           <gmd:authority>
+                              <gmd:CI_Citation>
+                                 <gmd:title>
+                                    <gco:CharacterString>ANZLIC Geographic Extent Name Register [ http://find.ga.gov.au/FIND/profileinfo/anzlic-allgens.xml ]</gco:CharacterString>
+                                 </gmd:title>
+                                 <gmd:alternateTitle>
+                                    <gco:CharacterString>ANZLIC AllGens / subcategory: anzlic-sla_2001edition ( Australian Statistical Local Areas (SLA) 2001 Edition ) </gco:CharacterString>
+                                 </gmd:alternateTitle>
+                                 <gmd:date>
+                                    <gmd:CI_Date>
+                                       <gmd:date>
+                                          <gco:Date>2011-10-25</gco:Date>
+                                       </gmd:date>
+                                       <gmd:dateType>
+                                          <gmd:CI_DateTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#CI_DateTypeCode"
+                                                               codeListValue="revision"/>
+                                       </gmd:dateType>
+                                    </gmd:CI_Date>
+                                 </gmd:date>
+                              </gmd:CI_Citation>
+                           </gmd:authority>
+                           <gmd:code>
+                              <gco:CharacterString>South Australia (SA) [ http://find.ga.gov.au/FIND/profileinfo/anzlic-allgens.xml#SA ]</gco:CharacterString>
+                           </gmd:code>
+                        </gmd:MD_Identifier>
+                     </gmd:geographicIdentifier>
+                  </gmd:EX_GeographicDescription>
+               </gmd:geographicElement>
+            </gmd:EX_Extent>
+         </gmd:extent>
+         <gmd:extent>
+            <gmd:EX_Extent>
+               <gmd:description>
+                  <gco:CharacterString>COMPLETED dataset</gco:CharacterString>
+               </gmd:description>
+
+               <!-- 9.1.5 (a)  this is the ADD-TEMPORAL-INFORMATION block for option (a).    -->
+               <gmd:temporalElement>
+                  <gmd:EX_TemporalExtent>
+                     <gmd:extent>
+                        <gml:TimePeriod gml:id="d1504596e424a1052958">
+                           <gml:beginPosition>2006-06-05</gml:beginPosition>
+                           <gml:endPosition>2010-10-04</gml:endPosition>
+                        </gml:TimePeriod>
+                     </gmd:extent>
+                  </gmd:EX_TemporalExtent>
+               </gmd:temporalElement>
+            </gmd:EX_Extent>
+         </gmd:extent>
+         <gmd:supplementalInformation>
+            <gco:CharacterString>This data is also available as one minute data, in the CREX format.</gco:CharacterString>
+         </gmd:supplementalInformation>
+      </gmd:MD_DataIdentification>
+   </gmd:identificationInfo>
+   
+   
+   <!-- 9.1.11    this is the ADD-DISTRIBUTION-INFORMATION block.  It is OPTIONAL but highly recommended  -->
+   <gmd:distributionInfo>
+      <gmd:MD_Distribution>
+         <gmd:distributionFormat>
+            <gmd:MD_Format>
+               <gmd:name>
+                  <gco:CharacterString>TAC</gco:CharacterString>
+               </gmd:name>
+               <gmd:version>
+                  <gco:CharacterString>123</gco:CharacterString>
+               </gmd:version>
+               <gmd:amendmentNumber>
+                  <gco:CharacterString>54</gco:CharacterString>
+               </gmd:amendmentNumber>
+               <gmd:specification>
+                  <gco:CharacterString>A title of a specification</gco:CharacterString>
+               </gmd:specification>
+		      <!-- 9.1.11.distributor    this is the ADD-DISTRIBUTION-DISTRIBUTOR block.  It is OPTIONAL BUT HIGHLY RECOMMENDED.  If not used, delete the block.  -->
+               <gmd:formatDistributor>
+                  <gmd:MD_Distributor>
+                     <gmd:distributorContact>
+                        <gmd:CI_ResponsibleParty>
+                           <gmd:individualName>
+                              <gco:CharacterString>EUMETSAT</gco:CharacterString>
+                           </gmd:individualName>
+                           <gmd:organisationName>
+                              <gco:CharacterString>EUMETSAT</gco:CharacterString>
+                           </gmd:organisationName>
+                           <gmd:positionName gco:nilReason="missing">
+                              <gco:CharacterString/>
+                           </gmd:positionName>
+                           <gmd:contactInfo>
+                              <gmd:CI_Contact>
+                                 <gmd:phone>
+                                    <gmd:CI_Telephone>
+                                       <gmd:voice>
+                                          <gco:CharacterString>45 1234-543=57</gco:CharacterString>
+                                       </gmd:voice>
+                                    </gmd:CI_Telephone>
+                                 </gmd:phone>
+                                 <gmd:address>
+                                    <gmd:CI_Address>
+                                       <gmd:country>
+                                          <gco:CharacterString>Germany</gco:CharacterString>
+                                       </gmd:country>
+                                       <gmd:electronicMailAddress>
+                                          <gco:CharacterString>ops@eumetsat.int</gco:CharacterString>
+                                       </gmd:electronicMailAddress>
+                                    </gmd:CI_Address>
+                                 </gmd:address>								 
+								<gmd:onlineResource>
+									<gmd:CI_OnlineResource>
+										<gmd:linkage>
+											<gmd:URL>http://www.eumetsat.int</gmd:URL>
+										</gmd:linkage>
+										<gmd:protocol>
+											<gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString>
+										</gmd:protocol>
+									</gmd:CI_OnlineResource>
+								</gmd:onlineResource>															
+                              </gmd:CI_Contact>
+                           </gmd:contactInfo>
+                           <gmd:role>
+                              <gmd:CI_RoleCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#CI_RoleCode"
+                                               codeListValue="distributor"/>
+                           </gmd:role>
+                        </gmd:CI_ResponsibleParty>
+                     </gmd:distributorContact>
+					 <!-- 9.1.11.ACCESS.url    this is the ADD-DISTRIBUTION-ACCESS-URL block.  It is OPTIONAL BUT HIGHLY RECOMMENDED.  If not used, delete the distributorTransferOptions block.  -->
+                     <gmd:distributorTransferOptions>
+                        <gmd:MD_DigitalTransferOptions>
+                           <gmd:unitsOfDistribution>
+                              <gco:CharacterString>MB</gco:CharacterString>
+                           </gmd:unitsOfDistribution>
+                           <gmd:transferSize>
+                              <gco:Real>147</gco:Real>
+                           </gmd:transferSize>
+                           <gmd:onLine>
+                              <gmd:CI_OnlineResource>
+                                 <gmd:linkage>
+                                    <gmd:URL>http://add-data-access-URL-here.org </gmd:URL>
+                                 </gmd:linkage>
+                                 <gmd:protocol>
+                                    <gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString>
+                                 </gmd:protocol>
+                                 <gmd:name>
+                                    <gco:CharacterString>Fluvial timeseries</gco:CharacterString>
+                                 </gmd:name>
+                                 <gmd:description>
+                                    <gco:CharacterString>Fluvial timeseries NRT</gco:CharacterString>
+                                 </gmd:description>
+                              </gmd:CI_OnlineResource>
+                           </gmd:onLine>
+                        </gmd:MD_DigitalTransferOptions>
+                     </gmd:distributorTransferOptions>
+                  </gmd:MD_Distributor>
+               </gmd:formatDistributor>
+            </gmd:MD_Format>
+         </gmd:distributionFormat>
+      </gmd:MD_Distribution>
+  </gmd:distributionInfo>
+
+
+  <gmd:dataQualityInfo>
+      <gmd:DQ_DataQuality>
+         <gmd:scope>
+            <gmd:DQ_Scope>
+               <gmd:level>
+                  <gmd:MD_ScopeCode codeListValue="dataset"
+                                    codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#MD_ScopeCode"/>
+               </gmd:level>
+               <gmd:levelDescription/>
+            </gmd:DQ_Scope>
+         </gmd:scope>
+         <gmd:lineage>
+            <gmd:LI_Lineage>
+               <gmd:statement>
+                  <gco:CharacterString>ADD any additional information about the events or source data used in constructing the dataset...</gco:CharacterString>
+               </gmd:statement>
+            </gmd:LI_Lineage>
+         </gmd:lineage>
+      </gmd:DQ_DataQuality>
+  </gmd:dataQualityInfo>
+   <gmd:metadataMaintenance>
+      <gmd:MD_MaintenanceInformation>
+         <gmd:maintenanceAndUpdateFrequency>
+            <gmd:MD_MaintenanceFrequencyCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#MD_MaintenanceFrequencyCode"
+                                             codeListValue="asNeeded"/>
+         </gmd:maintenanceAndUpdateFrequency>
+      </gmd:MD_MaintenanceInformation>
+  </gmd:metadataMaintenance>
+</gmd:MD_Metadata>
