@@ -1,0 +1,31 @@
+Identifier,Description
+weatherObservations,weather observations
+weatherForecasts,weather forecasts
+meteorology,Meteorology
+hydrology,Hydrology
+climatology,Climatology
+landMeteorologyClimate,land meteorology climate
+synopticMeteorology,synoptic meteorology
+marineMeteorology,marine meteorology
+agriculturalMeteorology,agricultural meteorology
+aerology,Aerology
+marineAerology,marine aerology
+oceanography,Oceanography
+landHydrology,land hydrology
+rocketSounding,rocket sounding
+pollution,Pollution
+waterPollution,water pollution
+landWaterPollution,land water pollution
+seaPollution,sea pollution
+landPollution,land pollution
+airPollution,air pollution
+glaciology,Glaciology
+actinometry,Actinometry
+satelliteObservation,satellite observation
+airplaneObservation,airplane observation
+observationPlatform,observation platform
+spaceWeather,"the physical and phenomenological state of the natural space environment including the sun, the solar wind, the magnetosphere, the ionosphere and the thermosphere, and its
+interaction with the Earth."
+atmosphericComposition,"the chemical abundance in the earth's atmosphere of its constituents including nitrogen, oxygen, argon, carbon dioxide, water vapour, ozone, neon, helium, krypton,
+methane, hydrogen and nitrous oxide"
+radiation,radiation
