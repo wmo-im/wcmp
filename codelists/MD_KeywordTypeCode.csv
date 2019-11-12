@@ -1,0 +1,8 @@
+Identifier,Description
+discipline,keyword identifies a branch of instruction or specialized learning
+place,keyword identifies a location
+stratum,keyword identifies the layer(s) of any deposited substance
+temporal,keyword identifies a time period related to the dataset
+theme,keyword identifies a particular subject or topic
+dataCentre,keyword identifies a repository or archive that manages and distributes data (from ISO/DIS 19115-1:2013)
+dataParam,keyword defines a data parameter contained within the resource
