@@ -27,6 +27,9 @@ Example:
    </gmd:EX_TemporalExtent>
 </gmd:temporalElement>
 ....
+or (for, say:  forecasts: now/now, see
+DRAFT – Guidance on WIS Discovery Metadata (following CBS-16), p??
+
 
 ==== E.1.2 What is being measured?
 
