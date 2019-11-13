@@ -1,0 +1,103 @@
+
+== E. Temporal information
+
+Metadata records should contain the following temporal information:
+
+. Temporal extent: This element describes the period of time that the available product covers.
+. Data Update frequency: The temporal frequency at which the data is updated (ie, every x hours, days, ...).
+
+=== E.1 Temporal Extent
+
+==== E.1.1 To which WMCP element(s) does it apply?
+
+To the TemporalElement element in gmd:identification info
+
+/gmd:MD_Metadata/gmd:identificationInfo/*/ gmd:extent/*/gmd:temporalElement/*/gmd:extent/
+
+Example:
+....
+<gmd:temporalElement>
+   <gmd:EX_TemporalExtent id="boundingTemporalExtent">
+     <gmd:extent>
+       <gml:TimePeriod gml:id="boundingTemporalExtentPeriod">
+       <gml:beginPosition>2005-10-01</gml:beginPosition>
+       <gml:endPosition>2014-10-20</gml:endPosition>
+       </gml:TimePeriod>
+     </gmd:extent>
+   </gmd:EX_TemporalExtent>
+</gmd:temporalElement>
+....
+
+==== E.1.2 What is being measured?
+
+The presence of such element in the WMCP evaluated record.
+
+==== E.1.3 Why should we measure it?
+
+This is a crucial information for qualifying the product described by a metadata record but it is optional in the WMCP 1.3 standard.
+
+==== E.1.4 How is the measurement executed?
+
+By detecting the presence of such element as a begin end date (with a now for the endPosition for on going datasets) construct or begin, end date and duration for describing the period of retention of the datasets by the service.
+
+See p 17 of the WMO Core Profile Metadata Guidance.
+
+==== E.1.5 What is (are) considered valid results?
+The presence of such element as a begin end date (with a now for the endPosition for on going datasets) construct or begin, end date and duration for describing the period of retention of the datasets by the service.
+
+==== E.1.6 Guidance to score well on this assessment
+Always add the temporal extent information
+
+=== E.2 Data Update Frequency
+
+==== E.2.1 To which WMCP element(s) does it apply?
+
+The UpdateFrequency element in the WMCP 1.3
+
+gmd:MD_Metadata/gmd:identificationInfo/*/gmd:resourceMaintenance/*/gmd:mainte
+nanceAndUpdateFrequency
+
+Example:
+....
+<gmd:resourceMaintenance>
+  <gmd:MD_MaintenanceInformation>
+    <gmd:maintenanceAndUpdateFrequency>
+     <gmd:MD_MaintenanceFrequencyCode codeListValue="irregular"
+      codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodel     ists.xml#MD_MaintenanceFrequencyCode"/>
+     </gmd:maintenanceAndUpdateFrequency>
+    <gmd:userDefinedMaintenanceFrequency>
+      <gts:TM_PeriodDuration>PT6H</gts:TM_PeriodDuration>
+    </gmd:userDefinedMaintenanceFrequency>
+    <gmd:maintenanceNote>
+DRAFT – Guidance on WIS Discovery Metadata (following CBS-16), p38
+    <gco:CharacterString>Instances of bulletin SIKB20NGTT are available every 6 hours starting at 03 UTC.</gco:CharacterString>
+    </gmd:maintenanceNote>
+ </gmd:MD_MaintenanceInformation>
+</gmd:resourceMaintenance>
+....
+
+==== E.2.2 What is being measured?
+
+The presence of such element in the WMCP evaluated record.
+
+==== E.2.3 Why should we measure it?
+
+This is an important information which indicates how often the product is updated.
+
+==== E.2.4 How is the measurement executed?
+
+By detecting the presence of such element with a period, and a maintenance note.
+
+See p 37 of the WMO Core Profile Metadata Guidance.
+
+==== E.2.5 What is (are) considered valid results?
+The presence of such element as 
+
+==== E.2.6 Guidance to score well on this assessment
+
+
+==== E.3 Bulletin metadata availability
+
+A Bulletin should contain a temporal extent with begin end and a period for indicating how long the data is kept on the cache (24 hr).
+It should also probably be repeated in the abstract.
+

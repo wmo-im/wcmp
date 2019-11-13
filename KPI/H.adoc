@@ -1,0 +1,99 @@
+== H. Data Parameter Keyword
+
+Data parameter keywords are optional elements syntactically.  
+An xml record will validate without its presence.
+
+
+=== H.1 To which WMCP element(s) does it apply ?
+
+This KPI applies to //<gmd:identificationInfo>/*/gmd:descriptiveKeywords/*/gmd:keyword/
+WMO Core Profile extends the CodeLists for MD_keywordTypeCode code to include "dataParam" and "dataCentre" values. 
+
+To express Parameter keywords, one shall specify:
+
+1 Keyword: These can be expressed via CharacteString, or if reference is needed to a specific online resource/code an anchor could be introduced.
+See examples with Character String vs anchors:https://webgate.ec.europa.eu/fpfis/wikis/display/InspireMIG/Spatial+scope+code+list
+
+2 type:  dataParam (MD_KeywordTypeCode)
+ /gmd:MD_Metadata/gmd:identificationInfo/*/gmd:descriptiveKeywords/*/gmd:type/*/@codeListValue=”dataParam”
+
+3 thesaurusName: Originating controlled vocabulary. 
+https://www.wmo.int/pages/prog/www/WIS/Metadata/WMOCoreMetadataVer1.html (suggest to add anchors for codelists)
+
+
+Restrictions:
+
+8.2.3 All keywords sourced from a particular keyword thesaurus shall be grouped into a
+single instance of the MD_Keywords class.
+
+
+
+Examples of Thesaurus:
+There is no formalised/standardised way to refer to a thesaurus
+
+WMO Codes:  http://codes.wmo.int/grib2/codeflag/4.2/
+
+GEMET - INSPIRE themes, version 1.0: https://www.eionet.europa.eu/gemet/en/inspire-themes/
+
+GCMD:https://earthdata.nasa.gov/earth-observation-data/find-data/gcmd/gcmd-keywords
+
+WMO_Codelists: http://wis.wmo.int/2013/codelists/WMOCodeLists.xml 
+
+....
+<gmd:descriptiveKeywords>
+   <gmd:MD_Keywords>
+      <gmd:keyword> 
+         <gco:CharacterString>Dewpoint temperature</gco:CharacterString>
+      </gmd:keyword>
+       <gmd:type>
+          <!-- MD_KeywordTypeCode needs to point to https://wis.wmo.int/2012/codelists/WMOCodeLists.xml  -->
+          <gmd:MD_KeywordTypeCode codeList="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#MD_KeywordTypeCode"  codeListValue="dataParam">dataParam</ gmd:MD_KeywordTypeCode>
+          
+       </gmd:type>
+       <gmd:thesaurus>
+          <gmd:CI_Citation>
+             <gmd:title>
+                <gco:CharacterString>WMO Codes</gco:CharacterString>
+             </gmd:title>
+              <gmd:date>
+                 <gmd:CI_Date>
+                    <gmd:date>
+                       <gco:Date>2016-06-25</gco:Date>
+                    </gmd:date>
+                 <gmd:dateType>
+                    <gmd:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
+                 </gmd:dateType>
+              </gmd:CI_Date>
+           </gmd:date>
+       </gmd:CI_Citation>
+    </gmd:thesaurus>
+  </gmd:MD_Keywords>
+</gmd:descriptiveKeywords>
+....
+
+=== H.2 What is being measured ?
+
+The presence of well defined data parameters, from well known thesaurus.
+
+=== H.3 Why should it be measured ?
+
+Data Parameters  are very often entered in search engines and in many cases they represent underlying data sets.
+
+=== H.4 How is the measurement executed ?
+
+
+Program should check that all keywords of the KeywordTypeCode dataParam belong to the same block
+In the presence of dataParam, ensure a Thesaurus is defined with the title as a minimum.
+
+
+=== H.5 What is (are) considered valid results?
+
+Data parameters defined with the dataParam KeywordTypeCode within the same descriptiveKeywords block 
+
+=== H.6 Guidance to score well on this assessment
+As a minimum:
+ Keyword and type should be present 
+Higher scores: 
+Fully referenced Thesaurus.
+
+ 

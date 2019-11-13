@@ -1,0 +1,60 @@
+== F. Link for WMOEssential data
+
+=== To which WMCP element(s) does it apply?
+
+WMOEssential is a keyword of the WMO_DataLicenseCode code list; see the abstract test suite 2.3.2 of the Manual on WIS (2017 edition), Appendix C, a Data Licence Code sould be given in the XPath:
+/gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceConstraints/gmd:MD_LegalConstaints/gmd:otherConstraints//
+
+If the DataLicenceCode is WMOEssential, then a Link should be given in
+  /gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:linkage
+  
+==== Example
+DWD ICON EPS model data, metadata record
+
+- https://gisc.dwd.de/wisportal/#SearchPlace:q?pid=de.dwd.icon-eps.ALL 
+
+Digital Transfer Options
+....
+<gmd:MD_DigitalTransferOptions>
+          <gmd:onLine>
+            <gmd:CI_OnlineResource>
+              <gmd:linkage>
+                <gmd:URL>https://opendata.dwd.de/weather/wmc/icon-eps/data/grib</gmd:URL>
+              </gmd:linkage>
+              <gmd:protocol>
+                <gco:CharacterString>http</gco:CharacterString>
+              </gmd:protocol>
+              <gmd:name>
+                <gco:CharacterString>GISC Offenbach, Deutscher Wetterdienst</gco:CharacterString>
+              </gmd:name>
+              <gmd:description>
+                <gco:CharacterString>WMO Information System, download products/data through GISC Offenbach, Deutscher Wetterdienst</gco:CharacterString>
+              </gmd:description>
+            </gmd:CI_OnlineResource>
+          </gmd:onLine>
+</gmd:MD_DigitalTransferOptions>
+....
+
+
+=== What is being measured?
+A measure shoud be if a link to the Data is given in the Metadtata.
+
+
+=== Why should we measure it?
+All WMOEssential data should have a link. Can it be an explicit link
+(without login). Not all the time because some datasets are freely
+available but require login.
+
+
+=== How is the measurement executed?
+Test of the DigitalTranferOptions are given.
+
+
+=== What is (are) considered valid results?
+A valid result is an existing link in the DigitalTransferOptions is given
+
+
+=== Guidance to score well on this assessment:
+Give a link to the data, and the link shoul be valid.
+
+

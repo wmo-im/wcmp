@@ -1,0 +1,54 @@
+== J. Broken links
+
+Detection of broken links contributing to the overall quality score.
+
+=== J.1 To which WMCP element(s) does it apply?
+
+All potential linked information (URLs).
+Links are generally present in <gmd:onlineResource>, <gmd:graphicOverview>, 
+
+....
+<gmd:graphicOverview>
+        <gmd:MD_BrowseGraphic>
+          <gmd:fileName>
+            <gco:CharacterString>https://navigator.eumetsat.int/preview/0deg-snow.jpg</gco:CharacterString>
+          </gmd:fileName>
+        </gmd:MD_BrowseGraphic>
+</gmd:graphicOverview>
+....
+
+....
+<gmd:CI_OnlineResource>
+   <gmd:linkage>
+      <gmd:URL>https://eumetview.eumetsat.int/mapviewer/?product=EO:EUM:DAT:MSG:SNOW</gmd:URL>
+   </gmd:linkage>
+</gmd:CI_OnlineResource>
+....
+
+=== J.2 What is being measured?
+
+The number of broken links present in each individual metadata record is being measured
+
+=== J.3 Why should we measure it?
+
+Broken links damage the user experience and gives the impression to users that the site is not maintained (88% of the online consumers are less likely to return to a site after a bad experience). In addition broken links affects search engine rankings as having too often or too many broken links affects the reputation of your website towards Search Engines.
+
+=== J.4 How is the measurement executed?
+
+Like in *I* graphic overview a program can regularly pull all the metadata records and look for broken links.
+Example of tool could be used and integrated in the GISC quality checking:
+
+- https://github.com/bartdag/pylinkvalidator[pylinkvalidator]: Python package that can be used to check on broken links
+
+Another could be to implement over the GISC catalogues and use a sitemap.xml.
+
+=== J.5 What is (are) considered valid results?
+
+A valid result is a link that can be reached (ends-up with an HTTP 202 or a redirect and a 202).
+
+=== J.6 Guidance to score well on this assessment
+
+Insure that all the included links are always fresh and accessible.
+
+
+

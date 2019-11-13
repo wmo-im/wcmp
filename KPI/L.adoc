@@ -1,0 +1,73 @@
+
+== E. Distribution Info
+
+Metadata records should contain some information regarding how to get access to the data.
+This information is located in the distributionInfo Element and describe the data format, the service providing access to the data including the access URL as well as the distributorContact when needed. 
+
+==== E.1 To which WMCP element(s) does it apply?
+
+To the TemporalElement element in gmd:distributionInfo
+
+//gmd:MD_Metadata/gmd:distributionInfo
+
+Example:
+....
+<gmd:distributionInfo>
+    <gmd:MD_Distribution>
+        <gmd:distributionFormat>
+            <gmd:MD_Format>
+<gmd:name> <gco:CharacterString>GRIB</gco:CharacterString>
+                </gmd:name>
+                <gmd:version>
+<gco:CharacterString>FM 92 GRIB Edition 2</gco:CharacterString> </gmd:version>
+<gmd:specification> <gco:CharacterString>http://www.wmo.int/pages/prog/www/WMOCodes.html</gco:CharacterString>
+                </gmd:specification>
+            </gmd:MD_Format>
+        </gmd:distributionFormat>
+        <gmd:transferOptions>
+<gmd:MD_DigitalTransferOptions> <gmd:onLine>
+                    <gmd:CI_OnlineResource>
+                        <gmd:linkage>
+<gmd:URL>ftp://data-portal.ecmwf.int/</gmd:URL> </gmd:linkage>
+<gmd:protocol> <gco:CharacterString>WWW:DOWNLOAD-1.0-ftp--download</gco:CharacterString>
+                        </gmd:protocol>
+                        <gmd:name>
+<gco:CharacterString>ECMWF DCPC FTP Server</gco:CharacterString> </gmd:name>
+                        <gmd:description>
+DRAFT – Guidance on WIS Discovery Metadata (following CBS-16), p36
+</gco:CharacterString> <gco:CharacterString>WMO Information System download service through ECMWF
+                        </gmd:description>
+                        <gmd:function>
+<gmd:CI_OnLineFunctionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodel
+ists.xml#CI_OnLineFunctionCode" codeListValue="download"> </gmd:function>
+                    </gmd:CI_OnlineResource>
+                </gmd:onLine>
+</gmd:MD_DigitalTransferOptions> </gmd:transferOptions>
+    </gmd:MD_Distribution>
+</gmd:distributionInfo>
+....
+
+==== E.2 What is being measured?
+
+The presence of such element and its subelements:
+
+ . DistributionFormat: //gmd:MD_Metadata/gmd:distributionInfo/*/gmd:distributionFormat. That can rely on existing WMO supported formats
+ . transferOptions: //gmd:MD_Metadata/gmd:distributionInfo/*/gmd:transferOptions including a gmd:linkage with a url to access the service providing the data
+ . optional distributorContact 
+
+==== E.3 Why should we measure it?
+
+This is a very important information in the WMCP as it provides the necessary information for accessing the data service.
+This is the link to the data itself.
+
+==== E.4 How is the measurement executed?
+
+By detecting the presence of the distribution format and transferOptions (multiple options are possible).
+See p 35 of the WMO Core Profile Metadata Guidance.
+
+==== E.5 What is (are) considered valid results?
+
+The presence of such element (see above the example). 
+
+==== E.6 Guidance to score well on this assessment
+Always add a complete distribution information.

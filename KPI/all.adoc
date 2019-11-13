@@ -1,0 +1,31 @@
+= WMCP Metadata Quality KPIs
+
+
+This document intend to summarize the different Key performance indicators that have been expressed in the discussion available here: https://github.com/wmo-im/wmcp/issues/2
+
+
+== A. link:A.adoc[Compliance to WMO Core Profile and its mandatory elements]
+
+== B. link:B.adoc[Good quality title]
+
+== C.link:C.adoc[Good quality abstract]
+
+== D. link:D.adoc[Valid Station Identifier]
+
+== E. link:E.adoc[Temporal Information]
+
+== F. link:F.adoc[Link for WMOEssential data]
+
+== G. link:G.adoc[Bulletins have an ongoing temporal extent]
+
+== H. link:H.adoc[Data Parameter Keyword]
+
+== I. link:I.adoc[GraphicOverview for non bulletins metadata records]
+
+== J. link:J.adoc[Broken links]
+
+== K. link:K.adoc[Data Policy Possible combination]
+
+== L. link:L.adoc[Distribution information]
+
+== N. link:M.adoc[Citation information to reference parties that have contributed to the creation of the dataset (presence of DOI)]
