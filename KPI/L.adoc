@@ -1,10 +1,10 @@
 
-== E. Distribution Info
+== L. Distribution Info
 
 Metadata records should contain some information regarding how to get access to the data.
 This information is located in the distributionInfo Element and describe the data format, the service providing access to the data including the access URL as well as the distributorContact when needed. 
 
-==== E.1 To which WMCP element(s) does it apply?
+==== L.1 To which WMCP element(s) does it apply?
 
 To the element gmd:distributionInfo
 
@@ -52,9 +52,10 @@ ists.xml#CI_OnLineFunctionCode" codeListValue="download"> </gmd:function>
 The presence of such element and its subelements:
 
  . DistributionFormat: //gmd:MD_Metadata/gmd:distributionInfo/*/gmd:distributionFormat. That can rely on existing WMO supported formats
+ 
  . transferOptions: //gmd:MD_Metadata/gmd:distributionInfo/*/gmd:transferOptions including a gmd:linkage with a url to access the service providing the data
  . optional distributorContact 
-
+ 
 ==== E.3 Why should we measure it?
 
 This is a very important information in the WMCP as it provides the necessary information for accessing the data service.
