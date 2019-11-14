@@ -6,7 +6,7 @@ This information is located in the distributionInfo Element and describe the dat
 
 ==== E.1 To which WMCP element(s) does it apply?
 
-To the TemporalElement element in gmd:distributionInfo
+To the element in gmd:distributionInfo
 
 //gmd:MD_Metadata/gmd:distributionInfo
 
