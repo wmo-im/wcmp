@@ -1,10 +1,10 @@
 
 == D. Valid Station Identifier
 
-A station id, when provided, should a WIGOS identifier long version, ie:
+A station id, when provided, should be a WIGOS identifier long version, ie:
 https://oscar.wmo.int/surface//index.html#/search/station/stationReportDetails/0-20000-0-10505
 
-When a station identifier is provided then it should be a VALID WIGOS
+And when a station identifier is provided then it should be a VALID WIGOS
 identifier url. This can be verified
 
 === To which WMCP element(s) does it apply?
@@ -14,7 +14,10 @@ The stationID should be defined as a Keyword type "place".
 === What is being measured?
 
 * Detect old stations id and recommend to have them replaced by the WIGOS station ID.
-* When a WIGOS ID is provided, check that it is a valid one (and the ideal format recommended. ACTION: also update tge Guidance doc to reflect newer WIGOS Station ID format)
+* When a WIGOS ID is provided, check that it is a valid one (and the ideal format recommended). 
+* Check that the Thesaurus element is used, and that the Thesaurus title matches XXX.
+ACTION: collect all the variants on thesaurus name, and identify the correct Thesaurus title wording, and related thesaurus content.
+ACTION: also update tge Guidance doc to reflect newer WIGOS Station ID format.
 
 === Why should we measure it?
 
