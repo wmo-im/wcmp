@@ -9,12 +9,12 @@ identifier url. This can be verified
 
 === To which WMCP element(s) does it apply?
 
-There should be a stationID defined as a Keyword type "place".
+The stationID should be defined as a Keyword type "place".
 
 === What is being measured?
 
 * Detect old stations id and recommend to have them replaced by the WIGOS station ID.
-* When a WIGOS ID is provided, check that it is a valid one.
+* When a WIGOS ID is provided, check that it is a valid one (and the ideal format recommended. ACTION: also update tge Guidance doc to reflect newer WIGOS Station ID format)
 
 === Why should we measure it?
 
