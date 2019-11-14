@@ -44,7 +44,7 @@ Another could be to implement over the GISC catalogues and use a sitemap.xml.
 
 === J.5 What is (are) considered valid results?
 
-A valid result is a link that can be reached (ends-up with an HTTP 202 or a redirect and a 202).
+A valid result is a link that can be reached (ends-up with an HTTP 202 or a redirect (30x) and a 202).
 
 === J.6 Guidance to score well on this assessment
 
