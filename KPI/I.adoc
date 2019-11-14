@@ -38,7 +38,9 @@ A program can get the entire list of metadata records from the OAI-PMH interface
 
 === I.5 What is (are) considered valid results?
 
-The presence of a link to a valid image file (that should be verified as well)
+The presence of a link to a valid image file (that should be verified as well) in //<gmd:identificationInfo>/<gmd:MD_DataIdentification>/<gmd:graphicOverview>/<gmd:MD_BrowseGraphic
+, the link can be resolved and it is an image (jpg, png, ...)
+
 
 === I.6 Guidance to score well on this assessment
 
