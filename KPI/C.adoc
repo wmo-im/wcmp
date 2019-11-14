@@ -5,15 +5,9 @@
 
 === What is being measured?
 Programmatic measurements:
-* length is at least 2 or 3 sentences 
-* NO URLs are included
-* Spelling and grammar
 
-Manual measurements: 
-* Tone
-* Completeness
-* Relevancy to the resource
-* Acronyms are spelled out, when applicable
+* Length is at least 3 sentences.
+* Spelling and grammar are correct.
 
 === Why should we measure it?
 To faciliate ease of understanding and discovery. 
@@ -22,9 +16,10 @@ To faciliate ease of understanding and discovery.
 Programmatically and manually.
 
 === What is (are) considered valid results?
-Abstract is at least 3(?) sentences, does not contain URLs, spelling and grammar are correct.
+Abstract is at least 3 sentences, spelling and grammar are correct.
 
-=== Guidance to score well on this assessment
+=== WIS Guidance to be referenced
+
 *WMCP v1.3 part 1 Guidance*
 The abstract should provide a clear and concise statement that enables the reader to
 understand the content of the dataset. For guidance when completing the abstract, consider
@@ -40,12 +35,13 @@ these points:
 
 *NOAA Recommendation*
 Brief narrative summary of the resource. This is different than a scientific abstract. Limit information in the abstract to the specific resource that is being described. Provide descriptive information in a clear, concise and human readable manner. Describe the contents of the resource and the key aspects and/or attributes that are represented. Briefly explain what is unique about this resource and, if appropriate how it differs from similar resources. Ensure contextual information important to the use of the resource are explained, e.g. formats, recommended tools, related resources, or limitations. Avoid citing external sources to this resource.
-# Write using plain language that the general public will understand. Terminology that is intended for a designated community is acceptable. However, avoid overly scientific and/or technical jargon.
-# Acronyms do not need to be spelled out if they are for commonly used terms which are understood by the general public. Once an uncommon acronym is spelled out within the Abstract it can be used without explanation.
-# Do not include URLs. URLs change often and link checkers generally only check links in <onlineResource> portions of the metadata.
-# Do not include html, csv, tables or extra spaces to control display of text. Use simple paragraph(s) only.
-# Do not copy text from a journal article verbatim. This can lead to copyright violation concerns. Additionally, abstracts for journal articles are not intended to describe the provided resource and do not meet the metadata requirements. Related papers can be referenced from and/or tied to the metadata. See EDM Wiki about MD_AggregateInformation section for more information on citing journals.
-# Do not include persistent identifier(s) related to this resource, e.g. DOI, referenced journals, etc. See information about including identifiers in other locations of the standard, i.e., MD_Identifier, MD_AggregateInformation, and CI_Citation Statement.
+
+* Write using plain language that the general public will understand. Terminology that is intended for a designated community is acceptable. However, avoid overly scientific and/or technical jargon.
+* Acronyms do not need to be spelled out if they are for commonly used terms which are understood by the general public. Once an uncommon acronym is spelled out within the Abstract it can be used without explanation.
+* Do not include URLs. URLs change often and link checkers generally only check links in <onlineResource> portions of the metadata.
+* Do not include html, csv, tables or extra spaces to control display of text. Use simple paragraph(s) only.
+* Do not copy text from a journal article verbatim. This can lead to copyright violation concerns. Additionally, abstracts for journal articles are not intended to describe the provided resource and do not meet the metadata requirements. Related papers can be referenced from and/or tied to the metadata. See EDM Wiki about MD_AggregateInformation section for more information on citing journals.
+* Do not include persistent identifier(s) related to this resource, e.g. DOI, referenced journals, etc. See information about including identifiers in other locations of the standard, i.e., MD_Identifier, MD_AggregateInformation, and CI_Citation Statement.
 # Avoid using future verb tense when possible. Write using present or past tenses.
 
 
