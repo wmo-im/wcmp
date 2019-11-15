@@ -24,6 +24,7 @@ Abstract is at least 3 sentences, spelling and grammar are correct.
 The abstract should provide a clear and concise statement that enables the reader to
 understand the content of the dataset. For guidance when completing the abstract, consider
 these points:
+
 * (a) State what the “things” are that are recorded.
 * (b) State the key aspects recorded about these things.
 * (c) State what form the data takes.
@@ -33,14 +34,15 @@ these points:
 * (g) Do not include general background information.
 * (h) Avoid jargon and unexplained abbreviations.
 
-* Relevant NOAA Recommendations*
-# This is different than a scientific abstract. 
-# Limit information in the abstract to the specific resource that is being described. 
-# Describe the contents of the resource and the key aspects and/or attributes that are represented.
-# Briefly explain what is unique about this resource and, if appropriate how it differs from similar resources. 
-# Avoid citing external sources to this resource.
-# Acronyms do not need to be spelled out if they are for commonly used terms which are understood by the general public. Once an uncommon acronym is spelled out within the Abstract it can be used without explanation.
-# Do not include html, csv, tables or extra spaces to control display of text. Use simple paragraph(s) only.
-# Do not copy text from a journal article verbatim. This can lead to copyright violation concerns. Additionally, abstracts for journal articles are not intended to describe the provided resource and do not meet the metadata requirements. Related papers can be referenced from and/or tied to the metadata. See EDM Wiki about MD_AggregateInformation section for more information on citing journals.
-# Avoid using future verb tense when possible. Write using present or past tenses.
+*Relevant NOAA Recommendations*
+
+1. This is different than a scientific abstract. 
+1. Limit information in the abstract to the specific resource that is being described. 
+1. Describe the contents of the resource and the key aspects and/or attributes that are represented.
+1. Briefly explain what is unique about this resource and, if appropriate how it differs from similar resources. 
+1. Avoid citing external sources to this resource.
+1. Acronyms do not need to be spelled out if they are for commonly used terms which are understood by the general public. Once an uncommon acronym is spelled out within the Abstract it can be used without explanation.
+1. Do not include html, csv, tables or extra spaces to control display of text. Use simple paragraph(s) only.
+1. Do not copy text from a journal article verbatim. This can lead to copyright violation concerns. Additionally, abstracts for journal articles are not intended to describe the provided resource and do not meet the metadata requirements. Related papers can be referenced from and/or tied to the metadata. See EDM Wiki about MD_AggregateInformation section for more information on citing journals.
+1. Avoid using future verb tense when possible. Write using present or past tenses.
 
