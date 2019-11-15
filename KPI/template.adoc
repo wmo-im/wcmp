@@ -6,8 +6,10 @@
 
 === Why should we measure it?
 
-=== How is the measurement executed?
+=== Rules for implementation ?
 
-=== What is (are) considered valid results?
+use XPath and pseudo-code
+
+=== Score values
 
 === Guidance to score well on this assessment
