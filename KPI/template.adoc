@@ -8,7 +8,7 @@
 
 === Rules for implementation ?
 
-use XPath and pseudo-code
+use XPath and pseudo-code (if then else)
 
 === Score values
 
