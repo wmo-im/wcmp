@@ -24,24 +24,45 @@ This KPI applies to //<gmd:identificationInfo>/<gmd:MD_DataIdentification>/<gmd:
 </gmd:graphicOverview>
 ....
 
-=== I.2 What is being measured ?
+=== I.2 What is being measured and why should it be measured
 
-The presence of that information (<gmd:graphicOverview>) is measured and can contribute to an overall quality score.
-
-=== I.3 Why should it be measured ?
+The presence of the <gmd:graphicOverview> is verified and it is checked that it contains a url to a JPG or PNG Image
 
 It should be measured because it contributes to the corresponding product information in the WIS catalogues and make them much more informative and user friendly by showing to the users an overview of the discovered products. It can be showed in the product overview or in the search results list.
 
-=== I.4 How is the measurement executed ?
+=== I.3 KPI implementation rules 
 
-A program can get the entire list of metadata records from the OAI-PMH interface of the GISC catalogues and check for the presence of the <gmd:graphicOverview> in the individual records. That could be one rule defined and verified against each individual records and leading to the production of a quality report available from the web.
+This part defines how a program should verify the currently described KPI.
 
-=== I.5 What is (are) considered valid results?
+....
+result = False
+url    = None
 
-The presence of a link to a valid image file (that should be verified as well) in //<gmd:identificationInfo>/<gmd:MD_DataIdentification>/<gmd:graphicOverview>/<gmd:MD_BrowseGraphic
-, the link can be resolved and it is an image (jpg, png, ...)
+if xpath(//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview/gmd:MD_BrowseGraphic/gmd:filename/gmx:Anchor/@xlink:href) then
+  
+  url = xpath.extract(//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview/gmd:MD_BrowseGraphic/gmd:filename/gmx:Anchor/@xlink:href)
 
+elif xpath(//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview/gmd:MD_BrowseGraphic/gmd:filename/gco:CharacterString) them
 
-=== I.6 Guidance to score well on this assessment
+  url = xpath.extract(//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview/gmd:MD_BrowseGraphic/gmd:filename/gco:CharacterString)
+
+fi
+
+if url then
+
+  //resolve the url to download the image (redirect have to be followed)
+  download the image and check that the downloaded content starts the the JPG or PNG magic number.
+  
+  result = True
+fi
+
+return result
+....
+  
+=== I.4 Score Values
+
+To be defined.
+
+=== I.5 Guidance to score well on this assessment
 
 In addition to the presence of the file it would be good to define a typical size (800x800 pixels for instance) such that all images are normalized.
