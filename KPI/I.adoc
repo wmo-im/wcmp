@@ -9,6 +9,11 @@ Examples of catalogues using such information are here:
 
 - https://navigator.eumetsat.int/search?query=MSG%20RGB[EUMETSAT Product Navigator]
 
+=== I.1 What is being measured and why should it be measured
+
+The presence of the <gmd:graphicOverview> is verified and it is checked that it contains a url to a JPG or PNG Image
+
+It should be measured because it contributes to the corresponding product information in the WIS catalogues and make them much more informative and user friendly by showing to the users an overview of the discovered products. It can be showed in the product overview or in the search results list.
 
 === I.1 To which WMCP element(s) does it apply ?
 
@@ -36,12 +41,6 @@ OR
   </gmd:MD_BrowseGraphic>
 </gmd:graphicOverview>
 ....
-
-=== I.2 What is being measured and why should it be measured
-
-The presence of the <gmd:graphicOverview> is verified and it is checked that it contains a url to a JPG or PNG Image
-
-It should be measured because it contributes to the corresponding product information in the WIS catalogues and make them much more informative and user friendly by showing to the users an overview of the discovered products. It can be showed in the product overview or in the search results list.
 
 === I.3 KPI implementation rules 
 
