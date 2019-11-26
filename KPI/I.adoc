@@ -14,6 +14,19 @@ Examples of catalogues using such information are here:
 
 This KPI applies to //<gmd:identificationInfo>/<gmd:MD_DataIdentification>/<gmd:graphicOverview>/<gmd:MD_BrowseGraphic/<gmd:fileName>
 
+
+....
+<gmd:graphicOverview>
+  <gmd:MD_BrowseGraphic>
+     <gmd:fileName>
+        <gmx:Anchor xlink:href="https://navigator.eumetsat.int/preview/meteosat-msg_naturalenhncd.jpg">Meteosat MSG Natural Enhanced Color</gmx:Anchor>
+     </gmd:fileName>
+  </gmd:MD_BrowseGraphic>
+</gmd:graphicOverview>
+....
+
+OR
+
 ....
 <gmd:graphicOverview>
   <gmd:MD_BrowseGraphic>
