@@ -1,10 +1,10 @@
-=== I.1 To which WMCP element(s) does it apply ?
+=== N.1 To which WMCP element(s) does it apply ?
 
 This KPI applies to all the elements defining some information regarding the metadata content attribution:
 Responsible party as creator or publisher, publication year and DOI.
 
 
-=== I.3 KPI implementation rules 
+=== N.3 KPI implementation rules 
 
 This part defines how a program should verify the currently described KPI.
 
@@ -36,10 +36,10 @@ fi
 return contributing_score
 ....
   
-=== I.4 Score Values
+=== N.4 Score Values
 
 To be defined. The points provided for that information should be "bonus" or optional points.
 
-=== I.5 Guidance to score well on this assessment
+=== N.5 Guidance to score well on this assessment
 
 A DOI with the associated creator/publisher and publication year information should be provided.
