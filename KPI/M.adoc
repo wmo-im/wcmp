@@ -1,22 +1,45 @@
-==M. Presence of a 'station identifier'
-(a complement to the ticket for D.adoc 'Validity of a station identifier')
+=== I.1 To which WMCP element(s) does it apply ?
 
-== To which WMCP element(s) does it apply?
-keyword with keyywordTypeCode of 'place'
+This KPI applies to all the elements defining some information regarding the metadata content attribution:
+Responsible party as creator or publisher, publication year and DOI.
 
-== What is being measured?
-Presence of station ID, when it should be there.
 
-== Why should we measure it?
-Helps with discovery /searching needs.
+=== I.3 KPI implementation rules 
 
-== How is the measurement executed?
-tba
-== What is (are) considered valid results?
-tba
-== Guidance to score well on this assessment
-tba
+This part defines how a program should verify the currently described KPI.
 
-The best would be to detect when a station identifier is missing? Any idea to it ?
+....
+contributing_score = 0
 
-Is it possible to define when it is applicable?  
+if xpath(//gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty[gmd:role/gmd:CI_RoleCode/@codeListValue[(.)= 'resourceProvider' or (.) = 'originator' or (.) = 'principalInvestigator' or (.) = 'author' or (.) = 'collaborator']]) then
+  
+  contributing_score += 1 
+fi
+
+if xpath(//gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty[.//gmd:role/gmd:CI_RoleCode/@codeListValue='publisher']) then
+  
+  contributing_score += 1 
+fi
+
+if xpath(//gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date/[.//gmd:dateType/gmd:CI_DateTypeCode/@codeListValue = 'publication' or .//gmd:dateType/gmd:CI_DateTypeCode/@codeListValue = 'creation']) then
+
+  contributing_score += 1 
+
+fi
+
+if xpath(	//gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code[contains(., 'DOI') or contains(.,'doi') or contains(.,'Doi')]) then
+
+  contributing_score += 1 
+
+fi
+
+return contributing_score
+....
+  
+=== I.4 Score Values
+
+To be defined. The points provided for that information should be "bonus" or optional points.
+
+=== I.5 Guidance to score well on this assessment
+
+A DOI with the associated creator/publisher and publication year information should be provided.
