@@ -5,189 +5,290 @@ checker. To be done
 ////
 
 
-=== A.1) XML encoding : ISO/TS 19139:2007 Compliance
+=== A.1 XML encoding : ISO/TS 19139:2007 Compliance
 
-==== To which WMCP element(s) does it apply?
-Whole metadata record
+==== A.1.1 What is being measured and why should it be measured
+Metadata record structure conforms to ISO/TS 19139:2007 standard : A WCMP Metadata record shall validate without error against 
+- the XML schema defined in ISO/TS 19139:2007.  
+- the rule-based contraints listed in ISO/TS 19139:2007 Annex A Table A1
+An invalid metadata record will be rejected by the WIS DAR catalog, so related datasets won’t be discoverables and accessibles.
 
-==== What is being measured?
-Metadata record structure conforms to that defined in ISO/TS 19139:2007 standard
+==== A.1.2 To which WMCP element(s) does it apply?
+Whole metadata record structure and content.
 
-==== Why should we measure it?
-A WCMP Metadata record shall validate without error against the XML schema defined in  ISO/TS 19139:2007.  A invalid metadata record will be rejected by the WIS DAR catalog, so related datasets won’t be discoverables and accessibles.
+==== A.1.3 KPI implementation rule
+Check the record against a validation tools supporting both full W3C XML Schema and Schematron rules.
+Verify that there is no error in checker output
 
-==== How is the measurement executed?
-Tools recommended in WCMP ATS, like rubric checker.
+==== A.1.4 Score Values
+To be defined
 
-==== What is (are) considered valid results?
-No error in checker output
-
-==== Guidance to score well on this assessment
-validate the metadata record  using rubric checker before publishing it
+==== A.1.5 Guidance to score well on this assessment
+Use WCMP templates and/or tools to generate the metadata record (ex excel to wis)
+validate the metadata record using rubric checker before publishing it
 
 
-=== A.2) XML encoding : Explicit namespace identification 
 
-==== To which WMCP element(s) does it apply?
-Whole metadata record
+=== A.2 XML encoding : explicit namespace identification 
 
-==== What is being measured?
+==== A.2.1 What is being measured and why should it be measured
 Each element is prefixed with it’s namespace prefix  (ie : gmd gmx, ...)
+In order to avoid collisions among elements from different packages in a metadata record 
 
-==== Why should we measure it?
-To avoid collisions among elements from different packages in a metadata record 
+==== A.2.2 To which WMCP element(s) does it apply?
+All elements, namespace declaration 
 
-==== How is the measurement executed?
+==== A.2.3 KPI implementation rule
+1/ establish the list of declared namespaces
+namespace are declared as xmlns attributes of the root element MD_Metatata :
+namespace_list=gmd:MD_Metadata[@xmlns:*]
 
-==== What is (are) considered valid results?
+2 / establish the list of namespace prefixes  
+namespace_prefix_list = namespace_list.prefixes()
 
-==== Guidance to score well on this assessment
+3/ Verify that each element in the medadata record is prefixed by a namespace from the list of namespaces prefixes.  
+element_list = //*
+foreach element in element_list
+{
+   element_prefix = element.prefix()
+   if element_prefix == "" return FALSE
+   elif
+      element_prefix not in namespace_prefix_list
+		return FALSE
+   fi
+}	 
+return TRUE		
+    
+==== A.2.4 Score Values
+To be defined
+
+==== A.2.5 Guidance to score well on this assessment
+Use WCMP templates and/or tools to generate the metadata record (e.g. excel to wis)
+Validate the metadata record using rubric checker before publishing it
 
 
-=== A.3) XML encoding : Use of GML 3.2
 
-==== To which WMCP element(s) does it apply?
-Whole metadata record, namespace declaration 
+=== A.3 XML encoding : Use of GML 3.2
 
-==== What is being measured?
+==== A.3.1 What is being measured and why should it be measured
+The use of gml 3.2 in metadata record
 
 ==== Why should we measure it?
 Wcmp 1.3 depends on gml 3.2.  A metadata record using another gml version may be rejected by the WIS DAR catalog.
 
-==== How is the measurement executed?
-Tools recommended in WCMP ATS, like rubric checker 
+==== A.3.2 To which WMCP element(s) does it apply?
+all elements from the gml namespace
+//gml:*
 
-==== What is (are) considered valid results?
+==== A.3.3 KPI implementation rule
 
-==== Guidance to score well on this assessment
+inspect "xmlns" declaration to ensure that gml nanespace is specified as xmlns:gml="http://www.opengis.net/gmd/3.2 :
+gml_namespace_uri = gmd:MD_Metadata[@xmlns:gml]
 
+if gml_namespace_uri == "" then
+	// gml namspace not declared ...
+	Return FALSE 
+elif
+	gml_namespace_uri.leaf() eq "3.2"
+        Return TRUE
+else
+	return FALSE
+fi
 
-=== A.4) Uniqueness of metadata record : Presence of the FileIdentifier element 
+==== A.3.4 Score Values
+To be defined
 
-==== To which WMCP element(s) does it apply?
-gmd:MD_Metadata/gmd:fileIdentifier
-
-==== What is being measured?
-Presence of gmd:FileIdentifier element in the metadata record.
-The gmd:FileIdentifier value is an URI compliant with the specified stucture in WCMP Part 1
-
-==== Why should we measure it?
-To ensure uniqueness of the metadata record within the WIS.
-
-==== How is the measurement executed?
-Tools recommended in WCMP ATS, like rubric checker 
-
-==== What is (are) considered valid results?
-No error related to the presence of  gmd:FileIdentifier in rubric output
-
-==== Guidance to score well on this assessment
-validate the metadata record  using rubric checker before publishing it. ( Does rubric check URL compliance ? )
+==== A.3.5 Guidance to score well on this assessment
+Use WCMP templates and/or tools to generate the metadata record (e.g. excel to wis)
+Validate the metadata record using rubric checker before publishing it
 
 
-=== A.5) Discovery rules within the DAR catalogue : Presence of the mandatory WMO_CategoryCode keyword 
+===  A.4 uniqueness of metadata : presence of the FileIdentifier element
 
-==== To which WMCP element(s) does it apply?
+==== A.4.1 What is being measured and why should it be measured
+
+Presence of gmd:MD_Metadata/gmd:fileIdentifier element in the metadata record to ensure uniqueness of the metadata record within the WIS.
+
+==== A.4.2 To which WMCP element(s) does it apply?
+gmd:MD_Metadata/gmd:FileIdentifier
+
+==== A.4.3 KPI implementation rule
+
+file_identifier=gmd:MD_Metadata/gmd:fileIdentifier
+if  file_identifier == "" then
+return FALSE
+else
+return TRUE
+
+==== A.4.4 Score Values
+To be defined
+
+==== A.4.5 Guidance to score well on this assessment
+Use WCMP templates and/or tools to generate the metadata record (e.g. excel to wis)
+Validate the metadata record using rubric checker before publishing it
+Does rubric check URL compliance  (given it's not mandatory, only recommended)
+
+
+=== A.5 discovery rules within the DAR catalogue : presence of the mandatory WMO_CategoryCode keyword 
+
+==== A.5.1 What is being measured and why should it be measured
+
+Presence of at least one keyword from the WMO_CategoryCode code list.
+Each keyword provided from WMO_CategoryCode code list must be of type "theme", from MD_KeywordTypeCode code list.
+All keywords sourced from a particular keyword thesaurus shall be grouped into a single instance of MD_Keywords class.
+
+Provision of WMO_CategoryCode keywords will improve data discovery in WMO community. 
+
+==== A.5.2 To which WMCP element(s) does it apply?
 gmd:MD_Metadata/gmd:identificationInfo/gmd:DataIndentification/gmd:descriptiveKeywords/gmd:Keywords/gmd:keyword
+gmd:MD_Metadata/gmd:identificationInfo/gmd:DataIndentification/gmd:descriptiveKeywords/gmd:Keywords/gmd:type/gmd:MD_KeywordTypeCode
 
-==== What is being measured?
-Presence and value of a keyword from the WMO_CategoryCode code list.
+==== A.5.3 KPI implementation rule
 
-==== Why should we measure it?
-Provide additional topic categories for data discovery in WMO community
+1/ Presence of at least one keyword from the WMO_CategoryCode code list.
+2/ Each keyword provided from WMO_CategoryCode code list must be of type "theme", from MD_KeywordTypeCode code list.
 
-==== How is the measurement executed?
-Tools recommended in WCMP ATS, like rubric checker 
+// keyword block couunt
+numblock = 0 
+foreach keyword_bloc in gmd:MD_Metadata/gmd:identificationInfo/gmd:DataIndentification/gmd:descriptiveKeywords/gmd:Keywords
+{
+  numblock = numbmock + 1
+  // retrieve thesaurus title
+  thesaurus_title = gmd:MD_Metadata/gmd:identificationInfo/gmd:DataIndentification/gmd:descriptiveKeywords/gmd:Keywords[numblock]/gmd:thesaurusName/gmd:CI_Citation/gmd:title
+  if thesaurus_title.contains ("WMO_CategoryCode") then
+  {
+    // WMO category code keyword block
+    // check that there is at least one keyword in the list
+    keyword_list = gmd:MD_Metadata/gmd:identificationInfo/gmd:DataIndentification/gmd:descriptiveKeywords[numblock]/gmd:Keywords/gmd:keyword
+    if keyword_list.isEmpty() return FALSE
+    foreach keyword in keyword_list
+    { 
+      if keyword not in WMO_CategoryCode codelist 
+          Return FALSE
+      fi
+     }
 
-==== What is (are) considered valid results?
-No error related to gmd:topicCategory in checker’s output, there is at least one keyword from  WMO_CategoryCode code list in the matadata record.
+     // check keyword theme
+     if gmd:MD_Metadata/gmd:identificationInfo/gmd:DataIndentification/gmd:descriptiveKeywords/gmd:Keywords[numblock]/gmd:type/gmd:MD_KeywordTypeCode != "theme"
+         Return FALSE
+     fi
+  }
+}
 
-==== Guidance to score well on this assessment
+3/ All keywords sourced from a particular keyword thesaurus shall be grouped into a single instance of MD_Keywords class.
+To be defined  (not so easy ...)
+
+
+==== A.5.4 Score Values
+To be defined
+
+==== A.5.5 Guidance to score well on this assessment
+Use WCMP templates and/or tools to generate the metadata record (e.g. excel to wis)
 validate the metadata record using rubric checker before publishing it
 
 
-=== A.6) Discovery rules within the DAR catalogue : Presence of the MD_TopicCategoryCode element
 
-==== To which WMCP element(s) does it apply?
-gmd:MD_Metadata/gmd:identificationInfo/gmd:DataIndentification/gmd:topicCategory
+=== A.6 Discovery rules within the DAR catalogue : presence of geographic data extent defined by a bounding box
 
-==== What is being measured?
-Presence and value of the gmd:topicCategory element
+==== A.6.1 What is being measured and why should it be measured
+Presence of gmd:EX_GeographicBoundingBox
+Provide the geographic extent of the dataset for data discovery based on location
 
-==== Why should we measure it?
-Provide the main theme of the dataset for data discovery
-
-==== How is the measurement executed?
-Tools recommended in WCMP ATS, like rubric checker 
-
-==== What is (are) considered valid results?
-No error related to gmd:topicCategoryCode in checker’s output
-
-==== Guidance to score well on this assessment
-validate the metadata record using rubric checker before publishing it
-
-
-
-=== A.6) Discovery rules within the DAR catalogue : Presence of geographic data extent defined by a bounding box
-
-==== To which WMCP element(s) does it apply?
+==== A.6.2 To which WMCP element(s) does it apply?
 gmd:MD_Metadata/gmd:identificationInfo/gmd:DataIndentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox
 
-==== What is being measured?
-Presence of gmd:EX_GeographicBoundingBox
+==== A.6.3 KPI implementation rule
+bbox_list=gmd:MD_Metadata/gmd:identificationInfo/gmd:DataIndentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox
+if bbox_list.isEmpty()  
+ return FALSE
+else
+ bboxcount = 0
+ foreach bbox in bbox_list
+ {
+   bboxcount = bbox_count + 1
+   // check bbox validity
+   west = gmd:MD_Metadata/gmd:identificationInfo/gmd:DataIndentification/gmd:extent/gmd:EX_Extent[bboxcount]/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:westBoundLongitude
+   east = gmd:MD_Metadata/gmd:identificationInfo/gmd:DataIndentification/gmd:extent/gmd:EX_Extent[bboxcount]/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:eastBoundLongitude
+   south = gmd:MD_Metadata/gmd:identificationInfo/gmd:DataIndentification/gmd:extent/gmd:EX_Extent[bboxcount]/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:southBoundLatitude
+   north = gmd:MD_Metadata/gmd:identificationInfo/gmd:DataIndentification/gmd:extent/gmd:EX_Extent[bboxcount]/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:northBoundLatitude
 
-==== Why should we measure it?
-Provide the geographic extent of the dataset for data discovery 
+   if ((east - west)  < 0  or  (east - west) > 360) return FALSE fi
+   if south > north return FALSE fi
+ }
+fi
 
-==== How is the measurement executed?
-Tools recommended in WCMP ATS, like rubric checker 
+==== A.6.4 Score Values
+To be defined
 
-==== What is (are) considered valid results?
-No error related to EX_GeographicBoundingBox in checker’s output
-
-==== Guidance to score well on this assessment
-validate the metadata record using rubric checker before publishing it
-
-
-
-=== A.7) Correct description of data for global exchange via WIS : Identifying data for global exchange
-
-==== To which WMCP element(s) does it apply?
-
-==== What is being measured?
-
-==== Why should we measure it?
-
-==== How is the measurement executed?
-
-==== What is (are) considered valid results?
-
-==== Guidance to score well on this assessment
-
-=== Correct description of data for global exchange via WIS : Specification of WMO data policy for globally exchanged data
-
-==== To which WMCP element(s) does it apply?
-
-==== What is being measured?
-
-==== Why should we measure it?
-
-==== How is the measurement executed?
-
-==== What is (are) considered valid results?
-
-==== Guidance to score well on this assessment
+==== A.6.5 Guidance to score well on this assessment
+Use WCMP templates and/or tools to generate the metadata record (e.g. excel to wis)
+Validate the metadata record using rubric checker before publishing it
 
 
-=== A.8) Correct description of data for global exchange via WIS : Specification of GTS priority for globally exchanged data
+===  A.7 Correct description of data for global exchange via WIS : Identifying data for global exchange
 
-==== To which WMCP element(s) does it apply?
+==== A.7.1 What is being measured and why should it be measured
+Presence of the keyword "GlobalExchange" from the WMO_DistributionScopeCode code list.
+the "GlobalExchange" keyword must be of type "dataCentre", from MD_KeywordTypeCode code list.
+It is important to identify datasets to be  globally exchanged via the WIS in order to store them in the cache.
 
-==== What is being measured?
+==== A.7.2 To which WMCP element(s) does it apply?
+gmd:MD_Metadata/gmd:identificationInfo/gmd:DataIndentification/gmd:descriptiveKeywords/gmd:Keywords/gmd:keyword
 
-==== Why should we measure it?
+==== A.7.3 KPI implementation rule
 
-==== How is the measurement executed?
+Check the presence of "GlobalExchange" keyword.
+Issue :
+Presence of the "GlobalExchange" keyword, for a dataset "supposed" to be globally exchanged. 
+Problem : how to identify a dataset for global exchange, given the GlobalExchange" keyword is not specified ? 
 
-==== What is (are) considered valid results?
+==== A.7.4 Score Values
+To be defined
 
-==== Guidance to score well on this assessment
+==== A.7.5 Guidance to score well on this assessment
+Use WCMP templates and/or tools to generate the metadata record (e.g. excel to wis)
+
+
+
+=== A.8 Correct description of data for global exchange via WIS : specification of WMO data policy for globally exchanged data
+
+==== A.8.1 What is being measured and why should it be measured
+Presence of one and only one instance of a term from the WMO_DataLicense code list 
+To be able to implement and enforce data policies related to Resolution 25 and 40 resolution and other regulations, like ICAO Annex 3
+
+==== A.8.2 To which WMCP element(s) does it apply?
+gmd:MD_Metadata/gmd:identificationInfo//gmd:ressourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints
+
+==== A.8.3 KPI implementation rule
+To be defined
+
+==== A.8.4 Score Values
+To be defined
+
+==== A.8.5 Guidance to score well on this assessment
+Use WCMP templates and/or tools to generate the metadata record (e.g. excel to wis)
+Validate the metadata record using rubric checker before publishing it
+
+
+
+=== A.9 Correct description of data for global exchange via WIS : specification of GTS priority for globally exchanged data
+
+==== A.9.1 What is being measured and why should it be measured
+presence of one and only one instance of a term from the WMO_GTSProductCategoryCode code list 
+
+==== A.9.2 To which WMCP element(s) does it apply?
+gmd:MD_Metadata/gmd:identificationInfo//gmd:ressourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints
+
+==== A.9.3 KPI implementation rule
+To be defined
+
+==== A.9.4 Score Values
+To be defined
+
+==== A.9.5 Guidance to score well on this assessment
+Use WCMP templates and/or tools to generate the metadata record (e.g. excel to wis)
+Validate the metadata record using rubric checker before publishing it
+
+
+
+
