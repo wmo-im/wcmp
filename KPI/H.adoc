@@ -100,6 +100,8 @@ e.g.
                </gmd:type>
             </gmd:MD_Keywords>
  <gmd:descriptiveKeywords>
+
+
 ....
 
 and
@@ -172,9 +174,51 @@ e.g.
 
 Absence of Keywords should return a non compliance result. All WMO core profile must provide at least one keyword from WMO_categoryCode code list. (Checked in KPI A )
 
-- Low: keywords are user defined. There is no presence of type or thesaurusName
+- Low:   keywords are user defined. There is no presence of type or thesaurusName
 - Medium:keywords, type and thesaurusName are defined. Terms do not refer to URI's e.g. they are defined by Characterstrings
-- High:  keywords, type and thesaurusName are defined. Codelist and values are checked against the references provided and HTTP URI's can be resolved.
+- High:  Compliance rules are implemented and they conform to well defined keywords rules. 
+         Keyword, type and thesaurusName are defined. 
+         Codelist and values are checked against the references provided and HTTP URI's can be resolved.
+
+e.g.
+
+....
+<gmd:descriptiveKeywords>
+        <gmd:MD_Keywords>
+          <gmd:keyword>
+                  <gmx:Anchor xmlns:gmx="http://www.isotc211.org/2005/gmx"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xlink:href="http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_weatherForecasts">weatherForecasts</gmx:Anchor>
+          </gmd:keyword>
+          <gmd:keyword>
+                  <gmx:Anchor xmlns:gmx="http://www.isotc211.org/2005/gmx"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xlink:href="http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_meteorology">meteorology</gmx:Anchor>
+          </gmd:keyword>
+          <gmd:type>
+            <gmd:MD_KeywordTypeCode codeList="http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#MD_KeywordTypeCode" codeListValue="theme">theme</gmd:MD_KeywordTypeCode>
+          </gmd:type>
+          <gmd:thesaurusName>
+            <gmd:CI_Citation>
+              <gmd:title>
+		  <gmx:Anchor xlink:href="http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode">WMO_CategoryCode</gmx:Anchor>
+              </gmd:title>
+              <gmd:date>
+                <gmd:CI_Date>
+                  <gmd:date>
+                    <gco:Date>2012-09-15</gco:Date>
+                  </gmd:date>
+                  <gmd:dateType>
+                    <gmd:CI_DateTypeCode codeList="http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#CI_DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
+                  </gmd:dateType>
+                </gmd:CI_Date>
+              </gmd:date>
+            </gmd:CI_Citation>
+          </gmd:thesaurusName>
+        </gmd:MD_Keywords>
+</gmd:descriptiveKeywords>
+
+....
  
 === H.5 Guidance to score well on this assessment
 
@@ -189,4 +233,3 @@ Examples of controlled vocabularies:
 - GEMET - INSPIRE themes, version 1.0:http://www.eionet.europa.eu/gemet/inspire_themes
 - GCMD:https://earthdata.nasa.gov/earth-observation-data/find-data/gcmd/gcmd-keywords
 - CF Standard Names: http://cfconventions.org/standard-names.html
-
