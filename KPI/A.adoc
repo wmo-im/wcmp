@@ -174,7 +174,7 @@ Use WCMP templates and/or tools to generate the metadata record (e.g. excel to w
 === Correct description of data for global exchange via WIS : specification of WMO data policy for globally exchanged data
 
 ==== To which WMCP element(s) does it apply?
-gmd:MD_Metadata/gmd:identificationInfo//gmd:ressourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints
+gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints
 
 ==== What is being measured?
 presence of one and only one instance of a term from the WMO_DataLicense code list 
@@ -196,7 +196,7 @@ Validate the metadata record using rubric checker before publishing it
 === Correct description of data for global exchange via WIS : specification of GTS priority for globally exchanged data
 
 ==== To which WMCP element(s) does it apply?
-gmd:MD_Metadata/gmd:identificationInfo//gmd:ressourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints
+gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints
 
 ==== What is being measured?
 presence of one and only one instance of a term from the WMO_GTSProductCategoryCode code list 
