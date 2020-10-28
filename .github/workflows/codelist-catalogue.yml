@@ -21,7 +21,7 @@ jobs:
         pip3 install jinja2
     - name: generate codelist catalogue ⚙️
       run: | 
-        python3 scripts/generate-codelist-catalogue.py codelists > dist/WMOCodeLists.xml
+        python3 scripts/generate-codelist-catalogue.py > dist/WMOCodeLists.xml
         git config --global user.email "tomkralidis@gmail.com"
         git config --global user.name "Tom Kralidis"
         git commit -m "update ISO codelist catalogue" > dist/WMOCodeLists.xml
