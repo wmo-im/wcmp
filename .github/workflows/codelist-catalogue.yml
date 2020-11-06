@@ -13,15 +13,15 @@ jobs:
     - name: checkout repository ☑️
       uses: actions/checkout@v2
       with: 
-        ref: ${{ github.ref }}
-    - name: Set up Python ${{ matrix.python-version }} 📦
-      uses: actions/setup-python@v2
-      with:
-        python-version: ${{ matrix.python-version }}
-    - name: Install requirements 📦
-      run: |
-        python3 -m pip install --upgrade pip
-        pip3 install jinja2
+        ref: ${{ github.head_ref }}
+#    - name: Set up Python ${{ matrix.python-version }} 📦
+#      uses: actions/setup-python@v2
+#      with:
+#        python-version: ${{ matrix.python-version }}
+#    - name: Install requirements 📦
+#      run: |
+#        python3 -m pip install --upgrade pip
+#        pip3 install jinja2
     - name: generate codelist catalogue ⚙️
       run: | 
         python3 scripts/generate-codelist-catalogue.py > dist/WMOCodeLists.xml
