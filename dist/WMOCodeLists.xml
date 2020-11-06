@@ -10,7 +10,7 @@
     Version 1.3.5: 24 November 2015: Introduction of changes from Fast Track approval
     Version 1.3.6: 26 May 2016: Introduction of changes from Simple approval procedure
 -->
-<gmx:CT_CodelistCatalogue xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.isotc211.org/2005/gmd http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gmd/gmd.xsd http://www.isotc211.org/2005/gmx http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gmx/gmx.xsd">
+<gmx:CT_CodelistCatalogue xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.isotc211.org/2005/gmd http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gmd/gmd.xsd http://www.isotc211.org/2005/gmx http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gmx/gmx.xsd">
   <gmx:name>
     <gco:CharacterString>WMOCodelists</gco:CharacterString>
   </gmx:name>
@@ -33,6 +33,30 @@
     <gmd:MD_CharacterSetCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#MD_CharacterSetCode" codeListValue="utf8">utf8</gmd:MD_CharacterSetCode>
   </gmx:characterSet>
   <!--============================= Codelists ====================================-->
+  <!-- WMO_DistributionScopeCode :: New codelist -->
+  <gmx:codelistItem>
+    <gmx:CodeListDictionary gml:id="WMO_DistributionScopeCode">
+      <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml">WMO_DistributionScopeCode</gml:identifier>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_DistributionScopeCode_GlobalExchange">
+          <gml:description>Data are published for global exchange via the WIS. Data shall be incorporated into the GISC Cache.</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DistributionScopeCode">GlobalExchange</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_DistributionScopeCode_RegionalExchange">
+          <gml:description>Data are published for regional exchange via a GISC.</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DistributionScopeCode">RegionalExchange</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_DistributionScopeCode_OriginatingCentre">
+          <gml:description>Data are published for exchange directly via the originating centre.</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DistributionScopeCode">OriginatingCentre</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+    </gmx:CodeListDictionary>
+  </gmx:codelistItem>
   <!-- WMO_CategoryCode :: New codelist -->
   <gmx:codelistItem>
     <gmx:CodeListDictionary gml:id="WMO_CategoryCode">
@@ -209,60 +233,6 @@ methane, hydrogen and nitrous oxide</gml:description>
       </gmx:codeEntry>
     </gmx:CodeListDictionary>
   </gmx:codelistItem>
-  <!-- WMO_DistributionScopeCode :: New codelist -->
-  <gmx:codelistItem>
-    <gmx:CodeListDictionary gml:id="WMO_DistributionScopeCode">
-      <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml">WMO_DistributionScopeCode</gml:identifier>
-      <gmx:codeEntry>
-        <gmx:CodeDefinition gml:id="WMO_DistributionScopeCode_GlobalExchange">
-          <gml:description>Data are published for global exchange via the WIS. Data shall be incorporated into the GISC Cache.</gml:description>
-          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DistributionScopeCode">GlobalExchange</gml:identifier>
-        </gmx:CodeDefinition>
-      </gmx:codeEntry>
-      <gmx:codeEntry>
-        <gmx:CodeDefinition gml:id="WMO_DistributionScopeCode_RegionalExchange">
-          <gml:description>Data are published for regional exchange via a GISC.</gml:description>
-          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DistributionScopeCode">RegionalExchange</gml:identifier>
-        </gmx:CodeDefinition>
-      </gmx:codeEntry>
-      <gmx:codeEntry>
-        <gmx:CodeDefinition gml:id="WMO_DistributionScopeCode_OriginatingCentre">
-          <gml:description>Data are published for exchange directly via the originating centre.</gml:description>
-          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DistributionScopeCode">OriginatingCentre</gml:identifier>
-        </gmx:CodeDefinition>
-      </gmx:codeEntry>
-    </gmx:CodeListDictionary>
-  </gmx:codelistItem>
-  <!-- WMO_DataLicenseCode :: New codelist -->
-  <gmx:codelistItem>
-    <gmx:CodeListDictionary gml:id="WMO_DataLicenseCode">
-      <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml">WMO_DataLicenseCode</gml:identifier>
-      <gmx:codeEntry>
-        <gmx:CodeDefinition gml:id="WMO_DataLicenseCode_WMOEssential">
-          <gml:description>WMO Essential Data: free and unrestricted international exchange of basic meteorological hydrological or GFCS relevant climate related data and products.</gml:description>
-          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DataLicenseCode">WMOEssential</gml:identifier>
-        </gmx:CodeDefinition>
-      </gmx:codeEntry>
-      <gmx:codeEntry>
-        <gmx:CodeDefinition gml:id="WMO_DataLicenseCode_WMOAdditional">
-          <gml:description>WMO Additional Data: free and unrestricted access to data and products exchanged under the auspices of WMO to the research and education communities for non-commercial activities. A more precise definition of the data policy may be additionally supplied within the metadata. In all cases it shall be the responsibility of the data consumer to ensure that they understand the data policy specified by the data provider - which may necessitate dialogue with the data publisher for confirmation of terms.</gml:description>
-          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DataLicenseCode">WMOAdditional</gml:identifier>
-        </gmx:CodeDefinition>
-      </gmx:codeEntry>
-      <gmx:codeEntry>
-        <gmx:CodeDefinition gml:id="WMO_DataLicenseCode_WMOOther">
-          <gml:description>Data that is not covered by WMO Resolution 25 or WMO Resolution 40; e.g. aviation OPMET data. Data marked with WMO Other data policy shall be treated like WMO Additional where a more precise definition of the data policy may be additionally supplied within the metadata. In all cases it shall be the responsibility of the data consumer to ensure that they understand the data policy specified by the data provider - which may necessitate dialogue with the data publisher for confirmation of terms and conditions.</gml:description>
-          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DataLicenseCode">WMOOther</gml:identifier>
-        </gmx:CodeDefinition>
-      </gmx:codeEntry>
-      <gmx:codeEntry>
-        <gmx:CodeDefinition gml:id="WMO_DataLicenseCode_NoLimitation">
-          <gml:description>No limitation on distribution or use.</gml:description>
-          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DataLicenseCode">NoLimitation</gml:identifier>
-        </gmx:CodeDefinition>
-      </gmx:codeEntry>
-    </gmx:CodeListDictionary>
-  </gmx:codelistItem>
   <!-- MD_KeywordTypeCode :: Amendment to existing codelist -->
   <gmx:codelistItem>
     <gmx:CodeListDictionary gml:id="MD_KeywordTypeCode">
@@ -307,6 +277,36 @@ methane, hydrogen and nitrous oxide</gml:description>
         <gmx:CodeDefinition gml:id="MD_KeywordTypeCode_dataParam">
           <gml:description>keyword defines a data parameter contained within the resource</gml:description>
           <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#MD_KeywordTypeCode">dataParam</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+    </gmx:CodeListDictionary>
+  </gmx:codelistItem>
+  <!-- WMO_DataLicenseCode :: New codelist -->
+  <gmx:codelistItem>
+    <gmx:CodeListDictionary gml:id="WMO_DataLicenseCode">
+      <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml">WMO_DataLicenseCode</gml:identifier>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_DataLicenseCode_WMOEssential">
+          <gml:description>WMO Essential Data: free and unrestricted international exchange of basic meteorological hydrological or GFCS relevant climate related data and products.</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DataLicenseCode">WMOEssential</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_DataLicenseCode_WMOAdditional">
+          <gml:description>WMO Additional Data: free and unrestricted access to data and products exchanged under the auspices of WMO to the research and education communities for non-commercial activities. A more precise definition of the data policy may be additionally supplied within the metadata. In all cases it shall be the responsibility of the data consumer to ensure that they understand the data policy specified by the data provider - which may necessitate dialogue with the data publisher for confirmation of terms.</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DataLicenseCode">WMOAdditional</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_DataLicenseCode_WMOOther">
+          <gml:description>Data that is not covered by WMO Resolution 25 or WMO Resolution 40; e.g. aviation OPMET data. Data marked with WMO Other data policy shall be treated like WMO Additional where a more precise definition of the data policy may be additionally supplied within the metadata. In all cases it shall be the responsibility of the data consumer to ensure that they understand the data policy specified by the data provider - which may necessitate dialogue with the data publisher for confirmation of terms and conditions.</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DataLicenseCode">WMOOther</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_DataLicenseCode_NoLimitation">
+          <gml:description>No limitation on distribution or use.</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DataLicenseCode">NoLimitation</gml:identifier>
         </gmx:CodeDefinition>
       </gmx:codeEntry>
     </gmx:CodeListDictionary>
