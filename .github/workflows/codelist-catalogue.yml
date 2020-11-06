@@ -5,9 +5,9 @@ on: [ push, pull_request ]
 jobs:
   autogenerate_wmo_codelist_catalogue_xml:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.6, 3.7, 3.8]
+#    strategy:
+#      matrix:
+#        python-version: [3.6, 3.7, 3.8]
 
     steps:
     - name: checkout repository ☑️
