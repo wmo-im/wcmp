@@ -48,7 +48,9 @@ TEMPLATE_ENV = Environment(
 )
 TEMPLATE = TEMPLATE_ENV.get_template('wmo-codelist-catalogue.xml.j2')
 
-for cl in glob.glob('codelists/*.csv'):
+file_list = glob.glob('codelists/*.csv')
+
+for cl in file_list:
     file_basename = os.path.splitext(os.path.basename(cl))[0]
 
     DATA[file_basename] = []
