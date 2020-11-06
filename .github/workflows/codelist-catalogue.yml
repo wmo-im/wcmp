@@ -26,5 +26,5 @@ jobs:
         git config --global user.name "Enrico Fucile"
         git branch
         git add .
-        git commit -m "update ISO codelist catalogue" dist/WMOCodeLists.xml
+        git commit -am "update ISO codelist catalogue"
         git push
