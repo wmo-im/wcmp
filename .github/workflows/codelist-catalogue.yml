@@ -24,6 +24,7 @@ jobs:
         python3 scripts/generate-codelist-catalogue.py > dist/WMOCodeLists.xml
         git config --global user.email "efucile@wmo.int"
         git config --global user.name "Enrico Fucile"
+        git branch
         git add .
         git commit -m "update ISO codelist catalogue" dist/WMOCodeLists.xml
         git push
