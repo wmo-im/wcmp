@@ -1,14 +1,22 @@
-= WMCP Metadata Quality KPIs
+= WMO Core Metadata Profile Key Performance Indicators
 
+== Overview
+This document is intended to define the Key Performance Indicators
+(KPIs) for the WMO Core Metadata Profile.  KPIs provide measurable, value
+added quality
+assessment rules over and above syntactic and schematic rulesets put forth by
+WCMP and ISO 19115:2003/19139:2007.
 
-This document intend to summarize the different Key performance indicators that have been expressed in the discussion available here: https://github.com/wmo-im/wmcp/issues/2
+The core driver of WCMP KPIs is continuous improvement and useability of
+WMO discovery metadata as part of the https://community.wmo.int/activity-areas/wmo-information-system-wis[WMO Information System (WIS)]. 
 
+= Key Performance Indicators
 
 == A. link:A.adoc[Compliance to WMO Core Profile and its mandatory elements]
 
 == B. link:B.adoc[Good quality title]
 
-== C.link:C.adoc[Good quality abstract]
+== C. link:C.adoc[Good quality abstract]
 
 == D. link:D.adoc[Valid Station Identifier]
 
