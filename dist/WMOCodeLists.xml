@@ -10,7 +10,7 @@
     Version 1.3.5: 24 November 2015: Introduction of changes from Fast Track approval
     Version 1.3.6: 26 May 2016: Introduction of changes from Simple approval procedure
 -->
-<gmx:CT_CodelistCatalogue xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.isotc211.org/2005/gmd http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gmd/gmd.xsd http://www.isotc211.org/2005/gmx http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gmx/gmx.xsd">
+<gmx:CT_CodelistCatalogue xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.isotc211.org/2005/gmd http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gmd/gmd.xsd http://www.isotc211.org/2005/gmx http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gmx/gmx.xsd">
   <gmx:name>
     <gco:CharacterString>WMOCodelists</gco:CharacterString>
   </gmx:name>
