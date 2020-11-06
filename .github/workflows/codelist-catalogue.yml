@@ -10,10 +10,10 @@ jobs:
 #        python-version: [3.6, 3.7, 3.8]
 
     steps:
-    - name: checkout repository ☑️
-      uses: actions/checkout@v2
-      with: 
-        ref: ${{ github.ref }}
+#    - name: checkout repository ☑️
+     - uses: actions/checkout@v2
+#      with: 
+#        ref: ${{ github.ref }}
 #    - name: Set up Python ${{ matrix.python-version }} 📦
 #      uses: actions/setup-python@v2
 #      with:
