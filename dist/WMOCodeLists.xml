@@ -1,0 +1,374 @@
+<?xml version="1.0" ?>
+<!--
+    WMO Core Metadata Profile version 1.3 Code List extensions and amendments
+    ChangeLog
+    Version 1.3.0: 14 Feb 2013: Issued with final draft for approval of WMO Metadata Core Profile 1.3
+    Version 1.3.1: 11 July 2013: Corrections to typography of descriptions of code list items (following TT-ApMD-2)
+    Version 1.3.2: 22 November 2013: Corrections following review by IPET-MDRD
+    Version 1.3.3: 15 May 2014: Introduction of changes from Fast Track approval
+    Version 1.3.4: 19 May 2015: Introduction of changes from Fast Track approval
+    Version 1.3.5: 24 November 2015: Introduction of changes from Fast Track approval
+    Version 1.3.6: 26 May 2016: Introduction of changes from Simple approval procedure
+-->
+<gmx:CT_CodelistCatalogue xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.isotc211.org/2005/gmd http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gmd/gmd.xsd http://www.isotc211.org/2005/gmx http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gmx/gmx.xsd">
+  <gmx:name>
+    <gco:CharacterString>WMOCodelists</gco:CharacterString>
+  </gmx:name>
+  <gmx:scope>
+    <gco:CharacterString>Codelists for description of metadata datasets compliant with the WMO Core Metadata Profile version 1.3 (derived from ISO/TC 211 19115:2003 and 19139)</gco:CharacterString>
+  </gmx:scope>
+  <gmx:fieldOfApplication>
+    <gco:CharacterString>WMO Core Metadata Profile</gco:CharacterString>
+  </gmx:fieldOfApplication>
+  <gmx:versionNumber>
+    <gco:CharacterString>1.3.dev0</gco:CharacterString>
+  </gmx:versionNumber>
+  <gmx:versionDate>
+    <gco:Date>YYYY-MM-DD</gco:Date>
+  </gmx:versionDate>
+  <gmx:language>
+    <gmd:LanguageCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#LanguageCode" codeListValue="eng">eng</gmd:LanguageCode>
+  </gmx:language>
+  <gmx:characterSet>
+    <gmd:MD_CharacterSetCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#MD_CharacterSetCode" codeListValue="utf8">utf8</gmd:MD_CharacterSetCode>
+  </gmx:characterSet>
+  <!--============================= Codelists ====================================-->
+  <!-- WMO_CategoryCode :: New codelist -->
+  <gmx:codelistItem>
+    <gmx:CodeListDictionary gml:id="WMO_CategoryCode">
+      <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml">WMO_CategoryCode</gml:identifier>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_CategoryCode_weatherObservations">
+          <gml:description>weather observations</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_CategoryCode">weatherObservations</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_CategoryCode_weatherForecasts">
+          <gml:description>weather forecasts</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_CategoryCode">weatherForecasts</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_CategoryCode_meteorology">
+          <gml:description>Meteorology</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_CategoryCode">meteorology</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_CategoryCode_hydrology">
+          <gml:description>Hydrology</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_CategoryCode">hydrology</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_CategoryCode_climatology">
+          <gml:description>Climatology</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_CategoryCode">climatology</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_CategoryCode_landMeteorologyClimate">
+          <gml:description>land meteorology climate</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_CategoryCode">landMeteorologyClimate</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_CategoryCode_synopticMeteorology">
+          <gml:description>synoptic meteorology</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_CategoryCode">synopticMeteorology</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_CategoryCode_marineMeteorology">
+          <gml:description>marine meteorology</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_CategoryCode">marineMeteorology</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_CategoryCode_agriculturalMeteorology">
+          <gml:description>agricultural meteorology</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_CategoryCode">agriculturalMeteorology</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_CategoryCode_aerology">
+          <gml:description>Aerology</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_CategoryCode">aerology</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_CategoryCode_marineAerology">
+          <gml:description>marine aerology</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_CategoryCode">marineAerology</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_CategoryCode_oceanography">
+          <gml:description>Oceanography</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_CategoryCode">oceanography</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_CategoryCode_landHydrology">
+          <gml:description>land hydrology</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_CategoryCode">landHydrology</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_CategoryCode_rocketSounding">
+          <gml:description>rocket sounding</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_CategoryCode">rocketSounding</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_CategoryCode_pollution">
+          <gml:description>Pollution</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_CategoryCode">pollution</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_CategoryCode_waterPollution">
+          <gml:description>water pollution</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_CategoryCode">waterPollution</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_CategoryCode_landWaterPollution">
+          <gml:description>land water pollution</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_CategoryCode">landWaterPollution</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_CategoryCode_seaPollution">
+          <gml:description>sea pollution</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_CategoryCode">seaPollution</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_CategoryCode_landPollution">
+          <gml:description>land pollution</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_CategoryCode">landPollution</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_CategoryCode_airPollution">
+          <gml:description>air pollution</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_CategoryCode">airPollution</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_CategoryCode_glaciology">
+          <gml:description>Glaciology</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_CategoryCode">glaciology</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_CategoryCode_actinometry">
+          <gml:description>Actinometry</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_CategoryCode">actinometry</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_CategoryCode_satelliteObservation">
+          <gml:description>satellite observation</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_CategoryCode">satelliteObservation</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_CategoryCode_airplaneObservation">
+          <gml:description>airplane observation</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_CategoryCode">airplaneObservation</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_CategoryCode_observationPlatform">
+          <gml:description>observation platform</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_CategoryCode">observationPlatform</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_CategoryCode_spaceWeather">
+          <gml:description>the physical and phenomenological state of the natural space environment including the sun, the solar wind, the magnetosphere, the ionosphere and the thermosphere, and its
+interaction with the Earth.</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_CategoryCode">spaceWeather</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_CategoryCode_atmosphericComposition">
+          <gml:description>the chemical abundance in the earth's atmosphere of its constituents including nitrogen, oxygen, argon, carbon dioxide, water vapour, ozone, neon, helium, krypton,
+methane, hydrogen and nitrous oxide</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_CategoryCode">atmosphericComposition</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_CategoryCode_radiation">
+          <gml:description>radiation</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_CategoryCode">radiation</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+    </gmx:CodeListDictionary>
+  </gmx:codelistItem>
+  <!-- WMO_DistributionScopeCode :: New codelist -->
+  <gmx:codelistItem>
+    <gmx:CodeListDictionary gml:id="WMO_DistributionScopeCode">
+      <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml">WMO_DistributionScopeCode</gml:identifier>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_DistributionScopeCode_GlobalExchange">
+          <gml:description>Data are published for global exchange via the WIS. Data shall be incorporated into the GISC Cache.</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DistributionScopeCode">GlobalExchange</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_DistributionScopeCode_RegionalExchange">
+          <gml:description>Data are published for regional exchange via a GISC.</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DistributionScopeCode">RegionalExchange</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_DistributionScopeCode_OriginatingCentre">
+          <gml:description>Data are published for exchange directly via the originating centre.</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DistributionScopeCode">OriginatingCentre</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+    </gmx:CodeListDictionary>
+  </gmx:codelistItem>
+  <!-- WMO_DataLicenseCode :: New codelist -->
+  <gmx:codelistItem>
+    <gmx:CodeListDictionary gml:id="WMO_DataLicenseCode">
+      <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml">WMO_DataLicenseCode</gml:identifier>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_DataLicenseCode_WMOEssential">
+          <gml:description>WMO Essential Data: free and unrestricted international exchange of basic meteorological hydrological or GFCS relevant climate related data and products.</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DataLicenseCode">WMOEssential</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_DataLicenseCode_WMOAdditional">
+          <gml:description>WMO Additional Data: free and unrestricted access to data and products exchanged under the auspices of WMO to the research and education communities for non-commercial activities. A more precise definition of the data policy may be additionally supplied within the metadata. In all cases it shall be the responsibility of the data consumer to ensure that they understand the data policy specified by the data provider - which may necessitate dialogue with the data publisher for confirmation of terms.</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DataLicenseCode">WMOAdditional</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_DataLicenseCode_WMOOther">
+          <gml:description>Data that is not covered by WMO Resolution 25 or WMO Resolution 40; e.g. aviation OPMET data. Data marked with WMO Other data policy shall be treated like WMO Additional where a more precise definition of the data policy may be additionally supplied within the metadata. In all cases it shall be the responsibility of the data consumer to ensure that they understand the data policy specified by the data provider - which may necessitate dialogue with the data publisher for confirmation of terms and conditions.</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DataLicenseCode">WMOOther</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_DataLicenseCode_NoLimitation">
+          <gml:description>No limitation on distribution or use.</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DataLicenseCode">NoLimitation</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+    </gmx:CodeListDictionary>
+  </gmx:codelistItem>
+  <!-- MD_KeywordTypeCode :: Amendment to existing codelist -->
+  <gmx:codelistItem>
+    <gmx:CodeListDictionary gml:id="MD_KeywordTypeCode">
+      <gml:identifier codeSpace="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml">MD_KeywordTypeCode</gml:identifier>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="MD_KeywordTypeCode_discipline">
+          <gml:description>keyword identifies a branch of instruction or specialized learning</gml:description>
+          <gml:identifier codeSpace="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#MD_KeywordTypeCode">discipline</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="MD_KeywordTypeCode_place">
+          <gml:description>keyword identifies a location</gml:description>
+          <gml:identifier codeSpace="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#MD_KeywordTypeCode">place</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="MD_KeywordTypeCode_stratum">
+          <gml:description>keyword identifies the layer(s) of any deposited substance</gml:description>
+          <gml:identifier codeSpace="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#MD_KeywordTypeCode">stratum</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="MD_KeywordTypeCode_temporal">
+          <gml:description>keyword identifies a time period related to the dataset</gml:description>
+          <gml:identifier codeSpace="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#MD_KeywordTypeCode">temporal</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="MD_KeywordTypeCode_theme">
+          <gml:description>keyword identifies a particular subject or topic</gml:description>
+          <gml:identifier codeSpace="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#MD_KeywordTypeCode">theme</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="MD_KeywordTypeCode_dataCentre">
+          <gml:description>keyword identifies a repository or archive that manages and distributes data (from ISO/DIS 19115-1:2013)</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#MD_KeywordTypeCode">dataCentre</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="MD_KeywordTypeCode_dataParam">
+          <gml:description>keyword defines a data parameter contained within the resource</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#MD_KeywordTypeCode">dataParam</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+    </gmx:CodeListDictionary>
+  </gmx:codelistItem>
+  <!-- WMO_GTSProductCategoryCode :: New codelist -->
+  <gmx:codelistItem>
+    <gmx:CodeListDictionary gml:id="WMO_GTSProductCategoryCode">
+      <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml">WMO_GTSProductCategoryCode</gml:identifier>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_GTSProductCategoryCode_GTSPriority1">
+          <gml:description>GTS Priority 1 -  highest priority products</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_GTSProductCategoryCode">GTSPriority1</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_GTSProductCategoryCode_GTSPriority2">
+          <gml:description>GTS Priority 2</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_GTSProductCategoryCode">GTSPriority2</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_GTSProductCategoryCode_GTSPriority3">
+          <gml:description>GTS Priority 3</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_GTSProductCategoryCode">GTSPriority3</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="WMO_GTSProductCategoryCode_GTSPriority4">
+          <gml:description>GTS Priority 4</gml:description>
+          <gml:identifier codeSpace="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_GTSProductCategoryCode">GTSPriority4</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+    </gmx:CodeListDictionary>
+  </gmx:codelistItem>
+  <!-- CI_DateTypeCode :: Amendment to existing codelist -->
+  <gmx:codelistItem>
+    <gmx:CodeListDictionary gml:id="CI_DateTypeCode">
+      <gml:identifier codeSpace="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml">CI_DateTypeCode</gml:identifier>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="CI_DateTypeCode_creation">
+          <gml:description>date identifies when the resource was brought into existence</gml:description>
+          <gml:identifier codeSpace="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#CI_DateTypeCode">creation</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="CI_DateTypeCode_publication">
+          <gml:description>date identifies when the resource was issued</gml:description>
+          <gml:identifier codeSpace="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#CI_DateTypeCode">publication</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="CI_DateTypeCode_revision">
+          <gml:description>date identifies when the resource was examined or re-examined and improved or amended</gml:description>
+          <gml:identifier codeSpace="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#CI_DateTypeCode">revision</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+      <gmx:codeEntry>
+        <gmx:CodeDefinition gml:id="CI_DateTypeCode_reference">
+          <gml:description>date identifies when the resource was referenced or accessed</gml:description>
+          <gml:identifier codeSpace="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#CI_DateTypeCode">reference</gml:identifier>
+        </gmx:CodeDefinition>
+      </gmx:codeEntry>
+    </gmx:CodeListDictionary>
+  </gmx:codelistItem>
+</gmx:CT_CodelistCatalogue>
