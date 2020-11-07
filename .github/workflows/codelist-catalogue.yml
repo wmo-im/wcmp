@@ -31,4 +31,4 @@ jobs:
         python3 scripts/generate-codelist-catalogue.py > dist/WMOCodeLists.xml
         git add .
         git commit -am "update ISO codelist catalogue"
-        git push
+        git push origin HEAD:master
