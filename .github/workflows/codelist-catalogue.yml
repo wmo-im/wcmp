@@ -28,4 +28,4 @@ jobs:
         git config --global user.email "tomkralidis@gmail.com"
         git config --global user.name "Tom Kralidis"
         git commit -am "update ISO codelist catalogue"
-        git push
+        git push origin ${{ github.ref }}
