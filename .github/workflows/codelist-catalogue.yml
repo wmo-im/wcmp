@@ -1,6 +1,14 @@
 name: Generate ISO codelist catalogue from codelist CSV tables ⚙️
 
-on: [ push, pull_request ]
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'dist/WMOCodeLists.xml'
+  pull_request:
+    branches:
+      - master
 
 jobs:
   autogenerate_wmo_codelist_catalogue_xml:
@@ -12,8 +20,8 @@ jobs:
     steps:
     - name: checkout repository ☑️
       uses: actions/checkout@v2
-#      with: 
-#        ref: ${{ github.ref }}
+      with: 
+        ref: ${{ github.ref }}
 #    - name: Set up Python ${{ matrix.python-version }} 📦
 #      uses: actions/setup-python@v2
 #      with:
