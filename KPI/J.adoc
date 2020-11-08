@@ -1,54 +1,73 @@
 == J. Broken links
 
-Detection of broken links contributing to the overall quality score.
+=== WMCP element(s)
 
-=== J.1 To which WMCP element(s) does it apply?
+Any element content with linked informations (URLs). Links are generally
+present in `<gmd:onlineResource>`, `<gmd:graphicOverview>`, 
 
-All potential linked information (URLs).
-Links are generally present in <gmd:onlineResource>, <gmd:graphicOverview>, 
-
-....
-<gmd:graphicOverview>
-        <gmd:MD_BrowseGraphic>
-          <gmd:fileName>
-            <gco:CharacterString>https://navigator.eumetsat.int/preview/0deg-snow.jpg</gco:CharacterString>
-          </gmd:fileName>
-        </gmd:MD_BrowseGraphic>
-</gmd:graphicOverview>
-....
-
-....
+```xml
 <gmd:CI_OnlineResource>
    <gmd:linkage>
       <gmd:URL>https://eumetview.eumetsat.int/mapviewer/?product=EO:EUM:DAT:MSG:SNOW</gmd:URL>
    </gmd:linkage>
 </gmd:CI_OnlineResource>
-....
+```
 
-=== J.2 What is being measured?
+```xml
+<gmd:graphicOverview>
+  <gmd:MD_BrowseGraphic>
+    <gmd:fileName>
+      <gco:CharacterString>https://navigator.eumetsat.int/preview/0deg-snow.jpg</gco:CharacterString>
+    </gmd:fileName>
+  </gmd:MD_BrowseGraphic>
+</gmd:graphicOverview>
+```
 
-The number of broken links present in each individual metadata record is being measured
+=== What is being measured
 
-=== J.3 Why should we measure it?
+The number of broken links in each individual metadata record.  Broken links
+include links which, when accessed, result in a 4xx or 5xx HTTP error.footnote:[https://httpstatuses.com].
 
-Broken links damage the user experience and gives the impression to users that the site is not maintained (88% of the online consumers are less likely to return to a site after a bad experience). In addition broken links affects search engine rankings as having too often or too many broken links affects the reputation of your website towards Search Engines.
+=== Rationale for measurement
 
-=== J.4 How is the measurement executed?
+Broken links damage the user experience and gives the impression to users that
+a website is not maintained (88% of the online consumers are less likely to
+return to a site after a bad experience.footnote:[https://review42.com/web-design-statistics]).
+In addition, having numerous broken links affects the reputation and rank of
+your website when indexed by mass market search engines.
 
-Like in *I* graphic overview a program can regularly pull all the metadata records and look for broken links.
-Example of tool could be used and integrated in the GISC quality checking:
+=== Rules for implementation
 
-- https://github.com/bartdag/pylinkvalidator[pylinkvalidator]: Python package that can be used to check on broken links
+.Broken links implementation rules
+|===
+|Rule |Score
 
-Another could be to implement over the GISC catalogues and use a sitemap.xml.
+|Document has 1 or more broken links
+|0
 
-=== J.5 What is (are) considered valid results?
+|Document has 1 -3 accessible links
+|5
 
-A valid result is a link that can be reached (ends-up with an HTTP 202 or a redirect (30x) and a 202).
+|Document has over 3 accessible links
+|10
+|===
 
-=== J.6 Guidance to score well on this assessment
+=== Score values
 
-Insure that all the included links are always fresh and accessible.
+.Broken links score values
+|===
+|Rank | Score
 
+|Low
+|0
 
+|Medium
+|5
 
+|High
+|10
+|===
+
+=== Guidance to score well on this assessment
+
+Ensure that all links resolve and are accessible.
