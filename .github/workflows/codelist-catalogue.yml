@@ -1,28 +1,34 @@
 name: Generate ISO codelist catalogue from codelist CSV tables ⚙️
 
-on: [ push, pull_request ]
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'dist/WMOCodeLists.xml'
+  pull_request:
+    branches:
+      - master
 
 jobs:
   autogenerate_wmo_codelist_catalogue_xml:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.6, 3.7, 3.8]
-
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-python@v2
-      name: Set up Python ${{ matrix.python-version }}
-      with:
-        python-version: ${{ matrix.python-version }}
+    - name: checkout repository ☑️
+      uses: actions/checkout@v2
+      with: 
+        ref: ${{ github.ref }}
     - name: Install requirements 📦
       run: |
         python3 -m pip install --upgrade pip
         pip3 install jinja2
+    - name: setup git config 📦
+      run: |
+        git config --global user.email "tomkralidis@gmail.com"
+        git config --global user.name "Tom Kralidis"
     - name: generate codelist catalogue ⚙️
       run: | 
         python3 scripts/generate-codelist-catalogue.py > dist/WMOCodeLists.xml
-        git config --global user.email "efucile@wmo.int"
-        git config --global user.name "Enrico Fucile"
-        git commit -m "update ISO codelist catalogue" dist/WMOCodeLists.xml
+        git add .
+        git commit -am "update ISO codelist catalogue"
         git push
