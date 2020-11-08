@@ -1,235 +1,239 @@
 == H. Keywords
 
-keywords are indexed by search engines to narrow down full text searches adding to the user experience and making datasets easier to discover.
-keywords can be user defined or can be imported from controlled vocabularies.
-
- 
-=== H.1 What is being measured and why should it be measured
-
-The presence of keywords, the level of definition and reference to controlled vocabularies.
-The level of definition of a keyword will improve the searchability of a dataset.
-Encouraging metadata providers to make use of keywords that are published in controlled vocabularies will ultimately help the end user to search for well known domain related terms.
-
-In addition to measure well defined references to dictionaries and keyword types, compliance to wmcp v1.3 defines a set of rules that apply to different sets of keywords.
-These have been listed for reference but are implemented as part of KPI A (compliance).
-
-=== H.2 To which WMCP element(s) does it apply ?
-
-This KPI applies to:
+=== WMCP element(s)
 
 ....
-//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/
-//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:type/
-//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd::thesaurusName/
+//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword
+//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:type
+//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName
 ....
 
+=== What is being measured
 
-=== H.3 KPI implementation rules
+* presence of keywords, the level of definition and reference to controlled
+vocabularies
+* level of definition of a keyword will improve the searchability of a dataset
 
-==== H.3.1 Compliance rules 
+In addition to measure well defined references to dictionaries and keyword
+types, compliance to WMCP 1.3 defines a set of rules that apply to different
+sets of keywords.  These have been listed for reference but are implemented
+as part of KPI A (compliance).
 
-As described in https://github.com/wmo-im/wmcp/blob/master/metadata/WMO_Core_Metadata_Profile_v1.3_Part_2.pdf
+=== Rationale for measurement
 
-- Each WIS discovery metadata record shall include at least one keyword from the WMO_CategoryCode code list.
-- Keywords from WMO_CategoryCode code list shall be defined as keyword type “theme”
-- All keywords sourced from a particular keyword thesaurus shall be grouped into a single instance of MD_Keywords class.
+Encouraging metadata providers to make use of keywords that are published in
+controlled vocabularies will ultimately help the end user to search for
+well-known domain related terms.
 
-==== H.3.2 Well defined keywords 
+Keywords are indexed by search engines to narrow down full text searches,
+adding to the user experience and making datasets easier to discover. Keywords
+can be user-defined or specified from controlled vocabularies.
 
-if (keyword is present)
+=== Rules for implementation
 
-then 
+==== Compliance rules 
 
-<!-- Check if keyword term references a thesaurus using the Anchor with a resolvable HTTP URI  --> 
+As described in https://github.com/wmo-im/wmcp/blob/master/metadata/WMO_Core_Metadata_Profile_v1.3_Part_2.pdf[WMCP 1.3, Part 2]:
 
- //gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/gmx:Anchor/@xlink:href
+* each WIS discovery metadata record shall include at least one keyword from
+the `WMO_CategoryCode` codelist
+* keywords from `WMO_CategoryCode` codelist shall be defined as keyword type
+`theme`
+* all keywords sourced from a particular keyword thesaurus shall be grouped
+into a single instance of `MD_Keywords` element
 
-e.g.
+==== Well defined keywords examples
 
-....
- <gmd:descriptiveKeywords>
-            <gmd:MD_Keywords>
-               <gmd:keyword>
-                  <gmx:Anchor xmlns:gmx="http://www.isotc211.org/2005/gmx"
-                              xmlns:xlink="http://www.w3.org/1999/xlink"
-                              xlink:href="http://codes.wmo.int/grib2/codeflag/4.2/_0-0-6">Dewpoint Temperature</gmx:Anchor>
-               </gmd:keyword>
-            </gmd:MD_Keywords>
- <gmd:descriptiveKeywords>
-....
+If keyword is present then check if keyword term references a thesaurus using
+the Anchor with a resolvable HTTP URI.
 
-or 
-
-<!-- Check if keyword term is user defined  --> 
-
- //gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/gco:CharacterString
-
-e.g.
-
-....
- <gmd:descriptiveKeywords>
-            <gmd:MD_Keywords>
-               <gmd:keyword>
-                     <gco:CharacterString>Dewpoint Temperature</gco:CharacterString>
-               </gmd:keyword>
-            </gmd:MD_Keywords>
- <gmd:descriptiveKeywords>
-....
-
-and
-
-<!-- Check for presence of WMO MD_KeywordTypeCode -->
-
- //gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords[gmd:type/gmd:MD_KeywordTypeCode/@codeList='http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#MD_KeywordTypeCode']
-
-<!-- Check for permitted codelist values -->
-
- //gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords[gmd:type/gmd:MD_KeywordTypeCode/@codeListValue=value]
-
-where value one of:
-
- https://github.com/wmo-im/wmcp/blob/master/codelists/MD_KeywordTypeCode.csv
-
-e.g.
-
-.... 
+```xml
 <gmd:descriptiveKeywords>
-            <gmd:MD_Keywords>
-               <gmd:type>
-                  <gmd:MD_KeywordTypeCode codeList="http://wis.wmo.int/2012/codelists/WMOCodeLists#MD_KeywordTypeCode" codeListValue="dataParam">dataParam</gmd:MD_KeywordTypeCode>
-               </gmd:type>
-            </gmd:MD_Keywords>
- <gmd:descriptiveKeywords>
-
-
-....
-
-and
-
-<! -- check for well referenced thesaurus using the Anchor with a resolvable HTTP URI -- >
-
- //gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gmx:Anchor/@xlink:href
-
-
-e.g.
-....
+  <gmd:MD_Keywords>
+    <gmd:keyword>
+      <gmx:Anchor xlink:href="http://codes.wmo.int/grib2/codeflag/4.2/_0-0-6">Dewpoint Temperature</gmx:Anchor>
+    </gmd:keyword>
+  </gmd:MD_Keywords>
 <gmd:descriptiveKeywords>
-            <gmd:MD_Keywords>
-               <gmd:thesaurusName>
- 		<gmd:CI_Citation>
-		 <gmd:title>
-		  <gmx:Anchor xlink:href="http://codes.wmo.int/grib2/codeflag/_4.2">WMO Codes Registry GRIB edition 2</gmx:Anchor>
-		 </gmd:title>
-		 <gmd:date>
- 		  <gmd:CI_Date>
-		   <gmd:date>
- 		    <gco:Date>2016-06-25</gco:Date>
-		   </gmd:date>
-		   <gmd:dateType>
-			 <gmd:CI_DateTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
-                   </gmd:dateType>
-   		  </gmd:CI_Date>
-		 </gmd:date>
- 		</gmd:CI_Citation>
-	       </gmd:thesaurusName>
-            </gmd:MD_Keywords>
- <gmd:descriptiveKeywords>
-....
+```
 
-or
+Check if keyword term is user defined.
 
-<!-- Check referenced thesaurus via CharacterStrings  --> 
-
-<!-- use URL within CharacterString is not recommended, Anchor should be used instead-->
-
- //gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString
-
-e.g.
-
-....
+```xml
 <gmd:descriptiveKeywords>
-            <gmd:MD_Keywords>
-               <gmd:thesaurusName>
- 		<gmd:CI_Citation>
-		 <gmd:title>
- 		  <gco:CharacterString>WMO Codes Registry - GRIB edition 2</gco:CharacterString>
-		 </gmd:title>
-		 <gmd:date>
- 		  <gmd:CI_Date>
-		   <gmd:date>
- 		    <gco:Date>2016-06-25</gco:Date>
-		   </gmd:date>
-		   <gmd:dateType>
-			 <gmd:CI_DateTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
-                   </gmd:dateType>
-   		  </gmd:CI_Date>
-		 </gmd:date>
- 		</gmd:CI_Citation>
-	       </gmd:thesaurusName>
-            </gmd:MD_Keywords>
- <gmd:descriptiveKeywords>
-....
+  <gmd:MD_Keywords>
+    <gmd:keyword>
+      <gco:CharacterString>Dewpoint Temperature</gco:CharacterString>
+    </gmd:keyword>
+  </gmd:MD_Keywords>
+</gmd:descriptiveKeywords>
+```
 
-=== H.4 Score Values
+Check for presence of WMO `MD_KeywordTypeCode`, check for permitted codelist
+values against https://wis.wmo.int/2012/codelists/WMOCodeLists#MD_KeywordTypeCode
 
-Absence of Keywords should return a non compliance result. All WMO core profile must provide at least one keyword from WMO_categoryCode code list. (Checked in KPI A )
+```xml
+<gmd:descriptiveKeywords>
+  <gmd:MD_Keywords>
+    <gmd:type>
+      <gmd:MD_KeywordTypeCode codeList="http://wis.wmo.int/2012/codelists/WMOCodeLists#MD_KeywordTypeCode" codeListValue="dataParam">dataParam</gmd:MD_KeywordTypeCode>
+    </gmd:type>
+  </gmd:MD_Keywords>
+<gmd:descriptiveKeywords>
+```
+
+Check for well referenced thesaurus using the Anchor with a resolvable HTTP
+URI.
+
+```xml
+<gmd:descriptiveKeywords>
+  <gmd:MD_Keywords>
+    <gmd:thesaurusName>
+      <gmd:CI_Citation>
+        <gmd:title>
+          <gmx:Anchor xlink:href="http://codes.wmo.int/grib2/codeflag/_4.2">WMO Codes Registry GRIB edition 2</gmx:Anchor>
+        </gmd:title>
+        <gmd:date>
+          <gmd:CI_Date>
+            <gmd:date>
+              <gco:Date>2016-06-25</gco:Date>
+            </gmd:date>
+            <gmd:dateType>
+              <gmd:CI_DateTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
+            </gmd:dateType>
+          </gmd:CI_Date>
+        </gmd:date>
+      </gmd:CI_Citation>
+    </gmd:thesaurusName>
+  </gmd:MD_Keywords>
+<gmd:descriptiveKeywords>
+```
+
+Check for referenced thesaurus via `gco:CharacterString` elements (use of a URL
+within `gco:CharacterString` is not recommended, `gmx:Anchor` should be used
+instead).
+
+```xml
+<gmd:descriptiveKeywords>
+  <gmd:MD_Keywords>
+    <gmd:thesaurusName>
+      <gmd:CI_Citation>
+        <gmd:title>
+          <gco:CharacterString>WMO Codes Registry - GRIB edition 2</gco:CharacterString>
+        </gmd:title>
+        <gmd:date>
+          <gmd:CI_Date>
+            <gmd:date>
+              <gco:Date>2016-06-25</gco:Date>
+            </gmd:date>
+            <gmd:dateType>
+              <gmd:CI_DateTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
+            </gmd:dateType>
+          </gmd:CI_Date>
+        </gmd:date>
+      </gmd:CI_Citation>
+    </gmd:thesaurusName>
+  </gmd:MD_Keywords>
+<gmd:descriptiveKeywords>
+```
+
+.Keywords implementation rules
+|===
+|Rule |Score
+
+a|`gmd:keywords` are user-defined. There is no presence of `gmd:type` or
+`gmd:thesaurusName`
+|1
+
+|`gmd:keywords`, `gmd:type`, and `gmd:thesaurusName` are defined. Terms are
+defined by `gco:CharacterString` elements, not URIs via `gmx:Anchor`
+|1
+
+|Compliance rules are implemented and they conform to well defined keywords rules.
+|2
+
+|Codelist and values are checked against the references provided and HTTP URIs
+can be successfully resolved
+|2
+|===
+
+
+=== Score values
+
+Absence of Keywords should return a non compliance result. All WMCP documents
+must provide at least one keyword from the `WMO_CategoryCode` codelist
+(checked in KPI A).
+
+=== Score values
+
+.Good quality title score values
+|===
+|Rank | Score
+
+|Low
+|0
+
+|Medium
+|1 -3
+
+|High
+|4 - 6 
+
+|===
 
 - Low:   keywords are user defined. There is no presence of type or thesaurusName
-- Medium:keywords, type and thesaurusName are defined. Terms do not refer to URI's e.g. they are defined by Characterstrings
+- Medium: keywords, type and thesaurusName are defined. Terms do not refer to URI's e.g. they are defined by Characterstrings
 - High:  Compliance rules are implemented and they conform to well defined keywords rules. 
          Keyword, type and thesaurusName are defined. 
          Codelist and values are checked against the references provided and HTTP URI's can be resolved.
 
 e.g.
 
-....
+```xml
 <gmd:descriptiveKeywords>
-        <gmd:MD_Keywords>
-          <gmd:keyword>
-                  <gmx:Anchor xmlns:gmx="http://www.isotc211.org/2005/gmx"
-                              xmlns:xlink="http://www.w3.org/1999/xlink"
-                              xlink:href="http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_weatherForecasts">weatherForecasts</gmx:Anchor>
-          </gmd:keyword>
-          <gmd:keyword>
-                  <gmx:Anchor xmlns:gmx="http://www.isotc211.org/2005/gmx"
-                              xmlns:xlink="http://www.w3.org/1999/xlink"
-                              xlink:href="http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_meteorology">meteorology</gmx:Anchor>
-          </gmd:keyword>
-          <gmd:type>
-            <gmd:MD_KeywordTypeCode codeList="http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#MD_KeywordTypeCode" codeListValue="theme">theme</gmd:MD_KeywordTypeCode>
-          </gmd:type>
-          <gmd:thesaurusName>
-            <gmd:CI_Citation>
-              <gmd:title>
-		  <gmx:Anchor xlink:href="http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode">WMO_CategoryCode</gmx:Anchor>
-              </gmd:title>
-              <gmd:date>
-                <gmd:CI_Date>
-                  <gmd:date>
-                    <gco:Date>2012-09-15</gco:Date>
-                  </gmd:date>
-                  <gmd:dateType>
-                    <gmd:CI_DateTypeCode codeList="http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#CI_DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
-                  </gmd:dateType>
-                </gmd:CI_Date>
-              </gmd:date>
-            </gmd:CI_Citation>
-          </gmd:thesaurusName>
-        </gmd:MD_Keywords>
+  <gmd:MD_Keywords>
+    <gmd:keyword>
+      <gmx:Anchor xlink:href="http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_weatherForecasts">weatherForecasts</gmx:Anchor>
+    </gmd:keyword>
+    <gmd:keyword>
+      <gmx:Anchor xlink:href="http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_meteorology">meteorology</gmx:Anchor>
+    </gmd:keyword>
+    <gmd:type>
+      <gmd:MD_KeywordTypeCode codeList="http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#MD_KeywordTypeCode" codeListValue="theme">theme</gmd:MD_KeywordTypeCode>
+    </gmd:type>
+    <gmd:thesaurusName>
+      <gmd:CI_Citation>
+        <gmd:title>
+          <gmx:Anchor xlink:href="http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode">WMO_CategoryCode</gmx:Anchor>
+        </gmd:title>
+        <gmd:date>
+          <gmd:CI_Date>
+            <gmd:date>
+              <gco:Date>2012-09-15</gco:Date>
+            </gmd:date>
+            <gmd:dateType>
+              <gmd:CI_DateTypeCode codeList="http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#CI_DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
+            </gmd:dateType>
+          </gmd:CI_Date>
+        </gmd:date>
+      </gmd:CI_Citation>
+    </gmd:thesaurusName>
+  </gmd:MD_Keywords>
 </gmd:descriptiveKeywords>
-
-....
+```
  
-=== H.5 Guidance to score well on this assessment
+=== Guidance to score well on this assessment
 
-A high score will be provided for full referenced term, keyword type and thesaurus.
-Additional recommendations for keywords implementation are found at the Guide to WMO Information System (WMO- No. 1061,Section 5.8.1.8)
+A high score will be provided for full referenced term, keyword type and
+thesaurus. Additional recommendations for keywords implementation are found at
+the Guide to WMO Information System (WMO- No. 1061,Section 5.8.1.8)
 https://library.wmo.int/doc_num.php?explnum_id=4004
 
 Examples of controlled vocabularies: 
 
-- WMO Codes Registry: http://codes.wmo.int/
-- WMO Codelists: http://wis.wmo.int/2013/codelists/WMOCodeLists.xml
-- GEMET - INSPIRE themes, version 1.0:http://www.eionet.europa.eu/gemet/inspire_themes
-- GCMD:https://earthdata.nasa.gov/earth-observation-data/find-data/gcmd/gcmd-keywords
-- CF Standard Names: http://cfconventions.org/standard-names.html
+* https://codes.wmo.int[WMO Codes Registry]
+* https://wis.wmo.int/2013/codelists/WMOCodeLists.xml[WMO Codelists]
+* https://www.eionet.europa.eu/gemet/en/inspire-themes[GEMET - INSPIRE themes]
+* https://earthdata.nasa.gov/earth-observation-data/find-data/gcmd/gcmd-keywords[Global Change Master Directory (GCMD)]
+* https://cfconventions.org/standard-names.html[CF Standard Names]
+* https://canada.multites.net/cst[Government of Canada Core Subject Thesaurus (CST)]
