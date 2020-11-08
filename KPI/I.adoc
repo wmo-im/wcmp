@@ -1,38 +1,11 @@
+== I. Graphic overview for non bulletins metadata records
 
-== I. GraphicOverview for non bulletins metadata records
+=== WMCP element(s)
 
-A thumbnail preview image for each available products improves greatly the user experience, allowing the user to recognise or understand by just looking at the thumbnail image, the product she is looking at in the search results. It makes also the WIS portals more user friendly and attractive to the users.
+* `//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview/gmd:MD_BrowseGraphic/gmd:fileName/gco:CharacterString`
+* `//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview/gmd:MD_BrowseGraphic/gmd:filename/gmx:Anchor/@xlink:href`
 
-Examples of catalogues using such information are here:
-
-- https://gisc.dwd.de[GISC DWD]
-
-- https://navigator.eumetsat.int/search?query=MSG%20RGB[EUMETSAT Product Navigator]
-
-=== I.1 What is being measured and why should it be measured
-
-The presence of the <gmd:graphicOverview> is verified and it is checked that it contains a url to a JPG or PNG Image
-
-It should be measured because it contributes to the corresponding product information in the WIS catalogues and make them much more informative and user friendly by showing to the users an overview of the discovered products. It can be showed in the product overview or in the search results list.
-
-=== I.1 To which WMCP element(s) does it apply ?
-
-This KPI applies to //<gmd:identificationInfo>/<gmd:MD_DataIdentification>/<gmd:graphicOverview>/<gmd:MD_BrowseGraphic/<gmd:fileName>
-
-
-....
-<gmd:graphicOverview>
-  <gmd:MD_BrowseGraphic>
-     <gmd:fileName>
-        <gmx:Anchor xlink:href="https://navigator.eumetsat.int/preview/meteosat-msg_naturalenhncd.jpg">Meteosat MSG Natural Enhanced Color</gmx:Anchor>
-     </gmd:fileName>
-  </gmd:MD_BrowseGraphic>
-</gmd:graphicOverview>
-....
-
-OR
-
-....
+```xml
 <gmd:graphicOverview>
   <gmd:MD_BrowseGraphic>
      <gmd:fileName>
@@ -40,41 +13,73 @@ OR
      </gmd:fileName>
   </gmd:MD_BrowseGraphic>
 </gmd:graphicOverview>
-....
+```
 
-=== I.3 KPI implementation rules 
+```xml
+<gmd:graphicOverview>
+  <gmd:MD_BrowseGraphic>
+     <gmd:fileName>
+        <gmx:Anchor xlink:href="https://navigator.eumetsat.int/preview/meteosat-msg_naturalenhncd.jpg">Meteosat MSG Natural Enhanced Color</gmx:Anchor>
+     </gmd:fileName>
+  </gmd:MD_BrowseGraphic>
+</gmd:graphicOverview>
+```
 
-This part defines how a program should verify the currently described KPI.
+=== What is being measured
 
-....
-result = False
-url    = None
+The presence of `<gmd:graphicOverview>` is checked that it contains a URL to
+a common web image file type.footnote:[https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#Common_image_file_types].
 
-if xpath(//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview/gmd:MD_BrowseGraphic/gmd:filename/gmx:Anchor/@xlink:href) then
-  
-  url = xpath.extract(//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview/gmd:MD_BrowseGraphic/gmd:filename/gmx:Anchor/@xlink:href)
+=== Rationale for measurement
 
-elif xpath(//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview/gmd:MD_BrowseGraphic/gmd:filename/gco:CharacterString) them
+Product graphic overviews provide the user with a high level preview of the
+product which can assist in a high level assessment and/or evaluation as part
+of search results presentation.
 
-  url = xpath.extract(//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview/gmd:MD_BrowseGraphic/gmd:filename/gco:CharacterString)
+=== Rules for implementation
 
-fi
+.Graphic overview for non bulletins metadata records implementation rules
+|===
+|Rule |Score
 
-if url then
+|graphic overview element exists
+|1
 
-  //resolve the url to download the image (redirect have to be followed)
-  download the image and check that the downloaded content starts the the JPG or PNG magic number.
-  
-  result = True
-fi
+|graphic overview URL resolves successfully
+|1
 
-return result
-....
-  
+|graphic overview URL content is a common web image file type
+(check MIME type, content header/magic number)
+|1
+|===
+
+Total possible score: 3
+
 === I.4 Score Values
 
-To be defined.
+.Graphic overview for non bulletins metadata records score values
+|===
+|Rank | Score
 
-=== I.5 Guidance to score well on this assessment
+|Low
+|0 - 1
 
-In addition to the presence of the file it would be good to define a typical size (800x800 pixels for instance) such that all images are normalized.
+|Medium
+|2
+
+|High
+|3
+
+|===
+
+=== Guidance to score well on this assessment
+
+In addition to the presence of the graphic overview image it would also be
+valuable to provide consistent image dimensions (e.g. 800x800 pixels) such that
+all images are normalized and scaling/alignment of overivew images can be
+applied consistently by web applications rendering search results.
+
+Examples of catalogues using such information are here:
+
+* https://gisc.dwd.de[GISC DWD]
+* https://navigator.eumetsat.int/search?query=MSG%20RGB[EUMETSAT Product Navigator]
