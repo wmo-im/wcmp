@@ -164,9 +164,7 @@ Absence of Keywords should return a non compliance result. All WMCP documents
 must provide at least one keyword from the `WMO_CategoryCode` codelist
 (checked in KPI A).
 
-=== Score values
-
-.Good quality title score values
+.Keywords score values
 |===
 |Rank | Score
 
