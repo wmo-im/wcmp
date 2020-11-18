@@ -16,7 +16,7 @@
 
 === What is being measured
 
-The presence of `<gmd:graphicOverview>` is checked that it contains a URL to
+The presence of `gmd:graphicOverview` is checked that it contains a URL to
 a common web image file type.footnote:[https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#Common_image_file_types].
 
 === Rationale for measurement
@@ -44,7 +44,7 @@ of search results presentation.
 
 Total possible score: 3
 
-=== I.4 Score Values
+=== Score Values
 
 .Graphic overview for non bulletins metadata records score values
 |===
