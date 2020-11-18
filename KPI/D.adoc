@@ -1,33 +1,82 @@
+== D. Valid station identifier
 
-== D. Valid Station Identifier
+A station identifier, when provided as a keyword, should be a valid WIGOS
+station identifier.footnote:[https://oscar.wmo.int/surface/index.html#/search/station/stationReportDetails/0-20008-0-THE].
 
-See: related KANBAN card: https://github.com/wmo-im/wmcp/issues/20
+=== WMCP element(s)
 
-A station id, when provided, should be a WIGOS identifier long version, ie:
-https://oscar.wmo.int/surface//index.html#/search/station/stationReportDetails/0-20000-0-10505
+* `//gmd:identificationInfo/gmd:descriptiveKeywords//gmd:thesaurusName/@xlink:href`
+* `//gmd:identificationInfo/gmd:descriptiveKeywords//gmd:type/gmd:MD_KeywordTypeCode`
+* `//gmd:identificationInfo/gmd:descriptiveKeywords//gmd:keyword/gco:CharacterString`
 
-And when a station identifier is provided then it should be a VALID WIGOS
-identifier url. This can be verified
+=== What is being measured
 
-=== To which WMCP element(s) does it apply?
+The presence of all `gmd:MD_Keywords/gmd:keyword` elements with the appropriate
+`gmd:thesaurus` and `gmd:thesaurusName are checked that they contain a valid
+WIGOS station identifier.
 
-The stationID should be defined as a Keyword type "place".
+=== Rationale for measurement
 
-=== What is being measured?
+Valid WIGOS station identifiers provide a reference to authoritative station
+information in WMO OSCAR.
 
-* Detect old stations id (ACTION: still define how), and recommend to have them replaced by the WIGOS station ID.
-* When a WIGOS ID is provided, check that it is the correct format.
-* When a WIGOS ID is provided, check that it is a valid one. 
-* Check that the Thesaurus element is used, and that the correct Thesaurus title is used.
+=== Rules for implementation
 
+.Valid station identifier implementation rules
+|===
+|Rule |Score
 
-=== Why should we measure it?
+|test for a valid thesaurus
+|1
 
-=== How is the measurement executed?
+|test for a valid keyword type code of type `place`
+|1
 
-=== What is (are) considered valid results?
+|test for the proper structure of a WIGOS identifier
+(`<WIGOS Identifier Series (number)>-<Issuer of Identifier (number)>-<Issue Number (number)>-<Local Identifier (characters)`)
+|1
+
+|test that 50 percent of WIGOS identifiers exist in WMO OSCAR
+|1
+
+|test that 80 percent of WIGOS identifiers exist in WMO OSCAR
+|1
+
+|test that 100 percent of WIGOS identifiers exist in WMO OSCAR
+|1
+
+|===
+
+Total possible score: 6
+
+=== Score values
+
+.Valid station identifier score values
+|===
+|Rank | Score
+
+|Low
+|0 - 1
+
+|Medium
+|2-4
+
+|High
+|5-6
+|===
 
 === Guidance to score well on this assessment
 
-Update the guidance to explain where to put the station information
-
+```xml
+<gmd:MD_Keywords>
+  <gmd:descriptiveKeywords>
+    <gmd:keyword>
+      <gco:CharacterString>http://wis.wmo.int/WMOVolumeAGazeteer.xml#71966</gco:CharacterString>
+    </gmd:keyword>
+    <gmd:type>
+      <gmd:MD_KeywordTypeCode codeList="http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#MD_KeywordTypeCode" codeListValue="place" codeSpace="ISOTC211/19115">place</gmd:MD_KeywordTypeCode>
+    </gmd:type>
+    <gmd:thesaurusName xlink:type="simple" xlink:title="WMO Publication No. 9, Volume A, Observing Stations and WMO Catalogue of Radiosondes" xlink:href="http://www.wmo.int/pages/prog/www/ois/volume-a/vola-home.htm" />
+  </gmd:MD_Keywords>
+</gmd:descriptiveKeywords>
+```
