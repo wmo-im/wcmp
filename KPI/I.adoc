@@ -1,6 +1,6 @@
 == I. Graphic overview for non bulletins metadata records
 
-=== WMCP element(s)
+=== WCMP element(s)
 
 * `//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview/gmd:MD_BrowseGraphic/gmd:filename/gmx:Anchor/@xlink:href`
 

@@ -1,6 +1,6 @@
 == X. KPI name
 
-=== To which WMCP element(s) does it apply?
+=== To which WCMP element(s) does it apply?
 
 === What is being measured?
 

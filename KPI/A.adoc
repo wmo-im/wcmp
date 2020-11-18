@@ -1,13 +1,13 @@
 == A. Compliance to WMO Core Profile and its mandatory elements
 ////
-They should be derived from WMCP documentation part 2 and the rubric
+They should be derived from WCMP documentation part 2 and the rubric
 checker. To be done
 ////
 
 
 === XML encoding : ISO/TS 19139:2007 Compliance
 
-==== To which WMCP element(s) does it apply?
+==== To which WCMP element(s) does it apply?
 Whole metadata record
 
 ==== What is being measured?
@@ -33,7 +33,7 @@ validate the metadata record using rubric checker before publishing it
 
 === XML encoding : explicit namespace identification 
 
-==== To which WMCP element(s) does it apply?
+==== To which WCMP element(s) does it apply?
 Whole metadata record, namespace declaration 
 
 ==== What is being measured?
@@ -55,7 +55,7 @@ Validate the metadata record using rubric checker before publishing it
 
 === XML encoding : Use of GML 3.2
 
-==== To which WMCP element(s) does it apply?
+==== To which WCMP element(s) does it apply?
 Whole metadata record, namespace declaration 
 
 ==== What is being measured?
@@ -77,7 +77,7 @@ Validate the metadata record using rubric checker before publishing it
 
 ===  uniqueness of metadata : presence of the FileIdentifier element 
 
-==== To which WMCP element(s) does it apply?
+==== To which WCMP element(s) does it apply?
 gmd:MD_Metadata/gmd:fileIdentifier
 
 ==== What is being measured?
@@ -100,7 +100,7 @@ Does rubric check URL compliance ?
 
 === discovery rules within the DAR catalogue : presence of the mandatory WMO_CategoryCode keyword 
 
-==== To which WMCP element(s) does it apply?
+==== To which WCMP element(s) does it apply?
 gmd:MD_Metadata/gmd:identificationInfo/gmd:DataIndentification/gmd:descriptiveKeywords/gmd:Keywords/gmd:keyword
 gmd:MD_Metadata/gmd:identificationInfo/gmd:DataIndentification/gmd:descriptiveKeywords/gmd:Keywords/gmd:keyword/gmd:Type/gmd:MD_KeywordTypeCode
 
@@ -126,7 +126,7 @@ validate the metadata record using rubric checker before publishing it
 
 === discovery rules within the DAR catalogue : presence of geographic data extent defined by a bounding box
 
-==== To which WMCP element(s) does it apply?
+==== To which WCMP element(s) does it apply?
 gmd:MD_Metadata/gmd:identificationInfo/gmd:DataIndentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox
 
 ==== What is being measured?
@@ -149,7 +149,7 @@ Validate the metadata record using rubric checker before publishing it
 
 === Correct description of data for global exchange via WIS : Identifying data for global exchange
 
-==== To which WMCP element(s) does it apply?
+==== To which WCMP element(s) does it apply?
 gmd:MD_Metadata/gmd:identificationInfo/gmd:DataIndentification/gmd:descriptiveKeywords/gmd:Keywords/gmd:keyword
 
 ==== What is being measured?
@@ -173,7 +173,7 @@ Use WCMP templates and/or tools to generate the metadata record (e.g. excel to w
 
 === Correct description of data for global exchange via WIS : specification of WMO data policy for globally exchanged data
 
-==== To which WMCP element(s) does it apply?
+==== To which WCMP element(s) does it apply?
 gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints
 
 ==== What is being measured?
@@ -195,7 +195,7 @@ Validate the metadata record using rubric checker before publishing it
 
 === Correct description of data for global exchange via WIS : specification of GTS priority for globally exchanged data
 
-==== To which WMCP element(s) does it apply?
+==== To which WCMP element(s) does it apply?
 gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints
 
 ==== What is being measured?

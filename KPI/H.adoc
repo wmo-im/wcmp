@@ -4,7 +4,7 @@ Data parameter keywords are optional elements syntactically.
 An xml record will validate without its presence.
 
 
-=== H.1 To which WMCP element(s) does it apply ?
+=== H.1 To which WCMP element(s) does it apply ?
 
 This KPI applies to //<gmd:identificationInfo>/*/gmd:descriptiveKeywords/*/gmd:keyword/
 WMO Core Profile extends the CodeLists for MD_keywordTypeCode code to include "dataParam" and "dataCentre" values. 
