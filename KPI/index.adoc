@@ -1,39 +1,49 @@
-= WMO Core Metadata Profile Key Performance Indicators
+:toc:
+:toc-placement!:
+:toclevels: 2
+
+= image:https://community.wmo.int/themes/wmo/logo.png[] WMO Core Metadata Profile Key Performance Indicators
+
+<<<
+toc::[]
+
+<<<
 
 == Overview
 This document is intended to define the Key Performance Indicators
-(KPIs) for the WMO Core Metadata Profile.  KPIs provide measurable, value
-added quality
-assessment rules over and above syntactic and schematic rulesets put forth by
-WCMP and ISO 19115:2003/19139:2007.
+(KPIs) for the WMO Core Metadata Profile (WCMP).  KPIs provide measurable,
+value added quality assessment rules over and above syntactic and schematic
+rulesets defined by WCMP and ISO 19115:2003/19139:2007.
 
 The core driver of WCMP KPIs is continuous improvement and useability of
-WMO discovery metadata as part of the https://community.wmo.int/activity-areas/wmo-information-system-wis[WMO Information System (WIS)]. 
+WMO discovery metadata as part of the https://community.wmo.int/activity-areas/wmo-information-system-wis[WMO Information System (WIS)].
 
-= Key Performance Indicators
+== Key Performance Indicators
 
-== A. link:A.adoc[Compliance to WMO Core Profile and its mandatory elements]
+include::A.adoc[]
 
-== B. link:B.adoc[Good quality title]
+include::B.adoc[]
 
-== C. link:C.adoc[Good quality abstract]
+include::C.adoc[]
 
-== D. link:D.adoc[Valid Station Identifier]
+include::D.adoc[]
 
-== E. link:E.adoc[Temporal Information]
+include::E.adoc[]
 
-== F. link:F.adoc[Link for WMOEssential data]
+include::F.adoc[]
 
-== G. link:G.adoc[Bulletins have an ongoing temporal extent]
+include::G.adoc[]
 
-== H. link:H.adoc[Data Parameter Keyword]
+include::H.adoc[]
 
-== I. link:I.adoc[GraphicOverview for non bulletins metadata records]
+include::I.adoc[]
 
-== J. link:J.adoc[Broken links]
+include::J.adoc[]
 
-== K. link:K.adoc[Data Policy Possible combination]
+include::K.adoc[]
 
-== L. link:L.adoc[Distribution information]
+include::L.adoc[]
 
-== N. link:M.adoc[Citation information to reference parties that have contributed to the creation of the dataset (presence of DOI)]
+include::M.adoc[]
+
+include::N.adoc[]
