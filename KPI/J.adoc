@@ -61,7 +61,7 @@ patterns.  HTTPS supports secure, authoritative and trustworthy links as part of
 |Document has over 6 accessible links
 |8
 
-|Document links are available as HTTPs
+|Document links are available as HTTPs with a valid SSL certificate
 |2
 |===
 
