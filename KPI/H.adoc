@@ -33,7 +33,7 @@ can be user-defined or specified from controlled vocabularies.
 
 ==== Compliance rules 
 
-As described in https://github.com/wmo-im/wmcp/blob/master/metadata/WMO_Core_Metadata_Profile_v1.3_Part_2.pdf[WMCP 1.3, Part 2]:
+As described in https://github.com/wmo-im/wcmp/blob/master/specification/WMO_Core_Metadata_Profile_v1.3_Part_2.pdf[WMCP 1.3, Part 2]:
 
 * each WIS discovery metadata record shall include at least one keyword from
 the `WMO_CategoryCode` codelist
@@ -152,7 +152,7 @@ defined by `gco:CharacterString` elements, not URIs via `gmx:Anchor`
 |Compliance rules are implemented and they conform to well defined keywords rules.
 |2
 
-|Codelist and values are checked against the references provided and HTTP URIs
+|Codelist and values are checked against the references provided and HTTP/HTTPS URIs
 can be successfully resolved
 |2
 |===
