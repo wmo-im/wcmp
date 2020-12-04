@@ -22,11 +22,8 @@ the TemporalExtent is present in `gmd:temporalElement` with the xpath , `//gmd:M
    </gmd:EX_TemporalExtent>
 </gmd:temporalElement>
 ....
-or (for, say:  forecasts: now/now, see
-DRAFT – Guidance on WIS Discovery Metadata (following CBS-16), p??
 
-
-The Data Update Frequency is present in '' with the xpath, '//gmd:MD_Metadata/gmd:identificationInfo/*/gmd:resourceMaintenance/*/gmd:mainte
+The Data Update Frequency is present in 'gmd:maintenanceAndUpdateFrequency' with the xpath, '//gmd:MD_Metadata/gmd:identificationInfo/*/gmd:resourceMaintenance/*/gmd:mainte
 nanceAndUpdateFrequency'
 
 ....
@@ -89,6 +86,10 @@ It is very crucial for users to which period of time is covered by the products 
 |High
 |10
 |===
+
+=== Guidance to score well on this assessment
+
+Ensure that the Temporal Extent and the Update Frequency is present in the metadata record.
 
 ==== E.3 Bulletin metadata availability
 
