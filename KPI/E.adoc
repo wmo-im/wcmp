@@ -91,8 +91,5 @@ It is very crucial for users to which period of time is covered by the products 
 
 Ensure that the Temporal Extent and the Update Frequency is present in the metadata record.
 
-==== E.3 Bulletin metadata availability
 
-A Bulletin should contain a temporal extent with begin end and a period for indicating how long the data is kept on the cache (24 hr).
-It should also probably be repeated in the abstract.
 
