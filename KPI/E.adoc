@@ -6,15 +6,10 @@ Metadata records should contain the following temporal information:
 . Temporal extent: This element describes the period of time that the available product covers.
 . Data Update frequency: The temporal frequency at which the data is updated (ie, every x hours, days, ...).
 
-=== E.1 Temporal Extent
+=== E.1 WMCP Elements
 
-==== E.1.1 To which WMCP element(s) does it apply?
+the TemporalExtent is present in `gmd:temporalElement` with the xpath , `//gmd:MD_Metadata/gmd:identificationInfo/*/ gmd:extent/*/gmd:temporalElement/*/gmd:extent/`
 
-To the TemporalElement element in gmd:identification info
-
-/gmd:MD_Metadata/gmd:identificationInfo/*/ gmd:extent/*/gmd:temporalElement/*/gmd:extent/
-
-Example:
 ....
 <gmd:temporalElement>
    <gmd:EX_TemporalExtent id="boundingTemporalExtent">
@@ -31,37 +26,9 @@ or (for, say:  forecasts: now/now, see
 DRAFT – Guidance on WIS Discovery Metadata (following CBS-16), p??
 
 
-==== E.1.2 What is being measured?
+The Data Update Frequency is present in '' with the xpath, '//gmd:MD_Metadata/gmd:identificationInfo/*/gmd:resourceMaintenance/*/gmd:mainte
+nanceAndUpdateFrequency'
 
-The presence of such element in the WMCP evaluated record.
-Check that the temporal extent is correctly bounded (the endPostion should not be anterior to the beginPosition).
-
-==== E.1.3 Why should we measure it?
-
-This is a crucial information for qualifying the product described by a metadata record but it is optional in the WMCP 1.3 standard.
-
-==== E.1.4 How is the measurement executed?
-
-By detecting the presence of such element as a begin end date (with a now for the endPosition for on going datasets) construct or begin, end date and duration for describing the period of retention of the datasets by the service.
-
-See p 17 of the WMO Core Profile Metadata Guidance.
-
-==== E.1.5 What is (are) considered valid results?
-The presence of such element as a begin end date (with a now for the endPosition for on going datasets) construct or begin, end date and duration for describing the period of retention of the datasets by the service.
-
-==== E.1.6 Guidance to score well on this assessment
-Always add the temporal extent information
-
-=== E.2 Data Update Frequency
-
-==== E.2.1 To which WMCP element(s) does it apply?
-
-The UpdateFrequency element in the WMCP 1.3
-
-gmd:MD_Metadata/gmd:identificationInfo/*/gmd:resourceMaintenance/*/gmd:mainte
-nanceAndUpdateFrequency
-
-Example:
 ....
 <gmd:resourceMaintenance>
   <gmd:MD_MaintenanceInformation>
@@ -80,25 +47,48 @@ DRAFT – Guidance on WIS Discovery Metadata (following CBS-16), p38
 </gmd:resourceMaintenance>
 ....
 
-==== E.2.2 What is being measured?
+=== E.2 What is being measured
 
-The presence of such element in the WMCP evaluated record.
+The present of a correctly defined TemporalExtent and Data Update Frequency is measured.
 
-==== E.2.3 Why should we measure it?
+=== E.3 Rationale for measurement
 
-This is an important information which indicates how often the product is updated.
+This is a very import information for qualifying the product described by a metadata record even if it is optional in the WMCP 1.3 standard.
+It is very crucial for users to which period of time is covered by the products and how often a new product is received.
 
-==== E.2.4 How is the measurement executed?
+=== E.4 Rules for implementation
 
-By detecting the presence of such element with a period, and a maintenance note.
+|===
+|Rule |Score
 
-See p 37 of the WMO Core Profile Metadata Guidance.
+|The Temporal Extent is not present
+|-5
 
-==== E.2.5 What is (are) considered valid results?
-The presence of such element as 
+|The Temportal Extent is present and well formatted (with a begin and an end)
+|+5
 
-==== E.2.6 Guidance to score well on this assessment
+|The Data Update Frequency is not present
+|-5
 
+|The Data Update Frequency is present and well formatted 
+|+5
+|===
+
+=== E.5 Score values
+
+.Temporal information score value
+|===
+|Rank | Score
+
+|Low
+|0
+
+|Medium
+|5
+
+|High
+|10
+|===
 
 ==== E.3 Bulletin metadata availability
 
