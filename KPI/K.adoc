@@ -1,9 +1,41 @@
 == K. Data Policy 
 
-Data Policy provides information to the users about how the data should be handled.
-Data providers also have the obligation to define the scope of the distribution of the data within WIS and when applicable the GTS priority.
 
-Data Policy Information is expressed via the gmd:resourceConstraints/gmd::MD_LegalConstraints
+=== WCMP element(s)
+
+....
+Data Policy 
+
+//gmd:MD_Metadata/gmd:identificationInfo/*/gmd:resourceConstraints/*
+
+Distribution Scope
+
+//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/
+//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:type/
+//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd::thesaurusName/
+....
+
+=== What is being measured
+
+* Compliance to the wcmp rules of Data for Global Exchange: Covered by KPI A
+
+* Presence of data policy encoded with WMO_DatalicenceCode in otherConstraints
+* Presence of accessConstraints with MD_RestrictionCode = otherConstraints
+* Presence of useConstraints with MD_RestrictionCode = otherConstraints
+* Presence of a  scope of distribution added as keyword from controlled vocabulary 
+WMO_DistributionScopeCode and KeywordTypeCode - datacentre
+* Presence of GTS priority if data is marked for GlobalExchange or RegionalExchange
+
+=== Rationale for measurement
+
+Data Policy provides information to the users about how the data should be handled.
+Data providers also have the obligation to define the scope of the distribution of
+the data within WIS and when applicable the GTS priority.
+
+Data Policy Information is expressed via the:
+gmd:resourceConstraints/gmd::MD_LegalConstraints
+
+=== Rules for implementation
 
 The following table summarises the relevant elements to define data policy
 
@@ -49,240 +81,220 @@ The Manual and Guide to  WIS (No. 1060/1061) recommendations for data policy imp
 
 Additional descriptions to explain the referred WMO_DatalicenceCode could be added in separate otherRestrictions blocks
 
-
-Data providers also have the obligation to define the scope of the distribution of the data within WIS and when applicable the GTS priority.
-
-WMCP 1.3 defines a precise set of compliance rules for Global Exchange data, some of them  refer to the data policy and scope of distribution.
-The rules are listed in K.3.1 here to ensure these are fulfilled (defined in KPI A)
-
-
-
-=== K.1 What is being measured and why should it be measured
-
-This KPI measures :
-
-- Compliance to the wmcp rules of Data for Global Exchange: Covered by KPI A
-
-- Presence of data policy encoded with WMO_DatalicenceCode in otherConstraints
-- Presence of accessConstraints with MD_RestrictionCode = otherConstraints
-- Presence of useConstraints with MD_RestrictionCode = otherConstraints
-- Presence of a  scope of distribution added as keyword from controlled vocabulary WMO_DistributionScopeCode and KeywordTypeCode - datacentre
-- Presence of GTS priority if data is marked for GlobalExchange or RegionalExchange
-
-
-=== K.2 To which WMCP element(s) does it apply ?
-
-This KPI applies to:
-
-....
-Data Policy 
-
-//gmd:MD_Metadata/gmd:identificationInfo/*/gmd:resourceConstraints/*
-
-Distribution Scope
-
-//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/
-//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:type/
-//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd::thesaurusName/
-....
-
-=== K.3 KPI implementation rules
-
-==== K.3.1 Compliance rules for Globally Exchanged data (Part of KPI A)
-
--  A WIS Discovery Metadata record describing data for global exchange via the WIS shall have a gmd:MD_Metadata/gmd:fileIdentifier attribute formatted as follows (where {uid} is a unique identifier derived from the GTS bulletin or file name): urn:x-wmo:md:int.wmo.wis::{uid}.
-
-- A WIS Discovery Metadata record describing data for global exchange via the WIS shall indicate the scope of distribution using the keyword "GlobalExchange" of type "dataCenterdataCentre" from thesaurus WMO_DistributionScopeCode.
-
-
-- A WIS Discovery Metadata record describing data for global exchange via the WIS shall indicate the WMO Data License as Legal Constraint (type: "otherConstraints") using one and only one term from the WMO_DataLicenseCode code list.
-
-
-- The presence of more than one WMO Data Policy statement in a single metadata record yields an ambiguous state; a WIS Discovery Metadata record describing data for global exchange shall declare only a single WMO Data Policy.
-
-
-- A WIS Discovery Metadata record describing data for global exchange via the WIS shall indicate the GTS Priority as Legal Constraint (type: “otherConstraints”) using one and only one term from the WMO_GTSProductCategoryCode code list.
-
-==== K.3.2  Well defined policies
-
-
-<!-- Check if the record is encoding a WMO_DataLicenseCode with gmx:Anchor--> 
-
-if (/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints/gmx:Anchor[contains(@xlink:href,'http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DataLicenseCode')]) then
-
-
-<!-- Check for permitted values --> 
-
-/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints/gmx:Anchor[text()='value']
-
-where value one of:
-https://github.com/wmo-im/wmcp/blob/master/codelists/WMO_DataLicenseCode.csv
-
-e.g.
-
-....
-       <gmd:resourceConstraints>
-        <gmd:MD_LegalConstraints>
-          <gmd:otherConstraints>
-            <gmx:Anchor xlink:href="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DataLicenseCode_WMOAdditional">WMOAdditional</gmx:Anchor>
-          </gmd:otherConstraints>
-        </gmd:MD_LegalConstraints>
-      </gmd:resourceConstraints> 
-....
-
-or 
-
-<!-- Check for WMO_DataLicenseCode within gmx:CharacterString-->
-
-/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints/gco:CharacterString[text()='value']
- 
-where value one of:
-
-https://github.com/wmo-im/wmcp/blob/master/codelists/WMO_DataLicenseCode.csv
-
-
-e.g. 
-
-....
-      <gmd:resourceConstraints>
-        <gmd:MD_LegalConstraints>
-          <gmd:otherConstraints>
-            <gco:CharacterString>WMOAdditional</gco:CharacterString>
-          </gmd:otherConstraints>
-        </gmd:MD_LegalConstraints>
-      </gmd:resourceConstraints> 
-....
-
-<!-- Check for accessConstraints with MD_RestrictionCode = otherRestrictions-->
-
-/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:accessConstraints/gmd:MD_RestrictionCode[@codeList='http://standards.iso.org/ittf/PublicallyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode']='otherConstraints'
-
-
-e.g. 
-
-....
-       <gmd:resourceConstraints>
-        <gmd:MD_LegalConstraints>
-          <gmd:accessConstraints>
-            <gmd:MD_RestrictionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</gmd:MD_RestrictionCode>
-          </gmd:accessConstraints>
-        </gmd:MD_LegalConstraints>
-      </gmd:resourceConstraints> 
-....
-
-<!-- Check for useConstraints with MD_RestrictionCode = otherRestrictions-->
-
-/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:useConstraints/gmd:MD_RestrictionCode[@codeList='http://standards.iso.org/ittf/PublicallyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode']='otherConstraints'
-
-
-e.g. 
-
-....
-       <gmd:resourceConstraints>
-        <gmd:MD_LegalConstraints>
-          <gmd:useConstraints>
-            <gmd:MD_RestrictionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</gmd:MD_RestrictionCode>
-          </gmd:useConstraints>
-        </gmd:MD_LegalConstraints>
-      </gmd:resourceConstraints> 
-....
-
-
- 
-<!-- Check for scope of distribution keyword from controlled vocabulary WMO_DistributionScopeCode and KeywordTypeCode - datacentre-->
-
-e.g.  Anchor
-....
-      <gmd:MD_Keywords>
-          <gmd:keyword>
-            <gmx:Anchor xlink:href="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DistributionScopeCode_GlobalExchange">GlobalExchange</gmx:Anchor>
-          </gmd:keyword>
-          <gmd:type>
-            <gmd:MD_KeywordTypeCode codeList="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#MD_KeywordTypeCode" codeListValue="dataCenter">dataCenter</gmd:MD_KeywordTypeCode>
-          </gmd:type>
-          <gmd:thesaurusName>
-            <gmd:CI_Citation>
-              <gmd:title>
-                <gmx:Anchor xlink:href="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DistributionScopeCode">WMO_DistributionScopeCode</gmx:Anchor>
-              </gmd:title>
-              <gmd:date>
-                <gmd:CI_Date>
-                  <gmd:date>
-                    <gco:Date>2012-06-27</gco:Date>
-                  </gmd:date>
-                  <gmd:dateType>
-                    <gmd:CI_DateTypeCode codeList="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#CI_DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
-                  </gmd:dateType>
-                </gmd:CI_Date>
-              </gmd:date>
-            </gmd:CI_Citation>
-          </gmd:thesaurusName>
-        </gmd:MD_Keywords>
-....
-
-
-or e.g.  CharacterString 
-
-....
-      <gmd:MD_Keywords>
-          <gmd:keyword>
-            <gco:CharacterString>GlobalExchange</gco:CharacterString>
-          </gmd:keyword>
-          <gmd:type>
-            <gmd:MD_KeywordTypeCode codeList="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#MD_KeywordTypeCode" codeListValue="dataCenter">dataCenter</gmd:MD_KeywordTypeCode>
-          </gmd:type>
-          <gmd:thesaurusName>
-            <gmd:CI_Citation>
-              <gmd:title>
-                <gco:CharacterString>WMO_DistributionScopeCode</gco:CharacterString>
-              </gmd:title>
-              <gmd:date>
-                <gmd:CI_Date>
-                  <gmd:date>
-                    <gco:Date>2012-06-27</gco:Date>
-                  </gmd:date>
-                  <gmd:dateType>
-                    <gmd:CI_DateTypeCode codeList="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#CI_DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
-                  </gmd:dateType>
-                </gmd:CI_Date>
-              </gmd:date>
-            </gmd:CI_Citation>
-          </gmd:thesaurusName>
-        </gmd:MD_Keywords>
-....
-
-
-<!-- Check for presence of GTS priority if data is marked for GlobalExchange or RegionalExchange -->
-
-e.g.
-
-....
-
-      <gmd:MD_Keywords>
-          <gmd:keyword>
-            <gmx:Anchor xlink:href="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DistributionScopeCode_GlobalExchange">GlobalExchange</gmx:Anchor>
-          </gmd:keyword>
-         [...]
-       </gmd:MD_Keywords>
-
-       <gmd:resourceConstraints>
-        <gmd:MD_LegalConstraints>
-         <gmd:otherConstraints>
-            <gmx:Anchor xlink:href="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_GTSProductCategoryCode_GTSPriority3">GTSPriority3</gmx:Anchor>
-          </gmd:otherConstraints>
-        </gmd:MD_LegalConstraints>
-       <gmd:resourceConstraints>
-....
-
-
-
-=== K.4 Score Values
-
-Low: 
-Medium:
-High: Conformance to wmcp is fulfilled (for data of global exchange) and data policy and scope of distribution are implemented according to k 3.2
-
-=== K.5 Guidance to score well on this assessment
-
-In addtion to programmatic checks which will provide an score, it should be clear to the user what are the conditions of use for the resource published. 
-If the codelist implementation is not clear there should be additional Free Text explanations via  <gmd:otherConstraints>  or <gmd:useLimitation>
+==== Compliance rules for Globally Exchanged data (Part of KPI A)
+
+* A WIS Discovery Metadata record describing data for global exchange via the WIS
+shall have a gmd:MD_Metadata/gmd:fileIdentifier attribute formatted as follows (where {uid}
+is a unique identifier derived from the GTS bulletin or file name): 
+urn:x-wmo:md:int.wmo.wis::{uid}.
+* A WIS Discovery Metadata record describing data for global exchange via the WIS
+shall indicate the scope of distribution using the keyword "GlobalExchange" of type
+"dataCenterdataCentre" from thesaurus WMO_DistributionScopeCode.
+* A WIS Discovery Metadata record describing data for global exchange via the WIS
+shall indicate the WMO Data License as Legal Constraint (type: "otherConstraints")
+using one and only one term from the WMO_DataLicenseCode code list.
+* The presence of more than one WMO Data Policy statement in a single metadata
+record yields an ambiguous state; a WIS Discovery Metadata record describing data
+for global exchange shall declare only a single WMO Data Policy.
+* A WIS Discovery Metadata record describing data for global exchange via the WIS
+shall indicate the GTS Priority as Legal Constraint (type: “otherConstraints”)
+using one and only one term from the WMO_GTSProductCategoryCode code list.
+
+
+==== Well defined policies examples
+
+If the record is encoding a WMO_DataLicenseCode with gmx:Anchor
+then check for permitted values in the corresponding codelist:
+https://github.com/wmo-im/wcmp-codelists/blob/main/codelists/WMO_DataLicenseCode.csv
+
+```xml
+<gmd:resourceConstraints>
+  <gmd:MD_LegalConstraints>
+    <gmd:otherConstraints>
+      <gmx:Anchor xlink:href="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DataLicenseCode_WMOAdditional">WMOAdditional</gmx:Anchor>
+    </gmd:otherConstraints>
+  </gmd:MD_LegalConstraints>
+</gmd:resourceConstraints> 
+```
+
+Check if the WMO_DataLicenseCode is implemented as a gmx:CharacterString (instead of Anchor)
+
+```xml
+<gmd:resourceConstraints>
+  <gmd:MD_LegalConstraints>
+    <gmd:otherConstraints>
+      <gco:CharacterString>WMOAdditional</gco:CharacterString>
+    </gmd:otherConstraints>
+  </gmd:MD_LegalConstraints>
+</gmd:resourceConstraints> 
+```
+
+Check for accessConstraints with MD_RestrictionCode = otherRestrictions
+
+```xml
+<gmd:resourceConstraints>
+  <gmd:MD_LegalConstraints>
+    <gmd:accessConstraints>
+      <gmd:MD_RestrictionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</gmd:MD_RestrictionCode>
+    </gmd:accessConstraints>
+  </gmd:MD_LegalConstraints>
+</gmd:resourceConstraints> 
+```
+
+Check for useConstraints with MD_RestrictionCode = otherRestrictions
+
+```xml
+<gmd:resourceConstraints>
+  <gmd:MD_LegalConstraints>
+    <gmd:useConstraints>
+      <gmd:MD_RestrictionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</gmd:MD_RestrictionCode>
+    </gmd:useConstraints>
+  </gmd:MD_LegalConstraints>
+</gmd:resourceConstraints> 
+```
+
+Check for scope of distribution keyword from controlled vocabulary 
+WMO_DistributionScopeCode and KeywordTypeCode = datacentre with an Anchor
+
+```xml
+<gmd:MD_Keywords>
+    <gmd:keyword>
+      <gmx:Anchor xlink:href="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DistributionScopeCode_GlobalExchange">GlobalExchange</gmx:Anchor>
+    </gmd:keyword>
+    <gmd:type>
+      <gmd:MD_KeywordTypeCode codeList="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#MD_KeywordTypeCode" codeListValue="dataCenter">dataCenter</gmd:MD_KeywordTypeCode>
+    </gmd:type>
+    <gmd:thesaurusName>
+      <gmd:CI_Citation>
+        <gmd:title>
+          <gmx:Anchor xlink:href="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DistributionScopeCode">WMO_DistributionScopeCode</gmx:Anchor>
+        </gmd:title>
+        <gmd:date>
+          <gmd:CI_Date>
+            <gmd:date>
+              <gco:Date>2012-06-27</gco:Date>
+            </gmd:date>
+            <gmd:dateType>
+              <gmd:CI_DateTypeCode codeList="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#CI_DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
+            </gmd:dateType>
+          </gmd:CI_Date>
+        </gmd:date>
+      </gmd:CI_Citation>
+    </gmd:thesaurusName>
+</gmd:MD_Keywords>
+```
+
+Check for scope of distribution keyword from controlled vocabulary 
+WMO_DistributionScopeCode and KeywordTypeCode = datacentre with CharacterString
+
+```xml
+<gmd:MD_Keywords>
+    <gmd:keyword>
+      <gco:CharacterString>GlobalExchange</gco:CharacterString>
+    </gmd:keyword>
+    <gmd:type>
+      <gmd:MD_KeywordTypeCode codeList="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#MD_KeywordTypeCode" codeListValue="dataCenter">dataCenter</gmd:MD_KeywordTypeCode>
+    </gmd:type>
+    <gmd:thesaurusName>
+      <gmd:CI_Citation>
+        <gmd:title>
+          <gco:CharacterString>WMO_DistributionScopeCode</gco:CharacterString>
+        </gmd:title>
+        <gmd:date>
+          <gmd:CI_Date>
+            <gmd:date>
+              <gco:Date>2012-06-27</gco:Date>
+            </gmd:date>
+            <gmd:dateType>
+              <gmd:CI_DateTypeCode codeList="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#CI_DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
+            </gmd:dateType>
+          </gmd:CI_Date>
+        </gmd:date>
+      </gmd:CI_Citation>
+    </gmd:thesaurusName>
+</gmd:MD_Keywords>
+```
+
+Check for presence of GTS priority if data is marked for GlobalExchange or RegionalExchange
+
+```xml
+<gmd:MD_Keywords>
+    <gmd:keyword>
+      <gmx:Anchor xlink:href="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DistributionScopeCode_GlobalExchange">GlobalExchange</gmx:Anchor>
+    </gmd:keyword>
+    [...]
+</gmd:MD_Keywords>
+
+<gmd:resourceConstraints>
+  <gmd:MD_LegalConstraints>
+   <gmd:otherConstraints>
+      <gmx:Anchor xlink:href="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_GTSProductCategoryCode_GTSPriority3">GTSPriority3</gmx:Anchor>
+   </gmd:otherConstraints>
+  </gmd:MD_LegalConstraints>
+<gmd:resourceConstraints>
+```
+
+.Data Policy implementation rules
+|===
+|Rule |Score
+
+a|`gmd:resourceConstraints` are present and there is a WMO_DatalicenceCode 
+term in `gmd:otherRestrictions`.
+|1
+
+|`gmd:accessConstraints`, `gmd:useConstraints` are vocabulary controlled
+by MD_RestrictionCode - otherConstraints
+|1
+
+|`gmd:Keywords` are present with definition of WMO_DistributionScopeCode keyword
+term and a gmd:type of vocabulary controlled `gmd:MD_KeywordTypeCode` = dataCenter
+|1
+
+|Compliance rules are implemented and they conform to well defined Data Policy rules.
+
+|2
+
+|`gmd:otherConstraints` and vocabulary controlled WMO_GTSProductCategoryCode
+if gmd:keyword is present with terms from 
+WMO_DistributionScopeCode = GlobalExchange or RegionalExchange
+|1
+
+|Codelist and values are checked against the references provided and HTTP URIs in 
+anchors can be successfully resolved  
+|2
+
+|`gmx:Anchors` are predominantly implemented versus `gco:CharacterString`
+|1
+
+
+|===
+
+=== Score values
+
+Absence of WMO_DataLicenseCode should return non compliance and score 0.
+
+
+.Data Policy score values
+|===
+|Rank | Score
+
+|Low
+|1-3
+
+|Medium
+|4 -6
+
+|High
+|7 - 9 
+
+|===
+
+
+=== Guidance to score well on this assessment
+
+In addtion to programmatic checks which will provide an score,
+it should be clear to the user what are the conditions of use for the resource published.
+If the codelist implementation is not clear there should be additional Free Text explanations
+`gmd:otherConstraints` or `gmd:useLimitation`.
+ See further guidance on data policy implementation at the Guide to WMO Information System
+* https://library.wmo.int/doc_num.php?explnum_id=10257 [WMO- No. 1061,Section 5.8.1.10]
