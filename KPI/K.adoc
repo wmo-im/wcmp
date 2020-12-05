@@ -297,4 +297,5 @@ it should be clear to the user what are the conditions of use for the resource p
 If the codelist implementation is not clear there should be additional Free Text explanations
 `gmd:otherConstraints` or `gmd:useLimitation`.
  See further guidance on data policy implementation at the Guide to WMO Information System
-* https://library.wmo.int/doc_num.php?explnum_id=10257 [WMO- No. 1061,Section 5.8.1.10]
+ 
+* https://library.wmo.int/doc_num.php?explnum_id=10257[WMO- No. 1061,Section 5.8.1.10]
