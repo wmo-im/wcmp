@@ -44,7 +44,7 @@ Total possible score: 8
 
 === Score values
 
-.Good quality title score values
+.Good quality abstract score values
 |===
 |Rank | Score
 
