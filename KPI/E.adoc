@@ -1,4 +1,3 @@
-
 == E. Temporal information
 
 Metadata records should contain the following temporal information:
@@ -6,55 +5,66 @@ Metadata records should contain the following temporal information:
 . Temporal extent: This element describes the period of time that the available product covers.
 . Data Update frequency: The temporal frequency at which the data is updated (ie, every x hours, days, ...).
 
-=== E.1 WMCP Elements
+=== WCMP Element(s)
 
-the TemporalExtent is present in `gmd:temporalElement` with the xpath , `//gmd:MD_Metadata/gmd:identificationInfo/*/ gmd:extent/*/gmd:temporalElement/*/gmd:extent/`
+* `/gmd:MD_Metadata/gmd:identification//gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent`
+* `/gmd:MD_Metadata/gmd:identification//gmd:resourceMaintenance//gmd:maintenanceAndUpdateFrequency`
 
-....
-<gmd:temporalElement>
-   <gmd:EX_TemporalExtent id="boundingTemporalExtent">
-     <gmd:extent>
-       <gml:TimePeriod gml:id="boundingTemporalExtentPeriod">
-       <gml:beginPosition>2005-10-01</gml:beginPosition>
-       <gml:endPosition>2014-10-20</gml:endPosition>
-       </gml:TimePeriod>
-     </gmd:extent>
-   </gmd:EX_TemporalExtent>
-</gmd:temporalElement>
-....
+=== What is being measured
 
-The Data Update Frequency is present in 'gmd:maintenanceAndUpdateFrequency' with the xpath, '//gmd:MD_Metadata/gmd:identificationInfo/*/gmd:resourceMaintenance/*/gmd:mainte
-nanceAndUpdateFrequency'
+The presence of a correctly defined temporal extent and data update frequency.
 
-....
-<gmd:resourceMaintenance>
-  <gmd:MD_MaintenanceInformation>
-    <gmd:maintenanceAndUpdateFrequency>
-     <gmd:MD_MaintenanceFrequencyCode codeListValue="irregular"
-      codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodel     ists.xml#MD_MaintenanceFrequencyCode"/>
-     </gmd:maintenanceAndUpdateFrequency>
-    <gmd:userDefinedMaintenanceFrequency>
-      <gts:TM_PeriodDuration>PT6H</gts:TM_PeriodDuration>
-    </gmd:userDefinedMaintenanceFrequency>
-    <gmd:maintenanceNote>
-DRAFT – Guidance on WIS Discovery Metadata (following CBS-16), p38
-    <gco:CharacterString>Instances of bulletin SIKB20NGTT are available every 6 hours starting at 03 UTC.</gco:CharacterString>
-    </gmd:maintenanceNote>
- </gmd:MD_MaintenanceInformation>
-</gmd:resourceMaintenance>
-....
+=== Rationale for measurement
 
-=== E.2 What is being measured
+Temporal information is a significant characteristic of weather/climate/water
+data and as such is critical for users to know which period(s) of time is/are
+covered by products and how often new products are received.
 
-The present of a correctly defined TemporalExtent and Data Update Frequency is measured.
+=== Rules for implementation
 
-=== E.3 Rationale for measurement
+The TemporalExtent is present in `gmd:temporalElement` with the xpath `//gmd:MD_Metadata/gmd:identificationInfo//gmd:extent//gmd:temporalElement/*/gmd:extent/`:
 
-This is a very import information for qualifying the product described by a metadata record even if it is optional in the WMCP 1.3 standard.
-It is very crucial for users to which period of time is covered by the products and how often a new product is received.
+```xml
+<gmd:identificationInfo>
+  ...
+  <gmd:temporalElement>
+    <gmd:EX_TemporalExtent id="boundingTemporalExtent">
+      <gmd:extent>
+        <gml:TimePeriod gml:id="boundingTemporalExtentPeriod">
+          <gml:beginPosition>2005-10-01</gml:beginPosition>
+          <gml:endPosition>2014-10-20</gml:endPosition>
+        </gml:TimePeriod>
+      </gmd:extent>
+    </gmd:EX_TemporalExtent>
+  </gmd:temporalElement>
+  ...
+</gmd:identificationInfo>
+```
 
-=== E.4 Rules for implementation
+The Data Update Frequency is present in 'gmd:maintenanceAndUpdateFrequency' with the xpath '//gmd:MD_Metadata/gmd:identificationInfo/*/gmd:resourceMaintenance/*/gmd:maintenanceAndUpdateFrequency':
 
+```xml
+<gmd:identificationInfo>
+  ...
+  <gmd:resourceMaintenance>
+    <gmd:MD_MaintenanceInformation>
+      <gmd:maintenanceAndUpdateFrequency>
+        <gmd:MD_MaintenanceFrequencyCode codeListValue="irregular" codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#MD_MaintenanceFrequencyCode"/>
+      </gmd:maintenanceAndUpdateFrequency>
+      <gmd:userDefinedMaintenanceFrequency>
+        <gts:TM_PeriodDuration>PT6H</gts:TM_PeriodDuration>
+      </gmd:userDefinedMaintenanceFrequency>
+      <gmd:maintenanceNote>
+        <!-- DRAFT – Guidance on WIS Discovery Metadata (following CBS-16), p38 -->
+        <gco:CharacterString>Instances of bulletin SIKB20NGTT are available every 6 hours starting at 03 UTC.</gco:CharacterString>
+      </gmd:maintenanceNote>
+    </gmd:MD_MaintenanceInformation>
+  </gmd:resourceMaintenance>
+  ...
+</gmd:identificationInfo>
+```
+
+.Temporal information implementation rules
 |===
 |Rule |Score
 
@@ -71,7 +81,9 @@ It is very crucial for users to which period of time is covered by the products 
 |+5
 |===
 
-=== E.5 Score values
+Total possible score: 10
+
+=== Score values
 
 .Temporal information score value
 |===
@@ -90,6 +102,3 @@ It is very crucial for users to which period of time is covered by the products 
 === Guidance to score well on this assessment
 
 Ensure that the Temporal Extent and the Update Frequency is present in the metadata record.
-
-
-
