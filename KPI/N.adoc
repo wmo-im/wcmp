@@ -1,6 +1,6 @@
 == N. DOI citation
 
-=== WMCP element(s)
+=== WCMP element(s)
 
 * `/gmd:MD_Metadata/gmd:identificationInfo//gmd:citation//gmd:identifier//gmd:code/gmx:Anchor/@xlink:href`
 * `/gmd:MD_Metadata/gmd:identificationInfo//gmd:citation//gmd:identifier//gmd:code/gmx:Anchor/@xlink:title`
