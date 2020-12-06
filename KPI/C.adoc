@@ -1,6 +1,6 @@
 == C. Good quality abstract
 
-=== WMCP element(s)
+=== WCMP element(s)
 
 `/gmd:MD_Metadata/gmd:identificationInfo//gmd:abstract`
 
