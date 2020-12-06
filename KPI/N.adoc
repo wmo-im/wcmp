@@ -1,1 +1,82 @@
+== N. DOI citation
 
+=== WMCP element(s)
+
+* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:citation//gmd:identifier//gmd:code/gmx:Anchor/@xlink:href`
+* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:citation//gmd:identifier//gmd:code/gmx:Anchor/@xlink:title`
+* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceConstraints//gmd:otherConstraints/gco:CharacterString`
+
+=== What is being measured
+
+Whether DOI information is available and can be successfully identified,
+deferenced and provides citation instructions.
+
+=== Rationale for measurement
+
+DOIs are persistent identifiers that allow data to be accessible and citable.
+They make research data easier to access, reuse and verify, thereby making it
+easier to build on previous work, conduct new research and avoid duplicating
+already existing work.
+
+=== Rules for implementation
+
+```xml
+<gmd:identificationInfo>
+...
+  <gmd:identifier>
+    <gmd:MD_Identifier>
+      <gmd:code>
+        <gmx:Anchor xlink:actuate="onRequest" xlink:href="http://dx.doi.org/10.14287/10000004" xlink:title="DOI">doi:10.14287/10000004</gmx:Anchor>
+      </gmd:code>
+    </gmd:MD_Identifier>
+  </gmd:identifier>
+</gmd:identificationInfo>
+```
+
+```xml
+<gmd:MD_LegalConstraints>
+...
+  <gmd:otherConstraints>
+    <gco:CharacterString>Cite as: WMO/GAW Ozone Monitoring Community, World Meteorological Organization-Global Atmosphere Watch Program (WMO-GAW)/World Ozone and Ultraviolet Radiation Data Centre (WOUDC) [Data]. Retrieved [YYYY-MM-DD], from https://woudc.org. A list of all contributors is available on the website. doi:10.14287/10000004</gco:CharacterString> 
+  </gmd:otherConstraints>
+...
+</gmd:MD_LegalConstraints>
+```
+
+.DOI citation implementation rules
+|===
+|Rule |Score
+
+|if DOI anchor exists, link can be deferenced
+|2
+
+|if DOI anchor exists, title is equal to 'DOI'
+|1
+
+a|if DOI citation exists as a constraint, link is provided and is the same as
+  DOI anchor
+|2
+|===
+
+Total possible score: 5
+
+=== Score values
+
+.DOI citation score values
+|===
+|Rank | Score
+
+|Low
+|0 - 1
+
+|Medium
+|2
+
+|High
+|4
+|===
+
+=== Guidance to score well on this assessment
+
+* Provide the DOI identifier with a `doi:` prefix (e.g. `doi:<doi-identifier>`)
+* Provide a 'Cite as' template in `gmd:otherConstraints`
