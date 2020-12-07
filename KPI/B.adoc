@@ -30,7 +30,7 @@ a|title is missing:
 
 |0
 
-|title has more 3 words or more
+|title has 3 words or more
 |1
 
 |title has 150 characters or less
@@ -39,7 +39,7 @@ a|title is missing:
 |title only has printable characters (numbers and letters)
 |1
 
-|words in title are represented in title case
+|words in title are represented in "Title Case"
 |1
 
 |title contains less than 3 acronyms
@@ -49,24 +49,8 @@ a|title is missing:
 |-1
 |===
 
-Total possible score: 5
+Total possible score: 5 (100%)
 
-=== Score values
-
-.Good quality title score values
-|===
-|Rank | Score
-
-|Low
-|0
-
-|Medium
-|1 -3
-
-|High
-|4 - 5
-
-|===
 
 === Guidance to score well on this assessment
 
