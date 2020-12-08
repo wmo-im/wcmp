@@ -3,6 +3,10 @@
 Metadata records should contain information regarding how to access the data
 which it is describing.
 
+=== Status
+
+Draft
+
 === WMCP element(s)
 
 * `//gmd:MD_Metadata/gmd:distributionInfo`
@@ -85,24 +89,7 @@ Guidance.
 |1
 |===
 
-Total possible score: 3
-
-=== Score values
-
-.Distribution information score values
-|===
-|Rank | Score
-
-|Low
-|0
-
-|Medium
-|1 - 2
-
-|High
-|3
-
-|===
+Total possible score: 3 (100%)
 
 === Guidance to score well on this assessment
 
