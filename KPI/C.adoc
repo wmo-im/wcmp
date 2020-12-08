@@ -1,5 +1,9 @@
 == C. Good quality abstract
 
+=== Status
+
+Draft
+
 === WCMP element(s)
 
 `/gmd:MD_Metadata/gmd:identificationInfo//gmd:abstract`
@@ -27,36 +31,17 @@ in support of data access, visualization and exploitation.
 |===
 |Rule |Score
 
-|abstract has 3 sentences or more
-|2
-
-|abstract has 255 characters or more
-|2
+|abstract has between 16 and 2048 characters
+|1
 
 |abstract contains no markup (HTML)
 |1
 
 |abstract passes a basic spellcheck
-|3
+|1
 |===
 
-Total possible score: 8
-
-=== Score values
-
-.Good quality abstract score values
-|===
-|Rank | Score
-
-|Low
-|0 - 3
-
-|Medium
-|4 - 6
-
-|High
-|7 - 8
-|===
+Total possible score: 3 (100%)
 
 === Guidance to score well on this assessment
 
@@ -76,7 +61,7 @@ the abstract, consider the following recommendations:
 . Do not include general background information
 . Avoid jargon and unexplained abbreviations
 
-==== Relevant NOAA Recommendations
+==== Relevant NOAA recommendations
 
 . A metadata record abstract not a scientific abstract
 . Limit information in the abstract to the specific resource that is being
@@ -103,3 +88,7 @@ the abstract, consider the following recommendations:
 links to NOAA Guidance: 
 * https://www.ngdc.noaa.gov/wiki/index.php/MD_DataIdentification
 * https://www.ngdc.noaa.gov/wiki/index.php/Abstract_Other_Recommendations
+
+==== Spell checking recommendations
+
+TODO
