@@ -1,63 +1,77 @@
-*To be merge with K*
+== F. WMOEssential data links
 
+=== Status
 
-== F. Link for WMOEssential data
+Draft (*To be merge with K* ?)
 
-=== To which WMCP element(s) does it apply?
+=== WMCP element(s)
 
-WMOEssential is a keyword of the WMO_DataLicenseCode code list; see the abstract test suite 2.3.2 of the Manual on WIS (2017 edition), Appendix C, a Data Licence Code sould be given in the XPath:
-/gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceConstraints/gmd:MD_LegalConstaints/gmd:otherConstraints//
+* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceConstraints/gmd:MD_LegalConstaints/gmd:otherConstraints`
+* `/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:linkage`
 
-If the DataLicenceCode is WMOEssential, then a Link should be given in
-  /gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:linkage
+=== What is being measured
+
+Whether the DataLicenseCode of `WMOEssential` is provided as a constraint as
+part of data identification, if yes then ensure that distribution URLs are
+provided.
+
+=== Rationale for measurement
+
+All `WMOEssential` data should have 1..n distribution links to the data.
+
+=== Rules for implementation
+
+```xml
+<gmd:resourceConstraints>
+  <gmd:MD_LegalConstraints>
+    <gmd:accessConstraints>
+      <gmd:MD_RestrictionCode codeList="http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#MD_RestrictionCode" codeListValue="none" codeSpace="ISOTC211/19115">none</gmd:MD_RestrictionCode>
+    </gmd:accessConstraints>
+    <gmd:otherConstraints>
+      <gco:CharacterString>WMOEssential</gco:CharacterString>
+    </gmd:otherConstraints>
+    <gmd:otherConstraints>
+      <gco:CharacterString>GTSPriority2</gco:CharacterString>
+    </gmd:otherConstraints>
+  </gmd:MD_LegalConstraints>
+</gmd:resourceConstraints>
+```
   
-==== Example
-DWD ICON EPS model data, metadata record
-
-- https://gisc.dwd.de/wisportal/#SearchPlace:q?pid=de.dwd.icon-eps.ALL 
-
-Digital Transfer Options
-....
+```xml
 <gmd:MD_DigitalTransferOptions>
-          <gmd:onLine>
-            <gmd:CI_OnlineResource>
-              <gmd:linkage>
-                <gmd:URL>https://opendata.dwd.de/weather/wmc/icon-eps/data/grib</gmd:URL>
-              </gmd:linkage>
-              <gmd:protocol>
-                <gco:CharacterString>http</gco:CharacterString>
-              </gmd:protocol>
-              <gmd:name>
-                <gco:CharacterString>GISC Offenbach, Deutscher Wetterdienst</gco:CharacterString>
-              </gmd:name>
-              <gmd:description>
-                <gco:CharacterString>WMO Information System, download products/data through GISC Offenbach, Deutscher Wetterdienst</gco:CharacterString>
-              </gmd:description>
-            </gmd:CI_OnlineResource>
-          </gmd:onLine>
+  <gmd:onLine>
+    <gmd:CI_OnlineResource>
+      <gmd:linkage>
+        <gmd:URL>https://opendata.dwd.de/weather/wmc/icon-eps/data/grib</gmd:URL>
+      </gmd:linkage>
+      <gmd:protocol>
+        <gco:CharacterString>http</gco:CharacterString>
+      </gmd:protocol>
+      <gmd:name>
+        <gco:CharacterString>GISC Offenbach, Deutscher Wetterdienst</gco:CharacterString>
+      </gmd:name>
+      <gmd:description>
+        <gco:CharacterString>WMO Information System, download products/data through GISC Offenbach, Deutscher Wetterdienst</gco:CharacterString>
+      </gmd:description>
+    </gmd:CI_OnlineResource>
+  </gmd:onLine>
 </gmd:MD_DigitalTransferOptions>
-....
+```
 
+.Temporal information implementation rules
+|===
+|Rule |Score
 
-=== What is being measured?
-A measure shoud be if a link to the Data is given in the Metadtata.
+|DataLicenseCode is `WMOEssential` and 1..n valid distribution links are provided
+|1
 
+|DataLicenseCode is `WMOEssential` and 1..n valid distribution links are provided
+|-1
+|===
 
-=== Why should we measure it?
-All WMOEssential data should have a link. Can it be an explicit link
-(without login). Not all the time because some datasets are freely
-available but require login.
+Total possible score: 1 (100%)
 
+=== Guidance to score well on this assessment
 
-=== How is the measurement executed?
-Test of the DigitalTranferOptions are given.
-
-
-=== What is (are) considered valid results?
-A valid result is an existing link in the DigitalTransferOptions is given
-
-
-=== Guidance to score well on this assessment:
-Give a link to the data, and the link shoul be valid.
-
-
+If your data described in your metadata is categorized as `WMOEssential`,
+provide a valid link to the data.
