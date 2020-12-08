@@ -42,10 +42,10 @@ a|title is missing:
 |words in title are represented in "Title Case"
 |1
 
-|title contains less than 3 acronyms
+|title contains less than 3 acronyms (words with all upper case)
 |1
 
-|title contains bulletin header (regular expression "[A-Z]{4}\d{2}[\s_]*[A-Z]{4}")
+|title contains bulletin header (regular expression `[A-Z]{4}\d{2}[\s_]*[A-Z]{4}`)
 |-1
 |===
 
