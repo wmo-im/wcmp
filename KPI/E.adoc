@@ -5,6 +5,10 @@ Metadata records should contain the following temporal information:
 . Temporal extent: This element describes the period of time that the available product covers.
 . Data Update frequency: The temporal frequency at which the data is updated (ie, every x hours, days, ...).
 
+=== Status
+
+Draft
+
 === WCMP Element(s)
 
 * `/gmd:MD_Metadata/gmd:identification//gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent`
@@ -69,35 +73,19 @@ The Data Update Frequency is present in 'gmd:maintenanceAndUpdateFrequency' with
 |Rule |Score
 
 |The Temporal Extent is not present
-|-5
+|-1
 
 |The Temportal Extent is present and well formatted (with a begin and an end)
-|+5
+|+1
 
 |The Data Update Frequency is not present
-|-5
+|-1
 
 |The Data Update Frequency is present and well formatted 
-|+5
+|+1
 |===
 
-Total possible score: 10
-
-=== Score values
-
-.Temporal information score value
-|===
-|Rank | Score
-
-|Low
-|0
-
-|Medium
-|5
-
-|High
-|10
-|===
+Total possible score: 2 (100%)
 
 === Guidance to score well on this assessment
 
