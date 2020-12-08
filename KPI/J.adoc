@@ -1,5 +1,9 @@
 == J. Links health
 
+=== Status
+
+Draft
+
 === WMCP element(s)
 
 Any element content with linked information (URLs). Links are generally
@@ -49,37 +53,11 @@ patterns.  HTTPS supports secure, authoritative and trustworthy links as part of
 |===
 |Rule |Score
 
-|Document has 1 or more broken links
-|0
-
-|Document has 1 - 3 accessible links
-|2
-
-|Document has 4 - 6 accessible links
-|5
-
-|Document has over 6 accessible links
-|8
-
-|Document links are available as HTTPs with a valid SSL certificate
-|2
+|Each valid link provided
+|1
 |===
 
-=== Score values
-
-.Links health score values
-|===
-|Rank | Score
-
-|Low
-|0
-
-|Medium
-|5
-
-|High
-|10
-|===
+Total possible score: total valid links / total links (100%)
 
 === Guidance to score well on this assessment
 

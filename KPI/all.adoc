@@ -22,7 +22,7 @@ This document intend to summarize the different Key performance indicators that 
 
 == I. link:I.adoc[GraphicOverview for non bulletins metadata records]
 
-== J. link:J.adoc[Broken links]
+include::J.adoc[]
 
 == K. link:K.adoc[Data Policy Possible combination]
 
