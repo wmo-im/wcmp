@@ -3,6 +3,10 @@
 A station identifier, when provided as a keyword, should be a valid WIGOS
 station identifier.footnote:[https://oscar.wmo.int/surface/index.html#/search/station/stationReportDetails/0-20008-0-THE].
 
+=== Status
+
+Draft
+
 === WMCP element(s)
 
 * `//gmd:identificationInfo/gmd:descriptiveKeywords//gmd:thesaurusName/@xlink:href`
@@ -47,23 +51,7 @@ information in WMO OSCAR.
 
 |===
 
-Total possible score: 6
-
-=== Score values
-
-.Valid station identifier score values
-|===
-|Rank | Score
-
-|Low
-|0 - 1
-
-|Medium
-|2-4
-
-|High
-|5-6
-|===
+Total possible score: 6 (100%)
 
 === Guidance to score well on this assessment
 
