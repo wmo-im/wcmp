@@ -1,5 +1,9 @@
 == X. KPI name
 
+=== Status
+
+Draft|Approved
+
 === WCMP element(s)
 
 - list of XPaths
