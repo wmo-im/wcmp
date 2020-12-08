@@ -45,7 +45,7 @@ a|title is missing:
 |title contains less than 3 acronyms
 |1
 
-|title contains bulletin header
+|title contains bulletin header (regular expression "[A-Z]{4}\d{2}[\s_]*[A-Z]{4}")
 |-1
 |===
 
