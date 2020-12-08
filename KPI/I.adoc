@@ -44,23 +44,6 @@ of search results presentation.
 
 Total possible score: 3
 
-=== Score Values
-
-.Graphic overview for non bulletins metadata records score values
-|===
-|Rank | Score
-
-|Low
-|0 - 1
-
-|Medium
-|2
-
-|High
-|3
-
-|===
-
 === Guidance to score well on this assessment
 
 In addition to the presence of the graphic overview image it would also be
