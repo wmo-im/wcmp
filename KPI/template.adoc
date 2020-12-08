@@ -1,15 +1,16 @@
 == X. KPI name
 
-=== To which WCMP element(s) does it apply?
+=== WCMP element(s)
 
-=== What is being measured?
+- list of XPaths
 
-=== Why should we measure it?
+=== What is being measured
 
-=== Rules for implementation ?
+=== Rationale for measurement
 
-use XPath and pseudo-code (if then else)
+=== Rules for implementation
 
-=== Score values
+- use XPath and pseudo-code (if then else)
+- provide total possible score
 
 === Guidance to score well on this assessment
