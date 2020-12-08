@@ -1,5 +1,8 @@
 == K. Data Policy 
 
+=== Status
+
+Draft
 
 === WCMP element(s)
 
@@ -251,8 +254,7 @@ term and a gmd:type of vocabulary controlled `gmd:MD_KeywordTypeCode` = dataCent
 |1
 
 |Compliance rules are implemented and they conform to well defined Data Policy rules.
-
-|2
+|1
 
 |`gmd:otherConstraints` and vocabulary controlled WMO_GTSProductCategoryCode
 if gmd:keyword is present with terms from 
@@ -261,34 +263,13 @@ WMO_DistributionScopeCode = GlobalExchange or RegionalExchange
 
 |Codelist and values are checked against the references provided and HTTP URIs in 
 anchors can be successfully resolved  
-|2
+|1
 
 |`gmx:Anchors` are predominantly implemented versus `gco:CharacterString`
 |1
-
-
 |===
 
-=== Score values
-
-Absence of WMO_DataLicenseCode should return non compliance and score 0.
-
-
-.Data Policy score values
-|===
-|Rank | Score
-
-|Low
-|1-3
-
-|Medium
-|4 -6
-
-|High
-|7 - 9 
-
-|===
-
+Total possible score: 7 (100%)
 
 === Guidance to score well on this assessment
 
