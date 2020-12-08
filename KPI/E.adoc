@@ -75,7 +75,7 @@ The Data Update Frequency is present in 'gmd:maintenanceAndUpdateFrequency' with
 |The Temporal Extent is not present
 |-1
 
-|The Temportal Extent is present and well formatted (with a begin and an end)
+|The Temporal Extent is present and well formatted (with a begin and an end)
 |+1
 
 |The Data Update Frequency is not present
