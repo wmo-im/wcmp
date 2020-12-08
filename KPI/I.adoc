@@ -42,7 +42,7 @@ of search results presentation.
 |1
 |===
 
-Total possible score: 3
+Total possible score: 3 (100%)
 
 === Guidance to score well on this assessment
 
