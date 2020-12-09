@@ -2,7 +2,7 @@
 
 === Status
 
-Draft (*To be merge with K* ?)
+Draft
 
 === WMCP element(s)
 
@@ -58,14 +58,14 @@ All `WMOEssential` data should have 1..n distribution links to the data.
 </gmd:MD_DigitalTransferOptions>
 ```
 
-.Temporal information implementation rules
+.WMOEssential data links implementation rules
 |===
 |Rule |Score
 
 |DataLicenseCode is `WMOEssential` and 1..n valid distribution links are provided
 |1
 
-|DataLicenseCode is `WMOEssential` and 1..n valid distribution links are provided
+|DataLicenseCode is `WMOEssential` and 1..n invalid distribution links are provided
 |-1
 |===
 
