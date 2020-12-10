@@ -67,5 +67,4 @@ Total possible score: 13 (100%)
 
 === Guidance to score well on this assessment
 
-Use WCMP templates and/or tools to generate the metadata record (e.g. excel to wis)
-Validate the metadata record using rubric checker before publishing it
+Use WCMP templates and/or tools to generate the metadata record (e.g. excel to wis).
