@@ -1,0 +1,130 @@
+
+== M. Codelists validation
+
+=== WCMP element(s)
+
+WCMP elements will vary depending on whether they are:
+
+* ISO Codelists  (gmxCodelists.xml)
+* WMO Codelists and ISO extensions (WMOcodeLists.xml)
+
+
+Authoritative codeLists:
+
+ISO:
+
+https://standards.iso.org/iso/19139/resources/gmxCodelists.xml
+https://schemas.isotc211.org/schemas/19139/resources/gmxCodelists.xml
+
+WMO:
+
+http://wis.wmo.int/2012/codelists/WMOCodeLists.xml   (references old URL's)
+
+URL's in the guidelines and WMOCodeLists.xml with reference to 
+gmxCodelists.xml out of date) 
+http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml
+
+
+See github issue:
+https://github.com/ISO-TC211/schemas/issues/24
+
+=== What is being measured
+
+* Presence of authoritative codeList URL's
+* Presence of valid terms from the referred codeList element.
+
+
+=== Rationale for measurement
+
+CodeLists are in  cases not referenced from official codeLists publications 
+or terms are included but do not match exactly the definitions on the codeLists
+e.g. by spelling mistakes, capitalisation etc 
+Software applications may look for exact matches to codeLists and miss functionality
+if not properly referenced.
+
+=== Rules for implementation
+
+WMO/ISO CodeLists referenced in WCMP
+
+[%header,cols=3*] 
+|===
+|codeList 
+|WCMP Element
+|Authoritative list
+
+|CI_DateTypeCode
+|*/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode
+| WMOCodeLists (ISO Extended)
+
+|CI_RoleCode
+|*/gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode
+|gmxCodelists (ISO)
+
+|MD_KeywordTypeCode
+|*/gmd:MD_Keywords/gmd:type/gmd:MD_KeywordTypeCode
+|WMOCodeLists (ISO Extended)
+
+|MD_RestrictionCode
+|*/gmd:resourceConstraints/*/gmd:MD_RestrictionCode
+|gmxCodelists (ISO)
+
+|MD_ScopeCode
+|*/gmd:scope/*/gmd:MD_ScopeCode
+|gmxCodelists (ISO)
+
+|MD_TopicCategoryCode
+|*/gmd:topicCategory/gmd:MD_TopicCategoryCode
+|gmxCodelists (ISO)
+
+|WMO_DataLicenseCode
+|*/gmd:resourceConstraints/*/gmd:otherConstraints
+
+CharacterString / Anchor
+|WMOCodeLists 
+
+|WMO_GTSProductCategoryCode
+|*/gmd:resourceConstraints/*/gmd:otherConstraints
+
+CharacterString / Anchor
+|WMOCodeLists 
+
+|WMO_CategoryCode
+|*/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/
+
+CharacterString / Anchor
+|WMOCodeLists 
+
+|WMO_DistributionScopeCode
+|*/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/
+
+CharacterString / Anchor
+|WMOCodeLists
+
+|===
+
+
+
+.CodeList validation implementation rules
+|===
+|Rule |Score
+
+|codeList URL's are from an authoritative source and terms are valid
+|1
+
+|codeList URL's are not from an authoritative source or terms are invalid
+|0
+|===
+
+Total possible score: Provide a percentage according to the number of 
+referenced codeLists that are fully compliant with respect to the total
+number defined across the full WCMP metadata record.
+
+e.g:
+
+* 10 out 10 : 100%
+* 4 out 5: 80%
+
+=== Guidance to score well on this assessment
+
+Ensure that codeLists referenced terms are well defined across the whole
+record and from authoritative sources
