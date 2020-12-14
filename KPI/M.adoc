@@ -13,8 +13,6 @@ Authoritative codeLists:
 
 ISO:
 
-~https://standards.iso.org/iso/19139/resources/gmxCodelists.xml~
-
 https://schemas.isotc211.org/schemas/19139/resources/gmxCodelists.xml
 
 WMO:
