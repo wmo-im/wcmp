@@ -8,7 +8,7 @@ Metadata records should contain the following temporal information:
 
 === E.1 Temporal Extent
 
-==== E.1.1 To which WMCP element(s) does it apply?
+==== E.1.1 To which WCMP element(s) does it apply?
 
 To the TemporalElement element in gmd:identification info
 
@@ -27,14 +27,17 @@ Example:
    </gmd:EX_TemporalExtent>
 </gmd:temporalElement>
 ....
+or (for, say:  forecasts: now/now, see
+DRAFT – Guidance on WIS Discovery Metadata (following CBS-16), p??
+
 
 ==== E.1.2 What is being measured?
 
-The presence of such element in the WMCP evaluated record.
+The presence of such element in the WCMP evaluated record.
 
 ==== E.1.3 Why should we measure it?
 
-This is a crucial information for qualifying the product described by a metadata record but it is optional in the WMCP 1.3 standard.
+This is a crucial information for qualifying the product described by a metadata record but it is optional in the WCMP 1.3 standard.
 
 ==== E.1.4 How is the measurement executed?
 
@@ -50,9 +53,9 @@ Always add the temporal extent information
 
 === E.2 Data Update Frequency
 
-==== E.2.1 To which WMCP element(s) does it apply?
+==== E.2.1 To which WCMP element(s) does it apply?
 
-The UpdateFrequency element in the WMCP 1.3
+The UpdateFrequency element in the WCMP 1.3
 
 gmd:MD_Metadata/gmd:identificationInfo/*/gmd:resourceMaintenance/*/gmd:mainte
 nanceAndUpdateFrequency
@@ -78,7 +81,7 @@ DRAFT – Guidance on WIS Discovery Metadata (following CBS-16), p38
 
 ==== E.2.2 What is being measured?
 
-The presence of such element in the WMCP evaluated record.
+The presence of such element in the WCMP evaluated record.
 
 ==== E.2.3 Why should we measure it?
 

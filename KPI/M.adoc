@@ -1,7 +1,7 @@
 ==M. Presence of a 'station identifier'
 (a complement to the ticket for D.adoc 'Validity of a station identifier')
 
-== To which WMCP element(s) does it apply?
+== To which WCMP element(s) does it apply?
 keyword with keyywordTypeCode of 'place'
 
 == What is being measured?
