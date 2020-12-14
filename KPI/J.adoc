@@ -55,9 +55,11 @@ patterns.  HTTPS supports secure, authoritative and trustworthy links as part of
 
 |Each valid link provided
 |1
+|Each valid HTTPS link provided
+|1
 |===
 
-Total possible score: total valid links / total links (100%)
+Total possible score: (valid links + valid HTTPS links) / (total links * 2) (100%)
 
 === Guidance to score well on this assessment
 
