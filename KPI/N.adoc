@@ -51,14 +51,13 @@ already existing work.
 |===
 |Rule |Score
 
-|if DOI anchor exists, link can be deferenced
+|if DOI anchor exists
 |1
 
-|if DOI anchor exists, title is equal to 'DOI'
+|title is equal to 'DOI'
 |1
 
-a|if DOI citation exists as a constraint, link is provided and is the same as
-  DOI anchor
+|if DOI citation exists as a constraint, link is provided and is the same as DOI anchor
 |1
 |===
 
