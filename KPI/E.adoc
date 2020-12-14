@@ -72,20 +72,20 @@ The Data Update Frequency is present in 'gmd:maintenanceAndUpdateFrequency' with
 |===
 |Rule |Score
 
-|The Temporal Extent is not present
-|-1
+|The Temporal Extent is present
+|1
 
-|The Temporal Extent is present and well formatted (with a begin and an end)
-|+1
+|The Temporal Extent is well formatted (with a begin and an end)
+|1
 
-|The Data Update Frequency is not present
-|-1
+|The Data Update Frequency is present
+|1
 
-|The Data Update Frequency is present and well formatted 
-|+1
+|The Data Update Frequency is well formatted 
+|1
 |===
 
-Total possible score: 2 (100%)
+Total possible score: 4 (100%)
 
 === Guidance to score well on this assessment
 
