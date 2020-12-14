@@ -11,8 +11,8 @@ Draft
 === What is being measured
 
 The title field shall always be populated and and follow the principles of
-WMCP guidance. The length shall not be too short or too long, contain less
-than 3 acronyms and represented in title case.
+WMCP guidance.  The length shall not be too short or too long, contain less
+than 3 acronyms and represented in title case.  Spelling and grammar are correct.
 
 === Rationale for measurement
 
@@ -26,12 +26,7 @@ for users to understand the resource.
 |===
 |Rule |Score
 
-a|title is missing:
-
-* `<gmd:title/>`
-* `<gmd:title></gmd:title>`
-* `<gmd:title gco:nilReason="missing"/>`
-
+|title exists
 |0
 
 |title has 3 words or more
@@ -49,11 +44,14 @@ a|title is missing:
 |title contains less than 3 acronyms (words with all upper case)
 |1
 
-|title contains bulletin header (regular expression `[A-Z]{4}\d{2}[\s_]*[A-Z]{4}`)
-|-1
+|title does not contain bulletin header (regular expression `[A-Z]{4}\d{2}[\s_]*[A-Z]{4}`)
+|1
+
+|abstract passes a basic spellcheck
+|1
 |===
 
-Total possible score: 5 (100%)
+Total possible score: 7 (100%)
 
 
 === Guidance to score well on this assessment
