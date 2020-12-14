@@ -10,10 +10,9 @@ Draft
 
 === What is being measured
 
-Programmatic measurements:
-
-* Length of abstract is at least 3 sentences
-* Spelling and grammar are correct
+The abstract field length shall not be too short or too long and contain no
+HTML markup.  Spelling and grammar are correct.  Bulletin templates should
+not be used to populate the abstract.
 
 === Rationale for measurement
 
@@ -23,7 +22,6 @@ Abstract is a key element of metadata information displayed as part of search
 results. Fulsome and meaningful abstract information allows for users to both
 understand and properly evaluate a metadata record and its respective resource
 in support of data access, visualization and exploitation.
-
 
 === Rules for implementation
 
@@ -39,9 +37,12 @@ in support of data access, visualization and exploitation.
 
 |abstract passes a basic spellcheck
 |1
+
+|abstract contains no bulletin template
+|1
 |===
 
-Total possible score: 3 (100%)
+Total possible score: 4 (100%)
 
 === Guidance to score well on this assessment
 
