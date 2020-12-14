@@ -45,7 +45,7 @@ The TemporalExtent is present in `gmd:temporalElement`:
 </gmd:identificationInfo>
 ```
 
-The Data Update Frequency is present in 'gmd:maintenanceAndUpdateFrequency' :
+The Data Update Frequency is present in 'gmd:maintenanceAndUpdateFrequency` :
 
 ```xml
 <gmd:identificationInfo>
