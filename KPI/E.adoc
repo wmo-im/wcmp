@@ -26,7 +26,7 @@ covered by products and how often new products are received.
 
 === Rules for implementation
 
-The TemporalExtent is present in `gmd:temporalElement` with the xpath `//gmd:MD_Metadata/gmd:identificationInfo//gmd:extent//gmd:temporalElement/*/gmd:extent/`:
+The TemporalExtent is present in `gmd:temporalElement`:
 
 ```xml
 <gmd:identificationInfo>
@@ -45,7 +45,7 @@ The TemporalExtent is present in `gmd:temporalElement` with the xpath `//gmd:MD_
 </gmd:identificationInfo>
 ```
 
-The Data Update Frequency is present in 'gmd:maintenanceAndUpdateFrequency' with the xpath '//gmd:MD_Metadata/gmd:identificationInfo/*/gmd:resourceMaintenance/*/gmd:maintenanceAndUpdateFrequency':
+The Data Update Frequency is present in 'gmd:maintenanceAndUpdateFrequency' :
 
 ```xml
 <gmd:identificationInfo>
@@ -76,6 +76,9 @@ The Data Update Frequency is present in 'gmd:maintenanceAndUpdateFrequency' with
 |1
 
 |The Temporal Extent is well formatted (with a begin and an end)
+|1
+
+|The begin data time is inferior or equal to the end date time
 |1
 
 |The Data Update Frequency is present
