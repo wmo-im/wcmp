@@ -27,7 +27,7 @@ for users to understand the resource.
 |Rule |Score
 
 |title exists
-|0
+|1
 
 |title has 3 words or more
 |1
@@ -47,11 +47,11 @@ for users to understand the resource.
 |title does not contain bulletin header (regular expression `[A-Z]{4}\d{2}[\s_]*[A-Z]{4}`)
 |1
 
-|abstract passes a basic spellcheck
+|title passes a basic spellcheck
 |1
 |===
 
-Total possible score: 7 (100%)
+Total possible score: 8 (100%)
 
 
 === Guidance to score well on this assessment
