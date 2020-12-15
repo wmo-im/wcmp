@@ -3,7 +3,7 @@
 Data parameter keywords are optional elements syntactically.  An xml record will validate without its presence.
 
 
-=== K.1 To which WMCP element(s) does it apply ?
+=== K.1 To which WCMP element(s) does it apply ?
 
 The data policy information is expressed via means of resourceContrains and scope of distribution:
 

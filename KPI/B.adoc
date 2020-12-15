@@ -1,6 +1,6 @@
 == B. Good quality title
 
-=== To which WMCP element(s) does it apply?
+=== To which WCMP element(s) does it apply?
 
 /gmd:MD_Metadata/gmd:identificationInfo//gmd:citation//gmd:title
 
@@ -8,7 +8,7 @@
 * field is not empty 
 * length is not too short or too long. (e.g. at least more than 3 characters and less than 150)
 * words are following Title case 
-* title is following WMCP guidance 
+* title is following WCMP guidance 
 
 === Why should we measure it?
 Title is the first reference to a resource displayed and is helps with initial identification. 
@@ -28,7 +28,7 @@ search/discovery perspective) content.
 It is difficult to create some automated software assessing the good
 quality of the title. May some elements can be verified (avoid acronyms,
 ….) but the general concensusconsensus is that a guidance should be
-developed for WMCP records.
+developed for WCMP records.
 
 The Task Team recommends to implement the following Style Guidelines derived from the NOAA guidance:
 
@@ -49,7 +49,7 @@ text.
 
 === WIS Guidance to be referenced here:
 
-link:http://wis.wmo.int/file=3291[WMCP Guidance]
+link:http://wis.wmo.int/file=3291[WCMP Guidance]
 
 The Product Title and the Product Abstract are the two most relevant elements in the WCMP metadata
 record, in the context of the WIS Product catalogues, as those two elements are presented to the users in

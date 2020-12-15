@@ -1,6 +1,6 @@
 == F. Link for WMOEssential data
 
-=== To which WMCP element(s) does it apply?
+=== To which WCMP element(s) does it apply?
 
 WMOEssential is a keyword of the WMO_DataLicenseCode code list; see the abstract test suite 2.3.2 of the Manual on WIS (2017 edition), Appendix C, a Data Licence Code sould be given in the XPath:
 /gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceConstraints/gmd:MD_LegalConstaints/gmd:otherConstraints//
