@@ -12,8 +12,8 @@ Draft
 
 === What is being measured
 
-Whether DOI information is available and can be successfully identified,
-deferenced and provides citation instructions.
+Whether DOI information is available, can be successfully identified,
+and provides citation instructions.
 
 === Rationale for measurement
 
@@ -57,7 +57,7 @@ already existing work.
 |title is equal to 'DOI'
 |1
 
-|if DOI citation exists as a constraint, link is provided and is the same as DOI anchor
+|if DOI citation exists as a constraint and includes the same DOI in the anchor
 |1
 |===
 
