@@ -1,13 +1,20 @@
 == X. KPI name
 
-=== To which WMCP element(s) does it apply?
+=== Status
 
-=== What is being measured?
+Draft|Approved
 
-=== Why should we measure it?
+=== WCMP element(s)
 
-=== How is the measurement executed?
+- list of XPaths
 
-=== What is (are) considered valid results?
+=== What is being measured
+
+=== Rationale for measurement
+
+=== Rules for implementation
+
+- use XPath and pseudo-code (if then else)
+- provide total possible score
 
 === Guidance to score well on this assessment

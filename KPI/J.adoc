@@ -2,7 +2,7 @@
 
 Detection of broken links contributing to the overall quality score.
 
-=== J.1 To which WMCP element(s) does it apply?
+=== J.1 To which WCMP element(s) does it apply?
 
 All potential linked information (URLs).
 Links are generally present in <gmd:onlineResource>, <gmd:graphicOverview>, 
