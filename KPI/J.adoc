@@ -6,8 +6,9 @@ Draft
 
 === WMCP element(s)
 
-Any element content with linked information (URLs). Links are generally
-present in `gmd:onlineResource`, `gmd:graphicOverview`, and `gmx:Anchor/@xlink:href`.
+Any element or attribute content with linked information (URLs). Links are
+generally present in `gmd:URL`, `gmd:graphicOverview`, `gmx:Anchor/@xlink:href`,
+and `@codeList` elements/attributes.
 
 ```xml
 <gmd:CI_OnlineResource>
@@ -27,12 +28,27 @@ present in `gmd:onlineResource`, `gmd:graphicOverview`, and `gmx:Anchor/@xlink:h
 </gmd:graphicOverview>
 ```
 
+```xml
+<gmd:MD_Identifier>
+  <gmd:code>
+    <gmx:Anchor xlink:actuate="onRequest" xlink:href="https://dx.doi.org/10.14287/10000004" xlink:title="DOI">doi:10.14287/10000004</gmx:Anchor>
+  </gmd:code>
+</gmd:MD_Identifier>
+```
+
+```xml
+<gmd:dateType>
+  <gmd:CI_DateTypeCode codeList="http://wis.wmo.int/2011/schemata/iso19139_2007/schema/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision" codeSpace="ISOTC211/19115">revision</gmd:CI_DateTypeCode>
+</gmd:dateType>
+```
+
 === What is being measured
 
 The number of broken links in each individual metadata record.  Broken links
 include links which, when accessed, result in a 4xx or 5xx HTTP error.footnote:[https://httpstatuses.com].
 
-Also being measured is the use of HTTPS as the link protocol throughout WIS Metadata..
+Also being measured is the use of HTTPS (with a valid SSL certificate) as the
+link protocol throughout WIS Metadata.
 
 === Rationale for measurement
 
@@ -45,7 +61,7 @@ your website when indexed by mass market search engines.
 HTTPS is increasingly becoming a requirement for numerous agencies as well as the
 suggested protocol vs. HTTP.  Having non-HTTPS links in a WCMP document often leads to mixed
 content errors in web applications deployed via HTTPS for example, and using AJAX/XHR design
-patterns.  HTTPS supports secure, authoritative and trustworthy links as part of WIS Metadata and WIS.
+patterns.  HTTPS supports secure, authoritative and trustworthy links as part of WIS Metadata.
 
 === Rules for implementation
 
