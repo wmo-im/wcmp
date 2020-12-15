@@ -9,7 +9,11 @@ Draft
 
 === WMCP element(s)
 
-* `//gmd:MD_Metadata/gmd:distributionInfo`
+* `//gmd:distributionInfo//gmd:distributionFormat`
+* `//gmd:distributionInfo//gmd:transferOptions//gmd:onLine//gmd:URL`
+* `//gmd:distributionInfo//gmd:distributor//gmd:organisationName``
+* `//gmd:distributionInfo//gmd:distributor//gmd:contactInfo//gmd:onlineResource//gmd:URL`
+* `//gmd:distributionInfo//gmd:distributor//gmd:contactInfo//gmd:electronicMailAddress/gco:CharacterString`
 
 ```xml
 <gmd:distributionInfo>
@@ -17,35 +21,80 @@ Draft
     <gmd:distributionFormat>
       <gmd:MD_Format>
         <gmd:name>
-          <gco:CharacterString>GRIB</gco:CharacterString>
+          <gco:CharacterString>FM 94 (BUFR)</gco:CharacterString>
         </gmd:name>
         <gmd:version>
-          <gco:CharacterString>FM 92 GRIB Edition 2</gco:CharacterString>
+          <gco:CharacterString>XII EXT.</gco:CharacterString>
         </gmd:version>
         <gmd:specification>
           <gco:CharacterString>http://www.wmo.int/pages/prog/www/WMOCodes.html</gco:CharacterString>
         </gmd:specification>
       </gmd:MD_Format>
     </gmd:distributionFormat>
+    <gmd:distributor>
+      <gmd:MD_Distributor>
+        <gmd:distributorContact>
+          <gmd:CI_ResponsibleParty>
+            <gmd:individualName>
+              <gco:CharacterString>DT/DSI/OP/TEL</gco:CharacterString>
+            </gmd:individualName>
+            <gmd:organisationName>
+              <gco:CharacterString>NMC FRANCE - Météo-France</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:contactInfo>
+              <gmd:CI_Contact>
+                <gmd:phone/>
+                <gmd:address>
+                  <gmd:CI_Address>
+                    <gmd:deliveryPoint>
+                      <gco:CharacterString>Direction des Systèmes d'Information, 42 avenue Gaspard CORIOLIS</gco:CharacterString>
+                    </gmd:deliveryPoint>
+                    <gmd:city>
+                      <gco:CharacterString>TOULOUSE</gco:CharacterString>
+                    </gmd:city>
+                    <gmd:postalCode>
+                      <gco:CharacterString>31057</gco:CharacterString>
+                    </gmd:postalCode>
+                    <gmd:country>
+                      <gco:CharacterString>France</gco:CharacterString>
+                    </gmd:country>
+                    <gmd:electronicMailAddress>
+                      <gco:CharacterString>gisc_support@meteo.fr</gco:CharacterString>
+                    </gmd:electronicMailAddress>
+                  </gmd:CI_Address>
+                </gmd:address>
+                <gmd:onlineResource>
+                  <gmd:CI_OnlineResource>
+                    <gmd:linkage>
+                      <gmd:URL>http://www.meteo.fr</gmd:URL>
+                    </gmd:linkage>
+                  </gmd:CI_OnlineResource>
+                </gmd:onlineResource>
+              </gmd:CI_Contact>
+            </gmd:contactInfo>
+            <gmd:role>
+              <gmd:CI_RoleCode codeListValue="pointOfContact" codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#CI_RoleCode">pointOfContact</gmd:CI_RoleCode>
+            </gmd:role>
+          </gmd:CI_ResponsibleParty>
+        </gmd:distributorContact>
+      </gmd:MD_Distributor>
+    </gmd:distributor>
     <gmd:transferOptions>
       <gmd:MD_DigitalTransferOptions>
         <gmd:onLine>
           <gmd:CI_OnlineResource>
             <gmd:linkage>
-              <gmd:URL>ftp://data-portal.ecmwf.int</gmd:URL>
+              <gmd:URL>http://wispi.meteo.fr/openwis-user-portal/srv/en/main.home?urn=urn:x-wmo:md:int.wmo.wis::ISMN10LFPW</gmd:URL>
             </gmd:linkage>
             <gmd:protocol>
-              <gco:CharacterString>WWW:DOWNLOAD-1.0-ftp--download</gco:CharacterString>
+              <gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString>
             </gmd:protocol>
             <gmd:name>
-              <gco:CharacterString>ECMWF DCPC FTP Server</gco:CharacterString>
+              <gco:CharacterString>Permanent link</gco:CharacterString>
             </gmd:name>
             <gmd:description>
-              <gco:CharacterString>WMO Information System download service through ECMWF</gco:CharacterString>
+              <gco:CharacterString>GISC Toulouse</gco:CharacterString>
             </gmd:description>
-            <gmd:function>
-              <gmd:CI_OnLineFunctionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="download">
-            </gmd:function>
           </gmd:CI_OnlineResource>
         </gmd:onLine>
       </gmd:MD_DigitalTransferOptions>
@@ -56,18 +105,18 @@ Draft
 
 === What is being measured
 
-The presence of distribution information as well supporting elements.
+The presence of distribution information and supporting elements.
 
 * format (`//gmd:MD_Metadata/gmd:distributionInfo/*/gmd:distributionFormat`).
   That can rely on existing WMO supported formats
 * transferOptions (`//gmd:MD_Metadata/gmd:distributionInfo/*/gmd:transferOptions//gmd:onLine`),
   including a `gmd:linkage` with a URL to access the service providing the data
-* distributor contact information
+* distributor contact information (organization, website, email)
  
 === Rationale for measurement
 
 Distribution information provides the necessary information for accessing the
-data, supported formats, and contact inforamtion for the data distributor.
+data, supported formats, and contact information for the data distributor.
 
 === Rules for implementation
 
@@ -85,14 +134,22 @@ Guidance.
 |1..n transfer options are identified
 |1
 
-|distributor contact is identified
+|distributor contact organization is identified
+|1
+
+|distributor contact website is identified
+|1
+
+|distributor contact email is identified
 |1
 |===
 
-Total possible score: 3 (100%)
+Total possible score: 5 (100%)
 
 === Guidance to score well on this assessment
 
-Always add format/medium information, 1..n links as well as a distributor
-contact. Note that a distributor contact would not have to be the same as
-the main point of contact, principal investigator.
+. Always add format/medium information, 1..n links as well as a distributor
+  contact. Note that a distributor contact would not have to be the same as
+  the main point of contact, principal investigator.
+. Always provide a website for the distributor
+. Always provide an email for the distributor
