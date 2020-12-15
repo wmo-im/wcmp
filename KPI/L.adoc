@@ -9,11 +9,11 @@ Draft
 
 === WMCP element(s)
 
-* `//gmd:distributionInfo//gmd:distributionFormat`
-* `//gmd:distributionInfo//gmd:transferOptions//gmd:onLine//gmd:URL`
-* `//gmd:distributionInfo//gmd:distributor//gmd:organisationName``
-* `//gmd:distributionInfo//gmd:distributor//gmd:contactInfo//gmd:onlineResource//gmd:URL`
-* `//gmd:distributionInfo//gmd:distributor//gmd:contactInfo//gmd:electronicMailAddress/gco:CharacterString`
+* `//gmd:distributionInfo//gmd:MD_Format`
+* `//gmd:distributionInfo//gmd:MD_DigitalTransferOptions//gmd:onLine//gmd:URL`
+* `//gmd:distributionInfo//gmd:MD_Distributor//gmd:organisationName`
+* `//gmd:distributionInfo//gmd:MD_Distributor//gmd:contactInfo//gmd:electronicMailAddress/gco:CharacterString`
+
 
 ```xml
 <gmd:distributionInfo>
@@ -111,7 +111,7 @@ The presence of distribution information and supporting elements.
   That can rely on existing WMO supported formats
 * transferOptions (`//gmd:MD_Metadata/gmd:distributionInfo/*/gmd:transferOptions//gmd:onLine`),
   including a `gmd:linkage` with a URL to access the service providing the data
-* distributor contact information (organization, website, email)
+* distributor contact information (organization, email)
  
 === Rationale for measurement
 
@@ -137,19 +137,15 @@ Guidance.
 |distributor contact organization is identified
 |1
 
-|distributor contact website is identified
-|1
-
 |distributor contact email is identified
 |1
 |===
 
-Total possible score: 5 (100%)
+Total possible score: 4 (100%)
 
 === Guidance to score well on this assessment
 
 . Always add format/medium information, 1..n links as well as a distributor
   contact. Note that a distributor contact would not have to be the same as
   the main point of contact, principal investigator.
-. Always provide a website for the distributor
 . Always provide an email for the distributor
