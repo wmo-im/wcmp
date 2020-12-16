@@ -38,11 +38,11 @@ in support of data access, visualization and exploitation.
 |abstract passes a basic spellcheck
 |1
 
-|abstract contains no bulletin template
-|1
+|abstract contains bulletin template
+|-1
 |===
 
-Total possible score: 4 (100%)
+Total possible score: 3 (100%)
 
 === Guidance to score well on this assessment
 
