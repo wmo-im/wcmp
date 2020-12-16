@@ -134,20 +134,24 @@ instead).
 |===
 |Rule |Score
 
-a|`gmd:keywords` are user-defined. There is no presence of `gmd:type` or
-`gmd:thesaurusName`
+a|`gmd:keywords` is present
 |1
 
-|`gmd:keywords`, `gmd:type`, and `gmd:thesaurusName` are defined. Terms are
-defined by `gco:CharacterString` elements, not URIs via `gmx:Anchor`
+|`gmd:type` is present
+
 |1
 
-|Codelist and values are checked against the references provided and HTTP/HTTPS URIs
-can be successfully resolved
+|`gmd:thesaurusName` is present
 |1
+
+| Keywords terms and thesaurus  are referred to with  `gmx:Anchor`
+|1
+
 |===
 
-Total possible score: 3 (100%)
+Total possible score: 4 per keyword set (100%). To asses how many kewords are defined 
+and provide a total percentage based on the number of keywords and individual 
+scoring.
 
 === Guidance to score well on this assessment
 
