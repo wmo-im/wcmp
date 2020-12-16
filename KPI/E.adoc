@@ -45,7 +45,7 @@ The TemporalExtent is present in `gmd:temporalElement`:
 </gmd:identificationInfo>
 ```
 
-The Data Update Frequency is present in 'gmd:maintenanceAndUpdateFrequency` :
+The Data Update Frequency is present in gmd:maintenanceAndUpdateFrequency :
 
 ```xml
 <gmd:identificationInfo>
@@ -75,17 +75,15 @@ The Data Update Frequency is present in 'gmd:maintenanceAndUpdateFrequency` :
 |The Temporal Extent is present
 |1
 
-|The Temporal Extent is well formatted (with a begin and an end)
+|The Temporal Extent contains a begin and an end
 |1
 
-|The begin data time is inferior or equal to the end date time
+|The begin date time is less than or equal to the end date time
 |1
 
 |The Data Update Frequency is present
 |1
 
-|The Data Update Frequency is well formatted 
-|1
 |===
 
 Total possible score: 4 (100%)
