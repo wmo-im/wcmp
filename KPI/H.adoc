@@ -4,7 +4,7 @@
 
 Draft
 
-=== WMCP element(s)
+=== WCMP element(s)
 
 ....
 //gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword
@@ -19,10 +19,8 @@ vocabularies
 * level of definition of a keyword will improve the searchability of a dataset
 
 In addition to measure well defined references to dictionaries and keyword
-types, compliance to WMCP 1.3 defines a set of rules that apply to different
-sets of keywords.  These have been listed for reference but are implemented
-as part of KPI A (compliance).
-
+types, compliance to WCMP 1.3 defines a set of rules that apply to different
+sets of keywords.  
 === Rationale for measurement
 
 Encouraging metadata providers to make use of keywords that are published in
