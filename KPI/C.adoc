@@ -1,6 +1,6 @@
 == C. Good quality abstract
 
-=== To which WMCP element(s) does it apply?
+=== To which WCMP element(s) does it apply?
 /gmd:MD_Metadata/gmd:identificationInfo//gmd:abstract
 
 === What is being measured?
@@ -25,7 +25,7 @@ Programmatically and manually.
 Abstract is at least 3(?) sentences, does not contain URLs, spelling and grammar are correct.
 
 === Guidance to score well on this assessment
-*WMCP v1.3 part 1 Guidance*
+*WCMP v1.3 part 1 Guidance*
 The abstract should provide a clear and concise statement that enables the reader to
 understand the content of the dataset. For guidance when completing the abstract, consider
 these points:
