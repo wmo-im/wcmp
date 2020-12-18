@@ -4,14 +4,14 @@
 
 Draft
 
-=== WMCP element(s)
+=== WCMP element(s)
 
 `/gmd:MD_Metadata/gmd:identificationInfo//gmd:citation/gmd:CI_Citation/gmd:title`
 
 === What is being measured
 
 The title field shall always be populated and and follow the principles of
-WMCP guidance.  The length shall not be too short or too long, contain less
+WCMP guidance.  The length shall not be too short or too long, contain less
 than 3 acronyms and represented in title case.  Spelling and grammar are correct.
 
 === Rationale for measurement
@@ -71,5 +71,5 @@ metadata record (abstract, keywords, etc.).
 For a satellite product offering one main data parameter, the title will
 typically define which parameter is contained in the product, and from which
 instrument or instrument type it originates. For example, "AMSR-2 Sea Surface
-Temperature” or “SLSTR L1B radiances and brightness temperatures”.footnote:[WMCP Guidance (http://wis.wmo.int/file=3291)]
+Temperature” or “SLSTR L1B radiances and brightness temperatures”.footnote:[WCMP Guidance (http://wis.wmo.int/file=3291)]
 

@@ -4,7 +4,7 @@
 
 Draft
 
-=== WMCP element(s)
+=== WCMP element(s)
 
 Any element or attribute content with linked information (URLs). Links are
 generally present in `gmd:URL`, `gmd:graphicOverview`, `gmx:Anchor/@xlink:href`,
