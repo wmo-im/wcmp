@@ -86,10 +86,6 @@ the abstract, consider the following recommendations:
 . Avoid using future verb tense when possible. Write using present or past
   tenses
 
-links to NOAA Guidance: 
-* https://www.ngdc.noaa.gov/wiki/index.php/MD_DataIdentification
-* https://www.ngdc.noaa.gov/wiki/index.php/Abstract_Other_Recommendations
-
 ==== Spell checking recommendations
 
 TODO
