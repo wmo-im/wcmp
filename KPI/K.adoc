@@ -244,6 +244,9 @@ WMO_DistributionScopeCode = GlobalExchange or RegionalExchange
 |===
 
 Total possible score: 5 (100%)
+Note: Other possible resourceContraint elements may exist and not comply to these rules.
+The score should check that there is one resourceContraint element that follows complies to
+the rules.
 
 === Guidance to score well on this assessment
 
