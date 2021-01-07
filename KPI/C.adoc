@@ -88,4 +88,5 @@ the abstract, consider the following recommendations:
 
 ==== Spell checking recommendations
 
-TODO
+. link:https://www.merriam-webster.com[Dictionary by Merriam-Webster: America's most-trusted online dictionary]
+. link:Cambridge Dictionary | English Dictionary, Translations & Thesaurus[https://dictionary.cambridge.org]
