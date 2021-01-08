@@ -119,7 +119,7 @@ Check for accessConstraints with MD_RestrictionCode = otherRestrictions
 <gmd:resourceConstraints>
   <gmd:MD_LegalConstraints>
     <gmd:accessConstraints>
-      <gmd:MD_RestrictionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</gmd:MD_RestrictionCode>
+        <gmd:MD_RestrictionCode codeList="https://schemas.isotc211.org/schemas/19139/resources/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</gmd:MD_RestrictionCode>
     </gmd:accessConstraints>
   </gmd:MD_LegalConstraints>
 </gmd:resourceConstraints> 
@@ -131,7 +131,7 @@ Check for useConstraints with MD_RestrictionCode = otherRestrictions
 <gmd:resourceConstraints>
   <gmd:MD_LegalConstraints>
     <gmd:useConstraints>
-      <gmd:MD_RestrictionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</gmd:MD_RestrictionCode>
+      <gmd:MD_RestrictionCode codeList="https://schemas.isotc211.org/schemas/19139/resources/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</gmd:MD_RestrictionCode>
     </gmd:useConstraints>
   </gmd:MD_LegalConstraints>
 </gmd:resourceConstraints> 
@@ -239,7 +239,12 @@ if gmd:keyword is present with terms from
 WMO_DistributionScopeCode = GlobalExchange or RegionalExchange
 |1
 
-|`gmx:Anchors` are predominantly implemented versus `gco:CharacterString`
+|`gmx:Anchors` implemented versus `gco:CharacterString` when referencing 
+WMO_DataLicenseCode (in otherConstraints),
+WMO_GTSProductCategoryCode (in otherConstrainst),
+WMO_DistributionScopeCode(in Keywords),
+WMO_DistributionScopeCode (in Thesaurus tile)
+
 |1
 |===
 
