@@ -1,110 +1,75 @@
 == B. Good quality title
 
-=== To which WMCP element(s) does it apply?
+=== Status
 
-/gmd:MD_Metadata/gmd:identificationInfo//gmd:citation//gmd:title
+Draft
 
-=== What is being measured?
-* field is not empty 
-* length is not too short or too long. (e.g. at least more than 3 characters and less than 150)
-* words are following Title case 
-* title is following WMCP guidance 
+=== WCMP element(s)
 
-=== Why should we measure it?
-Title is the first reference to a resource displayed and is helps with initial identification. 
-If it's not available, too short, or too long then it makes it difficult for users understand the resource. 
+`/gmd:MD_Metadata/gmd:identificationInfo//gmd:citation/gmd:CI_Citation/gmd:title`
 
-=== How is the measurement executed?
-Programmatically
-Manually
+=== What is being measured
 
-=== What is (are) considered valid results?
-Title field is populate, a proper length, and words are title case. 
+The title field shall always be populated and and follow the principles of
+WCMP guidance.  The length shall not be too short or too long, contain less
+than 3 acronyms and represented in title case.  Spelling and grammar are correct.
+
+=== Rationale for measurement
+
+Title is the first element of metadata information displayed and helps with
+initial identification. Meaningful and relevant information makes it easier
+for users to understand the resource.
+
+=== Rules for implementation
+
+.Good quality title implementation rules
+|===
+|Rule |Score
+
+|title exists
+|1
+
+|title has 3 words or more
+|1
+
+|title has 150 characters or less
+|1
+
+|title only has printable characters (numbers and letters)
+|1
+
+|words in title are represented in "Title Case"
+|1
+
+|title contains less than 3 acronyms (words with all upper case)
+|1
+
+|title does not contain bulletin header (regular expression `[A-Z]{4}\d{2}[\s_]*[A-Z]{4}`)
+|1
+
+|title passes a basic spellcheck
+|1
+|===
+
+Total possible score: 8 (100%)
+
 
 === Guidance to score well on this assessment
-Titles should be consistent and contain meaningful and useful (from
-search/discovery perspective) content.
 
-It is difficult to create some automated software assessing the good
-quality of the title. May some elements can be verified (avoid acronyms,
-….) but the general concensusconsensus is that a guidance should be
-developed for WMCP records.
+In the context of WIS Product catalogues, the product title and abstract are
+the two most relevant elements in the WCMP metadata record.  These two elements
+are presented to the users in search results as well as the product description
+page, and need to focus on highlighting the product’s key characteristics to
+assist users with relevant product search results.
 
-The Task Team recommends to implement the following Style Guidelines derived from the NOAA guidance:
+The title should be as specific about the product as possible. For example, if
+the product only contains one parameter, this can be stated in the title;
+however, if the product contains numerous parameters, then a more general term
+should be used in the title, and the parameters stated elsewhere in the
+metadata record (abstract, keywords, etc.).
 
-A good archival title summarizes *what, where and when* data were collected so that a data consumer can read the title and make an informed decision about learning more about the data.
-
-* Capitalize all major words (nouns, pronouns, verbs, adjectives,
-adverbs, and some conjunctions).
-* Avoid using acronyms unless defined in the abstract, especially for
-projects or organizations. Exception applies to _NOAA_ as our audience
-is familiar with our acronym.
-* If you include an acronym, spell out the meaning of the acronym then
-put the acronym in parentheses after the meaning. Do not assume that
-everyone reading the title will know or understand all acronyms or
-jargon. Some common acronyms may be widely understood within a specific
-domain.
-* Always, spell out the title acronym at least once in the abstract
-text.
-
-=== WIS Guidance to be referenced here:
-
-link:http://wis.wmo.int/file=3291[WMCP Guidance]
-
-The Product Title and the Product Abstract are the two most relevant elements in the WCMP metadata
-record, in the context of the WIS Product catalogues, as those two elements are presented to the users in
-the search results and product description page. They therefore need to focus on highlighting the
-product's key characteristics, to assist users searching for relevant products.
-The title should be as specific about the product as is possible. If the product only contains one parameter,
-for instance, this can be stated in the title; however, if the product contains many parameters, then a more general term should be used in the title, and the parameters stated elsewhere in the metadata
-record (the abstract and/or the keywords). For a satellite product offering one main data parameter, the
-title will typically define which parameter is contained in the product, and from which instrument or
-instrument type it originates. For instance “AMSR-2 Sea Surface Temperature” or “SLSTR L1B radiances
-and brightness temperatures”. 
-
-Below is an example:
-....
-<gmd:identificationInfo>
- <gmd:MD_DataIdentification>
- <gmd:citation>
- <gmd:CI_Citation>
- <gmd:title>
- <gco:CharacterString>AMSR-2 Sea Surface Temperature</gco:CharacterString>
- </gmd:title>
- <gmd:alternateTitle>
- <gco:CharacterString>
- AMSR-2 Sea Surface Temperature SST
- </gco:CharacterString>
- </gmd:alternateTitle>
- . . . . . .
- </gmd:CI_Citation>
-</gmd:citation>
- . . .. .
- </gmd:MD_DataIdentification>
-</gmd:identificationInfo>
-....
-
-==== Title for GTS bulletins
-
-The title for a GTS bulletin should also aim to be specific about the product, describing, as much as
-possible, the type of observation, and including the bulletin code or identifier, and original distributor (e.g.
-"from XXX").
-For instance:
-....
-<gmd:identificationInfo>
- <gmd:MD_DataIdentification>
- <gmd:citation>
- <gmd:CI_Citation>
- <gmd:title>
- <gco:CharacterString>Sea level observations data [ SZPS01 ] for the South Pacific area</gco:CharacterString>
- </gmd:title>
-....
-
-=== Enforcing some of the defined guidance rules
-
-Detect all template generated titles like IEDX02 BUFR bulletin available from EUMP (EUMETSAT - DARMSTADT).
-A script can be created to detect that kind of information and it could be regularly generated.
-
-
-
+For a satellite product offering one main data parameter, the title will
+typically define which parameter is contained in the product, and from which
+instrument or instrument type it originates. For example, "AMSR-2 Sea Surface
+Temperature” or “SLSTR L1B radiances and brightness temperatures”.footnote:[WCMP Guidance (http://wis.wmo.int/file=3291)]
 

@@ -4,7 +4,7 @@
 Metadata records should contain some information regarding how to get access to the data.
 This information is located in the distributionInfo Element and describe the data format, the service providing access to the data including the access URL as well as the distributorContact when needed. 
 
-==== E.1 To which WMCP element(s) does it apply?
+==== E.1 To which WCMP element(s) does it apply?
 
 To the TemporalElement element in gmd:distributionInfo
 
@@ -57,7 +57,7 @@ The presence of such element and its subelements:
 
 ==== E.3 Why should we measure it?
 
-This is a very important information in the WMCP as it provides the necessary information for accessing the data service.
+This is a very important information in the WCMP as it provides the necessary information for accessing the data service.
 This is the link to the data itself.
 
 ==== E.4 How is the measurement executed?
