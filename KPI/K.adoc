@@ -243,7 +243,7 @@ WMO_DistributionScopeCode = GlobalExchange or RegionalExchange
 WMO_DataLicenseCode (in otherConstraints),
 WMO_GTSProductCategoryCode (in otherConstrainst),
 WMO_DistributionScopeCode(in Keywords),
-WMO_DistributionScopeCode (in Thesaurus tile)
+WMO_DistributionScopeCode (in Thesaurus title)
 
 |1
 |===
