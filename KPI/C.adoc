@@ -62,7 +62,7 @@ the abstract, consider the following recommendations:
 . Do not include general background information
 . Avoid jargon and unexplained abbreviations
 
-==== Relevant NOAA recommendations
+==== Relevant recommendations
 
 . A metadata record abstract not a scientific abstract
 . Limit information in the abstract to the specific resource that is being
@@ -75,18 +75,17 @@ the abstract, consider the following recommendations:
 . Acronyms do not need to be spelled out if they are for commonly used terms
   which are understood by the general public. Once an uncommon acronym is
   spelled out within the Abstract it can be used without explanation
-. Do not include html, csv, tables or extra spaces to control display of text.
+. Do not include HTML/CSV tables or extra spaces to control display of text.
   Use simple paragraph(s) only
 . Do not copy text from a journal article verbatim. This can lead to copyright
   violation concerns. Additionally, abstracts for journal articles are not
   intended to describe the provided resource and do not meet the metadata
   requirements. Related papers can be referenced from and/or tied to the
-  metadata. See EDM Wiki about `gmd:MD_AggregateInformation` section for more
-  information on citing journals
+  metadata
 . Avoid using future verb tense when possible. Write using present or past
   tenses
 
 ==== Spell checking recommendations
 
 . link:https://www.merriam-webster.com[Dictionary by Merriam-Webster: America's most-trusted online dictionary]
-. link:Cambridge Dictionary | English Dictionary, Translations & Thesaurus[https://dictionary.cambridge.org]
+. link:https://dictionary.cambridge.org[Cambridge Dictionary | English Dictionary, Translations & Thesaurus]
