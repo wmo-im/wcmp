@@ -1,7 +1,7 @@
 == D. Valid station identifier
 
 A station identifier, when provided as a keyword, should be a valid WIGOS
-station identifier.footnote:[https://oscar.wmo.int/surface/index.html#/search/station/stationReportDetails/0-20008-0-THE].
+station identifier (WSI).footnote:[https://oscar.wmo.int/surface/index.html#/search/station/stationReportDetails/0-20008-0-THE].
 
 === Status
 
@@ -16,55 +16,69 @@ Draft
 === What is being measured
 
 The presence of all `gmd:MD_Keywords/gmd:keyword` elements with the appropriate
-`gmd:thesaurus` and `gmd:thesaurusName are checked that they contain a valid
-WIGOS station identifier.
+`gmd:MD_KeywordTypeCode` and `gmd:thesaurusName` are checked that they contain
+a valid WSI.
 
 === Rationale for measurement
 
-Valid WIGOS station identifiers provide a reference to authoritative station
-information in WMO OSCAR.
+Valid WSIs provide a reference to authoritative station information in
+WMO OSCAR.
 
 === Rules for implementation
+
+. Check for a valid thesaurus title of `OSCAR/Surface`
+. Check for well referenced thesaurus using the Anchor with a resolvable HTTP URI
+. Check for a valid WSI keyword value
+. Check for a valid keyword type value of `place`
+
+```xml
+<gmd:descriptiveKeywords>
+  <gmd:MD_Keywords>
+    <gmd:keyword>
+      <gmx:Anchor xlink:title="0-20008-0-THE" xlink:href="https://oscar.wmo.int/surface/#/search/station/stationReportDetails/0-20008-0-THE">0-20008-0-THE</gmx:Anchor>
+    </gmd:keyword>
+    <gmd:type>
+      <gmd:MD_KeywordTypeCode codeList="http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#MD_KeywordTypeCode" codeListValue="place" codeSpace="ISOTC211/19115">place</gmd:MD_KeywordTypeCode>
+    </gmd:type>
+    <gmd:thesaurusName>
+      <gmd:CI_Citation>
+        <gmd:title>
+          <gmx:Anchor xlink:title="OSCAR/Surface" xlink:href="https://oscar.wmo.int/surface/rest/api/stations/approvedStations/wigosIds">OSCAR/Surface</gmx:Anchor>
+        </gmd:title>
+        <gmd:date>
+          <gmd:CI_Date>
+            <gmd:date gco:nilReason="inapplicable"/>
+            <gmd:dateType gco:nilReason="inapplicable"/>
+          </gmd:CI_Date>
+        </gmd:date>
+      </gmd:CI_Citation>
+    </gmd:thesaurusName>
+  </gmd:MD_Keywords>
+</gmd:descriptiveKeywords>
+```
 
 .Valid station identifier implementation rules
 |===
 |Rule |Score
 
-|test for a valid thesaurus
+|test for a valid thesaurus title of `OSCAR/Title`
 |1
 
-|test for a valid keyword type code of type `place`
+|test for well referenced thesaurus using the Anchor with a resolvable HTTP URI
 |1
 
-|test for the proper structure of a WIGOS identifier
-(`<WIGOS Identifier Series (number)>-<Issuer of Identifier (number)>-<Issue Number (number)>-<Local Identifier (characters)`)
+|test for a valid keyword type code value of `place`
 |1
 
-|test that 50 percent of WIGOS identifiers exist in WMO OSCAR
+|test for a valid WSI
 |1
-
-|test that 80 percent of WIGOS identifiers exist in WMO OSCAR
-|1
-
-|test that 100 percent of WIGOS identifiers exist in WMO OSCAR
-|1
-
 |===
 
-Total possible score: 6 (100%)
+Total possible score: 4 per station identifier keyword (100%). To assess how
+many WSI keywords are defined and provide a total percentage based on the
+number of WSI keywords and individual scoring.
 
 === Guidance to score well on this assessment
 
-```xml
-<gmd:MD_Keywords>
-  <gmd:descriptiveKeywords>
-    <gmd:keyword>
-      <gco:CharacterString>http://wis.wmo.int/WMOVolumeAGazeteer.xml#71966</gco:CharacterString>
-    </gmd:keyword>
-    <gmd:type>
-      <gmd:MD_KeywordTypeCode codeList="http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#MD_KeywordTypeCode" codeListValue="place" codeSpace="ISOTC211/19115">place</gmd:MD_KeywordTypeCode>
-    </gmd:type>
-    <gmd:thesaurusName xlink:type="simple" xlink:title="WMO Publication No. 9, Volume A, Observing Stations and WMO Catalogue of Radiosondes" xlink:href="http://www.wmo.int/pages/prog/www/ois/volume-a/vola-home.htm" />
-  </gmd:MD_Keywords>
-</gmd:descriptiveKeywords>
-```
+. Ensure your WSI keyword is correctly formatted (just the WSI value and nothing else)
+. Ensure the thesaurus points to the OSCAR API request of all WIGOS identifiers
