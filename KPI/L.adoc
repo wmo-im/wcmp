@@ -27,7 +27,7 @@ Draft
           <gco:CharacterString>XII EXT.</gco:CharacterString>
         </gmd:version>
         <gmd:specification>
-          <gco:CharacterString>http://www.wmo.int/pages/prog/www/WMOCodes.html</gco:CharacterString>
+          <gmx:Anchor xlink:title="FM 94 (BUFR)" xlink:href="https://www.wmo.int/pages/prog/www/WMOCodes.html>FM 94 (BUFR)</gmx:Anchor>
         </gmd:specification>
       </gmd:MD_Format>
     </gmd:distributionFormat>
@@ -109,7 +109,7 @@ The presence of distribution information and supporting elements.
 
 * format (`//gmd:MD_Metadata/gmd:distributionInfo/*/gmd:distributionFormat`).
   That can rely on existing WMO supported formats
-* transferOptions (`//gmd:MD_Metadata/gmd:distributionInfo/*/gmd:transferOptions//gmd:onLine`),
+* 1..n `gmd:transferOptions` (`//gmd:MD_Metadata/gmd:distributionInfo/*/gmd:transferOptions//gmd:onLine`),
   including a `gmd:linkage` with a URL to access the service providing the data
 * distributor contact information (organization, email)
  
@@ -125,13 +125,14 @@ By detecting the presence of the distribution format and transferOptions
 Guidance.
 
 .Distribution information implementation rules
+[cols="1a,2"]
 |===
 |Rule |Score
 
 |format is identified
 |1
 
-|1..n transfer options are identified
+|format specification has an Anchor with a resolvable HTTP URI 
 |1
 
 |distributor contact organization is identified
@@ -139,13 +140,30 @@ Guidance.
 
 |distributor contact email is identified
 |1
+
+|1..n transfer options are identified
+
+[cols="2,1"]
+!===
+! Rule ! Score
+ 
+! a valid linkage is provided
+! 1
+
+!===
+|1 foreach transfer option
+
 |===
 
-Total possible score: 4 (100%)
+Total possible score: 4 per transfer option + 4 for format/distributor (100%).
+For transfer options, assess how many transfer options are defined and provide
+a total percentage based on the number of transfer options and individual
+scoring.
 
 === Guidance to score well on this assessment
 
-. Always add format/medium information, 1..n links as well as a distributor
-  contact. Note that a distributor contact would not have to be the same as
-  the main point of contact, principal investigator.
+. Always add format/medium information, a link to the format specification,
+  1..n transfer options as well as a distributor contact. Note that a
+  distributor contact does not have to be the same as the main point of
+  contact, principal investigator.
 . Always provide an email for the distributor
