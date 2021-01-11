@@ -2,7 +2,7 @@
 
 === Status
 
-Draft
+Approved
 
 === WCMP element(s)
 
