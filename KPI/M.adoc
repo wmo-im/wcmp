@@ -1,126 +1,104 @@
-
 == M. Codelists validation
 
 === WCMP element(s)
 
 WCMP elements will vary depending on whether they are:
 
-* ISO Codelists  (gmxCodelists.xml)
-* WMO Codelists and ISO extensions (WMOcodeLists.xml)
+* ISO Codelists (`gmxCodelists.xml`)
+* WMO Codelists / ISO extensions (`WMOCodeLists.xml`)
 
+Authoritative codelists are defined at the following locations:
 
-Authoritative codeLists are defined at:
-
-ISO:
-
-https://schemas.isotc211.org/schemas/19139/resources/gmxCodelists.xml
-
-WMO:
-
-http://wis.wmo.int/2012/codelists/WMOCodeLists.xml   
-
+* ISO: https://schemas.isotc211.org/schemas/19139/resources/gmxCodelists.xml
+* WMO: https://wis.wmo.int/2012/codelists/WMOCodeLists.xml
 
 === What is being measured
 
-* Presence of valid terms from the referred codeList element.
-
+* Presence of valid terms from the referred codelist element.
 
 === Rationale for measurement
 
-WCMP records can reference codeLists from a number of locations 
-(e.g. online copies from the authoritative sources ). 
+WCMP records can reference codelists from a number of locations
+(e.g. online copies of the authoritative sources).
 
 To ensure that the terms themselves are always consistent with the official sources,
 this KPI will validate that the terms referred to in WCMP records are consistent with
-the authoritative codeLists referred in this KPI.
-In many cases terms are included but do not match exactly the definitions on the codeLists
-e.g. by spelling mistakes, capitalisation etc
-Software applications may look for exact matches to codeLists and miss functionality
-if not properly referenced.
+the authoritative codelists referred in this KPI.
 
+In many cases terms are included but are not identifical to the official definitions
+on the codelists (e.g. spelling mistakes, case sensitivity errors, etc.).
+
+Software applications may look for exact matches to codelists and handle metadata
+incorrectly if not properly referenced.
 
 === Rules for implementation
 
-WMO/ISO CodeLists referenced in WCMP
+WMO/ISO Codelists referenced in WCMP
 
 [%header,cols=3*] 
 |===
-|codeList 
+|codelist
 |WCMP Element
 |Authoritative list
 
-|CI_DateTypeCode
-|*/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode
+|`CI_DateTypeCode`
+|`//gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode1`
 | WMOCodeLists (ISO Extended)
 
-|CI_RoleCode
-|*/gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode
+|`CI_RoleCode`
+|`//gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode`
 |gmxCodelists (ISO)
 
-|MD_KeywordTypeCode
-|*/gmd:MD_Keywords/gmd:type/gmd:MD_KeywordTypeCode
+|`MD_KeywordTypeCode`
+|`//gmd:MD_Keywords/gmd:type/gmd:MD_KeywordTypeCode`
 |WMOCodeLists (ISO Extended)
 
-|MD_RestrictionCode
-|*/gmd:resourceConstraints/*/gmd:MD_RestrictionCode
+|`MD_RestrictionCode`
+|`//gmd:resourceConstraints///gmd:MD_RestrictionCode`
 |gmxCodelists (ISO)
 
-|MD_ScopeCode
-|*/gmd:scope/*/gmd:MD_ScopeCode
+|`MD_ScopeCode`
+|`//gmd:scope//gmd:MD_ScopeCode`
 |gmxCodelists (ISO)
 
-|MD_TopicCategoryCode
-|*/gmd:topicCategory/gmd:MD_TopicCategoryCode
+|`MD_TopicCategoryCode`
+|`//gmd:topicCategory/gmd:MD_TopicCategoryCode`
 |gmxCodelists (ISO)
 
-|WMO_DataLicenseCode
-|*/gmd:resourceConstraints/*/gmd:otherConstraints
-
-CharacterString / Anchor
+|`WMO_DataLicenseCode`
+|`//gmd:resourceConstraints//gmd:otherConstraints[gco:CharacterString|gmx:Anchor]`
 |WMOCodeLists 
 
-|WMO_GTSProductCategoryCode
-|*/gmd:resourceConstraints/*/gmd:otherConstraints
-
-CharacterString / Anchor
+|`WMO_GTSProductCategoryCode`
+|`//gmd:resourceConstraints//gmd:otherConstraints[gco:CharacterString|gmx:Anchor]`
 |WMOCodeLists 
 
-|WMO_CategoryCode
-|*/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/
-
-CharacterString / Anchor
+|`WMO_CategoryCode`
+|`//gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword[gco:CharacterString|gmx:Anchor]`
 |WMOCodeLists 
 
-|WMO_DistributionScopeCode
-|*/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/
-
-CharacterString / Anchor
+|`WMO_DistributionScopeCode`
+|`//gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword[gco:CharacterString|gmx:Anchor]`
 |WMOCodeLists
 
 |===
 
 
-
-.CodeList validation implementation rules
+.Codelists validation implementation rules
 |===
 |Rule |Score
 
-|codeList referred terms are checked against authoritative sources
-with an exact match
+|codelist referred terms are checked against authoritative sources with an exact match
 |1
 
 |===
 
-Total possible score: Provide a percentage according to the number of 
-referenced codeLists that are valid with respect to the total
-number defined across the full WCMP metadata record.
+Total possible score: 1 per valid codelist value (100%). To assess how many valid
+codelist values are defined and provide a total percentage based on the total
+number of codelist values.
 
-e.g:
-
-* 10 out 10 : 100%
-* 4 out 5: 80%
 
 === Guidance to score well on this assessment
 
-Ensure that codeLists referenced terms are well defined across the whole
-record and from authoritative sources
+Ensure that codelists referenced terms are well defined across the whole
+record and from authoritative sources.
