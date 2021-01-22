@@ -12,9 +12,11 @@ WCMP elements will vary depending on whether they are:
 Authoritative codeLists are defined at:
 
 ISO:
+
 https://schemas.isotc211.org/schemas/19139/resources/gmxCodelists.xml
 
 WMO:
+
 http://wis.wmo.int/2012/codelists/WMOCodeLists.xml   
 
 
