@@ -66,19 +66,19 @@ WMO/ISO Codelists referenced in WCMP
 |gmxCodelists (ISO)
 
 |`WMO_DataLicenseCode`
-|`//gmd:resourceConstraints//gmd:otherConstraints[gco:CharacterString|gmx:Anchor]`
+|``//gmd:resourceConstraints//gmd:otherConstraints[gco:CharacterString\|gmx:Anchor]`
 |WMOCodeLists 
 
 |`WMO_GTSProductCategoryCode`
-|`//gmd:resourceConstraints//gmd:otherConstraints[gco:CharacterString|gmx:Anchor]`
+|`//gmd:resourceConstraints//gmd:otherConstraints[gco:CharacterString\|gmx:Anchor]`
 |WMOCodeLists 
 
 |`WMO_CategoryCode`
-|`//gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword[gco:CharacterString|gmx:Anchor]`
+|`//gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword[gco:CharacterString\|gmx:Anchor]`
 |WMOCodeLists 
 
 |`WMO_DistributionScopeCode`
-|`//gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword[gco:CharacterString|gmx:Anchor]`
+|`//gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword[gco:CharacterString\|gmx:Anchor]`
 |WMOCodeLists
 
 |===
