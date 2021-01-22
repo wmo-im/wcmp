@@ -9,37 +9,33 @@ WCMP elements will vary depending on whether they are:
 * WMO Codelists and ISO extensions (WMOcodeLists.xml)
 
 
-Authoritative codeLists:
+Authoritative codeLists are defined at:
 
 ISO:
-
 https://schemas.isotc211.org/schemas/19139/resources/gmxCodelists.xml
 
 WMO:
+http://wis.wmo.int/2012/codelists/WMOCodeLists.xml   
 
-http://wis.wmo.int/2012/codelists/WMOCodeLists.xml   (references old URL's)
-
-URL's in the guidelines and WMOCodeLists.xml with reference to 
-gmxCodelists.xml out of date) 
-http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml
-
-
-See github issue:
-https://github.com/ISO-TC211/schemas/issues/24
 
 === What is being measured
 
-* Presence of authoritative codeList URL's
 * Presence of valid terms from the referred codeList element.
 
 
 === Rationale for measurement
 
-CodeLists are in  cases not referenced from official codeLists publications 
-or terms are included but do not match exactly the definitions on the codeLists
-e.g. by spelling mistakes, capitalisation etc 
+WCMP records can reference codeLists from a number of locations 
+(e.g. online copies from the authoritative sources ). 
+
+To ensure that the terms themselves are always consistent with the official sources,
+this KPI will validate that the terms referred to in WCMP records are consistent with
+the authoritative codeLists referred in this KPI.
+In many cases terms are included but do not match exactly the definitions on the codeLists
+e.g. by spelling mistakes, capitalisation etc
 Software applications may look for exact matches to codeLists and miss functionality
 if not properly referenced.
+
 
 === Rules for implementation
 
@@ -107,15 +103,14 @@ CharacterString / Anchor
 |===
 |Rule |Score
 
-|codeList URL's are from an authoritative source and terms are valid
+|codeList referred terms are checked against authoritative sources
+with an exact match
 |1
 
-|codeList URL's are not from an authoritative source or terms are invalid
-|0
 |===
 
 Total possible score: Provide a percentage according to the number of 
-referenced codeLists that are fully compliant with respect to the total
+referenced codeLists that are valid with respect to the total
 number defined across the full WCMP metadata record.
 
 e.g:
