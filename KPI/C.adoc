@@ -91,6 +91,5 @@ the abstract, consider the following recommendations:
 . link:https://dictionary.cambridge.org[Cambridge Dictionary | English Dictionary, Translations & Thesaurus]
 
 ==== WMO Guidelines
- References of good abstract examples are found at the Guide to WMO Information System:
- 
- * https://library.wmo.int/doc_num.php?explnum_id=10257[WMO- No. 1061,Section 5.8.1.2] Product abstract  
+
+References of good abstract examples can be found in the link:https://library.wmo.int/doc_num.php?explnum_id=10257[Guide to WMO Information System (WMO No. 1061, Section 5.8.1.2)], product abstract.
