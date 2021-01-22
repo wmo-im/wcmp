@@ -8,7 +8,7 @@ Draft
 
 Data policy 
 
-`//gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceConstraints`
+* `//gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceConstraints`
 
 Distribution scope
 
