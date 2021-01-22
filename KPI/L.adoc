@@ -129,36 +129,24 @@ Guidance.
 |===
 |Rule |Score
 
-|format is identified
+|format is defined
 |1
 
 |format specification has an Anchor with a resolvable HTTP URI 
 |1
 
-|distributor contact organization is identified
+|distributor contact organization is defined
 |1
 
-|distributor contact email is identified
+|distributor contact email is defined
 |1
 
-|1..n transfer options are identified
-
-[cols="2,1"]
-!===
-! Rule ! Score
- 
-! a valid linkage is provided
-! 1
-
-!===
-|1 foreach transfer option
+|1..n transfer options are defined
+|1
 
 |===
 
-Total possible score: 4 per transfer option + 4 for format/distributor (100%).
-For transfer options, assess how many transfer options are defined and provide
-a total percentage based on the number of transfer options and individual
-scoring.
+Total possible score: 5 (100%)
 
 === Guidance to score well on this assessment
 
