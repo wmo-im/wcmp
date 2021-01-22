@@ -9,14 +9,14 @@
                  xsi:schemaLocation="http://www.isotc211.org/2005/gmd   http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gmd/gmd.xsd http://www.isotc211.org/2005/gmx  http://wis.wmo.int/2011/schemata/iso19139_2007/schema/gmx/gmx.xsd">
 
 	<!-- ABOUT THIS FILE:     -->
-	<!-- This file is part of the WMCP Guidance suite, from WMO.  Version 2.1  v2016-0804
+	<!-- This file is part of the WCMP Guidance suite, from WMO.  Version 2.1  v2016-0804
 	     It is a valid XML file.
      	The intent of this document is that each of the important fields contains some example content, which can be replaced by a metadata editor.
 		The content in each field is fictional example conent.  NOte that there is no logical relationship between the filler-content in each field.
 		-->
 
 	
-   <!-- 9.1.14   this is the WMCP IDENTIFIER block. It is MANDATORY, so DO NOT delete it    -->				 
+   <!-- 9.1.14   this is the WCMP IDENTIFIER block. It is MANDATORY, so DO NOT delete it    -->				 
    <gmd:fileIdentifier xmlns:gn-fn-metadata="http://geonetwork-opensource.org/xsl/functions/metadata"
                        xmlns:gmi="http://www.isotc211.org/2005/gmi">
       <gco:CharacterString>urn:x-wmo:md:int.eumetsat:EO:EUM:DAT:MSG:BXHRSEVIRI</gco:CharacterString>
