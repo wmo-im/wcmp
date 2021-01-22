@@ -27,7 +27,7 @@ Draft
           <gco:CharacterString>XII EXT.</gco:CharacterString>
         </gmd:version>
         <gmd:specification>
-          <gmx:Anchor xlink:title="FM 94 (BUFR)" xlink:href="https://www.wmo.int/pages/prog/www/WMOCodes.html>FM 94 (BUFR)</gmx:Anchor>
+          <gmx:Anchor xlink:title="FM 94 (BUFR)" xlink:href="https://www.wmo.int/pages/prog/www/WMOCodes.html">FM 94 (BUFR)</gmx:Anchor>
         </gmd:specification>
       </gmd:MD_Format>
     </gmd:distributionFormat>
