@@ -9,7 +9,7 @@ Draft
 
 === WMCP element(s)
 
-* `//gmd:distributionInfo//gmd:MD_Format`
+* `//gmd:distributionInfo//gmd:distributionFormat/gmd:MD_Format`
 * `//gmd:distributionInfo//gmd:MD_DigitalTransferOptions//gmd:onLine//gmd:URL`
 * `//gmd:distributionInfo//gmd:MD_Distributor//gmd:organisationName`
 * `//gmd:distributionInfo//gmd:MD_Distributor//gmd:contactInfo//gmd:electronicMailAddress/gco:CharacterString`
@@ -107,10 +107,10 @@ Draft
 
 The presence of distribution information and supporting elements.
 
-* format (`//gmd:MD_Metadata/gmd:distributionInfo/*/gmd:distributionFormat`).
+* format (`//gmd:distributionInfo//gmd:distributionFormat/gmd:MD_Format`)
   That can rely on existing WMO supported formats
-* 1..n `gmd:transferOptions` (`//gmd:MD_Metadata/gmd:distributionInfo/*/gmd:transferOptions//gmd:onLine`),
-  including a `gmd:linkage` with a URL to access the service providing the data
+* 1..n `gmd:transferOptions` (`//gmd:distributionInfo/*/gmd:transferOptions//gmd:onLine`),
+  including a `gmd:linkage` with a URL to access the data
 * distributor contact information (organization, email)
  
 === Rationale for measurement
@@ -129,7 +129,7 @@ Guidance.
 |===
 |Rule |Score
 
-|format is defined
+|`MD_Format` is defined
 |1
 
 |format specification has an Anchor with a resolvable HTTP URI 
@@ -153,5 +153,5 @@ Total possible score: 5 (100%)
 . Always add format/medium information, a link to the format specification,
   1..n transfer options as well as a distributor contact. Note that a
   distributor contact does not have to be the same as the main point of
-  contact, principal investigator.
+  contact, principal investigator
 . Always provide an email for the distributor
