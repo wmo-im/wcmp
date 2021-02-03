@@ -107,6 +107,18 @@ update frequency, `gmd:MD_MaintenanceFrequencyCode` can be set to `asNeeded`:
 </gmd:identificationInfo>
 ```
 
+It is also possible to identify a dataset status / progress using the `MD_ProgressCode`
+codelist.  The following example provides an ongoing dataset progress/status:
+
+```xml
+<gmd:identificationInfo>
+  ...
+  <gmd:status>
+    <gmd:MD_ProgressCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ProgressCode" codeSpace="ISOTC211/19115" codeListValue="onGoing">onGoing</gmd:MD_ProgressCode>
+  </gmd:status>
+</gmd:identificationInfo>
+```
+
 .Temporal information implementation rules
 
 |===
