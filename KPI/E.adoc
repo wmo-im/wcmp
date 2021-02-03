@@ -45,7 +45,29 @@ The TemporalExtent is present in `gmd:temporalElement`:
 </gmd:identificationInfo>
 ```
 
+In the case of an ongoing dataset with a known start date, but no known end
+date can be defined, the endPosition has to contain the attribute “indeterminatePosition="now"”.
+For instance, where a dataset is from 2005-10-01 onwards:
+
+```xml
+<gmd:identificationInfo>
+  ...
+  <gmd:temporalElement>
+     <gmd: EX TemporalExtent id="temporalExtent">
+       <gmd: extent>
+         <gml: TimePeriod gml: id = "boundingTemporalExtentPeriod">
+           <gml: beginPosition>2005-10-01</gml: beginPosition>
+           <gml: endPosition indeterminatePosition="now"/>
+         </gml: TimePeriod>
+       </gmd: extent>
+     </gmd: EX TemporalExtent>
+  </gmd: temporalElement>
+</gmd:temportalElement>
+```
+
 The Data Update Frequency is present in gmd:maintenanceAndUpdateFrequency :
+
+Below is an example of a GTS bulletin updated every 6 hours.
 
 ```xml
 <gmd:identificationInfo>
@@ -68,7 +90,26 @@ The Data Update Frequency is present in gmd:maintenanceAndUpdateFrequency :
 </gmd:identificationInfo>
 ```
 
+If it is not relevant or not necessary to provide some information regarding the data update frequency the MD_MaintenanceFrequencyCode can be set to "asNeeded":
+
+```xml
+<gmd:identificationInfo>
+  ...
+  <gmd:resourceMaintenance>
+      <gmd:MD_MaintenanceInformation>
+        <gmd:maintenanceAndUpdateFrequency>
+          <gmd:MD_MaintenanceFrequencyCode
+            codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_MaintenanceFrequencyCode"
+            codeListValue="asNeeded"/>
+        </gmd:maintenanceAndUpdateFrequency>
+      </gmd:MD_MaintenanceInformation>
+  </gmd:resourceMaintenance>
+  ...
+</gmd:identificationInfo>
+```
+
 .Temporal information implementation rules
+
 |===
 |Rule |Score
 
@@ -84,7 +125,7 @@ The Data Update Frequency is present in gmd:maintenanceAndUpdateFrequency :
 |The Data Update Frequency is present
 |1
 
-|===
+ |===
 
 Total possible score: 4 (100%)
 
