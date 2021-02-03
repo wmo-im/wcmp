@@ -92,21 +92,6 @@ Below is an example of a GTS bulletin updated every 6 hours.
 
 If it is not relevant or not necessary to provide some information regarding the data update frequency the MD_MaintenanceFrequencyCode can be set to "asNeeded":
 
-```xml
-<gmd:identificationInfo>
-  ...
-  <gmd:resourceMaintenance>
-      <gmd:MD_MaintenanceInformation>
-        <gmd:maintenanceAndUpdateFrequency>
-          <gmd:MD_MaintenanceFrequencyCode
-            codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_MaintenanceFrequencyCode"
-            codeListValue="asNeeded"/>
-        </gmd:maintenanceAndUpdateFrequency>
-      </gmd:MD_MaintenanceInformation>
-  </gmd:resourceMaintenance>
-  ...
-</gmd:identificationInfo>
-```
 
 .Temporal information implementation rules
 
@@ -124,8 +109,7 @@ If it is not relevant or not necessary to provide some information regarding the
 
 |The Data Update Frequency is present
 |1
-
- |===
+|===
 
 Total possible score: 4 (100%)
 
