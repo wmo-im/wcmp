@@ -1,54 +1,82 @@
-== J. Broken links
+== J. Links health
 
-Detection of broken links contributing to the overall quality score.
+=== Status
 
-=== J.1 To which WMCP element(s) does it apply?
+Approved
 
-All potential linked information (URLs).
-Links are generally present in <gmd:onlineResource>, <gmd:graphicOverview>, 
+=== WCMP element(s)
 
-....
-<gmd:graphicOverview>
-        <gmd:MD_BrowseGraphic>
-          <gmd:fileName>
-            <gco:CharacterString>https://navigator.eumetsat.int/preview/0deg-snow.jpg</gco:CharacterString>
-          </gmd:fileName>
-        </gmd:MD_BrowseGraphic>
-</gmd:graphicOverview>
-....
+Any element or attribute content with linked information (URLs). Links are
+generally present in `gmd:URL`, `gmd:graphicOverview`, `gmx:Anchor/@xlink:href`,
+and `@codeList` elements/attributes.
 
-....
+```xml
 <gmd:CI_OnlineResource>
    <gmd:linkage>
       <gmd:URL>https://eumetview.eumetsat.int/mapviewer/?product=EO:EUM:DAT:MSG:SNOW</gmd:URL>
    </gmd:linkage>
 </gmd:CI_OnlineResource>
-....
+```
 
-=== J.2 What is being measured?
+```xml
+<gmd:graphicOverview>
+  <gmd:MD_BrowseGraphic>
+    <gmd:fileName>
+      <gco:CharacterString>https://navigator.eumetsat.int/preview/0deg-snow.jpg</gco:CharacterString>
+    </gmd:fileName>
+  </gmd:MD_BrowseGraphic>
+</gmd:graphicOverview>
+```
 
-The number of broken links present in each individual metadata record is being measured
+```xml
+<gmd:MD_Identifier>
+  <gmd:code>
+    <gmx:Anchor xlink:actuate="onRequest" xlink:href="https://dx.doi.org/10.14287/10000004" xlink:title="DOI">doi:10.14287/10000004</gmx:Anchor>
+  </gmd:code>
+</gmd:MD_Identifier>
+```
 
-=== J.3 Why should we measure it?
+```xml
+<gmd:dateType>
+  <gmd:CI_DateTypeCode codeList="http://wis.wmo.int/2011/schemata/iso19139_2007/schema/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision" codeSpace="ISOTC211/19115">revision</gmd:CI_DateTypeCode>
+</gmd:dateType>
+```
 
-Broken links damage the user experience and gives the impression to users that the site is not maintained (88% of the online consumers are less likely to return to a site after a bad experience). In addition broken links affects search engine rankings as having too often or too many broken links affects the reputation of your website towards Search Engines.
+=== What is being measured
 
-=== J.4 How is the measurement executed?
+The number of broken links in each individual metadata record.  Broken links
+include links which, when accessed, result in a 4xx or 5xx HTTP error.footnote:[https://httpstatuses.com].
 
-Like in *I* graphic overview a program can regularly pull all the metadata records and look for broken links.
-Example of tool could be used and integrated in the GISC quality checking:
+Also being measured is the use of HTTPS (with a valid SSL certificate) as the
+link protocol throughout WIS Metadata.
 
-- https://github.com/bartdag/pylinkvalidator[pylinkvalidator]: Python package that can be used to check on broken links
+=== Rationale for measurement
 
-Another could be to implement over the GISC catalogues and use a sitemap.xml.
+Broken links damage the user experience and gives the impression to users that
+a website is not maintained (88% of the online consumers are less likely to
+return to a site after a bad experience.footnote:[https://review42.com/web-design-statistics]).
+In addition, having numerous broken links affects the reputation and rank of
+your website when indexed by mass market search engines.
 
-=== J.5 What is (are) considered valid results?
+HTTPS is increasingly becoming a requirement for numerous agencies as well as the
+suggested protocol vs. HTTP.  Having non-HTTPS links in a WCMP document often leads to mixed
+content errors in web applications deployed via HTTPS for example, and using AJAX/XHR design
+patterns.  HTTPS supports secure, authoritative and trustworthy links as part of WIS Metadata.
 
-A valid result is a link that can be reached (ends-up with an HTTP 202 or a redirect and a 202).
+=== Rules for implementation
 
-=== J.6 Guidance to score well on this assessment
+.Links health implementation rules
+|===
+|Rule |Score
 
-Insure that all the included links are always fresh and accessible.
+|Each valid link provided
+|1
+|Each valid HTTPS link provided
+|1
+|===
 
+Total possible score: (valid links + valid HTTPS links) / (total links * 2) (100%)
 
+=== Guidance to score well on this assessment
 
+Ensure that all links resolve and are accessible via HTTPS.
