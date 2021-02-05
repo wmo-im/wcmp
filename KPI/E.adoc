@@ -46,7 +46,7 @@ The TemporalExtent is defined in `gmd:temporalElement`:
 ```
 
 In the case of an ongoing dataset with a known start date, but no known end
-date can be defined, the end date much be defined as `now`.  For instance,
+date can be defined, the end date must be defined as `now`.  For instance,
 where a dataset is from 2005-10-01 onwards:
 
 ```xml
@@ -65,9 +65,21 @@ where a dataset is from 2005-10-01 onwards:
 </gmd:temportalElement>
 ```
 
+It is also recommended to identify a dataset status / progress using the `MD_ProgressCode`
+codelist.  The following example provides an ongoing dataset progress/status:
+
+```xml
+<gmd:identificationInfo>
+  ...
+  <gmd:status>
+    <gmd:MD_ProgressCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ProgressCode" codeSpace="ISOTC211/19115" codeListValue="onGoing">onGoing</gmd:MD_ProgressCode>
+  </gmd:status>
+</gmd:identificationInfo>
+```
+
 The Data Update Frequency is defined in `gmd:maintenanceAndUpdateFrequency`:
 
-Below is an example of a GTS bulletin whic is updated every 6 hours.
+Below is an example of a GTS bulletin which is updated every 6 hours.
 
 ```xml
 <gmd:identificationInfo>
@@ -104,18 +116,6 @@ update frequency, `gmd:MD_MaintenanceFrequencyCode` can be set to `asNeeded`:
       </gmd:MD_MaintenanceInformation>
   </gmd:resourceMaintenance>
   ...
-</gmd:identificationInfo>
-```
-
-It is also possible to identify a dataset status / progress using the `MD_ProgressCode`
-codelist.  The following example provides an ongoing dataset progress/status:
-
-```xml
-<gmd:identificationInfo>
-  ...
-  <gmd:status>
-    <gmd:MD_ProgressCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ProgressCode" codeSpace="ISOTC211/19115" codeListValue="onGoing">onGoing</gmd:MD_ProgressCode>
-  </gmd:status>
 </gmd:identificationInfo>
 ```
 
