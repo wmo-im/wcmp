@@ -61,7 +61,7 @@ WMO OSCAR.
 |===
 |Rule |Score
 
-|test for a valid thesaurus title of `OSCAR/Title`
+|test for a valid thesaurus title of `OSCAR/Surface`
 |1
 
 |test for well referenced thesaurus using the Anchor with a resolvable HTTP URI
