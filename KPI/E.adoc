@@ -1,106 +1,147 @@
-
 == E. Temporal information
 
 Metadata records should contain the following temporal information:
 
-. Temporal extent: This element describes the period of time that the available product covers.
-. Data Update frequency: The temporal frequency at which the data is updated (ie, every x hours, days, ...).
+. Temporal extent: This element describes the period of time that the available product covers
+. Data Update frequency: The temporal frequency at which the data is updated (i.e. every x hours, days, ...)
 
-=== E.1 Temporal Extent
+=== Status
 
-==== E.1.1 To which WCMP element(s) does it apply?
+Draft
 
-To the TemporalElement element in gmd:identification info
+=== WCMP Element(s)
 
-/gmd:MD_Metadata/gmd:identificationInfo/*/ gmd:extent/*/gmd:temporalElement/*/gmd:extent/
+* `/gmd:MD_Metadata/gmd:identification//gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent`
+* `/gmd:MD_Metadata/gmd:identification//gmd:resourceMaintenance//gmd:maintenanceAndUpdateFrequency`
 
-Example:
-....
-<gmd:temporalElement>
-   <gmd:EX_TemporalExtent id="boundingTemporalExtent">
-     <gmd:extent>
-       <gml:TimePeriod gml:id="boundingTemporalExtentPeriod">
-       <gml:beginPosition>2005-10-01</gml:beginPosition>
-       <gml:endPosition>2014-10-20</gml:endPosition>
-       </gml:TimePeriod>
-     </gmd:extent>
-   </gmd:EX_TemporalExtent>
-</gmd:temporalElement>
-....
-or (for, say:  forecasts: now/now, see
-DRAFT – Guidance on WIS Discovery Metadata (following CBS-16), p??
+=== What is being measured
 
+The presence of a correctly defined temporal extent and data update frequency.
 
-==== E.1.2 What is being measured?
+=== Rationale for measurement
 
-The presence of such element in the WCMP evaluated record.
+Temporal information is a significant characteristic of weather/climate/water
+data and as such is critical for users to know which period(s) of time is/are
+covered by products and how often new products are received.
 
-==== E.1.3 Why should we measure it?
+=== Rules for implementation
 
-This is a crucial information for qualifying the product described by a metadata record but it is optional in the WCMP 1.3 standard.
+The TemporalExtent is defined in `gmd:temporalElement`:
 
-==== E.1.4 How is the measurement executed?
+```xml
+<gmd:identificationInfo>
+  ...
+  <gmd:temporalElement>
+    <gmd:EX_TemporalExtent id="boundingTemporalExtent">
+      <gmd:extent>
+        <gml:TimePeriod gml:id="boundingTemporalExtentPeriod">
+          <gml:beginPosition>2005-10-01</gml:beginPosition>
+          <gml:endPosition>2014-10-20</gml:endPosition>
+        </gml:TimePeriod>
+      </gmd:extent>
+    </gmd:EX_TemporalExtent>
+  </gmd:temporalElement>
+  ...
+</gmd:identificationInfo>
+```
 
-By detecting the presence of such element as a begin end date (with a now for the endPosition for on going datasets) construct or begin, end date and duration for describing the period of retention of the datasets by the service.
+In the case of an ongoing dataset with a known start date, but no known end
+date can be defined, the end date must be defined as `now`.  For instance,
+where a dataset is from 2005-10-01 onwards:
 
-See p 17 of the WMO Core Profile Metadata Guidance.
+```xml
+<gmd:identificationInfo>
+  ...
+  <gmd:temporalElement>
+     <gmd:EX_TemporalExtent id="temporalExtent">
+       <gmd:extent>
+         <gml:TimePeriod gml:id="boundingTemporalExtentPeriod">
+           <gml:beginPosition>2005-10-01</gml:beginPosition>
+           <gml:endPosition indeterminatePosition="now"/>
+         </gml:TimePeriod>
+       </gmd:extent>
+     </gmd:EX_TemporalExtent>
+  </gmd:temporalElement>
+</gmd:temportalElement>
+```
 
-==== E.1.5 What is (are) considered valid results?
-The presence of such element as a begin end date (with a now for the endPosition for on going datasets) construct or begin, end date and duration for describing the period of retention of the datasets by the service.
+It is also recommended to identify a dataset status / progress using the `MD_ProgressCode`
+codelist.  The following example provides an ongoing dataset progress/status:
 
-==== E.1.6 Guidance to score well on this assessment
-Always add the temporal extent information
+```xml
+<gmd:identificationInfo>
+  ...
+  <gmd:status>
+    <gmd:MD_ProgressCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ProgressCode" codeSpace="ISOTC211/19115" codeListValue="onGoing">onGoing</gmd:MD_ProgressCode>
+  </gmd:status>
+</gmd:identificationInfo>
+```
 
-=== E.2 Data Update Frequency
+The Data Update Frequency is defined in `gmd:maintenanceAndUpdateFrequency`:
 
-==== E.2.1 To which WCMP element(s) does it apply?
+Below is an example of a GTS bulletin which is updated every 6 hours.
 
-The UpdateFrequency element in the WCMP 1.3
+```xml
+<gmd:identificationInfo>
+  ...
+  <gmd:resourceMaintenance>
+    <gmd:MD_MaintenanceInformation>
+      <gmd:maintenanceAndUpdateFrequency>
+        <gmd:MD_MaintenanceFrequencyCode codeListValue="irregular" codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#MD_MaintenanceFrequencyCode"/>
+      </gmd:maintenanceAndUpdateFrequency>
+      <gmd:userDefinedMaintenanceFrequency>
+        <gts:TM_PeriodDuration>PT6H</gts:TM_PeriodDuration>
+      </gmd:userDefinedMaintenanceFrequency>
+      <gmd:maintenanceNote>
+        <!-- DRAFT – Guidance on WIS Discovery Metadata (following CBS-16), p38 -->
+        <gco:CharacterString>Instances of bulletin SIKB20NGTT are available every 6 hours starting at 03 UTC.</gco:CharacterString>
+      </gmd:maintenanceNote>
+    </gmd:MD_MaintenanceInformation>
+  </gmd:resourceMaintenance>
+  ...
+</gmd:identificationInfo>
+```
 
-gmd:MD_Metadata/gmd:identificationInfo/*/gmd:resourceMaintenance/*/gmd:mainte
-nanceAndUpdateFrequency
+If it is not relevant or necessary to provide information regarding the data
+update frequency, `gmd:MD_MaintenanceFrequencyCode` can be set to `asNeeded`:
 
-Example:
-....
-<gmd:resourceMaintenance>
-  <gmd:MD_MaintenanceInformation>
-    <gmd:maintenanceAndUpdateFrequency>
-     <gmd:MD_MaintenanceFrequencyCode codeListValue="irregular"
-      codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodel     ists.xml#MD_MaintenanceFrequencyCode"/>
-     </gmd:maintenanceAndUpdateFrequency>
-    <gmd:userDefinedMaintenanceFrequency>
-      <gts:TM_PeriodDuration>PT6H</gts:TM_PeriodDuration>
-    </gmd:userDefinedMaintenanceFrequency>
-    <gmd:maintenanceNote>
-DRAFT – Guidance on WIS Discovery Metadata (following CBS-16), p38
-    <gco:CharacterString>Instances of bulletin SIKB20NGTT are available every 6 hours starting at 03 UTC.</gco:CharacterString>
-    </gmd:maintenanceNote>
- </gmd:MD_MaintenanceInformation>
-</gmd:resourceMaintenance>
-....
+```xml
+<gmd:identificationInfo>
+  ...
+  <gmd:resourceMaintenance>
+      <gmd:MD_MaintenanceInformation>
+        <gmd:maintenanceAndUpdateFrequency>
+          <gmd:MD_MaintenanceFrequencyCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_MaintenanceFrequencyCode" codeListValue="asNeeded"/>
+        </gmd:maintenanceAndUpdateFrequency>
+      </gmd:MD_MaintenanceInformation>
+  </gmd:resourceMaintenance>
+  ...
+</gmd:identificationInfo>
+```
 
-==== E.2.2 What is being measured?
+.Temporal information implementation rules
 
-The presence of such element in the WCMP evaluated record.
+|===
+|Rule |Score
 
-==== E.2.3 Why should we measure it?
+|The Temporal Extent is defined
+|1
 
-This is an important information which indicates how often the product is updated.
+|The Temporal Extent contains begin and end components
+|1
 
-==== E.2.4 How is the measurement executed?
+|The begin date time is less than or equal to the end date time
+|1
 
-By detecting the presence of such element with a period, and a maintenance note.
+|The Data Update Frequency is defined
+|1
 
-See p 37 of the WMO Core Profile Metadata Guidance.
+|The Data Status is defined
+|1
+|===
 
-==== E.2.5 What is (are) considered valid results?
-The presence of such element as 
+Total possible score: 5 (100%)
 
-==== E.2.6 Guidance to score well on this assessment
+=== Guidance to score well on this assessment
 
-
-==== E.3 Bulletin metadata availability
-
-A Bulletin should contain a temporal extent with begin end and a period for indicating how long the data is kept on the cache (24 hr).
-It should also probably be repeated in the abstract.
-
+Ensure that the Temporal Extent and the Update Frequency is defined in the metadata record.
