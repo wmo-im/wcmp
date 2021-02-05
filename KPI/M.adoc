@@ -66,7 +66,7 @@ WMO/ISO Codelists referenced in WCMP
 |gmxCodelists (ISO)
 
 |`WMO_DataLicenseCode`
-|``//gmd:resourceConstraints//gmd:otherConstraints/[gco:CharacterString\|gmx:Anchor]`
+|`//gmd:resourceConstraints//gmd:otherConstraints/[gco:CharacterString\|gmx:Anchor]`
 |WMOCodeLists 
 
 |`WMO_GTSProductCategoryCode`
