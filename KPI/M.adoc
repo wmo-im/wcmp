@@ -54,7 +54,7 @@ WMO/ISO Codelists referenced in WCMP
 |WMOCodeLists (ISO Extended)
 
 |`MD_RestrictionCode`
-|`//gmd:resourceConstraints///gmd:MD_RestrictionCode`
+|`//gmd:resourceConstraints//gmd:MD_RestrictionCode`
 |gmxCodelists (ISO)
 
 |`MD_ScopeCode`
