@@ -1,12 +1,12 @@
-== C. Good quality abstract
+== KPI-{counter:kpi}: Good quality abstract
 
 === Status
 
-Draft
+Approved
 
 === WCMP element(s)
 
-`/gmd:MD_Metadata/gmd:identificationInfo//gmd:abstract`
+* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:abstract`
 
 === What is being measured
 
@@ -42,7 +42,7 @@ in support of data access, visualization and exploitation.
 |-1
 |===
 
-Total possible score: 3 (100%)
+*Total possible score: 3 (100%)*
 
 === Guidance to score well on this assessment
 
@@ -52,44 +52,45 @@ The abstract should provide a clear and concise statement that enables the
 reader to understand the content of the dataset. For guidance when completing
 the abstract, consider the following recommendations:
 
-. State what the 'things' are that are recorded
-. State the key aspects recorded about these things
-. State what form the data takes
-. State any other limiting information, such as time period of validity of the
+* State what the 'things' are that are recorded
+* State the key aspects recorded about these things
+* State what form the data takes
+* State any other limiting information, such as time period of validity of the
   data
-. Add purpose of data resource where relevant (e.g. for survey data)
-. Aim to be understood by non-experts
-. Do not include general background information
-. Avoid jargon and unexplained abbreviations
+* Add purpose of data resource where relevant (e.g. for survey data)
+* Aim to be understood by non-experts
+* Do not include general background information
+* Avoid jargon and unexplained abbreviations
 
 ==== Relevant recommendations
 
-. A metadata record abstract not a scientific abstract
-. Limit information in the abstract to the specific resource that is being
+* Avoid adding a scientific abstract
+* Limit information in the abstract to the specific resource that is being
   described
-. Describe the contents of the resource and the key aspects and/or attributes
+* Describe the contents of the resource and the key aspects and/or attributes
   that are represented
-. Briefly explain what is unique about this resource and, if appropriate how
+* Explain briefly what is unique about this resource and, if appropriate, how
   it differs from similar resources
-. Avoid citing external sources to this resource
-. Acronyms do not need to be spelled out if they are for commonly used terms
-  which are understood by the general public. Once an uncommon acronym is
-  spelled out within the Abstract it can be used without explanation
-. Do not include HTML/CSV tables or extra spaces to control display of text.
-  Use simple paragraph(s) only
-. Do not copy text from a journal article verbatim. This can lead to copyright
+* Avoid citing external sources to this resource
+* Avoid spelling out commonly used acronym which are already understood by the
+  general public
+* Spell out uncommon acronyms only once
+* Avoid including HTML/CSV tables, extra spaces or other markup to control
+  display of text.  Use simple paragraph(s) only
+* Avoid copying text from a journal article verbatim. This can lead to copyright
   violation concerns. Additionally, abstracts for journal articles are not
   intended to describe the provided resource and do not meet the metadata
   requirements. Related papers can be referenced from and/or tied to the
   metadata
-. Avoid using future verb tense when possible. Write using present or past
+* Avoid using future verb tense when possible. Write using present or past
   tenses
 
 ==== Spell checking recommendations
 
-. link:https://www.merriam-webster.com[Dictionary by Merriam-Webster: America's most-trusted online dictionary]
-. link:https://dictionary.cambridge.org[Cambridge Dictionary | English Dictionary, Translations & Thesaurus]
+* link:https://www.merriam-webster.com[Dictionary by Merriam-Webster: America's most-trusted online dictionary]
+* link:https://dictionary.cambridge.org[Cambridge Dictionary | English Dictionary, Translations & Thesaurus]
 
 ==== WMO Guidelines
 
 References of good abstract examples can be found in the link:https://library.wmo.int/doc_num.php?explnum_id=10257[Guide to WMO Information System (WMO No. 1061, Section 5.8.1.2)], product abstract.
+

@@ -1,0 +1,3024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.10">
+<meta name="copyright" content="Copyright © 2021 World Meteorological Organization (WMO)">
+<title>WMO Core Metadata Profile 1.3, Key Performance Indicators</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment @import statement to use as custom stylesheet */
+/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+a{background:none}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,*::before,*::after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:0}
+p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
+ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
+ul.square{list-style-type:square}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-bottom:1px dotted #ddd;cursor:help}
+abbr{text-transform:none}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
+blockquote cite::before{content:"\2014 \0020"}
+blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+table thead,table tfoot{background:#f7f8f7}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt{background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
+:not(pre)>code.nobreak{word-wrap:normal}
+:not(pre)>code.nowrap{white-space:nowrap}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre>code{display:block}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#content{margin-top:1.25em}
+#content::before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:100%;background:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:rgba(255,255,255,.8);line-height:1.44}
+#content{margin-bottom:.625em}
+.sect1{padding-bottom:.625em}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details>summary:first-of-type{cursor:pointer;display:list-item;outline:none;margin-bottom:.75em}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:inherit}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6)}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
+.exampleblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child{margin-bottom:0}
+.sidebarblock{border-style:solid;border-width:1px;border-color:#dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;-webkit-border-radius:4px;border-radius:4px}
+.sidebarblock>:first-child{margin-top:0}
+.sidebarblock>:last-child{margin-bottom:0}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class="highlight"],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos{border-right:1px solid currentColor;opacity:.35;padding-right:.5em}
+pre.pygments .lineno{border-right:1px solid currentColor;opacity:.35;display:inline-block;margin-right:.75em}
+pre.pygments .lineno::before{content:"";margin-right:-.125em}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
+table.tableblock{max-width:100%;border-collapse:separate}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+td.tableblock>.content>:last-child.sidebarblock{margin-bottom:0}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
+table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
+table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
+table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px}
+table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0}
+table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
+table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
+table.frame-all{border-width:1px}
+table.frame-sides{border-width:0 1px}
+table.frame-topbot,table.frame-ends{border-width:1px 0}
+table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd),table.stripes-even tr:nth-of-type(even),table.stripes-hover tr:hover{background:#f8f8f7}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
+ul.inline{display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+.gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
+.gist .file-data>table td.line-data{width:99%}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background:#00fafa}
+.black{color:#000}
+.black-background{background:#000}
+.blue{color:#0000bf}
+.blue-background{background:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background:#fa00fa}
+.gray{color:#606060}
+.gray-background{background:#7d7d7d}
+.green{color:#006000}
+.green-background{background:#007d00}
+.lime{color:#00bf00}
+.lime-background{background:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background:#7d0000}
+.navy{color:#000060}
+.navy-background{background:#00007d}
+.olive{color:#606000}
+.olive-background{background:#7d7d00}
+.purple{color:#600060}
+.purple-background{background:#7d007d}
+.red{color:#bf0000}
+.red-background{background:#fa0000}
+.silver{color:#909090}
+.silver-background{background:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,span.alt{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]::after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span::before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+@media print,amzn-kf8{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+</head>
+<body class="book">
+<div id="header">
+<h1>WMO Core Metadata Profile 1.3, Key Performance Indicators</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div style="page-break-after: always;"></div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: YYYY-MM-DD</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: issue-69</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Document location: <a href="https://github.com/wmo-im/tree/issue-69/kpi/wcmp-1.3-kpi.html" class="bare">https://github.com/wmo-im/tree/issue-69/kpi/wcmp-1.3-kpi.html</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://community.wmo.int/governance/commission-membership/commission-observation-infrastructures-and-information-systems-infcom/commission-infrastructure-officers/infcom-management-group/standing-committee-information-management-and-technology-sc-imt/expert-team-metadata-0">Task Team on WIS Metadata (TT-WISMD)</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://community.wmo.int/governance/commission-membership/commission-observation-infrastructures-and-information-systems-infcom/commission-infrastructure-national-representatives/infcom-management-group/standing-committee-information-management-and-technology-sc-imt/et-metadata">Expert Team on Metadata Standards (ET-Metadata)</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://community.wmo.int/governance/commission-membership/commission-observation-infrastructures-and-information-systems-infcom/commission-infrastructure-officers/infcom-management-group/standing-committee-information-management-and-technology-sc-imt">Standing Committee on Information Management and Technology (SC-IMT)</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://community.wmo.int/governance/commission-membership/infcom">Commission for Observation, Infrastructures and Information Systems (INFCOM)</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Copyright © 2021 World Meteorological Organization (WMO)</p></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+<div id="toc" class="toc">
+<div id="toctitle" class="title">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_overview">1. Overview</a>
+<ul class="sectlevel2">
+<li><a href="#_purpose">1.1. Purpose</a></li>
+<li><a href="#_scope">1.2. Scope</a></li>
+<li><a href="#_audience">1.3. Audience</a></li>
+<li><a href="#_how_to_use">1.4. How to use</a></li>
+<li><a href="#_scoring">1.5. Scoring</a></li>
+<li><a href="#_reference_implementation">1.6. Reference implementation</a></li>
+<li><a href="#_codelists_rules">1.7. Codelists rules</a></li>
+<li><a href="#_conventions">1.8. Conventions</a></li>
+</ul>
+</li>
+<li><a href="#_kpi_1_wcmp_1_3_part_2_compliance">2. KPI-1: WCMP 1.3, Part 2 Compliance</a>
+<ul class="sectlevel2">
+<li><a href="#_status">2.1. Status</a></li>
+<li><a href="#_wcmp_elements">2.2. WCMP element(s)</a></li>
+<li><a href="#_what_is_being_measured">2.3. What is being measured</a></li>
+<li><a href="#_rational_for_measurement">2.4. Rational for measurement</a></li>
+<li><a href="#_rules_for_implementation">2.5. Rules for implementation</a></li>
+<li><a href="#_guidance_to_score_well_on_this_assessment">2.6. Guidance to score well on this assessment</a></li>
+</ul>
+</li>
+<li><a href="#_kpi_2_good_quality_title">3. KPI-2: Good quality title</a>
+<ul class="sectlevel2">
+<li><a href="#_status_2">3.1. Status</a></li>
+<li><a href="#_wcmp_elements_2">3.2. WCMP element(s)</a></li>
+<li><a href="#_what_is_being_measured_2">3.3. What is being measured</a></li>
+<li><a href="#_rationale_for_measurement">3.4. Rationale for measurement</a></li>
+<li><a href="#_rules_for_implementation_2">3.5. Rules for implementation</a></li>
+<li><a href="#_guidance_to_score_well_on_this_assessment_2">3.6. Guidance to score well on this assessment</a></li>
+</ul>
+</li>
+<li><a href="#_kpi_3_good_quality_abstract">4. KPI-3: Good quality abstract</a>
+<ul class="sectlevel2">
+<li><a href="#_status_3">4.1. Status</a></li>
+<li><a href="#_wcmp_elements_3">4.2. WCMP element(s)</a></li>
+<li><a href="#_what_is_being_measured_3">4.3. What is being measured</a></li>
+<li><a href="#_rationale_for_measurement_2">4.4. Rationale for measurement</a></li>
+<li><a href="#_rules_for_implementation_3">4.5. Rules for implementation</a></li>
+<li><a href="#_guidance_to_score_well_on_this_assessment_3">4.6. Guidance to score well on this assessment</a></li>
+</ul>
+</li>
+<li><a href="#_kpi_4_temporal_information">5. KPI-4: Temporal information</a>
+<ul class="sectlevel2">
+<li><a href="#_status_4">5.1. Status</a></li>
+<li><a href="#_wcmp_elements_4">5.2. WCMP Element(s)</a></li>
+<li><a href="#_what_is_being_measured_4">5.3. What is being measured</a></li>
+<li><a href="#_rationale_for_measurement_3">5.4. Rationale for measurement</a></li>
+<li><a href="#_rules_for_implementation_4">5.5. Rules for implementation</a></li>
+<li><a href="#_guidance_to_score_well_on_this_assessment_4">5.6. Guidance to score well on this assessment</a></li>
+</ul>
+</li>
+<li><a href="#_kpi_5_wmoessential_data_links">6. KPI-5: WMOEssential data links</a>
+<ul class="sectlevel2">
+<li><a href="#_status_5">6.1. Status</a></li>
+<li><a href="#_wcmp_elements_5">6.2. WCMP element(s)</a></li>
+<li><a href="#_what_is_being_measured_5">6.3. What is being measured</a></li>
+<li><a href="#_rationale_for_measurement_4">6.4. Rationale for measurement</a></li>
+<li><a href="#_rules_for_implementation_5">6.5. Rules for implementation</a></li>
+<li><a href="#_guidance_to_score_well_on_this_assessment_5">6.6. Guidance to score well on this assessment</a></li>
+</ul>
+</li>
+<li><a href="#_kpi_6_keywords">7. KPI-6: Keywords</a>
+<ul class="sectlevel2">
+<li><a href="#_status_6">7.1. Status</a></li>
+<li><a href="#_wcmp_elements_6">7.2. WCMP element(s)</a></li>
+<li><a href="#_what_is_being_measured_6">7.3. What is being measured</a></li>
+<li><a href="#_rationale_for_measurement_5">7.4. Rationale for measurement</a></li>
+<li><a href="#_rules_for_implementation_6">7.5. Rules for implementation</a></li>
+<li><a href="#_guidance_to_score_well_on_this_assessment_6">7.6. Guidance to score well on this assessment</a></li>
+</ul>
+</li>
+<li><a href="#_kpi_7_graphic_overview_for_non_bulletins_metadata_records">8. KPI-7: Graphic overview for non bulletins metadata records</a>
+<ul class="sectlevel2">
+<li><a href="#_wcmp_elements_7">8.1. WCMP element(s)</a></li>
+<li><a href="#_what_is_being_measured_7">8.2. What is being measured</a></li>
+<li><a href="#_rationale_for_measurement_6">8.3. Rationale for measurement</a></li>
+<li><a href="#_rules_for_implementation_7">8.4. Rules for implementation</a></li>
+<li><a href="#_guidance_to_score_well_on_this_assessment_7">8.5. Guidance to score well on this assessment</a></li>
+</ul>
+</li>
+<li><a href="#_kpi_8_links_health">9. KPI-8: Links health</a>
+<ul class="sectlevel2">
+<li><a href="#_status_7">9.1. Status</a></li>
+<li><a href="#_wcmp_elements_8">9.2. WCMP element(s)</a></li>
+<li><a href="#_what_is_being_measured_8">9.3. What is being measured</a></li>
+<li><a href="#_rationale_for_measurement_7">9.4. Rationale for measurement</a></li>
+<li><a href="#_rules_for_implementation_8">9.5. Rules for implementation</a></li>
+<li><a href="#_guidance_to_score_well_on_this_assessment_8">9.6. Guidance to score well on this assessment</a></li>
+</ul>
+</li>
+<li><a href="#_kpi_9_data_policy">10. KPI-9: Data policy</a>
+<ul class="sectlevel2">
+<li><a href="#_status_8">10.1. Status</a></li>
+<li><a href="#_wcmp_elements_9">10.2. WCMP element(s)</a></li>
+<li><a href="#_what_is_being_measured_9">10.3. What is being measured</a></li>
+<li><a href="#_rationale_for_measurement_8">10.4. Rationale for measurement</a></li>
+<li><a href="#_rules_for_implementation_9">10.5. Rules for implementation</a></li>
+<li><a href="#_guidance_to_score_well_on_this_assessment_9">10.6. Guidance to score well on this assessment</a></li>
+</ul>
+</li>
+<li><a href="#_kpi_10_distribution_information">11. KPI-10: Distribution information</a>
+<ul class="sectlevel2">
+<li><a href="#_status_9">11.1. Status</a></li>
+<li><a href="#_wcmp_elements_10">11.2. WCMP element(s)</a></li>
+<li><a href="#_what_is_being_measured_10">11.3. What is being measured</a></li>
+<li><a href="#_rationale_for_measurement_9">11.4. Rationale for measurement</a></li>
+<li><a href="#_rules_for_implementation_10">11.5. Rules for implementation</a></li>
+<li><a href="#_guidance_to_score_well_on_this_assessment_10">11.6. Guidance to score well on this assessment</a></li>
+</ul>
+</li>
+<li><a href="#_kpi_11_codelists_validation">12. KPI-11: Codelists validation</a>
+<ul class="sectlevel2">
+<li><a href="#_wcmp_elements_11">12.1. WCMP element(s)</a></li>
+<li><a href="#_what_is_being_measured_11">12.2. What is being measured</a></li>
+<li><a href="#_rationale_for_measurement_10">12.3. Rationale for measurement</a></li>
+<li><a href="#_rules_for_implementation_11">12.4. Rules for implementation</a></li>
+<li><a href="#_guidance_to_score_well_on_this_assessment_11">12.5. Guidance to score well on this assessment</a></li>
+</ul>
+</li>
+<li><a href="#_kpi_12_doi_citation">13. KPI-12: DOI citation</a>
+<ul class="sectlevel2">
+<li><a href="#_status_10">13.1. Status</a></li>
+<li><a href="#_wcmp_elements_12">13.2. WCMP element(s)</a></li>
+<li><a href="#_what_is_being_measured_12">13.3. What is being measured</a></li>
+<li><a href="#_rationale_for_measurement_11">13.4. Rationale for measurement</a></li>
+<li><a href="#_rules_for_implementation_12">13.5. Rules for implementation</a></li>
+<li><a href="#_guidance_to_score_well_on_this_assessment_12">13.6. Guidance to score well on this assessment</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_overview"><a class="anchor" href="#_overview"></a>1. Overview</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_purpose"><a class="anchor" href="#_purpose"></a>1.1. Purpose</h3>
+<div class="paragraph">
+<p>This document is intended to define Key Performance Indicators (KPIs) in
+support of the WMO Core Metadata Profile (WCMP).  KPIs provide measurable,
+value added quality assessment rules over and above syntactic and schematic
+rulesets put forth by WCMP and ISO 19115:2003/19139:2007.</p>
+</div>
+<div class="paragraph">
+<p>The core driver of WCMP KPIs is continuous improvement and useability of
+discovery metadata as part of the <a href="https://community.wmo.int/activity-areas/wmo-information-system-wis">WMO Information System (WIS)</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_scope"><a class="anchor" href="#_scope"></a>1.2. Scope</h3>
+<div class="paragraph">
+<p>This document is bound to the WCMP 1.3 specification and codelists. All
+other metadata specifications or representations are not in scope.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_audience"><a class="anchor" href="#_audience"></a>1.3. Audience</h3>
+<div class="paragraph">
+<p>The target stakeholder audiences for this document include (but are not limited to):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Metadata providers (NCs, DCPCs)</p>
+</li>
+<li>
+<p>Metadata consumers (GISCs)</p>
+</li>
+<li>
+<p>WMO World Data Centres (WDCs)</p>
+</li>
+<li>
+<p>GAW World Data Centres (WDCs)</p>
+</li>
+<li>
+<p>WMO WIS Operations and Monitoring</p>
+</li>
+<li>
+<p>Metadata implementors (generation, ingest)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_how_to_use"><a class="anchor" href="#_how_to_use"></a>1.4. How to use</h3>
+<div class="paragraph">
+<p>The KPIs in this document are designed to help metadata providers in the
+curation of discovery metadata, as well as GISCs to measure the quality
+of metadata from NCs and DCPCs.</p>
+</div>
+<div class="paragraph">
+<p>In order to improve quality:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>providers should use the KPIs to build into their metadata generation</p>
+</li>
+<li>
+<p>consumers should use the KPIs in order to quality assess discovery metadata
+and provide subsequent feedback to providers</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_scoring"><a class="anchor" href="#_scoring"></a>1.5. Scoring</h3>
+<div class="paragraph">
+<p>Each KPI assesses a number of criteria asssociated with metadata quality,
+resulting in a raw score, as well as a percentage. This approach is
+implemented so as to apply weighted scoring as required by a scoring rubric.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_reference_implementation"><a class="anchor" href="#_reference_implementation"></a>1.6. Reference implementation</h3>
+<div class="paragraph">
+<p>The TT-WISMD maintains <a href="https://github.com/wmo-im/pywcmp">pywcmp</a>, as the
+reference WCMP validation utility which includes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>validation against WMO Core Metadata Profile 1.3, specifically Part 2,
+Section 2</p>
+</li>
+<li>
+<p>validation against the KPIs described in this document</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Documentation on installation, configuration and usage can be found on the
+pywcmp website.</p>
+</div>
+<div class="paragraph">
+<p>pywcmp is provided as a resource to the community, under continuous
+improvement. Contributions are welcome and can be facilited via TT-WISMD.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_codelists_rules"><a class="anchor" href="#_codelists_rules"></a>1.7. Codelists rules</h3>
+<div class="paragraph">
+<p>WMO and ISO codelists currently exist in numerous locations on the Internet.
+The authoritative code locations that should be used when validating shall be:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>WMO codelists: <a href="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml" class="bare">https://wis.wmo.int/2012/codelists/WMOCodeLists.xml</a></p>
+</li>
+<li>
+<p>ISO codelists: <a href="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml" class="bare">https://standards.iso.org/iso/19139/resources/gmxCodelists.xml</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_conventions"><a class="anchor" href="#_conventions"></a>1.8. Conventions</h3>
+<div class="sect3">
+<h4 id="_symbols_and_abbreviated_terms"><a class="anchor" href="#_symbols_and_abbreviated_terms"></a>1.8.1. Symbols and abbreviated terms</h4>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Symbols and abbreviated terms</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Abbreviation</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Term</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">AJAX</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Asynchronous JavaScript and XML</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">CSV</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Comma-separated values</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">DCPC</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Data Collection and Production Centres</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">DOI</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Digital Object Identifier</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">GAW</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Global Atmospheric Watch</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">GISC</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Global Information System Centre</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">GML</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Geography Markup Language</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">GTS</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Global Telecommunication System</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HTML</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Hypertext Markup Language</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HTTP</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Hypertext Transfer Protocol</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HTTPS</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Hypertext Transfer Protocol Secure</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">INSPIRE</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Infrastructure for Spatial Information in the European Community</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ISO</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Internatioal Organization for Standardization</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">MIME</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Multipurpose Internet Mail Extensions</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">NC</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">National Centre</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">OGC</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open Geospatial Consortium</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">pywcmp</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WMO implementation of WCMP validation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">URL</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Uniform Resource Locator</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WCMP</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WMO Core Metadata Profile</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WDC</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">World Data Centre</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WIS</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WMO Information System</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WMO</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">World Meteorological Organization</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">XHR</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">XMLHttpRequest</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">XML</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">eXtensible Markup Language</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kpi_1_wcmp_1_3_part_2_compliance"><a class="anchor" href="#_kpi_1_wcmp_1_3_part_2_compliance"></a>2. KPI-1: WCMP 1.3, Part 2 Compliance</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_status"><a class="anchor" href="#_status"></a>2.1. Status</h3>
+<div class="paragraph">
+<p>Approved</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wcmp_elements"><a class="anchor" href="#_wcmp_elements"></a>2.2. WCMP element(s)</h3>
+<div class="paragraph">
+<p>All WCMP elements specified in <a href="https://wis.wmo.int/2013/metadata/version_1-3-0/WMO_Core_Metadata_Profile_v1.3_Part_2.pdf">WCMP 1.3, Part 2 – Abstract Test Suite, Data Dictionary and Code Lists</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_is_being_measured"><a class="anchor" href="#_what_is_being_measured"></a>2.3. What is being measured</h3>
+<div class="paragraph">
+<p>All requirements specified in WCMP 1.3, Part 2.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rational_for_measurement"><a class="anchor" href="#_rational_for_measurement"></a>2.4. Rational for measurement</h3>
+<div class="paragraph">
+<p>WCMP 1.3, Part 2 forms the basis of all KPIs.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rules_for_implementation"><a class="anchor" href="#_rules_for_implementation"></a>2.5. Rules for implementation</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>WCMP 1.3, Part 2 Compliance implementation rules</p>
+</li>
+</ol>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Rule</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement 6.1.1: Each WIS Discovery Metadata record shall validate without error against the XML schemas defined in ISO/TS 19139:2007</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement 6.1.2: Each WIS Discovery Metadata record shall validate without error against the rule-based constraints listed in ISO/TS 19139:2007 Annex A (Table A.1)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement 6.2.1: Each WIS Discovery Metadata record shall explicitly name all namespaces used within the record; use of default namespaces is prohibited</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Requirement 6.3.1: Each WIS Discovery Metadata record shall declare the following XML namespace for GML: <code>http://www.opengis.net/gml/3.2</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Requirement 8.1.1: Each WIS Discovery Metadata record shall include one <code>gmd:MD_Metadata/gmd:fileIdentifier</code> attribute</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Requirement 8.2.1: Each WIS Discovery Metadata record shall include at least one keyword from the <code>WMO_CategoryCode</code> code list</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Requirement 8.2.2: Keywords from <code>WMO_CategoryCode</code> code list shall be defined as keyword type <code>theme</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Requirement 8.2.3: All keywords sourced from a particular keyword thesaurus shall be grouped into a single instance of the <code>MD_Keywords</code> class</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement 8.2.4: Each WIS Discovery Metadata record describing geographic data shall include the description of at least one geographic bounding box defining the spatial extent of the data</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Requirement 9.1.1: A WIS Discovery Metadata record describing data for global exchange via the WIS shall indicate the scope of distribution using the keyword <code>GlobalExchange</code> of type <code>dataCenter</code> from thesaurus <code>WMO_DistributionScopeCode</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Requirement 9.2.1: A WIS Discovery Metadata record describing data for global exchange via the WIS shall have a <code>gmd:MD_Metadata/gmd:fileIdentifier</code> attribute formatted as follows (where <code>{uid}</code> is a unique identifier derived from the GTS bulletin or file name): <code>urn:x-wmo:md:int.wmo.wis::{uid}</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Requirement 9.3.1: A WIS Discovery Metadata record describing data for global exchange via the WIS shall indicate the WMO Data License as Legal Constraint (type: <code>gmd:otherConstraints</code>) using one and only one term from the <code>WMO_DataLicenseCode</code> code list</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Requirement 9.3.2: A WIS Discovery Metadata record describing data for global exchange via the WIS shall indicate the GTS Priority as Legal Constraint (type: <code>gmd:otherConstraints</code>) using one and only one term from the <code>WMO_GTSProductCategoryCode</code> code list</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Total possible score: 13 (100%)</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_guidance_to_score_well_on_this_assessment"><a class="anchor" href="#_guidance_to_score_well_on_this_assessment"></a>2.6. Guidance to score well on this assessment</h3>
+<div class="paragraph">
+<p>Use WCMP templates and/or tools to generate the metadata record (e.g. Excel to WIS).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kpi_2_good_quality_title"><a class="anchor" href="#_kpi_2_good_quality_title"></a>3. KPI-2: Good quality title</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_status_2"><a class="anchor" href="#_status_2"></a>3.1. Status</h3>
+<div class="paragraph">
+<p>Approved</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wcmp_elements_2"><a class="anchor" href="#_wcmp_elements_2"></a>3.2. WCMP element(s)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><code>/gmd:MD_Metadata/gmd:identificationInfo//gmd:citation/gmd:CI_Citation/gmd:title</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_is_being_measured_2"><a class="anchor" href="#_what_is_being_measured_2"></a>3.3. What is being measured</h3>
+<div class="paragraph">
+<p>The title field shall always be populated and and follow the principles of
+WCMP guidance.  The length shall not be too short or too long, contain less
+than 3 acronyms and represented in title case.  Spelling and grammar are correct.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rationale_for_measurement"><a class="anchor" href="#_rationale_for_measurement"></a>3.4. Rationale for measurement</h3>
+<div class="paragraph">
+<p>Title is the first element of metadata information displayed and helps with
+initial identification. Meaningful and relevant information makes it easier
+for users to understand the resource.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rules_for_implementation_2"><a class="anchor" href="#_rules_for_implementation_2"></a>3.5. Rules for implementation</h3>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. Good quality title implementation rules</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Rule</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">title exists</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">title has 3 words or more</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">title has 150 characters or less</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">title only has printable characters (numbers and letters)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">words in title are represented in "Title Case"</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">title contains less than 3 acronyms (words with all upper case)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>title does not contain bulletin header (regular expression: <code>[A-Z]{4}\d{2}[\s_]*[A-Z]{4}</code>)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">title passes a basic spellcheck</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Total possible score: 8 (100%)</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_guidance_to_score_well_on_this_assessment_2"><a class="anchor" href="#_guidance_to_score_well_on_this_assessment_2"></a>3.6. Guidance to score well on this assessment</h3>
+<div class="paragraph">
+<p>In the context of WIS Product catalogues, the product title and abstract are
+the two most relevant elements in the WCMP metadata record.  These two elements
+are presented to the users in search results as well as the product description
+page, and need to focus on highlighting the product’s key characteristics to
+assist users with relevant product search results.</p>
+</div>
+<div class="paragraph">
+<p>The title should be as specific about the product as possible. For example, if
+the product only contains one parameter, this can be stated in the title;
+however, if the product contains numerous parameters, then a more general term
+should be used in the title, and the parameters stated elsewhere in the
+metadata record (abstract, keywords, etc.).</p>
+</div>
+<div class="paragraph">
+<p>For a satellite product offering one main data parameter, the title will
+typically define which parameter is contained in the product, and from which
+instrument or instrument type it originates. For example, "AMSR-2 Sea Surface
+Temperature” or “SLSTR L1B radiances and brightness temperatures”.<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kpi_3_good_quality_abstract"><a class="anchor" href="#_kpi_3_good_quality_abstract"></a>4. KPI-3: Good quality abstract</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_status_3"><a class="anchor" href="#_status_3"></a>4.1. Status</h3>
+<div class="paragraph">
+<p>Approved</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wcmp_elements_3"><a class="anchor" href="#_wcmp_elements_3"></a>4.2. WCMP element(s)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><code>/gmd:MD_Metadata/gmd:identificationInfo//gmd:abstract</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_is_being_measured_3"><a class="anchor" href="#_what_is_being_measured_3"></a>4.3. What is being measured</h3>
+<div class="paragraph">
+<p>The abstract field length shall not be too short or too long and contain no
+HTML markup.  Spelling and grammar are correct.  Bulletin templates should
+not be used to populate the abstract.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rationale_for_measurement_2"><a class="anchor" href="#_rationale_for_measurement_2"></a>4.4. Rationale for measurement</h3>
+<div class="paragraph">
+<p>To faciliate ease of understanding and discovery.</p>
+</div>
+<div class="paragraph">
+<p>Abstract is a key element of metadata information displayed as part of search
+results. Fulsome and meaningful abstract information allows for users to both
+understand and properly evaluate a metadata record and its respective resource
+in support of data access, visualization and exploitation.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rules_for_implementation_3"><a class="anchor" href="#_rules_for_implementation_3"></a>4.5. Rules for implementation</h3>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 3. Good quality abstract implementation rules</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Rule</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">abstract has between 16 and 2048 characters</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">abstract contains no markup (HTML)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">abstract passes a basic spellcheck</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">abstract contains bulletin template</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">-1</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Total possible score: 3 (100%)</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_guidance_to_score_well_on_this_assessment_3"><a class="anchor" href="#_guidance_to_score_well_on_this_assessment_3"></a>4.6. Guidance to score well on this assessment</h3>
+<div class="sect3">
+<h4 id="_wcmp_1_3_part_1_guidance"><a class="anchor" href="#_wcmp_1_3_part_1_guidance"></a>4.6.1. WCMP 1.3 Part 1 Guidance</h4>
+<div class="paragraph">
+<p>The abstract should provide a clear and concise statement that enables the
+reader to understand the content of the dataset. For guidance when completing
+the abstract, consider the following recommendations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>State what the 'things' are that are recorded</p>
+</li>
+<li>
+<p>State the key aspects recorded about these things</p>
+</li>
+<li>
+<p>State what form the data takes</p>
+</li>
+<li>
+<p>State any other limiting information, such as time period of validity of the
+data</p>
+</li>
+<li>
+<p>Add purpose of data resource where relevant (e.g. for survey data)</p>
+</li>
+<li>
+<p>Aim to be understood by non-experts</p>
+</li>
+<li>
+<p>Do not include general background information</p>
+</li>
+<li>
+<p>Avoid jargon and unexplained abbreviations</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_relevant_recommendations"><a class="anchor" href="#_relevant_recommendations"></a>4.6.2. Relevant recommendations</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Avoid adding a scientific abstract</p>
+</li>
+<li>
+<p>Limit information in the abstract to the specific resource that is being
+described</p>
+</li>
+<li>
+<p>Describe the contents of the resource and the key aspects and/or attributes
+that are represented</p>
+</li>
+<li>
+<p>Explain briefly what is unique about this resource and, if appropriate, how
+it differs from similar resources</p>
+</li>
+<li>
+<p>Avoid citing external sources to this resource</p>
+</li>
+<li>
+<p>Avoid spelling out commonly used acronym which are already understood by the
+general public</p>
+</li>
+<li>
+<p>Spell out uncommon acronyms only once</p>
+</li>
+<li>
+<p>Avoid including HTML/CSV tables, extra spaces or other markup to control
+display of text.  Use simple paragraph(s) only</p>
+</li>
+<li>
+<p>Avoid copying text from a journal article verbatim. This can lead to copyright
+violation concerns. Additionally, abstracts for journal articles are not
+intended to describe the provided resource and do not meet the metadata
+requirements. Related papers can be referenced from and/or tied to the
+metadata</p>
+</li>
+<li>
+<p>Avoid using future verb tense when possible. Write using present or past
+tenses</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_spell_checking_recommendations"><a class="anchor" href="#_spell_checking_recommendations"></a>4.6.3. Spell checking recommendations</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.merriam-webster.com">Dictionary by Merriam-Webster: America&#8217;s most-trusted online dictionary</a></p>
+</li>
+<li>
+<p><a href="https://dictionary.cambridge.org">Cambridge Dictionary | English Dictionary, Translations &amp; Thesaurus</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_wmo_guidelines"><a class="anchor" href="#_wmo_guidelines"></a>4.6.4. WMO Guidelines</h4>
+<div class="paragraph">
+<p>References of good abstract examples can be found in the <a href="https://library.wmo.int/doc_num.php?explnum_id=10257">Guide to WMO Information System (WMO No. 1061, Section 5.8.1.2)</a>, product abstract.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kpi_4_temporal_information"><a class="anchor" href="#_kpi_4_temporal_information"></a>5. KPI-4: Temporal information</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_status_4"><a class="anchor" href="#_status_4"></a>5.1. Status</h3>
+<div class="paragraph">
+<p>Approved</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wcmp_elements_4"><a class="anchor" href="#_wcmp_elements_4"></a>5.2. WCMP Element(s)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><code>/gmd:MD_Metadata/gmd:identification//gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent</code></p>
+</li>
+<li>
+<p><code>/gmd:MD_Metadata/gmd:identification//gmd:resourceMaintenance//gmd:maintenanceAndUpdateFrequency</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_is_being_measured_4"><a class="anchor" href="#_what_is_being_measured_4"></a>5.3. What is being measured</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Temporal extent: This element describes the period of time that the available product covers</p>
+</li>
+<li>
+<p>Data update frequency: The temporal frequency at which the data is updated (i.e. every x hours, days, etc.)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rationale_for_measurement_3"><a class="anchor" href="#_rationale_for_measurement_3"></a>5.4. Rationale for measurement</h3>
+<div class="paragraph">
+<p>Temporal information is a significant characteristic of weather/climate/water
+data and as such is critical for users to know which period(s) of time is/are
+covered by products and how often new products are received.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rules_for_implementation_4"><a class="anchor" href="#_rules_for_implementation_4"></a>5.5. Rules for implementation</h3>
+<div class="paragraph">
+<p>The TemporalExtent is defined in <code>gmd:temporalElement</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;gmd:identificationInfo&gt;
+  ...
+  &lt;gmd:temporalElement&gt;
+    &lt;gmd:EX_TemporalExtent id="boundingTemporalExtent"&gt;
+      &lt;gmd:extent&gt;
+        &lt;gml:TimePeriod gml:id="boundingTemporalExtentPeriod"&gt;
+          &lt;gml:beginPosition&gt;2005-10-01&lt;/gml:beginPosition&gt;
+          &lt;gml:endPosition&gt;2014-10-20&lt;/gml:endPosition&gt;
+        &lt;/gml:TimePeriod&gt;
+      &lt;/gmd:extent&gt;
+    &lt;/gmd:EX_TemporalExtent&gt;
+  &lt;/gmd:temporalElement&gt;
+  ...
+&lt;/gmd:identificationInfo&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the case of an ongoing dataset with a known start date, but no known end
+date can be defined, the end date must be defined as <code>now</code>.  For instance,
+where a dataset is from 2005-10-01 onwards:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;gmd:identificationInfo&gt;
+  ...
+  &lt;gmd:temporalElement&gt;
+     &lt;gmd:EX_TemporalExtent id="temporalExtent"&gt;
+       &lt;gmd:extent&gt;
+         &lt;gml:TimePeriod gml:id="boundingTemporalExtentPeriod"&gt;
+           &lt;gml:beginPosition&gt;2005-10-01&lt;/gml:beginPosition&gt;
+           &lt;gml:endPosition indeterminatePosition="now"/&gt;
+         &lt;/gml:TimePeriod&gt;
+       &lt;/gmd:extent&gt;
+     &lt;/gmd:EX_TemporalExtent&gt;
+  &lt;/gmd:temporalElement&gt;
+&lt;/gmd:temportalElement&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It is also recommended to identify a dataset status / progress using the <code>gmd:MD_ProgressCode</code>
+codelist.  The following example provides an ongoing dataset progress/status:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;gmd:identificationInfo&gt;
+  ...
+  &lt;gmd:status&gt;
+    &lt;gmd:MD_ProgressCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ProgressCode" codeSpace="ISOTC211/19115" codeListValue="onGoing"&gt;onGoing&lt;/gmd:MD_ProgressCode&gt;
+  &lt;/gmd:status&gt;
+&lt;/gmd:identificationInfo&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The Data Update Frequency is defined in <code>gmd:maintenanceAndUpdateFrequency</code>:</p>
+</div>
+<div class="paragraph">
+<p>Below is an example of a GTS bulletin which is updated every 6 hours.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;gmd:identificationInfo&gt;
+  ...
+  &lt;gmd:resourceMaintenance&gt;
+    &lt;gmd:MD_MaintenanceInformation&gt;
+      &lt;gmd:maintenanceAndUpdateFrequency&gt;
+        &lt;gmd:MD_MaintenanceFrequencyCode codeListValue="irregular" codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_MaintenanceFrequencyCode"/&gt;
+      &lt;/gmd:maintenanceAndUpdateFrequency&gt;
+      &lt;gmd:userDefinedMaintenanceFrequency&gt;
+        &lt;gts:TM_PeriodDuration&gt;PT6H&lt;/gts:TM_PeriodDuration&gt;
+      &lt;/gmd:userDefinedMaintenanceFrequency&gt;
+      &lt;gmd:maintenanceNote&gt;
+        &lt;!-- DRAFT – Guidance on WIS Discovery Metadata (following CBS-16), p38 --&gt;
+        &lt;gco:CharacterString&gt;Instances of bulletin SIKB20NGTT are available every 6 hours starting at 03 UTC.&lt;/gco:CharacterString&gt;
+      &lt;/gmd:maintenanceNote&gt;
+    &lt;/gmd:MD_MaintenanceInformation&gt;
+  &lt;/gmd:resourceMaintenance&gt;
+  ...
+&lt;/gmd:identificationInfo&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If it is not relevant or necessary to provide information regarding the data
+update frequency, <code>gmd:MD_MaintenanceFrequencyCode</code> can be set to <code>asNeeded</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;gmd:identificationInfo&gt;
+  ...
+  &lt;gmd:resourceMaintenance&gt;
+      &lt;gmd:MD_MaintenanceInformation&gt;
+        &lt;gmd:maintenanceAndUpdateFrequency&gt;
+          &lt;gmd:MD_MaintenanceFrequencyCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_MaintenanceFrequencyCode" codeListValue="asNeeded"/&gt;
+        &lt;/gmd:maintenanceAndUpdateFrequency&gt;
+      &lt;/gmd:MD_MaintenanceInformation&gt;
+  &lt;/gmd:resourceMaintenance&gt;
+  ...
+&lt;/gmd:identificationInfo&gt;</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 4. Temporal information implementation rules</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Rule</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Temporal Extent is defined</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Temporal Extent contains begin and end components</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The begin date time is less than or equal to the end date time</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Data Update Frequency is defined</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Data Status is defined</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Total possible score: 5 (100%)</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_guidance_to_score_well_on_this_assessment_4"><a class="anchor" href="#_guidance_to_score_well_on_this_assessment_4"></a>5.6. Guidance to score well on this assessment</h3>
+<div class="paragraph">
+<p>Ensure that the Temporal Extent and the Update Frequency is defined in the metadata record.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kpi_5_wmoessential_data_links"><a class="anchor" href="#_kpi_5_wmoessential_data_links"></a>6. KPI-5: WMOEssential data links</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_status_5"><a class="anchor" href="#_status_5"></a>6.1. Status</h3>
+<div class="paragraph">
+<p>Approved</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wcmp_elements_5"><a class="anchor" href="#_wcmp_elements_5"></a>6.2. WCMP element(s)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><code>/gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceConstraints/gmd:MD_LegalConstaints/gmd:otherConstraints</code></p>
+</li>
+<li>
+<p><code>/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:linkage</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_is_being_measured_5"><a class="anchor" href="#_what_is_being_measured_5"></a>6.3. What is being measured</h3>
+<div class="paragraph">
+<p>Whether the DataLicenseCode of <code>WMOEssential</code> is provided as a constraint as
+part of data identification, if yes then ensure that distribution URLs are
+provided.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rationale_for_measurement_4"><a class="anchor" href="#_rationale_for_measurement_4"></a>6.4. Rationale for measurement</h3>
+<div class="paragraph">
+<p>All <code>WMOEssential</code> data should have 1..n distribution links to the data.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rules_for_implementation_5"><a class="anchor" href="#_rules_for_implementation_5"></a>6.5. Rules for implementation</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;gmd:resourceConstraints&gt;
+  &lt;gmd:MD_LegalConstraints&gt;
+    &lt;gmd:otherConstraints&gt;
+      &lt;gmx:Anchor xlink:href="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_DataLicenseCode_WMOEssential"&gt;WMOEssential&lt;/gmx:Anchor&gt;
+    &lt;/gmd:otherConstraints&gt;
+  &lt;/gmd:MD_LegalConstraints&gt;
+&lt;/gmd:resourceConstraints&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;gmd:MD_DigitalTransferOptions&gt;
+  &lt;gmd:onLine&gt;
+    &lt;gmd:CI_OnlineResource&gt;
+      &lt;gmd:linkage&gt;
+        &lt;gmd:URL&gt;https://opendata.dwd.de/weather/wmc/icon-eps/data/grib&lt;/gmd:URL&gt;
+      &lt;/gmd:linkage&gt;
+      &lt;gmd:protocol&gt;
+        &lt;gco:CharacterString&gt;http&lt;/gco:CharacterString&gt;
+      &lt;/gmd:protocol&gt;
+      &lt;gmd:name&gt;
+        &lt;gco:CharacterString&gt;GISC Offenbach, Deutscher Wetterdienst&lt;/gco:CharacterString&gt;
+      &lt;/gmd:name&gt;
+      &lt;gmd:description&gt;
+        &lt;gco:CharacterString&gt;WMO Information System, download products/data through GISC Offenbach, Deutscher Wetterdienst&lt;/gco:CharacterString&gt;
+      &lt;/gmd:description&gt;
+    &lt;/gmd:CI_OnlineResource&gt;
+  &lt;/gmd:onLine&gt;
+&lt;/gmd:MD_DigitalTransferOptions&gt;</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 5. WMOEssential data links implementation rules</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Rule</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>DataLicenseCode</code> is <code>WMOEssential</code> and 1..n distribution links are provided</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Total possible score: 1 (100%)</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_guidance_to_score_well_on_this_assessment_5"><a class="anchor" href="#_guidance_to_score_well_on_this_assessment_5"></a>6.6. Guidance to score well on this assessment</h3>
+<div class="paragraph">
+<p>If the data described is categorized as <code>WMOEssential</code>, provide a link to the data.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kpi_6_keywords"><a class="anchor" href="#_kpi_6_keywords"></a>7. KPI-6: Keywords</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_status_6"><a class="anchor" href="#_status_6"></a>7.1. Status</h3>
+<div class="paragraph">
+<p>Approved</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wcmp_elements_6"><a class="anchor" href="#_wcmp_elements_6"></a>7.2. WCMP element(s)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><code>//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword</code></p>
+</li>
+<li>
+<p><code>//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:type</code></p>
+</li>
+<li>
+<p><code>//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_is_being_measured_6"><a class="anchor" href="#_what_is_being_measured_6"></a>7.3. What is being measured</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>presence of keywords, the level of definition and reference to controlled
+vocabularies</p>
+</li>
+<li>
+<p>level of definition of a keyword will improve the searchability of a dataset</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In addition to measure well defined references to dictionaries and keyword
+types, compliance to WCMP 1.3 defines a set of rules that apply to different
+sets of keywords.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rationale_for_measurement_5"><a class="anchor" href="#_rationale_for_measurement_5"></a>7.4. Rationale for measurement</h3>
+<div class="paragraph">
+<p>Encouraging metadata providers to make use of keywords that are published in
+controlled vocabularies will ultimately help the end user to search for
+well-known domain related terms.</p>
+</div>
+<div class="paragraph">
+<p>Keywords are indexed by search engines to narrow down full text searches,
+adding to the user experience and making datasets easier to discover. Keywords
+can be user-defined or specified from controlled vocabularies.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rules_for_implementation_6"><a class="anchor" href="#_rules_for_implementation_6"></a>7.5. Rules for implementation</h3>
+<div class="sect3">
+<h4 id="_well_defined_keywords_examples"><a class="anchor" href="#_well_defined_keywords_examples"></a>7.5.1. Well defined keywords examples</h4>
+<div class="paragraph">
+<p>If keyword is present then check if keyword term references a thesaurus using
+the Anchor with a resolvable HTTP URL.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;gmd:descriptiveKeywords&gt;
+  &lt;gmd:MD_Keywords&gt;
+    &lt;gmd:keyword&gt;
+      &lt;gmx:Anchor xlink:href="https://codes.wmo.int/grib2/codeflag/4.2/_0-0-6"&gt;Dewpoint Temperature&lt;/gmx:Anchor&gt;
+    &lt;/gmd:keyword&gt;
+  &lt;/gmd:MD_Keywords&gt;
+&lt;gmd:descriptiveKeywords&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Check if keyword term is user defined.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;gmd:descriptiveKeywords&gt;
+  &lt;gmd:MD_Keywords&gt;
+    &lt;gmd:keyword&gt;
+      &lt;gco:CharacterString&gt;Dewpoint Temperature&lt;/gco:CharacterString&gt;
+    &lt;/gmd:keyword&gt;
+  &lt;/gmd:MD_Keywords&gt;
+&lt;/gmd:descriptiveKeywords&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Check for presence of WMO <code>MD_KeywordTypeCode</code>, check for permitted codelist
+values against <a href="https://wis.wmo.int/2012/codelists/WMOCodeLists#MD_KeywordTypeCode" class="bare">https://wis.wmo.int/2012/codelists/WMOCodeLists#MD_KeywordTypeCode</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;gmd:descriptiveKeywords&gt;
+  &lt;gmd:MD_Keywords&gt;
+    &lt;gmd:type&gt;
+      &lt;gmd:MD_KeywordTypeCode codeList="https://wis.wmo.int/2012/codelists/WMOCodeLists#MD_KeywordTypeCode" codeListValue="dataParam"&gt;dataParam&lt;/gmd:MD_KeywordTypeCode&gt;
+    &lt;/gmd:type&gt;
+  &lt;/gmd:MD_Keywords&gt;
+&lt;gmd:descriptiveKeywords&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Check for well referenced thesaurus using the Anchor with a resolvable HTTP URL.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;gmd:descriptiveKeywords&gt;
+  &lt;gmd:MD_Keywords&gt;
+    &lt;gmd:thesaurusName&gt;
+      &lt;gmd:CI_Citation&gt;
+        &lt;gmd:title&gt;
+          &lt;gmx:Anchor xlink:href="https://codes.wmo.int/grib2/codeflag/_4.2"&gt;WMO Codes Registry GRIB edition 2&lt;/gmx:Anchor&gt;
+        &lt;/gmd:title&gt;
+        &lt;gmd:date&gt;
+          &lt;gmd:CI_Date&gt;
+            &lt;gmd:date&gt;
+              &lt;gco:Date&gt;2016-06-25&lt;/gco:Date&gt;
+            &lt;/gmd:date&gt;
+            &lt;gmd:dateType&gt;
+              &lt;gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication"&gt;publication&lt;/gmd:CI_DateTypeCode&gt;
+            &lt;/gmd:dateType&gt;
+          &lt;/gmd:CI_Date&gt;
+        &lt;/gmd:date&gt;
+      &lt;/gmd:CI_Citation&gt;
+    &lt;/gmd:thesaurusName&gt;
+  &lt;/gmd:MD_Keywords&gt;
+&lt;gmd:descriptiveKeywords&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Check for referenced thesaurus via <code>gco:CharacterString</code> elements (use of a URL
+within <code>gco:CharacterString</code> is not recommended, <code>gmx:Anchor</code> should be used
+instead).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;gmd:descriptiveKeywords&gt;
+  &lt;gmd:MD_Keywords&gt;
+    &lt;gmd:thesaurusName&gt;
+      &lt;gmd:CI_Citation&gt;
+        &lt;gmd:title&gt;
+          &lt;gco:CharacterString&gt;WMO Codes Registry - GRIB edition 2&lt;/gco:CharacterString&gt;
+        &lt;/gmd:title&gt;
+        &lt;gmd:date&gt;
+          &lt;gmd:CI_Date&gt;
+            &lt;gmd:date&gt;
+              &lt;gco:Date&gt;2016-06-25&lt;/gco:Date&gt;
+            &lt;/gmd:date&gt;
+            &lt;gmd:dateType&gt;
+              &lt;gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication"&gt;publication&lt;/gmd:CI_DateTypeCode&gt;
+            &lt;/gmd:dateType&gt;
+          &lt;/gmd:CI_Date&gt;
+        &lt;/gmd:date&gt;
+      &lt;/gmd:CI_Citation&gt;
+    &lt;/gmd:thesaurusName&gt;
+  &lt;/gmd:MD_Keywords&gt;
+&lt;gmd:descriptiveKeywords&gt;</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 6. Keywords implementation rules</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Rule</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>gmd:keywords</code> is present</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>gmd:type</code> is present</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>gmd:thesaurusName</code> is present</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Keywords terms and thesaurus  are referred to with  <code>gmx:Anchor</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Total possible score: 4 per keyword set (100%)</strong></p>
+</div>
+<div class="paragraph">
+<p>To assess how many keywords are defined and provide a total percentage
+based on the number of keywords and individual scoring.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_guidance_to_score_well_on_this_assessment_6"><a class="anchor" href="#_guidance_to_score_well_on_this_assessment_6"></a>7.6. Guidance to score well on this assessment</h3>
+<div class="paragraph">
+<p>A high score will be provided for full referenced term, keyword type and
+thesaurus. Additional recommendations for keywords implementation are found at
+the <a href="https://library.wmo.int/doc_num.php?explnum_id=4004">Guide to WMO Information System (WMO- No. 1061,Section 5.8.1.8)</a></p>
+</div>
+<div class="paragraph">
+<p>Examples of controlled vocabularies:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://codes.wmo.int">WMO Codes Registry</a></p>
+</li>
+<li>
+<p><a href="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml">WMO Codelists</a></p>
+</li>
+<li>
+<p><a href="https://www.eionet.europa.eu/gemet/en/inspire-themes">General Multilingual Environmental Thesaurus (GEMET) - INSPIRE Spatial Data Themes</a></p>
+</li>
+<li>
+<p><a href="https://earthdata.nasa.gov/earth-observation-data/find-data/gcmd/gcmd-keywords">Global Change Master Directory (GCMD)</a></p>
+</li>
+<li>
+<p><a href="https://cfconventions.org/standard-names.html">Climate and Forecast (CF) Standard Names</a></p>
+</li>
+<li>
+<p><a href="https://canada.multites.net/cst">Government of Canada Core Subject Thesaurus (CST)</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kpi_7_graphic_overview_for_non_bulletins_metadata_records"><a class="anchor" href="#_kpi_7_graphic_overview_for_non_bulletins_metadata_records"></a>8. KPI-7: Graphic overview for non bulletins metadata records</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_wcmp_elements_7"><a class="anchor" href="#_wcmp_elements_7"></a>8.1. WCMP element(s)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><code>//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview/gmd:MD_BrowseGraphic/gmd:filename/gmx:Anchor/@xlink:href</code></p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;gmd:graphicOverview&gt;
+  &lt;gmd:MD_BrowseGraphic&gt;
+     &lt;gmd:fileName&gt;
+        &lt;gmx:Anchor xlink:href="https://navigator.eumetsat.int/preview/meteosat-msg_naturalenhncd.jpg"&gt;Meteosat MSG Natural Enhanced Color&lt;/gmx:Anchor&gt;
+     &lt;/gmd:fileName&gt;
+  &lt;/gmd:MD_BrowseGraphic&gt;
+&lt;/gmd:graphicOverview&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_is_being_measured_7"><a class="anchor" href="#_what_is_being_measured_7"></a>8.2. What is being measured</h3>
+<div class="paragraph">
+<p>The presence of <code>gmd:graphicOverview</code> is checked that it contains a URL to
+a common web image file type.<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rationale_for_measurement_6"><a class="anchor" href="#_rationale_for_measurement_6"></a>8.3. Rationale for measurement</h3>
+<div class="paragraph">
+<p>Product graphic overviews provide the user with a high level preview of the
+product which can assist in a high level assessment and/or evaluation as part
+of search results presentation.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rules_for_implementation_7"><a class="anchor" href="#_rules_for_implementation_7"></a>8.4. Rules for implementation</h3>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 7. Graphic overview for non bulletins metadata records implementation rules</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Rule</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">graphic overview element exists</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">graphic overview URL resolves successfully</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">graphic overview URL content is a common web image file type
+(check MIME type, content header/magic number)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Total possible score: 3 (100%)</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_guidance_to_score_well_on_this_assessment_7"><a class="anchor" href="#_guidance_to_score_well_on_this_assessment_7"></a>8.5. Guidance to score well on this assessment</h3>
+<div class="paragraph">
+<p>In addition to the presence of the graphic overview image it would also be
+valuable to provide consistent image dimensions (e.g. 800x800 pixels) such that
+all images are normalized and scaling/alignment of overivew images can be
+applied consistently by web applications rendering search results.</p>
+</div>
+<div class="paragraph">
+<p>Examples of catalogues using such information are here:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://gisc.dwd.de">GISC DWD</a></p>
+</li>
+<li>
+<p><a href="https://navigator.eumetsat.int/search?query=MSG%20RGB">EUMETSAT Product Navigator</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kpi_8_links_health"><a class="anchor" href="#_kpi_8_links_health"></a>9. KPI-8: Links health</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_status_7"><a class="anchor" href="#_status_7"></a>9.1. Status</h3>
+<div class="paragraph">
+<p>Approved</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wcmp_elements_8"><a class="anchor" href="#_wcmp_elements_8"></a>9.2. WCMP element(s)</h3>
+<div class="paragraph">
+<p>Any element or attribute content with linked information (URLs).</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>//gmd:URL</code></p>
+</li>
+<li>
+<p><code>//gmd:graphicOverview</code></p>
+</li>
+<li>
+<p><code>//gmx:Anchor/@xlink:href</code></p>
+</li>
+<li>
+<p><code>//@codeList</code> TODO: should we really check code lists link health or treat as a plain old value?</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;gmd:CI_OnlineResource&gt;
+   &lt;gmd:linkage&gt;
+      &lt;gmd:URL&gt;https://eumetview.eumetsat.int/mapviewer/?product=EO:EUM:DAT:MSG:SNOW&lt;/gmd:URL&gt;
+   &lt;/gmd:linkage&gt;
+&lt;/gmd:CI_OnlineResource&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;gmd:graphicOverview&gt;
+  &lt;gmd:MD_BrowseGraphic&gt;
+    &lt;gmd:fileName&gt;
+      &lt;gco:CharacterString&gt;https://navigator.eumetsat.int/preview/0deg-snow.jpg&lt;/gco:CharacterString&gt;
+    &lt;/gmd:fileName&gt;
+  &lt;/gmd:MD_BrowseGraphic&gt;
+&lt;/gmd:graphicOverview&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;gmd:MD_Identifier&gt;
+  &lt;gmd:code&gt;
+    &lt;gmx:Anchor xlink:actuate="onRequest" xlink:href="https://dx.doi.org/10.14287/10000004" xlink:title="DOI"&gt;doi:10.14287/10000004&lt;/gmx:Anchor&gt;
+  &lt;/gmd:code&gt;
+&lt;/gmd:MD_Identifier&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;gmd:dateType&gt;
+  &lt;gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision" codeSpace="ISOTC211/19115"&gt;revision&lt;/gmd:CI_DateTypeCode&gt;
+&lt;/gmd:dateType&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_is_being_measured_8"><a class="anchor" href="#_what_is_being_measured_8"></a>9.3. What is being measured</h3>
+<div class="paragraph">
+<p>The number of broken links in each individual metadata record.  Broken links
+include links which, when accessed, result in a 4xx or 5xx HTTP error.<sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup>.</p>
+</div>
+<div class="paragraph">
+<p>Also being measured is the use of HTTPS (with a valid SSL certificate) as the
+link protocol throughout WIS Metadata.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rationale_for_measurement_7"><a class="anchor" href="#_rationale_for_measurement_7"></a>9.4. Rationale for measurement</h3>
+<div class="paragraph">
+<p>Broken links damage the user experience and gives the impression to users that
+a website is not maintained (88% of the online consumers are less likely to
+return to a site after a bad experience.<sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnotedef_4" title="View footnote.">4</a>]</sup>).
+In addition, having numerous broken links affects the reputation and rank of
+your website when indexed by mass market search engines.</p>
+</div>
+<div class="paragraph">
+<p>HTTPS is increasingly becoming a requirement for numerous agencies as well as the
+suggested protocol vs. HTTP.  Having non-HTTPS links in a WCMP document often leads to mixed
+content errors in web applications deployed via HTTPS for example, and using AJAX/XHR design
+patterns.  HTTPS supports secure, authoritative and trustworthy links as part of WIS Metadata.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rules_for_implementation_8"><a class="anchor" href="#_rules_for_implementation_8"></a>9.5. Rules for implementation</h3>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 8. Links health implementation rules</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Rule</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Each valid link provided</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Each valid HTTPS link provided</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Total possible score: (valid links + valid HTTPS links) / (total links * 2) (100%)</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_guidance_to_score_well_on_this_assessment_8"><a class="anchor" href="#_guidance_to_score_well_on_this_assessment_8"></a>9.6. Guidance to score well on this assessment</h3>
+<div class="paragraph">
+<p>Ensure that all links resolve and are accessible via HTTPS.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kpi_9_data_policy"><a class="anchor" href="#_kpi_9_data_policy"></a>10. KPI-9: Data policy</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_status_8"><a class="anchor" href="#_status_8"></a>10.1. Status</h3>
+<div class="paragraph">
+<p>Approved</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wcmp_elements_9"><a class="anchor" href="#_wcmp_elements_9"></a>10.2. WCMP element(s)</h3>
+<div class="paragraph">
+<p>Data policy</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>//gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceConstraints</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Distribution scope</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword</code></p>
+</li>
+<li>
+<p><code>//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:type</code></p>
+</li>
+<li>
+<p><code>//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_is_being_measured_9"><a class="anchor" href="#_what_is_being_measured_9"></a>10.3. What is being measured</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Definition of data policy encoded with <code>WMO_DataLicenceCode</code> in <code>gmd:otherConstraints</code></p>
+</li>
+<li>
+<p>Definition of <code>gmd:accessConstraints</code> with <code>MD_RestrictionCode</code> = <code>gmd:otherConstraints</code></p>
+</li>
+<li>
+<p>Definition of <code>gmd:useConstraints</code> with <code>MD_RestrictionCode</code> = <code>gmd:otherConstraints</code></p>
+</li>
+<li>
+<p>Definition of a scope of distribution added as keyword from controlled vocabulary
+<code>WMO_DistributionScopeCode</code> and <code>KeywordTypeCode</code> <code>dataCentre</code></p>
+</li>
+<li>
+<p>Presence of GTS priority if data is marked for <code>GlobalExchange</code> or <code>RegionalExchange</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rationale_for_measurement_8"><a class="anchor" href="#_rationale_for_measurement_8"></a>10.4. Rationale for measurement</h3>
+<div class="paragraph">
+<p>Data policy provides information to the users about how the data should be handled.
+Data providers also have the obligation to define the scope of the distribution of
+the data within WIS and when applicable the GTS priority.</p>
+</div>
+<div class="paragraph">
+<p>Data policy Information is expressed via <code>gmd:resourceConstraints/gmd:MD_LegalConstraints</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rules_for_implementation_9"><a class="anchor" href="#_rules_for_implementation_9"></a>10.5. Rules for implementation</h3>
+<div class="paragraph">
+<p>The following table summarises the relevant elements to define data policy</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Element</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>gmd:useLimitation</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Free text. limitations regarding usage of the resource (e.g. this data set is not to be used for navigation)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>gmd:accessConstraints</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Controlled vocabulary. <code>MD_RestrictionCode</code>, access constraints applied to assure the protection of privacy or intellectual property, and any special restrictions or limitations on obtaining the resource</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>gmd:useConstraints</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Controlled vocabularys. <code>MD_RestrictionCode</code>, restrictions on the use of a resource</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>gmd:otherRestrictions</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Free text</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The Manual and Guide to  WIS (No. 1060/1061) recommendations for data policy implementation are as follows:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Element</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>gmd:useLimitation</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Free text Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>gmd:accessConstraints</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>gmd:MD_RestrictionCode</code> = <code>otherRestrictions</code></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>gmd:useConstraints</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>gmd:MD_RestrictionCode</code> = <code>otherRestrictions</code></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>gmd:otherRestrictions</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Vocabulary controlled: <code>WMO_DataLicenceCode</code> (<code>WMOEssential</code>, <code>WMOAdditional</code>, <code>WMOther</code>, <code>NoLimitation</code>)</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Additional descriptions to explain the referred <code>WMO_DataLicenceCode</code> could be added in separate <code>otherRestrictions</code> blocks.</p>
+</div>
+<div class="sect3">
+<h4 id="_well_defined_policies_examples"><a class="anchor" href="#_well_defined_policies_examples"></a>10.5.1. Well defined policies examples</h4>
+<div class="paragraph">
+<p>If the record is encoding <code>WMO_DataLicenseCode</code> with <code>gmx:Anchor</code>,
+then check for permitted values in the corresponding codelist:
+<a href="https://github.com/wmo-im/wcmp-codelists/blob/main/codelists/WMO_DataLicenseCode.csv" class="bare">https://github.com/wmo-im/wcmp-codelists/blob/main/codelists/WMO_DataLicenseCode.csv</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;gmd:resourceConstraints&gt;
+  &lt;gmd:MD_LegalConstraints&gt;
+    &lt;gmd:otherConstraints&gt;
+      &lt;gmx:Anchor xlink:href="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_DataLicenseCode_WMOAdditional"&gt;WMOAdditional&lt;/gmx:Anchor&gt;
+    &lt;/gmd:otherConstraints&gt;
+  &lt;/gmd:MD_LegalConstraints&gt;
+&lt;/gmd:resourceConstraints&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Check if the <code>WMO_DataLicenseCode</code> is implemented as <code>gco:CharacterString</code> (instead of <code>gmx:Anchor</code>)</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;gmd:resourceConstraints&gt;
+  &lt;gmd:MD_LegalConstraints&gt;
+    &lt;gmd:otherConstraints&gt;
+      &lt;gco:CharacterString&gt;WMOAdditional&lt;/gco:CharacterString&gt;
+    &lt;/gmd:otherConstraints&gt;
+  &lt;/gmd:MD_LegalConstraints&gt;
+&lt;/gmd:resourceConstraints&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Check for <code>gmd:accessConstraints</code> with <code>gmd:MD_RestrictionCode</code> = <code>otherRestrictions</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;gmd:resourceConstraints&gt;
+  &lt;gmd:MD_LegalConstraints&gt;
+    &lt;gmd:accessConstraints&gt;
+        &lt;gmd:MD_RestrictionCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions"&gt;otherRestrictions&lt;/gmd:MD_RestrictionCode&gt;
+    &lt;/gmd:accessConstraints&gt;
+  &lt;/gmd:MD_LegalConstraints&gt;
+&lt;/gmd:resourceConstraints&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Check for <code>gmd:useConstraints</code> with <code>gmd:MD_RestrictionCode</code> = <code>otherRestrictions</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;gmd:resourceConstraints&gt;
+  &lt;gmd:MD_LegalConstraints&gt;
+    &lt;gmd:useConstraints&gt;
+      &lt;gmd:MD_RestrictionCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions"&gt;otherRestrictions&lt;/gmd:MD_RestrictionCode&gt;
+    &lt;/gmd:useConstraints&gt;
+  &lt;/gmd:MD_LegalConstraints&gt;
+&lt;/gmd:resourceConstraints&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Check for scope of distribution keyword from controlled vocabulary
+<code>WMO_DistributionScopeCode</code> and <code>gmd:KeywordTypeCode</code> = <code>dataCentre</code> with <code>gmx:Anchor</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;gmd:MD_Keywords&gt;
+    &lt;gmd:keyword&gt;
+      &lt;gmx:Anchor xlink:href="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_DistributionScopeCode_GlobalExchange"&gt;GlobalExchange&lt;/gmx:Anchor&gt;
+    &lt;/gmd:keyword&gt;
+    &lt;gmd:type&gt;
+      &lt;gmd:MD_KeywordTypeCode codeList="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#MD_KeywordTypeCode" codeListValue="dataCenter"&gt;dataCenter&lt;/gmd:MD_KeywordTypeCode&gt;
+    &lt;/gmd:type&gt;
+    &lt;gmd:thesaurusName&gt;
+      &lt;gmd:CI_Citation&gt;
+        &lt;gmd:title&gt;
+          &lt;gmx:Anchor xlink:href="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_DistributionScopeCode"&gt;WMO_DistributionScopeCode&lt;/gmx:Anchor&gt;
+        &lt;/gmd:title&gt;
+        &lt;gmd:date&gt;
+          &lt;gmd:CI_Date&gt;
+            &lt;gmd:date&gt;
+              &lt;gco:Date&gt;2012-06-27&lt;/gco:Date&gt;
+            &lt;/gmd:date&gt;
+            &lt;gmd:dateType&gt;
+              &lt;gmd:CI_DateTypeCode codeList="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#CI_DateTypeCode" codeListValue="revision"&gt;revision&lt;/gmd:CI_DateTypeCode&gt;
+            &lt;/gmd:dateType&gt;
+          &lt;/gmd:CI_Date&gt;
+        &lt;/gmd:date&gt;
+      &lt;/gmd:CI_Citation&gt;
+    &lt;/gmd:thesaurusName&gt;
+&lt;/gmd:MD_Keywords&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Check for scope of distribution keyword from controlled vocabulary
+<code>WMO_DistributionScopeCode</code> and <code>KeywordTypeCode</code> = <code>dataCentre</code> with <code>gco:CharacterString</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;gmd:MD_Keywords&gt;
+    &lt;gmd:keyword&gt;
+      &lt;gco:CharacterString&gt;GlobalExchange&lt;/gco:CharacterString&gt;
+    &lt;/gmd:keyword&gt;
+    &lt;gmd:type&gt;
+      &lt;gmd:MD_KeywordTypeCode codeList="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#MD_KeywordTypeCode" codeListValue="dataCenter"&gt;dataCenter&lt;/gmd:MD_KeywordTypeCode&gt;
+    &lt;/gmd:type&gt;
+    &lt;gmd:thesaurusName&gt;
+      &lt;gmd:CI_Citation&gt;
+        &lt;gmd:title&gt;
+          &lt;gco:CharacterString&gt;WMO_DistributionScopeCode&lt;/gco:CharacterString&gt;
+        &lt;/gmd:title&gt;
+        &lt;gmd:date&gt;
+          &lt;gmd:CI_Date&gt;
+            &lt;gmd:date&gt;
+              &lt;gco:Date&gt;2012-06-27&lt;/gco:Date&gt;
+            &lt;/gmd:date&gt;
+            &lt;gmd:dateType&gt;
+              &lt;gmd:CI_DateTypeCode codeList="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#CI_DateTypeCode" codeListValue="revision"&gt;revision&lt;/gmd:CI_DateTypeCode&gt;
+            &lt;/gmd:dateType&gt;
+          &lt;/gmd:CI_Date&gt;
+        &lt;/gmd:date&gt;
+      &lt;/gmd:CI_Citation&gt;
+    &lt;/gmd:thesaurusName&gt;
+&lt;/gmd:MD_Keywords&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Check for presence of GTS priority if data is marked for <code>GlobalExchange</code> or <code>RegionalExchange</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;gmd:MD_Keywords&gt;
+    &lt;gmd:keyword&gt;
+      &lt;gmx:Anchor xlink:href="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_DistributionScopeCode_GlobalExchange"&gt;GlobalExchange&lt;/gmx:Anchor&gt;
+    &lt;/gmd:keyword&gt;
+    [...]
+&lt;/gmd:MD_Keywords&gt;
+
+&lt;gmd:resourceConstraints&gt;
+  &lt;gmd:MD_LegalConstraints&gt;
+   &lt;gmd:otherConstraints&gt;
+      &lt;gmx:Anchor xlink:href="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_GTSProductCategoryCode_GTSPriority3"&gt;GTSPriority3&lt;/gmx:Anchor&gt;
+   &lt;/gmd:otherConstraints&gt;
+  &lt;/gmd:MD_LegalConstraints&gt;
+&lt;gmd:resourceConstraints&gt;</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 9. Data policy implementation rules</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Rule</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>gmd:resourceConstraints</code> are present and there is a <code>WMO_DataLicenceCode</code>
+term in <code>gmd:otherRestrictions</code>.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>gmd:accessConstraints</code>, <code>gmd:useConstraints</code> are vocabulary controlled
+by <code>gmd:MD_RestrictionCode</code> - <code>otherRestrictions</code></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>gmd:Keywords</code> are present with definition of <code>WMO_DistributionScopeCode</code> keyword
+term and a <code>gmd:type</code> of vocabulary controlled <code>gmd:MD_KeywordTypeCode</code> = <code>dataCenter</code></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>gmd:otherConstraints</code> and vocabulary controlled <code>WMO_GTSProductCategoryCode</code>
+if <code>gmd:keyword</code> is present with terms from
+<code>WMO_DistributionScopeCode</code> (<code>GlobalExchange</code>, <code>RegionalExchange</code>)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>gmx:Anchor</code> implemented versus <code>gco:CharacterString</code> when referencing
+<code>WMO_DataLicenseCode</code> (in <code>gmd:otherConstraints</code>),
+<code>WMO_GTSProductCategoryCode</code> (in <code>gmd:otherConstraints</code>),
+<code>WMO_DistributionScopeCode</code> (in Keywords),
+<code>WMO_DistributionScopeCode</code> (in Thesaurus title)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Total possible score: 5 (100%)</strong></p>
+</div>
+<div class="paragraph">
+<p>Note: Other possible <code>gmd:resourceContraints</code> elements may exist and not comply to these rules.
+The score should check that there is one <code>gmd:resourceContraints</code> element that complies to
+the rules.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_guidance_to_score_well_on_this_assessment_9"><a class="anchor" href="#_guidance_to_score_well_on_this_assessment_9"></a>10.6. Guidance to score well on this assessment</h3>
+<div class="paragraph">
+<p>In addtion to programmatic checks which will provide an score,
+it should be clear to the user what are the conditions of use for the resource published.
+If the codelist implementation is not clear there should be additional free text explanations
+<code>gmd:otherConstraints</code> or <code>gmd:useLimitation</code>.</p>
+</div>
+<div class="paragraph">
+<p>Further guidance on data policy implementation can be found in the <a href="https://library.wmo.int/doc_num.php?explnum_id=10257">Guide to WMO Information System (WMO No. 1061, Section 5.8.1.10)</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kpi_10_distribution_information"><a class="anchor" href="#_kpi_10_distribution_information"></a>11. KPI-10: Distribution information</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Metadata records should contain information regarding how to access the data
+which it is describing.</p>
+</div>
+<div class="sect2">
+<h3 id="_status_9"><a class="anchor" href="#_status_9"></a>11.1. Status</h3>
+<div class="paragraph">
+<p>Approved</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wcmp_elements_10"><a class="anchor" href="#_wcmp_elements_10"></a>11.2. WCMP element(s)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><code>//gmd:distributionInfo//gmd:distributionFormat/gmd:MD_Format</code></p>
+</li>
+<li>
+<p><code>//gmd:distributionInfo//gmd:MD_DigitalTransferOptions//gmd:onLine//gmd:URL</code></p>
+</li>
+<li>
+<p><code>//gmd:distributionInfo//gmd:MD_Distributor//gmd:organisationName</code></p>
+</li>
+<li>
+<p><code>//gmd:distributionInfo//gmd:MD_Distributor//gmd:contactInfo//gmd:electronicMailAddress/gco:CharacterString</code></p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;gmd:distributionInfo&gt;
+  &lt;gmd:MD_Distribution&gt;
+    &lt;gmd:distributionFormat&gt;
+      &lt;gmd:MD_Format&gt;
+        &lt;gmd:name&gt;
+          &lt;gco:CharacterString&gt;FM 94 (BUFR)&lt;/gco:CharacterString&gt;
+        &lt;/gmd:name&gt;
+        &lt;gmd:version&gt;
+          &lt;gco:CharacterString&gt;XII EXT.&lt;/gco:CharacterString&gt;
+        &lt;/gmd:version&gt;
+        &lt;gmd:specification&gt;
+          &lt;gmx:Anchor xlink:title="FM 94 (BUFR)" xlink:href="https://www.wmo.int/pages/prog/www/WMOCodes.html"&gt;FM 94 (BUFR)&lt;/gmx:Anchor&gt;
+        &lt;/gmd:specification&gt;
+      &lt;/gmd:MD_Format&gt;
+    &lt;/gmd:distributionFormat&gt;
+    &lt;gmd:distributor&gt;
+      &lt;gmd:MD_Distributor&gt;
+        &lt;gmd:distributorContact&gt;
+          &lt;gmd:CI_ResponsibleParty&gt;
+            &lt;gmd:individualName&gt;
+              &lt;gco:CharacterString&gt;DT/DSI/OP/TEL&lt;/gco:CharacterString&gt;
+            &lt;/gmd:individualName&gt;
+            &lt;gmd:organisationName&gt;
+              &lt;gco:CharacterString&gt;NMC FRANCE - Météo-France&lt;/gco:CharacterString&gt;
+            &lt;/gmd:organisationName&gt;
+            &lt;gmd:contactInfo&gt;
+              &lt;gmd:CI_Contact&gt;
+                &lt;gmd:phone/&gt;
+                &lt;gmd:address&gt;
+                  &lt;gmd:CI_Address&gt;
+                    &lt;gmd:deliveryPoint&gt;
+                      &lt;gco:CharacterString&gt;Direction des Systèmes d'Information, 42 avenue Gaspard CORIOLIS&lt;/gco:CharacterString&gt;
+                    &lt;/gmd:deliveryPoint&gt;
+                    &lt;gmd:city&gt;
+                      &lt;gco:CharacterString&gt;TOULOUSE&lt;/gco:CharacterString&gt;
+                    &lt;/gmd:city&gt;
+                    &lt;gmd:postalCode&gt;
+                      &lt;gco:CharacterString&gt;31057&lt;/gco:CharacterString&gt;
+                    &lt;/gmd:postalCode&gt;
+                    &lt;gmd:country&gt;
+                      &lt;gco:CharacterString&gt;France&lt;/gco:CharacterString&gt;
+                    &lt;/gmd:country&gt;
+                    &lt;gmd:electronicMailAddress&gt;
+                      &lt;gco:CharacterString&gt;gisc_support@meteo.fr&lt;/gco:CharacterString&gt;
+                    &lt;/gmd:electronicMailAddress&gt;
+                  &lt;/gmd:CI_Address&gt;
+                &lt;/gmd:address&gt;
+                &lt;gmd:onlineResource&gt;
+                  &lt;gmd:CI_OnlineResource&gt;
+                    &lt;gmd:linkage&gt;
+                      &lt;gmd:URL&gt;https://meteofrance.com&lt;/gmd:URL&gt;
+                    &lt;/gmd:linkage&gt;
+                  &lt;/gmd:CI_OnlineResource&gt;
+                &lt;/gmd:onlineResource&gt;
+              &lt;/gmd:CI_Contact&gt;
+            &lt;/gmd:contactInfo&gt;
+            &lt;gmd:role&gt;
+              &lt;gmd:CI_RoleCode codeListValue="pointOfContact" codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_RoleCode"&gt;pointOfContact&lt;/gmd:CI_RoleCode&gt;
+            &lt;/gmd:role&gt;
+          &lt;/gmd:CI_ResponsibleParty&gt;
+        &lt;/gmd:distributorContact&gt;
+      &lt;/gmd:MD_Distributor&gt;
+    &lt;/gmd:distributor&gt;
+    &lt;gmd:transferOptions&gt;
+      &lt;gmd:MD_DigitalTransferOptions&gt;
+        &lt;gmd:onLine&gt;
+          &lt;gmd:CI_OnlineResource&gt;
+            &lt;gmd:linkage&gt;
+              &lt;gmd:URL&gt;http://wispi.meteo.fr/openwis-user-portal/srv/en/main.home?urn=urn:x-wmo:md:int.wmo.wis::ISMN10LFPW&lt;/gmd:URL&gt;
+            &lt;/gmd:linkage&gt;
+            &lt;gmd:protocol&gt;
+              &lt;gco:CharacterString&gt;WWW:LINK-1.0-http--link&lt;/gco:CharacterString&gt;
+            &lt;/gmd:protocol&gt;
+            &lt;gmd:name&gt;
+              &lt;gco:CharacterString&gt;Permanent link&lt;/gco:CharacterString&gt;
+            &lt;/gmd:name&gt;
+            &lt;gmd:description&gt;
+              &lt;gco:CharacterString&gt;GISC Toulouse&lt;/gco:CharacterString&gt;
+            &lt;/gmd:description&gt;
+          &lt;/gmd:CI_OnlineResource&gt;
+        &lt;/gmd:onLine&gt;
+      &lt;/gmd:MD_DigitalTransferOptions&gt;
+    &lt;/gmd:transferOptions&gt;
+  &lt;/gmd:MD_Distribution&gt;
+&lt;/gmd:distributionInfo&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_is_being_measured_10"><a class="anchor" href="#_what_is_being_measured_10"></a>11.3. What is being measured</h3>
+<div class="paragraph">
+<p>The presence of distribution information and supporting elements.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>format (<code>//gmd:distributionInfo//gmd:distributionFormat/gmd:MD_Format</code>)
+That can rely on existing WMO supported formats</p>
+</li>
+<li>
+<p>1..n <code>gmd:transferOptions</code> (<code>//gmd:distributionInfo//gmd:transferOptions//gmd:onLine</code>),
+including a <code>gmd:linkage</code> with a URL to access the data</p>
+</li>
+<li>
+<p>distributor contact information (organization, email)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rationale_for_measurement_9"><a class="anchor" href="#_rationale_for_measurement_9"></a>11.4. Rationale for measurement</h3>
+<div class="paragraph">
+<p>Distribution information provides the necessary information for accessing the
+data, supported formats, and contact information for the data distributor.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rules_for_implementation_10"><a class="anchor" href="#_rules_for_implementation_10"></a>11.5. Rules for implementation</h3>
+<div class="paragraph">
+<p>By detecting the presence of the distribution format and transferOptions
+(multiple options are possible). See page 35 of the WMO Core Profile Metadata
+Guidance.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 10. Distribution information implementation rules</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Rule</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>gmd:MD_Format</code> is defined</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>format specification has an Anchor with a resolvable HTTP URL</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>distributor contact organization is defined</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>distributor contact email is defined</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>1..n transfer options are defined</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Total possible score: 5 (100%)</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_guidance_to_score_well_on_this_assessment_10"><a class="anchor" href="#_guidance_to_score_well_on_this_assessment_10"></a>11.6. Guidance to score well on this assessment</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Specify format/medium information and a link to the format specification</p>
+</li>
+<li>
+<p>Specify 1..n transfer options as well as a distributor contact. Note that a
+distributor contact does not have to be the same as the main point of
+contact, principal investigator</p>
+</li>
+<li>
+<p>Specify an email for the distributor</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kpi_11_codelists_validation"><a class="anchor" href="#_kpi_11_codelists_validation"></a>12. KPI-11: Codelists validation</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_wcmp_elements_11"><a class="anchor" href="#_wcmp_elements_11"></a>12.1. WCMP element(s)</h3>
+<div class="paragraph">
+<p>WCMP elements will vary depending on whether they are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ISO Codelists (<code>gmxCodelists.xml</code>)</p>
+</li>
+<li>
+<p>WMO Codelists / ISO extensions (<code>WMOCodeLists.xml</code>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Authoritative codelists are defined at the following locations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ISO: <a href="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml" class="bare">https://standards.iso.org/iso/19139/resources/gmxCodelists.xml</a></p>
+</li>
+<li>
+<p>WMO: <a href="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml" class="bare">https://wis.wmo.int/2012/codelists/WMOCodeLists.xml</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_is_being_measured_11"><a class="anchor" href="#_what_is_being_measured_11"></a>12.2. What is being measured</h3>
+<div class="paragraph">
+<p>Presence of valid terms from the referred codelist element.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rationale_for_measurement_10"><a class="anchor" href="#_rationale_for_measurement_10"></a>12.3. Rationale for measurement</h3>
+<div class="paragraph">
+<p>WCMP records can reference codelists from a number of locations
+(e.g. online copies of the authoritative sources).</p>
+</div>
+<div class="paragraph">
+<p>To ensure that the terms themselves are always consistent with the official sources,
+this KPI will validate that the terms referred to in WCMP records are consistent with
+the authoritative codelists referred in this KPI.</p>
+</div>
+<div class="paragraph">
+<p>In many cases terms are included but are not identifical to the official definitions
+on the codelists (e.g. spelling mistakes, case sensitivity errors, etc.).</p>
+</div>
+<div class="paragraph">
+<p>Software applications may look for exact matches to codelists and handle metadata
+incorrectly if not properly referenced.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rules_for_implementation_11"><a class="anchor" href="#_rules_for_implementation_11"></a>12.4. Rules for implementation</h3>
+<div class="paragraph">
+<p>WMO/ISO Codelists referenced in WCMP</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">codelist</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">WCMP Element</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Authoritative list</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>CI_DateTypeCode</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>//gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode1</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WMOCodeLists (ISO Extended)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>CI_RoleCode</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>//gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">gmxCodelists (ISO)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>MD_KeywordTypeCode</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>//gmd:MD_Keywords/gmd:type/gmd:MD_KeywordTypeCode</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WMOCodeLists (ISO Extended)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>MD_RestrictionCode</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>//gmd:resourceConstraints//gmd:MD_RestrictionCode</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">gmxCodelists (ISO)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>MD_ScopeCode</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>//gmd:scope//gmd:MD_ScopeCode</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">gmxCodelists (ISO)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>MD_TopicCategoryCode</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>//gmd:topicCategory/gmd:MD_TopicCategoryCode</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">gmxCodelists (ISO)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>WMO_DataLicenseCode</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>//gmd:resourceConstraints//gmd:otherConstraints/[gco:CharacterString|gmx:Anchor]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WMOCodeLists</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>WMO_GTSProductCategoryCode</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>//gmd:resourceConstraints//gmd:otherConstraints/[gco:CharacterString|gmx:Anchor]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WMOCodeLists</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>WMO_CategoryCode</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>//gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/[gco:CharacterString|gmx:Anchor]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WMOCodeLists</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>WMO_DistributionScopeCode</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>//gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/[gco:CharacterString|gmx:Anchor]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WMOCodeLists</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 11. Codelists validation implementation rules</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Rule</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">codelist referred terms are checked against authoritative sources with an exact match</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Total possible score: 1 per valid codelist value (100%)</strong></p>
+</div>
+<div class="paragraph">
+<p>To assess how many valid codelist values are defined and provide a total
+percentage based on the total number of codelist values.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_guidance_to_score_well_on_this_assessment_11"><a class="anchor" href="#_guidance_to_score_well_on_this_assessment_11"></a>12.5. Guidance to score well on this assessment</h3>
+<div class="paragraph">
+<p>Ensure that codelists referenced terms are well defined across the whole
+record and from authoritative sources.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kpi_12_doi_citation"><a class="anchor" href="#_kpi_12_doi_citation"></a>13. KPI-12: DOI citation</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_status_10"><a class="anchor" href="#_status_10"></a>13.1. Status</h3>
+<div class="paragraph">
+<p>Approved</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wcmp_elements_12"><a class="anchor" href="#_wcmp_elements_12"></a>13.2. WCMP element(s)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><code>/gmd:MD_Metadata/gmd:identificationInfo//gmd:citation//gmd:identifier//gmd:code/gmx:Anchor/@xlink:href</code></p>
+</li>
+<li>
+<p><code>/gmd:MD_Metadata/gmd:identificationInfo//gmd:citation//gmd:identifier//gmd:code/gmx:Anchor/@xlink:title</code></p>
+</li>
+<li>
+<p><code>/gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceConstraints//gmd:otherConstraints/gco:CharacterString</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_is_being_measured_12"><a class="anchor" href="#_what_is_being_measured_12"></a>13.3. What is being measured</h3>
+<div class="paragraph">
+<p>Whether DOI information is available, can be successfully identified,
+and provides citation instructions.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rationale_for_measurement_11"><a class="anchor" href="#_rationale_for_measurement_11"></a>13.4. Rationale for measurement</h3>
+<div class="paragraph">
+<p>DOIs are persistent identifiers that allow data to be accessible and citable.
+They make research data easier to access, reuse and verify, thereby making it
+easier to build on previous work, conduct new research and avoid duplicating
+already existing work.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rules_for_implementation_12"><a class="anchor" href="#_rules_for_implementation_12"></a>13.5. Rules for implementation</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;gmd:identificationInfo&gt;
+...
+  &lt;gmd:identifier&gt;
+    &lt;gmd:MD_Identifier&gt;
+      &lt;gmd:code&gt;
+        &lt;gmx:Anchor xlink:actuate="onRequest" xlink:href="https://dx.doi.org/10.14287/10000004" xlink:title="DOI"&gt;doi:10.14287/10000004&lt;/gmx:Anchor&gt;
+      &lt;/gmd:code&gt;
+    &lt;/gmd:MD_Identifier&gt;
+  &lt;/gmd:identifier&gt;
+&lt;/gmd:identificationInfo&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;gmd:MD_LegalConstraints&gt;
+...
+  &lt;gmd:otherConstraints&gt;
+    &lt;gco:CharacterString&gt;Cite as: WMO/GAW Ozone Monitoring Community, World Meteorological Organization-Global Atmosphere Watch Program (WMO-GAW)/World Ozone and Ultraviolet Radiation Data Centre (WOUDC) [Data]. Retrieved [YYYY-MM-DD], from https://woudc.org. A list of all contributors is available on the website. doi:10.14287/10000004&lt;/gco:CharacterString&gt;
+  &lt;/gmd:otherConstraints&gt;
+...
+&lt;/gmd:MD_LegalConstraints&gt;</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 12. DOI citation implementation rules</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Rule</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">if DOI anchor exists</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">title is equal to 'DOI'</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">if DOI citation exists as a constraint and includes the same DOI in the anchor</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Total possible score: 3 (100%)</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_guidance_to_score_well_on_this_assessment_12"><a class="anchor" href="#_guidance_to_score_well_on_this_assessment_12"></a>13.6. Guidance to score well on this assessment</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Provide the DOI identifier with a <code>doi:</code> prefix (e.g. <code>doi:&lt;doi-identifier&gt;</code>)</p>
+</li>
+<li>
+<p>Provide a 'Cite as' template in <code>gmd:otherConstraints</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. WCMP Guidance (<a href="https://wis.wmo.int/file=3291" class="bare">https://wis.wmo.int/file=3291</a>)
+</div>
+<div class="footnote" id="_footnotedef_2">
+<a href="#_footnoteref_2">2</a>. <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#Common_image_file_types" class="bare">https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#Common_image_file_types</a>
+</div>
+<div class="footnote" id="_footnotedef_3">
+<a href="#_footnoteref_3">3</a>. <a href="https://httpstatuses.com" class="bare">https://httpstatuses.com</a>
+</div>
+<div class="footnote" id="_footnotedef_4">
+<a href="#_footnoteref_4">4</a>. <a href="https://review42.com/web-design-statistics" class="bare">https://review42.com/web-design-statistics</a>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2021-02-07 12:55:55 -0500
+</div>
+</div>
+</body>
+</html>

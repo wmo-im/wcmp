@@ -1,8 +1,8 @@
-== F. WMOEssential data links
+== KPI-{counter:kpi}: WMOEssential data links
 
 === Status
 
-Draft
+Approved
 
 === WCMP element(s)
 
@@ -25,7 +25,7 @@ All `WMOEssential` data should have 1..n distribution links to the data.
 <gmd:resourceConstraints>
   <gmd:MD_LegalConstraints>
     <gmd:otherConstraints>
-      <gmx:Anchor xlink:href="http://wis.wmo.int/2013/codelists/WMOCodeLists.xml#WMO_DataLicenseCode_WMOEssential">WMOEssential</gmx:Anchor>
+      <gmx:Anchor xlink:href="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_DataLicenseCode_WMOEssential">WMOEssential</gmx:Anchor>
     </gmd:otherConstraints>
   </gmd:MD_LegalConstraints>
 </gmd:resourceConstraints>
@@ -56,14 +56,14 @@ All `WMOEssential` data should have 1..n distribution links to the data.
 |===
 |Rule |Score
 
-|DataLicenseCode is `WMOEssential` and 1..n distribution links are provided
+a|`DataLicenseCode` is `WMOEssential` and 1..n distribution links are provided
 |1
 
 |===
 
-Total possible score: 1 (100%)
+*Total possible score: 1 (100%)*
 
 === Guidance to score well on this assessment
 
-If your data described in your metadata is categorized as `WMOEssential`,
-provide a link to the data. 
+If the data described is categorized as `WMOEssential`, provide a link to the data. 
+

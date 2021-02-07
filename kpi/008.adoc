@@ -1,4 +1,4 @@
-== J. Links health
+== KPI-{counter:kpi}: Links health
 
 === Status
 
@@ -6,9 +6,12 @@ Approved
 
 === WCMP element(s)
 
-Any element or attribute content with linked information (URLs). Links are
-generally present in `gmd:URL`, `gmd:graphicOverview`, `gmx:Anchor/@xlink:href`,
-and `@codeList` elements/attributes.
+Any element or attribute content with linked information (URLs).
+
+* `//gmd:URL`
+* `//gmd:graphicOverview`
+* `//gmx:Anchor/@xlink:href`
+* `//@codeList` TODO: should we really check code lists link health or treat as a plain old value?
 
 ```xml
 <gmd:CI_OnlineResource>
@@ -38,7 +41,7 @@ and `@codeList` elements/attributes.
 
 ```xml
 <gmd:dateType>
-  <gmd:CI_DateTypeCode codeList="http://wis.wmo.int/2011/schemata/iso19139_2007/schema/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision" codeSpace="ISOTC211/19115">revision</gmd:CI_DateTypeCode>
+  <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision" codeSpace="ISOTC211/19115">revision</gmd:CI_DateTypeCode>
 </gmd:dateType>
 ```
 
@@ -75,8 +78,9 @@ patterns.  HTTPS supports secure, authoritative and trustworthy links as part of
 |1
 |===
 
-Total possible score: (valid links + valid HTTPS links) / (total links * 2) (100%)
+*Total possible score: (valid links + valid HTTPS links) / (total links * 2) (100%)*
 
 === Guidance to score well on this assessment
 
 Ensure that all links resolve and are accessible via HTTPS.
+

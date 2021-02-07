@@ -1,4 +1,4 @@
-== N. DOI citation
+== KPI-{counter:kpi}: DOI citation
 
 === Status
 
@@ -30,7 +30,7 @@ already existing work.
   <gmd:identifier>
     <gmd:MD_Identifier>
       <gmd:code>
-        <gmx:Anchor xlink:actuate="onRequest" xlink:href="http://dx.doi.org/10.14287/10000004" xlink:title="DOI">doi:10.14287/10000004</gmx:Anchor>
+        <gmx:Anchor xlink:actuate="onRequest" xlink:href="https://dx.doi.org/10.14287/10000004" xlink:title="DOI">doi:10.14287/10000004</gmx:Anchor>
       </gmd:code>
     </gmd:MD_Identifier>
   </gmd:identifier>
@@ -61,9 +61,10 @@ already existing work.
 |1
 |===
 
-Total possible score: 3 (100%)
+*Total possible score: 3 (100%)*
 
 === Guidance to score well on this assessment
 
 * Provide the DOI identifier with a `doi:` prefix (e.g. `doi:<doi-identifier>`)
 * Provide a 'Cite as' template in `gmd:otherConstraints`
+

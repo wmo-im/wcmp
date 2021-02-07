@@ -1,4 +1,4 @@
-== B. Good quality title
+== KPI-{counter:kpi}: Good quality title
 
 === Status
 
@@ -6,7 +6,7 @@ Approved
 
 === WCMP element(s)
 
-`/gmd:MD_Metadata/gmd:identificationInfo//gmd:citation/gmd:CI_Citation/gmd:title`
+* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:citation/gmd:CI_Citation/gmd:title`
 
 === What is being measured
 
@@ -44,15 +44,14 @@ for users to understand the resource.
 |title contains less than 3 acronyms (words with all upper case)
 |1
 
-|title does not contain bulletin header (regular expression `[A-Z]{4}\d{2}[\s_]*[A-Z]{4}`)
+a|title does not contain bulletin header (regular expression: `[A-Z]{4}\d{2}[\s_]*[A-Z]{4}`)
 |1
 
 |title passes a basic spellcheck
 |1
 |===
 
-Total possible score: 8 (100%)
-
+*Total possible score: 8 (100%)*
 
 === Guidance to score well on this assessment
 
@@ -71,5 +70,5 @@ metadata record (abstract, keywords, etc.).
 For a satellite product offering one main data parameter, the title will
 typically define which parameter is contained in the product, and from which
 instrument or instrument type it originates. For example, "AMSR-2 Sea Surface
-Temperature” or “SLSTR L1B radiances and brightness temperatures”.footnote:[WCMP Guidance (http://wis.wmo.int/file=3291)]
+Temperature” or “SLSTR L1B radiances and brightness temperatures”.footnote:[WCMP Guidance (https://wis.wmo.int/file=3291)]
 

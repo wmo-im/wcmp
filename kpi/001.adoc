@@ -1,0 +1,71 @@
+== KPI-{counter:kpi}: WCMP 1.3, Part 2 Compliance
+
+=== Status
+
+Approved
+
+=== WCMP element(s)
+
+All WCMP elements specified in link:https://wis.wmo.int/2013/metadata/version_1-3-0/WMO_Core_Metadata_Profile_v1.3_Part_2.pdf[WCMP 1.3, Part 2 – Abstract Test Suite, Data Dictionary and Code Lists].
+
+=== What is being measured
+
+All requirements specified in WCMP 1.3, Part 2.
+
+=== Rational for measurement
+
+WCMP 1.3, Part 2 forms the basis of all KPIs.
+
+=== Rules for implementation
+
+. WCMP 1.3, Part 2 Compliance implementation rules
+
+|===
+|Rule |Score
+
+|Requirement 6.1.1: Each WIS Discovery Metadata record shall validate without error against the XML schemas defined in ISO/TS 19139:2007
+|1
+
+|Requirement 6.1.2: Each WIS Discovery Metadata record shall validate without error against the rule-based constraints listed in ISO/TS 19139:2007 Annex A (Table A.1)
+|1
+
+|Requirement 6.2.1: Each WIS Discovery Metadata record shall explicitly name all namespaces used within the record; use of default namespaces is prohibited
+|1
+
+a|Requirement 6.3.1: Each WIS Discovery Metadata record shall declare the following XML namespace for GML: `\http://www.opengis.net/gml/3.2`
+|1
+
+a|Requirement 8.1.1: Each WIS Discovery Metadata record shall include one `gmd:MD_Metadata/gmd:fileIdentifier` attribute
+|1
+
+a|Requirement 8.2.1: Each WIS Discovery Metadata record shall include at least one keyword from the `WMO_CategoryCode` code list
+|1
+
+a|Requirement 8.2.2: Keywords from `WMO_CategoryCode` code list shall be defined as keyword type `theme`
+|1
+
+a|Requirement 8.2.3: All keywords sourced from a particular keyword thesaurus shall be grouped into a single instance of the `MD_Keywords` class
+|1
+
+|Requirement 8.2.4: Each WIS Discovery Metadata record describing geographic data shall include the description of at least one geographic bounding box defining the spatial extent of the data
+|1
+
+a|Requirement 9.1.1: A WIS Discovery Metadata record describing data for global exchange via the WIS shall indicate the scope of distribution using the keyword `GlobalExchange` of type `dataCenter` from thesaurus `WMO_DistributionScopeCode`
+|1
+
+a|Requirement 9.2.1: A WIS Discovery Metadata record describing data for global exchange via the WIS shall have a `gmd:MD_Metadata/gmd:fileIdentifier` attribute formatted as follows (where `{uid}` is a unique identifier derived from the GTS bulletin or file name): `urn:x-wmo:md:int.wmo.wis::{uid}`
+|1
+
+a|Requirement 9.3.1: A WIS Discovery Metadata record describing data for global exchange via the WIS shall indicate the WMO Data License as Legal Constraint (type: `gmd:otherConstraints`) using one and only one term from the `WMO_DataLicenseCode` code list
+|1
+
+a|Requirement 9.3.2: A WIS Discovery Metadata record describing data for global exchange via the WIS shall indicate the GTS Priority as Legal Constraint (type: `gmd:otherConstraints`) using one and only one term from the `WMO_GTSProductCategoryCode` code list
+|1
+|===
+
+*Total possible score: 13 (100%)*
+
+=== Guidance to score well on this assessment
+
+Use WCMP templates and/or tools to generate the metadata record (e.g. Excel to WIS).
+

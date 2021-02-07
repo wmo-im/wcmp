@@ -1,4 +1,4 @@
-== I. Graphic overview for non bulletins metadata records
+== KPI-{counter:kpi}: Graphic overview for non bulletins metadata records
 
 === WCMP element(s)
 
@@ -42,7 +42,7 @@ of search results presentation.
 |1
 |===
 
-Total possible score: 3 (100%)
+*Total possible score: 3 (100%)*
 
 === Guidance to score well on this assessment
 
@@ -55,3 +55,4 @@ Examples of catalogues using such information are here:
 
 * https://gisc.dwd.de[GISC DWD]
 * https://navigator.eumetsat.int/search?query=MSG%20RGB[EUMETSAT Product Navigator]
+
