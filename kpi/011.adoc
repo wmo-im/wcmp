@@ -43,7 +43,7 @@ WMO/ISO Codelists referenced in WCMP
 |Authoritative list
 
 a|`CI_DateTypeCode`
-a|`//gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode1`
+a|`//gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode`
 | WMOCodeLists (ISO Extended)
 
 a|`CI_RoleCode`
@@ -59,7 +59,7 @@ a|`//gmd:resourceConstraints//gmd:MD_RestrictionCode`
 |gmxCodelists (ISO)
 
 a|`MD_ScopeCode`
-a|`//gmd:scope//gmd:MD_ScopeCode`
+a|`//gmd:scope/gmd:MD_ScopeCode`
 |gmxCodelists (ISO)
 
 a|`MD_TopicCategoryCode`
