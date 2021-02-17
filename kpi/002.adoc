@@ -26,7 +26,7 @@ for users to understand the resource.
 |===
 |Rule |Score
 
-|title exists
+|title is included
 |1
 
 |title has 3 words or more
