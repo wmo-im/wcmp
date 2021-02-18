@@ -6,8 +6,8 @@ Approved
 
 === WCMP Element(s)
 
-* `/gmd:MD_Metadata/gmd:identification//gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent`
-* `/gmd:MD_Metadata/gmd:identification//gmd:resourceMaintenance//gmd:maintenanceAndUpdateFrequency`
+* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent`
+* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceMaintenance//gmd:maintenanceAndUpdateFrequency`
 
 === What is being measured
 
