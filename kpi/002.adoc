@@ -10,7 +10,7 @@ Approved
 
 === What is being measured
 
-The title field shall always be populated and and follow the principles of
+The title field shall always be populated and follow the principles of
 WCMP guidance.  The length shall not be too short or too long, contain less
 than 3 acronyms and represented in title case.  Spelling and grammar are correct.
 
