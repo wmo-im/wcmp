@@ -154,7 +154,7 @@ based on the number of keywords and individual scoring.
 
 A high score will be provided for full referenced term, keyword type and
 thesaurus. Additional recommendations for keywords implementation are found at
-the link:https://library.wmo.int/doc_num.php?explnum_id=4004[Guide to WMO Information System (WMO- No. 1061,Section 5.8.1.8)]
+the link:https://library.wmo.int/doc_num.php?explnum_id=10257[Guide to WMO Information System (WMO- No. 1061,Section 5.8.1.8)]
 
 Examples of controlled vocabularies: 
 
