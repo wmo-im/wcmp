@@ -52,7 +52,7 @@ The abstract should provide a clear and concise statement that enables the
 reader to understand the content of the dataset. For guidance when completing
 the abstract, consider the following recommendations:
 
-* State what the 'things' are that are recorded
+* State the 'things' that are recorded
 * State the key aspects recorded about these things
 * State what form the data takes
 * State any other limiting information, such as time period of validity of the

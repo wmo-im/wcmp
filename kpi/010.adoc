@@ -129,16 +129,16 @@ Guidance.
 |===
 |Rule |Score
 
-|`gmd:MD_Format` is defined
+|`gmd:MD_Format` is included
 |1
 
 |format specification has an Anchor with a resolvable HTTP URL 
 |1
 
-|distributor contact organization is defined
+|distributor contact organization is included
 |1
 
-|distributor contact email is defined
+|distributor contact email is included
 |1
 
 |1..n transfer options are defined

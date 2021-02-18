@@ -6,7 +6,7 @@ Approved
 
 === WCMP element(s)
 
-All WCMP elements specified in link:https://wis.wmo.int/2013/metadata/version_1-3-0/WMO_Core_Metadata_Profile_v1.3_Part_2.pdf[WCMP 1.3, Part 2 – Abstract Test Suite, Data Dictionary and Code Lists].
+All WCMP elements specified in link:https://wis.wmo.int/2013/metadata/version_1-3-0/WMO_Core_Metadata_Profile_v1.3_Part_2.pdf[WCMP 1.3, Part C2 – Abstract Test Suite, Data Dictionary and Code Lists].
 
 === What is being measured
 
@@ -18,7 +18,7 @@ WCMP 1.3, Part 2 forms the basis of all KPIs.
 
 === Rules for implementation
 
-. WCMP 1.3, Part 2 Compliance implementation rules
+. WCMP 1.3, Part C2, 2.1 Abstract tests for XML encoding
 
 |===
 |Rule |Score

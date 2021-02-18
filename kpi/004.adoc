@@ -8,11 +8,13 @@ Approved
 
 * `/gmd:MD_Metadata/gmd:identificationInfo//gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent`
 * `/gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceMaintenance//gmd:maintenanceAndUpdateFrequency`
+* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:status`
 
 === What is being measured
 
 * Temporal extent: This element describes the period of time that the available product covers
 * Data update frequency: The temporal frequency at which the data is updated (i.e. every x hours, days, etc.)
+* Status of dataset
 
 === Rationale for measurement
 
@@ -22,13 +24,13 @@ covered by products and how often new products are received.
 
 === Rules for implementation
 
-The TemporalExtent is defined in `gmd:temporalElement`:
+The TemporalExtent is included in `gmd:temporalElement`:
 
 ```xml
 <gmd:identificationInfo>
   ...
   <gmd:temporalElement>
-    <gmd:EX_TemporalExtent id="boundingTemporalExtent">
+    <gmd:EX_TemporalExtent>
       <gmd:extent>
         <gml:TimePeriod gml:id="boundingTemporalExtentPeriod">
           <gml:beginPosition>2005-10-01</gml:beginPosition>
@@ -49,7 +51,7 @@ where a dataset is from 2005-10-01 onwards:
 <gmd:identificationInfo>
   ...
   <gmd:temporalElement>
-     <gmd:EX_TemporalExtent id="temporalExtent">
+     <gmd:EX_TemporalExtent>
        <gmd:extent>
          <gml:TimePeriod gml:id="boundingTemporalExtentPeriod">
            <gml:beginPosition>2005-10-01</gml:beginPosition>
@@ -73,7 +75,7 @@ codelist.  The following example provides an ongoing dataset progress/status:
 </gmd:identificationInfo>
 ```
 
-The Data Update Frequency is defined in `gmd:maintenanceAndUpdateFrequency`:
+The Data Update Frequency is included in `gmd:maintenanceAndUpdateFrequency`:
 
 Below is an example of a GTS bulletin which is updated every 6 hours.
 
@@ -120,7 +122,7 @@ update frequency, `gmd:MD_MaintenanceFrequencyCode` can be set to `asNeeded`:
 |===
 |Rule |Score
 
-|The Temporal Extent is defined
+|The Temporal Extent is included
 |1
 
 |The Temporal Extent contains begin and end components
@@ -129,10 +131,10 @@ update frequency, `gmd:MD_MaintenanceFrequencyCode` can be set to `asNeeded`:
 |The begin date time is less than or equal to the end date time
 |1
 
-|The Data Update Frequency is defined
+|The Data Update Frequency is included
 |1
 
-|The Data Status is defined
+|The Data Status is included
 |1
 |===
 
@@ -140,5 +142,5 @@ update frequency, `gmd:MD_MaintenanceFrequencyCode` can be set to `asNeeded`:
 
 === Guidance to score well on this assessment
 
-Ensure that the Temporal Extent and the Update Frequency is defined in the metadata record.
+Ensure that the Temporal Extent and the Update Frequency is included in the metadata record.
 

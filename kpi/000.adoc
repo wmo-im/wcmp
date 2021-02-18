@@ -3,9 +3,9 @@
 === Purpose
 
 This document is intended to define Key Performance Indicators (KPIs) in
-support of the WMO Core Metadata Profile (WCMP).  KPIs provide measurable,
-value added quality assessment rules over and above syntactic and schematic
-rulesets put forth by WCMP and ISO 19115:2003/19139:2007.
+support of the WMO Core Metadata Profile (WCMP).  KPIs provide measurable
+and valuable quality assessment rules over and above the rulesets put
+forth by WCMP and ISO 19115:2003/19139:2007.
 
 The core driver of WCMP KPIs is continuous improvement and useability of
 discovery metadata as part of the https://community.wmo.int/activity-areas/wmo-information-system-wis[WMO Information System (WIS)].
@@ -41,8 +41,8 @@ In order to improve quality:
 === Scoring
 
 Each KPI assesses a number of criteria asssociated with metadata quality,
-resulting in a raw score, as well as a percentage. This approach is
-implemented so as to apply weighted scoring as required by a scoring rubric.
+resulting in a raw score, as well as a percentage. This approach supports
+weighted rubric scoring.
 
 === Reference implementation
 
@@ -57,7 +57,8 @@ Documentation on installation, configuration and usage can be found on the
 pywcmp website.
 
 pywcmp is provided as a resource to the community, under continuous
-improvement. Contributions are welcome and can be facilited via TT-WISMD.
+improvement. Contributions are welcome and can be facilited by the
+WMO Task Team on WIS Metadata.
 
 === Codelists rules
 
