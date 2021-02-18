@@ -2,7 +2,7 @@
 
 === WCMP element(s)
 
-* `//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview/gmd:MD_BrowseGraphic/gmd:filename/gmx:Anchor/@xlink:href`
+* `//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview/gmd:MD_BrowseGraphic/gmd:fileName/gmx:Anchor/@xlink:href`
 
 ```xml
 <gmd:graphicOverview>
