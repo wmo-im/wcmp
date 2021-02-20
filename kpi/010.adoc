@@ -36,7 +36,7 @@ Approved
         <gmd:distributorContact>
           <gmd:CI_ResponsibleParty>
             <gmd:individualName>
-              <gco:CharacterString>DT/DSI/OP/TEL</gco:CharacterString>
+              <gco:CharacterString>Lastname, Firstname</gco:CharacterString>
             </gmd:individualName>
             <gmd:organisationName>
               <gco:CharacterString>NMC FRANCE - Météo-France</gco:CharacterString>

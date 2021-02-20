@@ -11,7 +11,7 @@ Any element or attribute content with linked information (URLs).
 * `//gmd:URL`
 * `//gmd:graphicOverview`
 * `//gmx:Anchor/@xlink:href`
-* `//@codeList` TODO: should we really check code lists link health or treat as a plain old value?
+* `//@codeList`
 
 ```xml
 <gmd:CI_OnlineResource>
@@ -48,7 +48,7 @@ Any element or attribute content with linked information (URLs).
 === What is being measured
 
 The number of broken links in each individual metadata record.  Broken links
-include links which, when accessed, result in a 4xx or 5xx HTTP error.footnote:[https://httpstatuses.com].
+include links which, when accessed, result in a 4xx or 5xx HTTP error.footnote:[https://httpstatuses.com]
 
 Also being measured is the use of HTTPS (with a valid SSL certificate) as the
 link protocol throughout WIS Metadata.
@@ -57,7 +57,7 @@ link protocol throughout WIS Metadata.
 
 Broken links damage the user experience and gives the impression to users that
 a website is not maintained (88% of the online consumers are less likely to
-return to a site after a bad experience.footnote:[https://review42.com/web-design-statistics]).
+return to a site after a bad experience.footnote:[https://review42.com/web-design-statistics])
 In addition, having numerous broken links affects the reputation and rank of
 your website when indexed by mass market search engines.
 

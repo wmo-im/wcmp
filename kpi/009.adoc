@@ -250,10 +250,10 @@ the rules.
 
 === Guidance to score well on this assessment
 
-In addtion to programmatic checks which will provide an score,
-it should be clear to the user what are the conditions of use for the resource published.
+In addition to programmatic checks which will provide a score, the conditions
+of use for the resource published should be clear to the user.  
 If the codelist implementation is not clear there should be additional free text explanations
 `gmd:otherConstraints` or `gmd:useLimitation`.
 
-Further guidance on data policy implementation can be found in the link:https://library.wmo.int/doc_num.php?explnum_id=10257[Guide to WMO Information System (WMO No. 1061, Section 5.8.1.10)].
+Further guidance on data policy implementation can be found in the Guide to WMO Information System (WMO No. 1061, Section 5.8.1.10).footnote:[https://library.wmo.int/doc_num.php?explnum_id=10257]
 

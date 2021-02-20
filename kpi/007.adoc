@@ -17,7 +17,7 @@
 === What is being measured
 
 The presence of `gmd:graphicOverview` is checked that it contains a URL to
-a common web image file type.footnote:[https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#Common_image_file_types].
+a common web image file type.footnote:[https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#Common_image_file_types]
 
 === Rationale for measurement
 

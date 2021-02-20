@@ -11,9 +11,8 @@ Approved
 
 === What is being measured
 
-Whether the DataLicenseCode of `WMOEssential` is provided as a constraint as
-part of data identification, if yes then ensure that distribution URLs are
-provided.
+Ensure that distribution URLs are included when the DataLicenseCode of
+`WMOEssential` is indicated in the constraint section.
 
 === Rationale for measurement
 

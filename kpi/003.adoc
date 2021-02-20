@@ -87,10 +87,10 @@ the abstract, consider the following recommendations:
 
 ==== Spell checking recommendations
 
-* link:https://www.merriam-webster.com[Dictionary by Merriam-Webster: America's most-trusted online dictionary]
-* link:https://dictionary.cambridge.org[Cambridge Dictionary | English Dictionary, Translations & Thesaurus]
+* Dictionary by Merriam-Webster: America's most-trusted online dictionaryfootnote:[https://www.merriam-webster.com]
+* Cambridge Dictionary | English Dictionary, Translations & Thesaurusfootnote:[https://dictionary.cambridge.org]
 
 ==== WMO Guidelines
 
-References of good abstract examples can be found in the link:https://library.wmo.int/doc_num.php?explnum_id=10257[Guide to WMO Information System (WMO No. 1061, Section 5.8.1.2)], product abstract.
+References of good abstract examples can be found in the Guide to WMO Information System (WMO No. 1061, Section 5.8.1.2)footnote:[https://library.wmo.int/doc_num.php?explnum_id=10257], product abstract.
 

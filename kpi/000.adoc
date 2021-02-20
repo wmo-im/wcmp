@@ -3,12 +3,12 @@
 === Purpose
 
 This document is intended to define Key Performance Indicators (KPIs) in
-support of the WMO Core Metadata Profile (WCMP).  KPIs provide measurable
+support of the WMO Core Metadata Profile (WCMP). KPIs provide measurable
 and valuable quality assessment rules over and above the rulesets put
 forth by WCMP and ISO 19115:2003/19139:2007.
 
 The core driver of WCMP KPIs is continuous improvement and useability of
-discovery metadata as part of the https://community.wmo.int/activity-areas/wmo-information-system-wis[WMO Information System (WIS)].
+discovery metadata as part of the WMO Information System (WIS).footnote:[https://community.wmo.int/activity-areas/wmo-information-system-wis]
 
 === Scope
 
@@ -46,7 +46,7 @@ weighted rubric scoring.
 
 === Reference implementation
 
-The TT-WISMD maintains link:https://github.com/wmo-im/pywcmp[pywcmp], as the
+The TT-WISMD maintains pywcmpfootnote:[https://github.com/wmo-im/pywcmp], as the
 reference WCMP validation utility which includes:
 
 * validation against WMO Core Metadata Profile 1.3, specifically Part 2,
