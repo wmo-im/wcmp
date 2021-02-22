@@ -34,7 +34,7 @@ can be user-defined or specified from controlled vocabularies.
 
 ==== Well defined keywords examples
 
-Used keyword references URL of acode registry using an Anchor element.
+Used keyword references URL of a code registry using an Anchor element.
 
 ```xml
   <gmd:MD_Keywords>
