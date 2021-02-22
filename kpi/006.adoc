@@ -47,7 +47,7 @@ the Anchor with a resolvable HTTP URL.
 <gmd:descriptiveKeywords>
 ```
 
-Check if keyword term is user defined.
+Check if keyword term is user-defined.
 
 ```xml
 <gmd:descriptiveKeywords>
@@ -140,14 +140,14 @@ a|`gmd:type` is present
 a|`gmd:thesaurusName` is present
 |1
 
-a| Keywords terms and thesaurus  are referred to with  `gmx:Anchor`
+a| Keywords terms and thesaurus are present via `gmx:Anchor`
 |1
 
 |===
 
 *Total possible score: 4 per keyword set (100%)*
 
-To assess how many keywords are defined and provide a total percentage
+To assess how many keywords are present and provide a total percentage
 based on the number of keywords and individual scoring.
 
 === Guidance to score well on this assessment

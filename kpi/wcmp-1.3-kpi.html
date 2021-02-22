@@ -1048,7 +1048,7 @@ for users to understand the resource.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">title is included</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">title is present</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
 </tr>
 <tr>
@@ -1350,7 +1350,7 @@ covered by products and how often new products are received.</p>
 <div class="sect2">
 <h3 id="_rules_for_implementation_4"><a class="anchor" href="#_rules_for_implementation_4"></a>5.5. Rules for implementation</h3>
 <div class="paragraph">
-<p>The TemporalExtent is included in <code>gmd:temporalElement</code>:</p>
+<p>The TemporalExtent is present in <code>gmd:temporalElement</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1371,8 +1371,8 @@ covered by products and how often new products are received.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>In the case of an ongoing dataset with a known start date, but no known end
-date can be defined, the end date must be defined as <code>now</code>.  For instance,
+<p>In the case of an ongoing dataset with a known start date and unknown end
+date, the end date must be indicated with <code>now</code>.  For instance,
 where a dataset is from 2005-10-01 onwards:</p>
 </div>
 <div class="listingblock">
@@ -1407,7 +1407,7 @@ codelist.  The following example provides an ongoing dataset progress/status:</p
 </div>
 </div>
 <div class="paragraph">
-<p>The Data Update Frequency is included in <code>gmd:maintenanceAndUpdateFrequency</code>:</p>
+<p>The Data Update Frequency is present in <code>gmd:maintenanceAndUpdateFrequency</code>:</p>
 </div>
 <div class="paragraph">
 <p>Below is an example of a GTS bulletin which is updated every 6 hours.</p>
@@ -1467,11 +1467,11 @@ update frequency, <code>gmd:MD_MaintenanceFrequencyCode</code> can be set to <co
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Temporal Extent is included</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Temporal Extent is present</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Temporal Extent contains begin and end components</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The begin and end components are present in the temporal extent</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
 </tr>
 <tr>
@@ -1479,11 +1479,11 @@ update frequency, <code>gmd:MD_MaintenanceFrequencyCode</code> can be set to <co
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Data Update Frequency is included</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Data Update Frequency is present</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Data Status is included</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The Data Status is present</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
 </tr>
 </tbody>
@@ -1495,7 +1495,7 @@ update frequency, <code>gmd:MD_MaintenanceFrequencyCode</code> can be set to <co
 <div class="sect2">
 <h3 id="_guidance_to_score_well_on_this_assessment_4"><a class="anchor" href="#_guidance_to_score_well_on_this_assessment_4"></a>5.6. Guidance to score well on this assessment</h3>
 <div class="paragraph">
-<p>Ensure that the Temporal Extent and the Update Frequency is included in the metadata record.</p>
+<p>Ensure that the Temporal Extent and the Update Frequency is present in the metadata record.</p>
 </div>
 </div>
 </div>
@@ -1585,7 +1585,7 @@ update frequency, <code>gmd:MD_MaintenanceFrequencyCode</code> can be set to <co
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><code>DataLicenseCode</code> is <code>WMOEssential</code> and 1..n distribution links are provided</p>
+<p><code>DataLicenseCode</code> is <code>WMOEssential</code> and 1..n distribution links are present</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
 </tr>
@@ -1682,7 +1682,7 @@ the Anchor with a resolvable HTTP URL.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Check if keyword term is user defined.</p>
+<p>Check if keyword term is user-defined.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1801,7 +1801,7 @@ instead).</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Keywords terms and thesaurus  are referred to with  <code>gmx:Anchor</code></p>
+<p>Keywords terms and thesaurus are present via <code>gmx:Anchor</code></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
 </tr>
@@ -1811,7 +1811,7 @@ instead).</p>
 <p><strong>Total possible score: 4 per keyword set (100%)</strong></p>
 </div>
 <div class="paragraph">
-<p>To assess how many keywords are defined and provide a total percentage
+<p>To assess how many keywords are present and provide a total percentage
 based on the number of keywords and individual scoring.</p>
 </div>
 </div>
@@ -1906,7 +1906,7 @@ of search results presentation.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">graphic overview element exists</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">graphic overview element is present</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
 </tr>
 <tr>
@@ -2058,11 +2058,11 @@ patterns.  HTTPS supports secure, authoritative and trustworthy links as part of
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Each valid link provided</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Each valid link present</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Each valid HTTPS link provided</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Each valid HTTPS link present</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
 </tr>
 </tbody>
@@ -2660,7 +2660,7 @@ Guidance.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>1..n transfer options are defined</p>
+<p>1..n transfer options are present</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
 </tr>
@@ -2709,7 +2709,7 @@ contact, principal investigator</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Authoritative codelists are defined at the following locations:</p>
+<p>Authoritative codelists are found at the following locations:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2882,15 +2882,15 @@ incorrectly if not properly referenced.</p>
 <p><strong>Total possible score: 1 per valid codelist value (100%)</strong></p>
 </div>
 <div class="paragraph">
-<p>To assess how many valid codelist values are defined and provide a total
+<p>To assess how many valid codelist values are indicated and provide a total
 percentage based on the total number of codelist values.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_guidance_to_score_well_on_this_assessment_11"><a class="anchor" href="#_guidance_to_score_well_on_this_assessment_11"></a>12.5. Guidance to score well on this assessment</h3>
 <div class="paragraph">
-<p>Ensure that codelists referenced terms are well defined across the whole
-record and from authoritative sources.</p>
+<p>Ensure that codelists referenced terms are indicated across the entire
+record, from authoritative sources.</p>
 </div>
 </div>
 </div>
@@ -2977,7 +2977,7 @@ already existing work.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">if DOI anchor exists</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">if DOI anchor is present</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
 </tr>
 <tr>
@@ -2985,7 +2985,7 @@ already existing work.</p>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">if DOI citation exists as a constraint and includes the same DOI in the anchor</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">if DOI citation is present as a constraint and includes the same DOI in the anchor</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
 </tr>
 </tbody>

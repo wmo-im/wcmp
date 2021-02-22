@@ -55,7 +55,7 @@ All `WMOEssential` data should have 1..n distribution links to the data.
 |===
 |Rule |Score
 
-a|`DataLicenseCode` is `WMOEssential` and 1..n distribution links are provided
+a|`DataLicenseCode` is `WMOEssential` and 1..n distribution links are present
 |1
 
 |===

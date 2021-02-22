@@ -51,13 +51,13 @@ already existing work.
 |===
 |Rule |Score
 
-|if DOI anchor exists
+|if DOI anchor is present
 |1
 
 |title is equal to 'DOI'
 |1
 
-|if DOI citation exists as a constraint and includes the same DOI in the anchor
+|if DOI citation is present as a constraint and includes the same DOI in the anchor
 |1
 |===
 

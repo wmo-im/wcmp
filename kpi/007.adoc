@@ -31,7 +31,7 @@ of search results presentation.
 |===
 |Rule |Score
 
-|graphic overview element exists
+|graphic overview element is present
 |1
 
 |graphic overview URL resolves successfully

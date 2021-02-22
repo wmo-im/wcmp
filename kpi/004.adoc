@@ -24,7 +24,7 @@ covered by products and how often new products are received.
 
 === Rules for implementation
 
-The TemporalExtent is included in `gmd:temporalElement`:
+The TemporalExtent is present in `gmd:temporalElement`:
 
 ```xml
 <gmd:identificationInfo>
@@ -43,8 +43,8 @@ The TemporalExtent is included in `gmd:temporalElement`:
 </gmd:identificationInfo>
 ```
 
-In the case of an ongoing dataset with a known start date, but no known end
-date can be defined, the end date must be defined as `now`.  For instance,
+In the case of an ongoing dataset with a known start date and unknown end
+date, the end date must be indicated with `now`.  For instance,
 where a dataset is from 2005-10-01 onwards:
 
 ```xml
@@ -75,7 +75,7 @@ codelist.  The following example provides an ongoing dataset progress/status:
 </gmd:identificationInfo>
 ```
 
-The Data Update Frequency is included in `gmd:maintenanceAndUpdateFrequency`:
+The Data Update Frequency is present in `gmd:maintenanceAndUpdateFrequency`:
 
 Below is an example of a GTS bulletin which is updated every 6 hours.
 
@@ -122,19 +122,19 @@ update frequency, `gmd:MD_MaintenanceFrequencyCode` can be set to `asNeeded`:
 |===
 |Rule |Score
 
-|The Temporal Extent is included
+|The Temporal Extent is present
 |1
 
-|The Temporal Extent contains begin and end components
+|The begin and end components are present in the temporal extent
 |1
 
 |The begin date time is less than or equal to the end date time
 |1
 
-|The Data Update Frequency is included
+|The Data Update Frequency is present
 |1
 
-|The Data Status is included
+|The Data Status is present
 |1
 |===
 
@@ -142,5 +142,5 @@ update frequency, `gmd:MD_MaintenanceFrequencyCode` can be set to `asNeeded`:
 
 === Guidance to score well on this assessment
 
-Ensure that the Temporal Extent and the Update Frequency is included in the metadata record.
+Ensure that the Temporal Extent and the Update Frequency is present in the metadata record.
 

@@ -141,7 +141,7 @@ Guidance.
 |distributor contact email is included
 |1
 
-|1..n transfer options are defined
+|1..n transfer options are present
 |1
 
 |===

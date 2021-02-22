@@ -72,9 +72,9 @@ patterns.  HTTPS supports secure, authoritative and trustworthy links as part of
 |===
 |Rule |Score
 
-|Each valid link provided
+|Each valid link present
 |1
-|Each valid HTTPS link provided
+|Each valid HTTPS link present
 |1
 |===
 
