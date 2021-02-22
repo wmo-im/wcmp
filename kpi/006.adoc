@@ -34,8 +34,7 @@ can be user-defined or specified from controlled vocabularies.
 
 ==== Well defined keywords examples
 
-If keyword is present then check if keyword term references a thesaurus using
-the Anchor with a resolvable HTTP URL.
+Used keyword references URL of acode registry using an Anchor element.
 
 ```xml
   <gmd:MD_Keywords>
@@ -45,18 +44,7 @@ the Anchor with a resolvable HTTP URL.
   </gmd:MD_Keywords>
 ```
 
-Check if keyword term is user-defined.
-
-```xml
-<gmd:MD_Keywords>
-  <gmd:keyword>
-    <gco:CharacterString>Dewpoint Temperature</gco:CharacterString>
-  </gmd:keyword>
-</gmd:MD_Keywords>
-```
-
-Check for presence of WMO `MD_KeywordTypeCode`, check for permitted codelist
-values against https://wis.wmo.int/2012/codelists/WMOCodeLists#MD_KeywordTypeCode
+The type of keyword is given in `MD_KeywordTypeCode` element, the "codelist" indicates URL of the code list, e.g. https://wis.wmo.int/2012/codelists/WMOCodeLists#MD_KeywordTypeCode.
 
 ```xml
 <gmd:type>
@@ -64,7 +52,7 @@ values against https://wis.wmo.int/2012/codelists/WMOCodeLists#MD_KeywordTypeCod
 </gmd:type>
 ```
 
-Check for well referenced thesaurus using the Anchor with a resolvable HTTP URL.
+Keywords reference a thesaurus using an Anchor element with a resolvable HTTP URL.
 
 ```xml
 <gmd:thesaurusName>
@@ -86,9 +74,7 @@ Check for well referenced thesaurus using the Anchor with a resolvable HTTP URL.
 </gmd:thesaurusName>
 ```
 
-Check for referenced thesaurus via `gco:CharacterString` elements (use of a URL
-within `gco:CharacterString` is not recommended, `gmx:Anchor` should be used
-instead).
+Less prefered is to use a `gco:CharacterString` element. Such thesaurus references are still quite common, and formaly valid, but are considreded deprecated.
 
 ```xml
 <gmd:thesaurusName>
