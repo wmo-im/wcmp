@@ -25,8 +25,6 @@ already existing work.
 === Rules for implementation
 
 ```xml
-<gmd:identificationInfo>
-...
   <gmd:identifier>
     <gmd:MD_Identifier>
       <gmd:code>
@@ -34,17 +32,12 @@ already existing work.
       </gmd:code>
     </gmd:MD_Identifier>
   </gmd:identifier>
-</gmd:identificationInfo>
 ```
 
 ```xml
-<gmd:MD_LegalConstraints>
-...
   <gmd:otherConstraints>
     <gco:CharacterString>Cite as: WMO/GAW Ozone Monitoring Community, World Meteorological Organization-Global Atmosphere Watch Program (WMO-GAW)/World Ozone and Ultraviolet Radiation Data Centre (WOUDC) [Data]. Retrieved [YYYY-MM-DD], from https://woudc.org. A list of all contributors is available on the website. doi:10.14287/10000004</gco:CharacterString> 
   </gmd:otherConstraints>
-...
-</gmd:MD_LegalConstraints>
 ```
 
 .DOI citation implementation rules
