@@ -27,8 +27,6 @@ covered by products and how often new products are received.
 The TemporalExtent is present in `gmd:temporalElement`:
 
 ```xml
-<gmd:identificationInfo>
-  ...
   <gmd:temporalElement>
     <gmd:EX_TemporalExtent>
       <gmd:extent>
@@ -39,8 +37,6 @@ The TemporalExtent is present in `gmd:temporalElement`:
       </gmd:extent>
     </gmd:EX_TemporalExtent>
   </gmd:temporalElement>
-  ...
-</gmd:identificationInfo>
 ```
 
 In the case of an ongoing dataset with a known start date and unknown end
@@ -48,8 +44,6 @@ date, the end date must be indicated with `now`.  For instance,
 where a dataset is from 2005-10-01 onwards:
 
 ```xml
-<gmd:identificationInfo>
-  ...
   <gmd:temporalElement>
      <gmd:EX_TemporalExtent>
        <gmd:extent>
@@ -60,19 +54,15 @@ where a dataset is from 2005-10-01 onwards:
        </gmd:extent>
      </gmd:EX_TemporalExtent>
   </gmd:temporalElement>
-</gmd:temportalElement>
 ```
 
 It is also recommended to identify a dataset status / progress using the `gmd:MD_ProgressCode`
 codelist.  The following example provides an ongoing dataset progress/status:
 
 ```xml
-<gmd:identificationInfo>
-  ...
   <gmd:status>
     <gmd:MD_ProgressCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ProgressCode" codeSpace="ISOTC211/19115" codeListValue="onGoing">onGoing</gmd:MD_ProgressCode>
   </gmd:status>
-</gmd:identificationInfo>
 ```
 
 The Data Update Frequency is present in `gmd:maintenanceAndUpdateFrequency`:
@@ -80,8 +70,6 @@ The Data Update Frequency is present in `gmd:maintenanceAndUpdateFrequency`:
 Below is an example of a GTS bulletin which is updated every 6 hours.
 
 ```xml
-<gmd:identificationInfo>
-  ...
   <gmd:resourceMaintenance>
     <gmd:MD_MaintenanceInformation>
       <gmd:maintenanceAndUpdateFrequency>
@@ -96,16 +84,12 @@ Below is an example of a GTS bulletin which is updated every 6 hours.
       </gmd:maintenanceNote>
     </gmd:MD_MaintenanceInformation>
   </gmd:resourceMaintenance>
-  ...
-</gmd:identificationInfo>
 ```
 
 If it is not relevant or necessary to provide information regarding the data
 update frequency, `gmd:MD_MaintenanceFrequencyCode` can be set to `asNeeded`:
 
 ```xml
-<gmd:identificationInfo>
-  ...
   <gmd:resourceMaintenance>
       <gmd:MD_MaintenanceInformation>
         <gmd:maintenanceAndUpdateFrequency>
@@ -113,8 +97,6 @@ update frequency, `gmd:MD_MaintenanceFrequencyCode` can be set to `asNeeded`:
         </gmd:maintenanceAndUpdateFrequency>
       </gmd:MD_MaintenanceInformation>
   </gmd:resourceMaintenance>
-  ...
-</gmd:identificationInfo>
 ```
 
 .Temporal information implementation rules
