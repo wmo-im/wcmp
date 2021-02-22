@@ -83,7 +83,7 @@ Additional descriptions to explain the referred `WMO_DataLicenceCode` could be a
 
 If the record is encoding `WMO_DataLicenseCode` with `gmx:Anchor`,
 then check for permitted values in the corresponding codelist:
-https://github.com/wmo-im/wcmp-codelists/blob/main/codelists/WMO_DataLicenseCode.csv
+http://wis.wmo.int/2012/codelists/WMOCodeLists#WMO_DataLicenseCode
 
 ```xml
 <gmd:resourceConstraints>
