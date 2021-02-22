@@ -38,45 +38,35 @@ If keyword is present then check if keyword term references a thesaurus using
 the Anchor with a resolvable HTTP URL.
 
 ```xml
-<gmd:descriptiveKeywords>
   <gmd:MD_Keywords>
     <gmd:keyword>
       <gmx:Anchor xlink:href="https://codes.wmo.int/grib2/codeflag/4.2/_0-0-6">Dewpoint Temperature</gmx:Anchor>
     </gmd:keyword>
   </gmd:MD_Keywords>
-<gmd:descriptiveKeywords>
 ```
 
 Check if keyword term is user-defined.
 
 ```xml
-<gmd:descriptiveKeywords>
   <gmd:MD_Keywords>
     <gmd:keyword>
       <gco:CharacterString>Dewpoint Temperature</gco:CharacterString>
     </gmd:keyword>
   </gmd:MD_Keywords>
-</gmd:descriptiveKeywords>
 ```
 
 Check for presence of WMO `MD_KeywordTypeCode`, check for permitted codelist
 values against https://wis.wmo.int/2012/codelists/WMOCodeLists#MD_KeywordTypeCode
 
 ```xml
-<gmd:descriptiveKeywords>
-  <gmd:MD_Keywords>
     <gmd:type>
       <gmd:MD_KeywordTypeCode codeList="https://wis.wmo.int/2012/codelists/WMOCodeLists#MD_KeywordTypeCode" codeListValue="dataParam">dataParam</gmd:MD_KeywordTypeCode>
     </gmd:type>
-  </gmd:MD_Keywords>
-<gmd:descriptiveKeywords>
 ```
 
 Check for well referenced thesaurus using the Anchor with a resolvable HTTP URL.
 
 ```xml
-<gmd:descriptiveKeywords>
-  <gmd:MD_Keywords>
     <gmd:thesaurusName>
       <gmd:CI_Citation>
         <gmd:title>
@@ -94,8 +84,6 @@ Check for well referenced thesaurus using the Anchor with a resolvable HTTP URL.
         </gmd:date>
       </gmd:CI_Citation>
     </gmd:thesaurusName>
-  </gmd:MD_Keywords>
-<gmd:descriptiveKeywords>
 ```
 
 Check for referenced thesaurus via `gco:CharacterString` elements (use of a URL
@@ -103,8 +91,6 @@ within `gco:CharacterString` is not recommended, `gmx:Anchor` should be used
 instead).
 
 ```xml
-<gmd:descriptiveKeywords>
-  <gmd:MD_Keywords>
     <gmd:thesaurusName>
       <gmd:CI_Citation>
         <gmd:title>
@@ -122,8 +108,6 @@ instead).
         </gmd:date>
       </gmd:CI_Citation>
     </gmd:thesaurusName>
-  </gmd:MD_Keywords>
-<gmd:descriptiveKeywords>
 ```
 
 .Keywords implementation rules
