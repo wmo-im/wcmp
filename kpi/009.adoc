@@ -113,7 +113,7 @@ Check for `gmd:accessConstraints` with `gmd:MD_RestrictionCode` = `otherRestrict
 <gmd:resourceConstraints>
   <gmd:MD_LegalConstraints>
     <gmd:accessConstraints>
-        <gmd:MD_RestrictionCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</gmd:MD_RestrictionCode>
+      <gmd:MD_RestrictionCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</gmd:MD_RestrictionCode>
     </gmd:accessConstraints>
   </gmd:MD_LegalConstraints>
 </gmd:resourceConstraints> 
@@ -136,29 +136,29 @@ Check for scope of distribution keyword from controlled vocabulary
 
 ```xml
 <gmd:MD_Keywords>
-    <gmd:keyword>
-      <gmx:Anchor xlink:href="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_DistributionScopeCode_GlobalExchange">GlobalExchange</gmx:Anchor>
-    </gmd:keyword>
-    <gmd:type>
-      <gmd:MD_KeywordTypeCode codeList="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#MD_KeywordTypeCode" codeListValue="dataCenter">dataCenter</gmd:MD_KeywordTypeCode>
-    </gmd:type>
-    <gmd:thesaurusName>
-      <gmd:CI_Citation>
-        <gmd:title>
-          <gmx:Anchor xlink:href="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_DistributionScopeCode">WMO_DistributionScopeCode</gmx:Anchor>
-        </gmd:title>
-        <gmd:date>
-          <gmd:CI_Date>
-            <gmd:date>
-              <gco:Date>2012-06-27</gco:Date>
-            </gmd:date>
-            <gmd:dateType>
-              <gmd:CI_DateTypeCode codeList="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#CI_DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
-            </gmd:dateType>
-          </gmd:CI_Date>
-        </gmd:date>
-      </gmd:CI_Citation>
-    </gmd:thesaurusName>
+  <gmd:keyword>
+    <gmx:Anchor xlink:href="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_DistributionScopeCode_GlobalExchange">GlobalExchange</gmx:Anchor>
+  </gmd:keyword>
+  <gmd:type>
+    <gmd:MD_KeywordTypeCode codeList="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#MD_KeywordTypeCode" codeListValue="dataCenter">dataCenter</gmd:MD_KeywordTypeCode>
+  </gmd:type>
+  <gmd:thesaurusName>
+    <gmd:CI_Citation>
+      <gmd:title>
+        <gmx:Anchor xlink:href="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_DistributionScopeCode">WMO_DistributionScopeCode</gmx:Anchor>
+      </gmd:title>
+      <gmd:date>
+        <gmd:CI_Date>
+          <gmd:date>
+            <gco:Date>2012-06-27</gco:Date>
+          </gmd:date>
+          <gmd:dateType>
+            <gmd:CI_DateTypeCode codeList="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#CI_DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
+          </gmd:dateType>
+        </gmd:CI_Date>
+      </gmd:date>
+    </gmd:CI_Citation>
+  </gmd:thesaurusName>
 </gmd:MD_Keywords>
 ```
 
@@ -167,29 +167,29 @@ Check for scope of distribution keyword from controlled vocabulary
 
 ```xml
 <gmd:MD_Keywords>
-    <gmd:keyword>
-      <gco:CharacterString>GlobalExchange</gco:CharacterString>
-    </gmd:keyword>
-    <gmd:type>
-      <gmd:MD_KeywordTypeCode codeList="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#MD_KeywordTypeCode" codeListValue="dataCenter">dataCenter</gmd:MD_KeywordTypeCode>
-    </gmd:type>
-    <gmd:thesaurusName>
-      <gmd:CI_Citation>
-        <gmd:title>
-          <gco:CharacterString>WMO_DistributionScopeCode</gco:CharacterString>
-        </gmd:title>
-        <gmd:date>
-          <gmd:CI_Date>
-            <gmd:date>
-              <gco:Date>2012-06-27</gco:Date>
-            </gmd:date>
-            <gmd:dateType>
-              <gmd:CI_DateTypeCode codeList="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#CI_DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
-            </gmd:dateType>
-          </gmd:CI_Date>
-        </gmd:date>
-      </gmd:CI_Citation>
-    </gmd:thesaurusName>
+  <gmd:keyword>
+    <gco:CharacterString>GlobalExchange</gco:CharacterString>
+  </gmd:keyword>
+  <gmd:type>
+    <gmd:MD_KeywordTypeCode codeList="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#MD_KeywordTypeCode" codeListValue="dataCentre">dataCentre</gmd:MD_KeywordTypeCode>
+  </gmd:type>
+  <gmd:thesaurusName>
+    <gmd:CI_Citation>
+      <gmd:title>
+        <gco:CharacterString>WMO_DistributionScopeCode</gco:CharacterString>
+      </gmd:title>
+      <gmd:date>
+        <gmd:CI_Date>
+          <gmd:date>
+            <gco:Date>2012-06-27</gco:Date>
+          </gmd:date>
+          <gmd:dateType>
+            <gmd:CI_DateTypeCode codeList="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#CI_DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
+          </gmd:dateType>
+        </gmd:CI_Date>
+      </gmd:date>
+    </gmd:CI_Citation>
+  </gmd:thesaurusName>
 </gmd:MD_Keywords>
 ```
 
@@ -203,13 +203,15 @@ Check for presence of GTS priority if data is marked for `GlobalExchange` or `Re
     [...]
 </gmd:MD_Keywords>
 
+[...]
+
 <gmd:resourceConstraints>
   <gmd:MD_LegalConstraints>
    <gmd:otherConstraints>
       <gmx:Anchor xlink:href="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_GTSProductCategoryCode_GTSPriority3">GTSPriority3</gmx:Anchor>
    </gmd:otherConstraints>
   </gmd:MD_LegalConstraints>
-<gmd:resourceConstraints>
+</gmd:resourceConstraints>
 ```
 
 .Data policy implementation rules
