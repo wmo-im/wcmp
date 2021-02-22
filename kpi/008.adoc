@@ -15,9 +15,9 @@ Any element or attribute content with linked information (URLs).
 
 ```xml
 <gmd:CI_OnlineResource>
-   <gmd:linkage>
-      <gmd:URL>https://eumetview.eumetsat.int/mapviewer/?product=EO:EUM:DAT:MSG:SNOW</gmd:URL>
-   </gmd:linkage>
+ <gmd:linkage>
+   <gmd:URL>https://eumetview.eumetsat.int/mapviewer/?product=EO:EUM:DAT:MSG:SNOW</gmd:URL>
+ </gmd:linkage>
 </gmd:CI_OnlineResource>
 ```
 
@@ -32,11 +32,9 @@ Any element or attribute content with linked information (URLs).
 ```
 
 ```xml
-<gmd:MD_Identifier>
-  <gmd:code>
-    <gmx:Anchor xlink:actuate="onRequest" xlink:href="https://dx.doi.org/10.14287/10000004" xlink:title="DOI">doi:10.14287/10000004</gmx:Anchor>
-  </gmd:code>
-</gmd:MD_Identifier>
+<gmd:code>
+  <gmx:Anchor xlink:actuate="onRequest" xlink:href="https://dx.doi.org/10.14287/10000004" xlink:title="DOI">doi:10.14287/10000004</gmx:Anchor>
+</gmd:code>
 ```
 
 ```xml
