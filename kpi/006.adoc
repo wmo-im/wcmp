@@ -39,7 +39,7 @@ Used keyword references URL of a code registry using an Anchor element.
 ```xml
   <gmd:MD_Keywords>
     <gmd:keyword>
-      <gmx:Anchor xlink:href="https://codes.wmo.int/grib2/codeflag/4.2/_0-0-6">Dewpoint Temperature</gmx:Anchor>
+     <gmx:Anchor xlink:href="http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_meteorology">meteorology</gmx:Anchor>
     </gmd:keyword>
   </gmd:MD_Keywords>
 ```
@@ -48,7 +48,7 @@ The type of keyword is given in `MD_KeywordTypeCode` element, the "codelist" ind
 
 ```xml
 <gmd:type>
-  <gmd:MD_KeywordTypeCode codeList="https://wis.wmo.int/2012/codelists/WMOCodeLists#MD_KeywordTypeCode" codeListValue="dataParam">dataParam</gmd:MD_KeywordTypeCode>
+  <gmd:MD_KeywordTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_KeywordTypeCode_theme" codeListValue="theme">theme</gmd:MD_KeywordTypeCode>
 </gmd:type>
 ```
 
@@ -58,15 +58,15 @@ Keywords reference a thesaurus using an Anchor element with a resolvable HTTP UR
 <gmd:thesaurusName>
   <gmd:CI_Citation>
     <gmd:title>
-      <gmx:Anchor xlink:href="https://codes.wmo.int/grib2/codeflag/_4.2">WMO Codes Registry GRIB edition 2</gmx:Anchor>
+      <gmx:Anchor xlink:href="http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode">WMO_CategoryCode</gmx:Anchor>
     </gmd:title>
     <gmd:date>
       <gmd:CI_Date>
         <gmd:date>
-          <gco:Date>2016-06-25</gco:Date>
+          <gco:Date>2016-05-26</gco:Date>
         </gmd:date>
         <gmd:dateType>
-          <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
+          <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
         </gmd:dateType>
       </gmd:CI_Date>
     </gmd:date>
@@ -80,15 +80,15 @@ Less prefered is to use a `gco:CharacterString` element. Such thesaurus referenc
 <gmd:thesaurusName>
   <gmd:CI_Citation>
     <gmd:title>
-      <gco:CharacterString>WMO Codes Registry - GRIB edition 2</gco:CharacterString>
+      <gco:CharacterString>WMO_CategoryCode</gco:CharacterString>
     </gmd:title>
     <gmd:date>
       <gmd:CI_Date>
         <gmd:date>
-          <gco:Date>2016-06-25</gco:Date>
+          <gco:Date>2016-05-26</gco:Date>
         </gmd:date>
         <gmd:dateType>
-          <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
+          <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
         </gmd:dateType>
       </gmd:CI_Date>
     </gmd:date>
