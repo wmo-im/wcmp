@@ -58,7 +58,7 @@ a|`//gmd:resourceConstraints//gmd:MD_RestrictionCode`
 |gmxCodelists (ISO)
 
 a|`MD_ScopeCode`
-a|`//gmd:scope/gmd:MD_ScopeCode`
+a|`//gmd:scope//gmd:MD_ScopeCode`
 |gmxCodelists (ISO)
 
 a|`MD_TopicCategoryCode`
