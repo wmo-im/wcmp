@@ -71,6 +71,6 @@ For a satellite product offering one main data parameter, the title will
 typically define which parameter is contained in the product, and from which
 instrument or instrument type it originates. For example, "AMSR-2 Sea Surface
 Temperature” or “SLSTR L1B radiances and brightness temperatures”. Please see
-the Guidance on WIS Discovery Metadatafootnote:[https://wis.wmo.int/file=3291]
+the Guidance on WIS Discovery Metadatafootnote:[https://library.wmo.int/index.php?lvl=notice_display&id=6856#.X2TSLZMzYUF]
 for more information.
 
