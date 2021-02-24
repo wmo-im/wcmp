@@ -1,4 +1,4 @@
-== X. KPI name
+== KPI-{counter:kpi}: my KPI
 
 === Status
 
@@ -6,15 +6,24 @@ Draft|Approved
 
 === WCMP element(s)
 
-- list of XPaths
+* XPath 1
+* XPath 2
 
 === What is being measured
 
+Text description of measurement.
+
 === Rationale for measurement
+
+Why should this measurement take place.
 
 === Rules for implementation
 
 - use XPath and pseudo-code (if then else)
 - provide total possible score
 
+*Total possible score: x (100%)*
+
 === Guidance to score well on this assessment
+
+Recommendations and hints/advice.

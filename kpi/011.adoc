@@ -1,0 +1,104 @@
+== KPI-{counter:kpi}: Codelists validation
+
+=== WCMP element(s)
+
+WCMP elements will vary depending on whether they are:
+
+* ISO Codelists (`gmxCodelists.xml`)
+* WMO Codelists / ISO extensions (`WMOCodeLists.xml`)
+
+Authoritative codelists are found at the following locations:
+
+* ISO: https://standards.iso.org/iso/19139/resources/gmxCodelists.xml
+* WMO: https://wis.wmo.int/2012/codelists/WMOCodeLists.xml
+
+=== What is being measured
+
+Presence of valid terms from the referred codelist element.
+
+=== Rationale for measurement
+
+WCMP records can reference codelists from a number of locations
+(e.g. online copies of the authoritative sources).
+
+To ensure that the terms themselves are always consistent with the official sources,
+this KPI will validate that the terms referred to in WCMP records are consistent with
+the authoritative codelists referred in this KPI.
+
+In many cases terms are included but are not identical to the official definitions
+on the codelists (e.g. spelling mistakes, case sensitivity errors, etc.).
+
+Software applications may look for exact matches to codelists and handle metadata
+incorrectly if not properly referenced.
+
+=== Rules for implementation
+
+WMO/ISO Codelists referenced in WCMP
+
+[%header,cols=3*] 
+|===
+|codelist
+|WCMP Element
+|Authoritative list
+
+a|`CI_DateTypeCode`
+a|`//gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode`
+| WMOCodeLists (ISO Extended)
+
+a|`CI_RoleCode`
+a|`//gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode`
+|gmxCodelists (ISO)
+
+a|`MD_KeywordTypeCode`
+a|`//gmd:MD_Keywords/gmd:type/gmd:MD_KeywordTypeCode`
+|WMOCodeLists (ISO Extended)
+
+a|`MD_RestrictionCode`
+a|`//gmd:resourceConstraints//gmd:MD_RestrictionCode`
+|gmxCodelists (ISO)
+
+a|`MD_ScopeCode`
+a|`//gmd:scope//gmd:MD_ScopeCode`
+|gmxCodelists (ISO)
+
+a|`MD_TopicCategoryCode`
+a|`//gmd:topicCategory/gmd:MD_TopicCategoryCode`
+|gmxCodelists (ISO)
+
+a|`WMO_DataLicenseCode`
+a|`//gmd:resourceConstraints//gmd:otherConstraints/[gco:CharacterString\|gmx:Anchor]`
+|WMOCodeLists 
+
+a|`WMO_GTSProductCategoryCode`
+a|`//gmd:resourceConstraints//gmd:otherConstraints/[gco:CharacterString\|gmx:Anchor]`
+|WMOCodeLists 
+
+a|`WMO_CategoryCode`
+a|`//gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/[gco:CharacterString\|gmx:Anchor]`
+|WMOCodeLists 
+
+a|`WMO_DistributionScopeCode`
+a|`//gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/[gco:CharacterString\|gmx:Anchor]`
+|WMOCodeLists
+
+|===
+
+.Codelists validation implementation rules
+|===
+|Rule |Score
+
+|codelist referred terms are checked against authoritative sources with an exact match
+|1
+
+|===
+
+*Total possible score: 1 per valid codelist value (100%)*
+
+To assess how many valid codelist values are indicated and provide a total
+percentage based on the total number of codelist values.
+
+=== Guidance to score well on this assessment
+
+Ensure that codelists referenced terms are indicated across the entire
+record, from authoritative sources.
+

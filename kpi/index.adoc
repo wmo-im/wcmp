@@ -1,0 +1,50 @@
+:title: WMO Core Metadata Profile 1.3, Key Performance Indicators
+:titletext: {title}
+:version: issue-69
+:date: YYYY-MM-DD
+:copyright: Copyright © 2021 World Meteorological Organization (WMO)
+:doctype: book
+:encoding: utf-8
+:lang: en
+:toc:
+:toc-placement!:
+:toclevels: 2
+:sectnums:
+:sectnumlevels: 4
+:sectanchors:
+
+= {title}
+
+<<<
+[cols = "<",frame = "none",grid = "none"]
+|===
+|{set:cellbgcolor:#FFFFFF}
+|[big]*World Meteorological Organization*
+|Date: {date}
+|Version: {version}
+|Document location: https://github.com/wmo-im/tree/{version}/kpi/wcmp-1.3-kpi.html
+|Task Team on WIS Metadata (TT-WISMD)footnote:[https://community.wmo.int/governance/commission-membership/commission-observation-infrastructures-and-information-systems-infcom/commission-infrastructure-officers/infcom-management-group/standing-committee-information-management-and-technology-sc-imt/expert-team-metadata-0]
+|Expert Team on Metadata Standards (ET-Metadata)footnote:[https://community.wmo.int/governance/commission-membership/commission-observation-infrastructures-and-information-systems-infcom/commission-infrastructure-national-representatives/infcom-management-group/standing-committee-information-management-and-technology-sc-imt/et-metadata]
+|Standing Committee on Information Management and Technology (SC-IMT)footnote:[https://community.wmo.int/governance/commission-membership/commission-observation-infrastructures-and-information-systems-infcom/commission-infrastructure-officers/infcom-management-group/standing-committee-information-management-and-technology-sc-imt]
+|Commission for Observation, Infrastructures and Information Systems (INFCOM)footnote:[https://community.wmo.int/governance/commission-membership/infcom]
+|{copyright}
+|===
+
+<<<
+toc::[]
+<<<
+
+include::000.adoc[]
+include::001.adoc[]
+include::002.adoc[]
+include::003.adoc[]
+include::004.adoc[]
+include::005.adoc[]
+include::006.adoc[]
+include::007.adoc[]
+include::008.adoc[]
+include::009.adoc[]
+include::010.adoc[]
+include::011.adoc[]
+include::012.adoc[]
+
