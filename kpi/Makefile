@@ -6,7 +6,7 @@ html:
 pdf:
 	asciidoctor --trace -r asciidoctor-pdf --trace -b pdf -o ${FILE_BASENAME}.pdf index.adoc
 
-doc:
+docx:
 	asciidoctor --trace --backend docbook --out-file - index.adoc | pandoc --from docbook --to docx --output ${FILE_BASENAME}.docx
 
 linkcheck:
