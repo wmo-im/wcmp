@@ -47,10 +47,4 @@ find . -name "???.adoc" -exec asciidoc-link-check -p -c asciidoc-link-check-conf
 
 ## Releasing
 
-- update `index.adoc`
-  - `{version}`
-  - `{date}`
-- commit and push updates
-  - `git commit -m 'update release version x.y.z' index.adoc && git push origin master`
-- cut version
-  - `git tag -a x.y.z -m 'tagging release version x.y.z' && git push --tags`
+See https://github.com/wmo-im/wcmp/wiki/ReleaseManagement for more information.
