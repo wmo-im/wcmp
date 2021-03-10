@@ -1,4 +1,4 @@
-FILE_BASENAME=wcmp-1.3-kpi
+FILE_BASENAME=wcmp-kpi-${VERSION}
 
 html:
 	asciidoctor --trace -o ${FILE_BASENAME}.html index.adoc
@@ -12,4 +12,4 @@ docx:
 linkcheck:
 	find . -name "???.adoc" -exec asciidoc-link-check -p -c ./asciidoc-link-check-config.json {} \;
 
-.PHONY: html pdf linkcheck
+.PHONY: html pdf docx linkcheck
