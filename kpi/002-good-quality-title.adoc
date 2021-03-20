@@ -1,4 +1,4 @@
-== KPI-{counter:kpi}: Good quality title
+== KPI-2: Good quality title
 
 === Status
 

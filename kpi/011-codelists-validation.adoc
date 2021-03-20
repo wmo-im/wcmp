@@ -1,4 +1,4 @@
-== KPI-{counter:kpi}: Codelists validation
+== KPI-11: Codelists validation
 
 === WCMP element(s)
 
@@ -35,7 +35,7 @@ incorrectly if not properly referenced.
 
 WMO/ISO Codelists referenced in WCMP
 
-[%header,cols=3*] 
+[%header,cols=3*]
 |===
 |codelist
 |WCMP Element
@@ -67,15 +67,15 @@ a|`//gmd:topicCategory/gmd:MD_TopicCategoryCode`
 
 a|`WMO_DataLicenseCode`
 a|`//gmd:resourceConstraints//gmd:otherConstraints/[gco:CharacterString\|gmx:Anchor]`
-|WMOCodeLists 
+|WMOCodeLists
 
 a|`WMO_GTSProductCategoryCode`
 a|`//gmd:resourceConstraints//gmd:otherConstraints/[gco:CharacterString\|gmx:Anchor]`
-|WMOCodeLists 
+|WMOCodeLists
 
 a|`WMO_CategoryCode`
 a|`//gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/[gco:CharacterString\|gmx:Anchor]`
-|WMOCodeLists 
+|WMOCodeLists
 
 a|`WMO_DistributionScopeCode`
 a|`//gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/[gco:CharacterString\|gmx:Anchor]`
