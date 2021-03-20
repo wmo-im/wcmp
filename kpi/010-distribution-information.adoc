@@ -1,4 +1,4 @@
-== KPI-{counter:kpi}: Distribution information
+== KPI-10: Distribution information
 
 Metadata records should contain information regarding how to access the data
 which it is describing.
@@ -112,7 +112,7 @@ The presence of distribution information and supporting elements.
 * 1..n `gmd:transferOptions` (`//gmd:distributionInfo//gmd:transferOptions//gmd:onLine`),
   including a `gmd:linkage` with a URL to access the data
 * distributor contact information (organization, email)
- 
+
 === Rationale for measurement
 
 Distribution information provides the necessary information for accessing the
@@ -132,7 +132,7 @@ Guidance.
 |`gmd:MD_Format` is included
 |1
 
-|format specification has an Anchor with a resolvable HTTP URL 
+|format specification has an Anchor with a resolvable HTTP URL
 |1
 
 |distributor contact organization is included

@@ -1,4 +1,4 @@
-== KPI-{counter:kpi}: Keywords
+== KPI-6: Keywords
 
 === Status
 
@@ -18,7 +18,7 @@ Approved
 
 In addition to measure well-defined references to dictionaries and keyword
 types, compliance to WCMP 1.3 defines a set of rules that apply to different
-sets of keywords.  
+sets of keywords.
 
 === Rationale for measurement
 
@@ -126,7 +126,7 @@ A high score will be provided for full referenced term, keyword type and
 thesaurus. Additional recommendations for keywords implementation are found at
 the Guide to WMO Information System (WMO- No. 1061,Section 5.8.1.8).footnote:[https://library.wmo.int/index.php?lvl=notice_display&id=6856]
 
-Examples of controlled vocabularies: 
+Examples of controlled vocabularies:
 
 * https://codes.wmo.int[WMO Codes Registry]
 * https://wis.wmo.int/2012/codelists/WMOCodeLists.xml[WMO Codelists]

@@ -1,4 +1,4 @@
-== KPI-{counter:kpi}: Temporal information
+== KPI-4: Temporal information
 
 === Status
 

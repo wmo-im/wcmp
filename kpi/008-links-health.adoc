@@ -1,4 +1,4 @@
-== KPI-{counter:kpi}: Links health
+== KPI-8: Links health
 
 === Status
 

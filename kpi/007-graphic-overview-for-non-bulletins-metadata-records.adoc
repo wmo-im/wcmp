@@ -1,4 +1,4 @@
-== KPI-{counter:kpi}: Graphic overview for non bulletins metadata records
+== KPI-7: Graphic overview for non bulletins metadata records
 
 === WCMP element(s)
 
