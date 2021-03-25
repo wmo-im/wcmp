@@ -1,4 +1,4 @@
-== KPI-{counter:kpi}: Good quality abstract
+== KPI-3: Good quality abstract
 
 === Status
 
@@ -16,7 +16,7 @@ not be used to populate the abstract.
 
 === Rationale for measurement
 
-To faciliate ease of understanding and discovery. 
+To faciliate ease of understanding and discovery.
 
 Abstract is a key element of metadata information displayed as part of search
 results. Fulsome and meaningful abstract information allows for users to both

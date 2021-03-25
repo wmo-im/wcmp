@@ -1,4 +1,4 @@
-== KPI-{counter:kpi}: WCMP 1.3, Part 2 Compliance
+== KPI-1: WCMP 1.3, Part 2 Compliance
 
 === Status
 

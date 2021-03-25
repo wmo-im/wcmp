@@ -1,4 +1,4 @@
-== KPI-{counter:kpi}: WMOEssential data links
+== KPI-5: WMOEssential data links
 
 === Status
 
@@ -29,7 +29,7 @@ All `WMOEssential` data should have 1..n distribution links to the data.
   </gmd:MD_LegalConstraints>
 </gmd:resourceConstraints>
 ```
-  
+
 ```xml
 <gmd:MD_DigitalTransferOptions>
   <gmd:onLine>
@@ -64,5 +64,5 @@ a|`DataLicenseCode` is `WMOEssential` and 1..n distribution links are present
 
 === Guidance to score well on this assessment
 
-If the data described is categorized as `WMOEssential`, provide a link to the data. 
+If the data described is categorized as `WMOEssential`, provide a link to the data.
 
