@@ -1,9 +1,5 @@
 == KPI-6: Keywords
 
-=== Status
-
-Approved
-
 === WCMP element(s)
 
 * `//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword`

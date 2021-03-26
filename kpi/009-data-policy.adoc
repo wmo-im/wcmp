@@ -1,9 +1,5 @@
 == KPI-9: Data policy
 
-=== Status
-
-Approved
-
 === WCMP element(s)
 
 Data policy

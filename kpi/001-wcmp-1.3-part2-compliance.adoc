@@ -1,9 +1,5 @@
 == KPI-1: WCMP 1.3, Part 2 Compliance
 
-=== Status
-
-Approved
-
 === WCMP element(s)
 
 All WCMP elements specified in the WCMP 1.3, Part C2 – Abstract Test Suite, Data Dictionary and Code Lists.footnote:[https://wis.wmo.int/2013/metadata/version_1-3-0/WMO_Core_Metadata_Profile_v1.3_Part_2.pdf]

@@ -1,9 +1,5 @@
 == KPI-8: Links health
 
-=== Status
-
-Approved
-
 === WCMP element(s)
 
 Any element or attribute content with linked information (URLs).
