@@ -1,9 +1,5 @@
 == KPI-4: Temporal information
 
-=== Status
-
-Approved
-
 === WCMP Element(s)
 
 * `/gmd:MD_Metadata/gmd:identificationInfo//gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent`

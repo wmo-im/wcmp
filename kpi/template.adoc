@@ -1,13 +1,9 @@
 == KPI-XXX: my KPI
 
-=== Status
-
-Draft|Approved
-
 === WCMP element(s)
 
-* XPath 1
-* XPath 2
+* `//XPath1`
+* `//XPath2`
 
 === What is being measured
 

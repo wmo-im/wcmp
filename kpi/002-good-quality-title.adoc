@@ -1,9 +1,5 @@
 == KPI-2: Good quality title
 
-=== Status
-
-Approved
-
 === WCMP element(s)
 
 * `/gmd:MD_Metadata/gmd:identificationInfo//gmd:citation/gmd:CI_Citation/gmd:title`

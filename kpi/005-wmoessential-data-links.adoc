@@ -1,9 +1,5 @@
 == KPI-5: WMOEssential data links
 
-=== Status
-
-Approved
-
 === WCMP element(s)
 
 * `/gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints`
