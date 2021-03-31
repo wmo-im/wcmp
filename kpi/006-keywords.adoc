@@ -70,7 +70,7 @@ Keywords reference a thesaurus using an Anchor element with a resolvable HTTP UR
 </gmd:thesaurusName>
 ```
 
-Less prefered is to use a `gco:CharacterString` element. Such thesaurus references are still quite common, and formaly valid, but are considreded deprecated.
+Less prefered is to use a `gco:CharacterString` element. Such thesaurus references are still quite common, and formaly valid, but are considered deprecated.
 
 ```xml
 <gmd:thesaurusName>

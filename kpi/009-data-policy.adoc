@@ -242,8 +242,8 @@ if `gmd:keyword` is present with terms from
 
 *Total possible score: 5 (100%)*
 
-Note: Other possible `gmd:resourceContraints` elements may exist and not comply to these rules.
-The score should check that there is one `gmd:resourceContraints` element that complies to
+Note: Other possible `gmd:resourceConstraints` elements may exist and not comply to these rules.
+The score should check that there is one `gmd:resourceConstraints` element that complies to
 the rules.
 
 === Guidance to score well on this assessment
