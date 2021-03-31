@@ -1,9 +1,5 @@
 == KPI-3: Good quality abstract
 
-=== Status
-
-Approved
-
 === WCMP element(s)
 
 * `/gmd:MD_Metadata/gmd:identificationInfo//gmd:abstract`

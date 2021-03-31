@@ -3,10 +3,6 @@
 Metadata records should contain information regarding how to access the data
 which it is describing.
 
-=== Status
-
-Approved
-
 === WCMP element(s)
 
 * `//gmd:distributionInfo//gmd:distributionFormat/gmd:MD_Format`
