@@ -1,0 +1,38 @@
+== WIS Discovery Metadata
+
+=== Presentation of the WMO Core Metadata Profile 
+
+The WCMP 1.3, while sometimes referred to as “discovery” metadata, is also aimed at providing catalogue users with sufficient information for them to decide on the suitability of the data and at providing access to or details on how to access the data. Some of the information contained in a WCMP metadata record is vital for optimizing the searching functionality offered by the WIS product catalogues. In the WIS, users typically need to search one of the catalogues for discovering and accessing products.
+
+A discovery metadata record has to contain the following information to help users understand a product: what, when, where, who and how. A summary is provided below, and details are provided in section 5.8.1.
+
+==== Product information
+
+What: This is the product content which is mainly defined by the product title and the product abstract fields, though additional fields can be used. The information in the title and abstract is very important because the Product Title and Abstract are indexed by any product catalogue and are thus searchable. In addition, the title and part of the abstract are presented to users in the search results of each WIS catalogue; so good content here can enhance users' efficiency as they follow the sequence search, view search results, and decide. 
+
+When: This is the temporal coverage of the dataset or product, and is captured in the temporal extent section of the metadata record. It is possible to describe ongoing, finite, or rolling-window datasets.
+
+Where: This is the geospatial extent of the dataset, describing which geographical area(s) the product covers, over the Earth or atmosphere. It can be the whole Earth, a region or a specific place. In the WCMP, for geographical data, the metadata record must contain at least one bounding box with latitude and longitude coordinates, but that information can also be enhanced by using geographical identifiers for geographical regions, features (such as coastlines) and the like. 
+
+Who: The contact details of the organization responsible for the product, of the organization responsible for the metadata, and (optionally) the name of the party that should be cited when referencing the data. It is possible, but not necessary, for the same party to be responsible for both the product and metadata.
+
+How - Data access and use: This consists of the distribution information, but also includes the data policy (the terms and conditions for accessing the product). Where possible, the distribution section provides a URL linking to a data access service. The data access service might require registration and might offer subselects or subsamples of the product. Users wishing to access information that has the WMOAdditional data policy (shown in “resourceConstraints”) must be registered with their regional GISC. Data with a WMOEssential or NoLimitation data policy can be accessed without restriction. Users wishing to set up a subscription (see Use Case B.5 in Appendix B) must register regardless of the type of information they require.
+
+==== Necessary technical information related to WIS
+
+Section 5.8.2 defines the information required to have a functioning, distributed WIS infrastructure. This includes, for instance, the WIS unique identifier for each metadata record.
+
+=== WMO Core Metadata Profile and International Organization for Standardization standard
+
+The WCMP 1.3 is a customization, also called a profile, of the more generic ISO 19115 discovery metadata standard. It allows the meteorological community to better define meteorological products (terrestrial, Earth observations, numerical weather prediction model outputs). The ISO 19115 structure is detailed and complex because it was designed to accommodate a wide range of information resources with different characteristics. The WCMP, as well as providing more targeted searching, aims to remove the need to understand some of the intricacies of ISO 19115. This Guide sets out to simplify the knowledge needed by users who are starting to create WCMP 1.3 metadata records.
+
+=== WMO Core Metadata Profile granularity and scope
+
+One difficulty, when creating a metadata record, is to understand what level of detail of a dataset should be described in the record for a particular product. Some products of the same type are continuously produced for an extended period, such as those from a satellite mission, or as model forecast outputs. Creating a new metadata record for each individual satellite instrument measurement granule (produced every three minutes) or for each forecast run (produced three times a day) would make the content of WIS catalogues grow at an extremely fast rate, and the thousands of new metadata records would contain the same information, except for the measurement time. This would drastically hinder the ability of users to find information when searching the catalogue.
+
+To solve that problem, the creation of one metadata record for an entire collection of similar products is generally recommended, provided that effective searching and other WIS infrastructure needs are not compromised. A collection of products that might be considered similar is a set of products where only one or two dimensions vary (such as time and geographical position) but the products still come from the same measurement instrument or station.
+
+An example of this approach is the EUMETSAT Meteosat Second Generation (MSG) Seviri Level 1.5 dataset which includes all the Level 1.5 radiances over the entire MSG mission with a global coverage and is described by one unique metadata record. The user discovering this product collection, via the WIS portals, is redirected to a EUMETSAT service offering subsampling capacities for selecting the required time period and geographic region.
+
+That said, it is up to the data provider to decide what constitutes a valid collection. Additional guidance on choosing the granularity criteria for collection metadata records can be found in the annex to this Part.
+

@@ -1,0 +1,14 @@
+== Introduction
+
+Metadata records play a very important role in the WIS by providing the information that will allow WIS users to discover, access and retrieve products.  Metadata records have to adhere to standards (such as standard vocabularies and schemas) to ensure product definition homogeneity and make systems interoperable. There are a number of metadata standards that address the needs of meteorological and hydrological communities. The WIS discovery metadata standard (for dataset discovery catalogues) is called WMO Core Metadata Profile 1.3 (WCMP 1.3). It is a profile of the International Organization for Standardization (ISO) 19115:2003 metadata standard (_ISO 19115:2003 Geographic information - Metadata_), with its associated ISO 19139 XML mapping. ISO 19115 is a complex standard, thus both organizational and subject expertise may be required to create high-quality ISO 19115 metadata records that clearly describe an object in the context in which it is used.
+
+This part of the Guide is intended for metadata authors and product or infrastructure specialists who create WCMP 1.3 metadata records for making their datasets discoverable within the WIS catalogue(s). It will also assist those who wish to create high-quality WIS metadata records for data that will be ingested and distributed by a GISC.
+
+The WCMP templates and relevant documentation listed below should be used together with the guidance information provided in this part of the Guide, which also contains a set of recommendations to be followed in order to provide the right level and granularity of product information in the WCMP metadata records:
+
+- WCMP 1.3 Template XML records: Template records containing placeholders (to be replaced with information related to the specific product described by the WIS discovery metadata record) are available from http://wis.wmo.int/MD-Templates. A valid example of an XML record, with field content (to be replaced) is also available there;
+- WIS Wiki Page on WIS discovery metadata: http://wis.wmo.int/MD_Index;
+- WCMP documentation: Part 1: http://wis.wmo.int/WCMPpart1; Part 2: http://wis.wmo.int/WCMPPart2;
+- Additional guidance WCMP documentation: http://wis.wmo.int/MD_Index or http://wis.wmo.int/WIS-Manual (for a summary of changes);
+- Additional examples of WCMP metadata (for particular product types): https://wis.wmo.int/MD-Examples.
+
