@@ -1,6 +1,6 @@
 ---
-name: WMCP Issue Template
-about: Generic template for any type of issue for WMCP repository.
+name: WCMP Issue Template
+about: Generic template for any type of issue for WCMP repository.
 title: ''
 labels: ''
 assignees: ''
