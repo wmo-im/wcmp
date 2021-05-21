@@ -1,0 +1,12 @@
+== Compliance with Additional Metadata Standards
+
+This part of the Guide provides information to help create metadata records that comply with WCMP 1.3. This profile is based on ISO 19115 which provides two profiling mechanisms:
+[loweralpha]
+. A more constrained use of ISO 19115 (either by recommending use of fewer fields, making an optional element mandatory, or constraining the expected content of a field) to suit the needs of a particular community;
+. In addition to (a), the possibility of defining additional non-ISO 19115 fields (and field content) to be added to any record.
+Examples of type (a) ISO 19115 profiles, in addition to the WCMP, include the Infrastructure for Spatial Information in the European Community (INSPIRE) Metadata Profile, the North American Profile, the Australian and New Zealand Information Council (ANZLIC) Metadata Profile and UK GEMINI. An example of (b) is the Marine Community Profile. For more information see also http://www.dcc.ac.uk/resources/metadata-standards/iso-19115.
+
+Each ISO 19115 profile defines specific rules that should be met. For example, to comply with the INSPIRE metadata profile, the additional requirements to be met include the provision of one keyword from the general environmental multilingual thesaurus (GEMET), a lineage statement and a statement of conformance with European Commission Regulation (EC) No. 1205/2008.
+
+The content of a WCMP 1.3 metadata record, defined according to this part of the Guide, can be extended so that the record also supports additional profiles (such as INSPIRE or ANZLIC). In such a case, the metadata author is required to implement any additional requirements specified in the corresponding profile documentation. The extended WCMP 1.3 metadata record can still be published in the WIS.
+

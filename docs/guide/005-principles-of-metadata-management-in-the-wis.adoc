@@ -1,0 +1,21 @@
+== Principles of Metadata Management in the WIS
+
+The Global Information System Centres are responsible for the management of metadata. According to the WMO Technical Regulations, each GISC shall:
+
+. Provide a comprehensive metadata catalogue with discovery services for all information provided by NCs or DCPCs across the WIS;
+. Support the Search and Retrieve via URL (SRU) protocol;
+. Ensure the synchronization of metadata among GISCs, using the Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH);
+. Support user's identification and authorization, including in terms of metadata maintenance;
+. Provide metadata publishing facilities using uploading/harvesting metadata publishing or online metadata editing tools to allow metadata authors to create metadata records.
+
+How to publish metadata
+
+. Metadata could be published at DCPC or GISC level;
+. Find out which GISC you belong to (i.e. which is your principal GISC). The official reference for WIS centres (GISCs and affiliated DCPCs and NCs, and their areas of responsibility) is the Manual on WIS, Appendix B. The list of GISCs and related links is also available online on the WMO portal at http://wis.wmo.int/WIScentresDb. The procedure for metadata management (account creation and editing facilities) may vary from one centre to another, but will usually be via the GISC portal (at least as a first point of contact);
+. Proceed to register with your principal GISC (this could be done online, depending on the capabilities and policies of the GISC) after which you will be assigned a username and a role;
+. Publish your metadata via your principal GISC. In order to publish your metadata records, use the appropriate method among those allowed by the GISC (import/insert metadata or harvest metadata using OAI-PMH). 
+
+Note: For a limited number of records, it is also possible to use the online editing services of a GISC.
+
+For more comprehensive information regarding the WIS and publishing metadata on the WIS, please consult the Manual on WIS (https://wis.wmo.int/WIS-Manual).
+
