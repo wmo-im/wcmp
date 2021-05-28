@@ -8,15 +8,20 @@ A discovery metadata record has to contain the following information to help use
 
 ==== Product information
 
-What: This is the product content which is mainly defined by the product title and the product abstract fields, though additional fields can be used. The information in the title and abstract is very important because the Product Title and Abstract are indexed by any product catalogue and are thus searchable. In addition, the title and part of the abstract are presented to users in the search results of each WIS catalogue; so good content here can enhance users' efficiency as they follow the sequence search, view search results, and decide. 
+What:: 
+  This is the product content which is mainly defined by the product title and the product abstract fields, though additional fields can be used. The information in the title and abstract is very important because the Product Title and Abstract are indexed by any product catalogue and are thus searchable. In addition, the title and part of the abstract are presented to users in the search results of each WIS catalogue; so good content here can enhance users' efficiency as they follow the sequence search, view search results, and decide. 
 
-When: This is the temporal coverage of the dataset or product, and is captured in the temporal extent section of the metadata record. It is possible to describe ongoing, finite, or rolling-window datasets.
+When:: 
+  This is the temporal coverage of the dataset or product, and is captured in the temporal extent section of the metadata record. It is possible to describe ongoing, finite, or rolling-window datasets.
 
-Where: This is the geospatial extent of the dataset, describing which geographical area(s) the product covers, over the Earth or atmosphere. It can be the whole Earth, a region or a specific place. In the WCMP, for geographical data, the metadata record must contain at least one bounding box with latitude and longitude coordinates, but that information can also be enhanced by using geographical identifiers for geographical regions, features (such as coastlines) and the like. 
+Where::
+  This is the geospatial extent of the dataset, describing which geographical area(s) the product covers, over the Earth or atmosphere. It can be the whole Earth, a region or a specific place. In the WCMP, for geographical data, the metadata record must contain at least one bounding box with latitude and longitude coordinates, but that information can also be enhanced by using geographical identifiers for geographical regions, features (such as coastlines) and the like. 
 
-Who: The contact details of the organization responsible for the product, of the organization responsible for the metadata, and (optionally) the name of the party that should be cited when referencing the data. It is possible, but not necessary, for the same party to be responsible for both the product and metadata.
+Who::
+  The contact details of the organization responsible for the product, of the organization responsible for the metadata, and (optionally) the name of the party that should be cited when referencing the data. It is possible, but not necessary, for the same party to be responsible for both the product and metadata.
 
-How - Data access and use: This consists of the distribution information, but also includes the data policy (the terms and conditions for accessing the product). Where possible, the distribution section provides a URL linking to a data access service. The data access service might require registration and might offer subselects or subsamples of the product. Users wishing to access information that has the WMOAdditional data policy (shown in “resourceConstraints”) must be registered with their regional GISC. Data with a WMOEssential or NoLimitation data policy can be accessed without restriction. Users wishing to set up a subscription (see Use Case B.5 in Appendix B) must register regardless of the type of information they require.
+How - Data access and use::
+  This consists of the distribution information, but also includes the data policy (the terms and conditions for accessing the product). Where possible, the distribution section provides a URL linking to a data access service. The data access service might require registration and might offer subselects or subsamples of the product. Users wishing to access information that has the WMOAdditional data policy (shown in “resourceConstraints”) must be registered with their regional GISC. Data with a WMOEssential or NoLimitation data policy can be accessed without restriction. Users wishing to set up a subscription (see Use Case B.5 in Appendix B) must register regardless of the type of information they require.
 
 ==== Necessary technical information related to WIS
 
