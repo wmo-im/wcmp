@@ -1,4 +1,4 @@
 == Technical Document
 
-More details on the WCMP metadata can be found at http://wis.wmo.int/MD_Index.
+More details on the WCMP metadata can be found at https://community.wmo.int/activity-areas/wis/wcmp.
 
