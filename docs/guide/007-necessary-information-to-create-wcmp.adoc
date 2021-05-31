@@ -2,11 +2,12 @@
 
 This section describes the information needed to build a meaningful metadata record. For each individual component, the following elements are provided:
 
-. Template value: The template XML record's placeholder value that is to be replaced;
-. Information: A summary of the type of information (from the metadata creator) that should replace the placeholder;
-. Necessity: Whether the component is mandatory, conditionally mandatory, highly recommended or optional, within WCMP 1.3; 
-. XPath: Its location within the WCMP XML metadata record; 
-. An example of XML for that component, with content instead of placeholders.
+- *Necessity:* Whether the component is mandatory (conditionally), highly recommended or optional, within WCMP 1.3; 
+- *Template value:* The template XML record's placeholder value that is to be replaced including the revelance of the element (see section 5.7 - template-based principle);
+- *Information:* A summary of the type of information (from the metadata creator) that should replace the placeholder;
+- *Category:* An overarching classification of the element;
+- *XPath:* Its location within the WCMP XML metadata record; 
+- An example of XML for that component, with content instead of placeholders.
 
 The metadata creator should, when reading the documentation, open the relevant metadata template record and find the placeholder(s) to be replaced by the relevant product information.
 
@@ -17,17 +18,19 @@ For each component, this part of the Guide describes what is generally required 
 ==== Product title
 
 .Product title
+[cols="1,1"]
 |===
-||
-
-|Template value
-|ADD-PRODUCT-TITLE*M, ADD-ALTERNATE-TITLE*O
-
-|Information
-|Product name
 
 |Necessity
 |Mandatory for WCMP 1.3
+
+|Template value
+a|
+ADD-PRODUCT-TITLE*M +
+ADD-ALTERNATE-TITLE*O
+
+|Information
+|Product name
 
 |Category
 |Product information
@@ -41,8 +44,8 @@ The product title and the product abstract are the two most relevant elements in
 
 The title should be as specific about the product as possible. If the product contains only one parameter, for instance, this can be stated in the title. However, if the product contains many parameters, the title should be more general and the parameters should be listed elsewhere in the metadata record (the abstract and/or the keywords). The title of a satellite product containing one main data parameter will typically describe that parameter and from which instrument or instrument type it originates, for instance, "AMSR-2 Sea Surface Temperature" or "SLSTR L1B radiances and brightness temperatures".
 
-Below is an example:
 
+====== Example: Product title
 ```xml
 <gmd:identificationInfo>
    <gmd:MD_DataIdentification>
@@ -70,6 +73,7 @@ The title for a GTS bulletin should also aim to be specific about the product, d
 
 For instance: 
 
+====== Example: Title for GTS bulletins
 ```xml
 <gmd:identificationInfo>
     <gmd:MD_DataIdentification>
@@ -84,17 +88,18 @@ For instance:
 ==== Product abstract
 
 .Product abstract
+[cols="1,1"]
 |===
-||
-
-|Template value
-|ADD-PRODUCT-ABSTRACT*M
-
-|Information
-|Abstract describing the product
 
 |Necessity
 |Mandatory for WCMP 1.3
+
+|Template value
+a|
+ADD-PRODUCT-ABSTRACT*M
+
+|Information
+|Abstract describing the product
 
 |Category
 |Product information
@@ -119,7 +124,7 @@ Below are typical abstracts and titles for:
 ** Title: IASI Atmospheric Temperature, Water Vapour and Surface Skin Temperature–Metop;
 ** Abstract: The Atmospheric Temperature, Water Vapour and Surface Skin Temperature (TWT) product contains the vertical profiles of atmospheric temperature and humidity, with a vertical sampling at 101 pressure levels, and surface skin temperature. The vertical profiles are retrieved from the IASI sounder measurements (IASI L1C product) together with collocated microwave measurements (AMSU & MHS 1B) when available. The main objective of the Infrared Atmospheric Sounding Interferometer (IASI) is to provide high resolution atmospheric emission spectra to derive temperature and humidity profiles with high spectral and vertical resolution and accuracy. Additionally, it is used for the determination of trace gases, as well as land and sea surface temperature, emissivity and cloud properties. The products are provided at the single IASI footprint resolution (which is about 12 km with a spatial sampling of about 25 km at Nadir). The quality and yield of the vertical profiles retrieved in cloudy instantaneous fields of view (IFOVs) are strongly related to the cloud properties in the IASI Cloud Parameter (CLP) product and the availability of collocated microwave measurements.
 
-More examples of metadata titles and abstracts can be found in the WIS Wiki at http://wis.wmo.int/MD-Examples.
+More examples of metadata titles and abstracts can be found in the WIS Wiki at https://old.wmo.int/wiswiki/tiki-index.php%3Fpage=MDG_EG.html.
 
 * GTS bulletin
 ** Title: SMPS02 SYNOP reports (pressure, temperature and wind) – South Pacific area; available from NZKL (WELLINGTON/KELBURN) at 00, 06, 12 and 18 UTC;
@@ -137,17 +142,25 @@ More examples of metadata titles and abstracts can be found in the WIS Wiki at h
 ==== Metadata responsible party
 
 .Metadata responsible party
+[cols="1,1"]
 |===
-||
-
-|Template value
-|ADD METADATA CONTACT ORGANISATION NAME*M; ADD ADDRESS STREET*O; ADD CITY*O; ADD REGION*O; ADD POSTCODE*O; ADD COUNTRY*O; ADD EMAIL ADDRESS*HR; ADD ORGANISATION WEBSITE*O.
-
-|Information
-|Party responsible for the created metadata record
 
 |Necessity
 |Mandatory for WCMP 1.3
+
+|Template value
+a|
+ADD METADATA CONTACT ORGANISATION NAME*M + 
+ADD ADDRESS STREET*O + 
+ADD CITY*O + 
+ADD REGION*O + 
+ADD POSTCODE*O + 
+ADD COUNTRY*O + 
+ADD EMAIL ADDRESS*HR + 
+ADD ORGANISATION WEBSITE*O + 
+
+|Information
+|Party responsible for the created metadata record
 
 |Category
 |Administrative information
@@ -159,6 +172,7 @@ a|`/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty`
 
 This element describes the contact details (address, telephone, email) of the party responsible for the metadata. For example:
 
+====== Example: Metadata responsible party
 ```xml
 <gmd:MD_Metadata>
    ….. .. .. . 
@@ -210,17 +224,19 @@ This element describes the contact details (address, telephone, email) of the pa
 ==== Product responsible party
 
 .Product responsible party
+[cols="1,1"]
 |===
-||
-
-|Template value
-|ADD PRODUCT RESPONSIBLE PARTY ORGANISATION SHORTNAME*M, ADD PRODUCT RESPONSIBLE PARTY EMAIL*HR
-
-|Information
-|Organization responsible for the product described in the metadata record
 
 |Necessity
 |Mandatory for WCMP 1.3
+
+|Template value
+a|
+ADD PRODUCT RESPONSIBLE PARTY ORGANISATION SHORTNAME*M + 
+ADD PRODUCT RESPONSIBLE PARTY EMAIL*HR
+
+|Information
+|Organization responsible for the product described in the metadata record
 
 |Category
 |Product information
@@ -230,8 +246,9 @@ a|`/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:pointOfContact/gmd:CI_Responsib
 
 |===
 
-This element contains the contact details of the organization responsible for the product. At least a name and an e-mail address are required, and the role should be “pointOfContact”.
+This element contains the contact details of the organization responsible for the product. At least a name and an e-mail address are required, and the role should be `"pointOfContact"`.
 
+====== Example: Product responsible party
 ```xml
 <gmd:MD_Metadata>
    ….. .. .. . 
@@ -279,17 +296,21 @@ pointOfContact</gmd:CI_RoleCode>
 ==== Temporal extent
 
 .Temporal extent
+[cols="1,1"]
 |===
-||
-
-|Template value
-|ADD TEMPORAL INFORMATION*HR, ADD TEMPORAL INFORMATION startDate*HR, ADD TEMPORAL INFORMATION endDate*HR
-
-|Information
-|Time period to which the product applies
 
 |Necessity
 |Optional for WCMP 1.3
+
+|Template value
+a|
+ADD TEMPORAL INFORMATION*HR + 
+ADD TEMPORAL INFORMATION startDate*HR + 
+ADD TEMPORAL INFORMATION endDate*HR +
+ADD TEMPORAL INFORMATION duration*O 
+
+|Information
+|Time period to which the product applies
 
 |Category
 |Product information
@@ -299,37 +320,40 @@ a|`/gmd:MD_Metadata/gmd:identificationInfo/\*/gmd:extent/*/gmd:temporalElement/*
 
 |===
 
-This element describes the period of time to which the product applies. Where the product has a clear start and end date, and where the entire set of data is available, the specific start date and end date should both contain a date or date and time. The date information is constructed as YYYY-MM-DD, while the date and time information is constructed as YYYY-MM-DDTHH:MM:SSZ (for UTC time) as in 2016 04 17T13:42:54Z. In the examples below, the start and end dates are indicated as beginPosition and endPosition.
+This element describes the period of time to which the product applies. Where the product has a clear start and end date, and where the entire set of data is available, the specific start date and end date should both contain a date or date and time. The date information is constructed as `YYYY-MM-DD`, while the date and time information is constructed as `YYYY-MM-DDTHH:MM:SSZ` (for UTC time) as in `2016-04-17T13:42:54Z`. In the examples below, the start and end dates are indicated as `beginPosition` and `endPosition`. For a TimePeriod, the begin and end positions must always be included whereas duration is optional. 
+
+The encoding of a duration as `[(- or +) PnYnMnDTnhnmns]` allows the expression of time intervals such as: a number of years (nY), and/or months (nM), and/or days (nD), or hours (nh), or minutes (nm), or seconds (ns), where “n” represents a number. For example, a duration of 4 hours is expressed as `P0Y0M0DT4h0m0s` or `PT4h`. Note that duration can be expressed using either the long form (e.g.: `P0Y5M0DT0h0m0s`) or the short form, but the latter must include `"T"` for intervals of hours, minutes or seconds (e.g.: `P5M` is 5 months, `PT5m` is 5 minutes). 
+
 Here are some examples of temporal extents whose meaning is described in the following paragraphs:
 
 .Example temporal extents
+[cols="1,1"]
 |===
-||
 
 |[DateX] to [DateY]
-|e.g.: beginPosition:2005-10-01 endPosition:2014-10-20
+a|
+e.g.: +
+`beginPosition: 2005-10-01` + 
+`endPosition: 2014-10-20`
 
 |[DateX] to [now]
-|e.g.: beginPosition:2005-10-01 endPosition:now
+a| e.g.: +
+`beginPosition: 2005-10-01` + 
+`endPosition: now`
 
 |[Now] plus [period]
-|e.g.: beginPosition:now endPosition:after duration:P1M (+1 month)
+a| e.g.: + 
+`beginPosition: now` + 
+`endPosition: after` +
+`duration: P7D (short)` or `duration: P0Y0M7DT0h0m0s (long)` (+7 days)
 
 |===
 
-Where it is not possible to accurately capture the time period in the TemporalExtent (using the start date, end date and duration), record details that are as close as possible, and then explain the period in words, using the description field.
-
-.Example temporal extents
-|===
-||
-
-|[DateX] to [DateY]
-|e.g.: beginPosition:2005-10-01 endPosition:2014-10-20
-
-|===
+Where it is not possible to accurately capture the time period in the `temporalExtent` (using the start date, end date and duration), record details that are as close as possible, and then explain the period in words, using the description field.
 
 The following example shows a dataset with a known start date and a known end date:
 
+====== Example: [DateX] to [DateY]
 ```xml
 <gmd:temporalElement>
   <gmd:EX_TemporalExtent id="boundingTemporalExtent">
@@ -343,17 +367,9 @@ The following example shows a dataset with a known start date and a known end da
 </gmd:temporalElement>
 ```
 
-.Example temporal extents
-|===
-||
+It is also possible to describe an ongoing dataset with a known start date, but no known end date. In that case, the `endPosition` should contain the attribute `indeterminatePosition="now"`. For instance, where a dataset is from 2005-10-01 onwards, it would be encoded as follows:
 
-|[DateX] to [now]
-|e.g.: beginPosition:2005-10-01 endPosition:now
-
-|===
-
-It is also possible to describe an ongoing dataset with a known start date, but no known end date. In that case, the endPosition should contain the attribute `indeterminatePosition="now"`. For instance, where a dataset is from 2005-10-01 onwards, it would be encoded as follows:
-
+====== Example: [DateX] to [now]
 ```xml
 <gmd:temporalElement>
   <gmd:EX_TemporalExtent id="temporalExtent">
@@ -367,35 +383,19 @@ It is also possible to describe an ongoing dataset with a known start date, but 
 </gmd:temporalElement>
 ```
 
-The EX_TemporalExtent options for a TimePeriod hence include beginPosition, endPosition and duration, e.g.:
+For a `TimePeriod`, the begin and end positions must always be included whereas duration is optional. For more information on encoding of duration, see https://en.wikipedia.org/wiki/ISO_8601#Durations.
+
+The `EX_TemporalExtent` options for a `TimePeriod` hence include `beginPosition`, `endPosition` and `duration`, e.g.:
 
 . `<gml:beginPosition> ..   …  …</gml:beginPosition>`
 . `<gml:endPosition> ..   …  …</gml:endPosition>`
 . `<gml:duration> ..   …  …</gml:duration>`
 
-For a TimePeriod, the begin and end positions must always be included whereas duration is optional. 
-
-The encoding of duration [(- or +) PnYnMnDTnhnmns] allows the expression of time intervals such as: a number of years (nY), and/or months (nM), and/or days (nD), or hours (nh), or minutes (nm), or seconds (ns), where “n” represents a number.
-
-For example, a duration of 4 hours is expressed as P0Y0M0DT4h0m0s or PT4h.
-
-Note that duration can be expressed using either the long form (e.g.: P0Y5M0DT0h0m0s) or the short form, but the latter must include “T” for intervals of hours, minutes or seconds (e.g.: P5M is 5 months, PT5m is 5 minutes). 
-
-For more information on encoding of duration, see the Durations segment at https://en.wikipedia.org/wiki/ISO_8601;
-
-.Example temporal extents
-|===
-||
-
-|[Now] plus [period]
-|e.g.: beginPosition:now endPosition:after duration:P0Y0M7DT0h0m0s (+7 days)
-
-|===
-
-For a dataset that is ongoing (that is, new data are continuously produced) but for which only the latest file is available (that is, data is only ever available for a rolling window of time), the TemporalExtent should reflect the period covered by the available data, in this case, the period covered by the latest file.
+For a dataset that is ongoing (that is, new data are continuously produced) but for which only the latest file is available (that is, data is only ever available for a rolling window of time), the `TemporalExtent` should reflect the period covered by the available data, in this case, the period covered by the latest file.
 
 For instance, where only the latest file is ever available, and the latest file is a forecast for the next 7 days, it would be encoded as follows:
 
+====== Example: [Now] plus [period]
 ```xml
 <gmd:temporalElement>
    <gmd:EX_TemporalExtent>
@@ -414,17 +414,22 @@ For instance, where only the latest file is ever available, and the latest file 
 ==== Geographical information
 
 .Geographical information
+[cols="1,1"]
 |===
-||
-
-|Template value
-|(ADD-GEOSPATIAL-INFORMATION*C), ADD BBOX VALUE WEST*M MW, ADD BBOX VALUE EAST*M MW, ADD BBOX VALUE SOUTH*M MW, ADD BBOX VALUE NORTH*M MW
-
-|Information
-|Geographical coverage of the product, as a bounding box latitude and longitude
 
 |Necessity
 |Conditional. It is mandatory for WCMP 1.3, if the data is geographical
+
+|Template value
+a|
+(ADD-GEOSPATIAL-INFORMATION*C) + 
+ADD BBOX VALUE WEST*M MW +
+ADD BBOX VALUE EAST*M MW +
+ADD BBOX VALUE SOUTH*M MW +
+ADD BBOX VALUE NORTH*M MW
+
+|Information
+|Geographical coverage of the product, as a bounding box latitude and longitude
 
 |Category
 |Product information
@@ -438,6 +443,7 @@ The geographical area covered by the product is described as a bounding box with
 
 The following example shows the XML for bounding box information of a dataset:
 
+====== Example: Geographical information
 ```xml
 <gmd:geographicElement>
    <gmd:EX_GeographicBoundingBox id="boundingGeographicBoundingBox">
@@ -458,28 +464,34 @@ The following example shows the XML for bounding box information of a dataset:
 ```
 
 Bounding boxes that cross the 180 degree meridian can be differentiated from bounding boxes that do not, using the following rules:
-. In a dataset that does not cross the 180 degree meridian, the westernmost longitude shall always be less than the easternmost longitude;
-. Conversely, if a bounding box crosses the 180 degree meridian, the westernmost longitude shall be greater than the easternmost longitude.
+
+- In a dataset that does not cross the 180 degree meridian, the westernmost longitude shall always be less than the easternmost longitude;
+- Conversely, if a bounding box crosses the 180 degree meridian, the westernmost longitude shall be greater than the easternmost longitude.
+
 Other constraints on geographical bounding boxes:
-. Geographical points shall be designated with the northernmost and southernmost latitudes equal, and with the westernmost and easternmost longitudes equal;
-. Except for a geographical point, the total longitudinal span shall be greater than zero and less than or equal to 360 degrees;
-. The northernmost latitude shall always be greater than or equal to the southernmost latitude;
-. Longitude and latitude shall be recorded in a coordinate reference system that has the same axes, units and prime meridian as WGS84.
+
+- Geographical points shall be designated with the northernmost and southernmost latitudes equal, and with the westernmost and easternmost longitudes equal;
+- Except for a geographical point, the total longitudinal span shall be greater than zero and less than or equal to 360 degrees;
+- The northernmost latitude shall always be greater than or equal to the southernmost latitude;
+- Longitude and latitude shall be recorded in a coordinate reference system that has the same axes, units and prime meridian as WGS84.
 
 ==== Geographic identifier
 
 .Geographic identifier
+[cols="1,1"]
 |===
-||
-
-|Template value
-|(ADD GEOGRAPHIC IDENTIFIER INFORMATION*O), ADD GEOGRAPHIC IDENTIFIER THESAURUS NAME*O, ADD GEOGRAPHIC IDENTIFIER CODE*C MW
-
-|Information
-|Geographic identifier indicating the zone covered on earth by the product
 
 |Necessity
 |Optional
+
+|Template value
+a|
+(ADD GEOGRAPHIC IDENTIFIER INFORMATION*O) +
+ADD GEOGRAPHIC IDENTIFIER THESAURUS NAME*O +
+ADD GEOGRAPHIC IDENTIFIER CODE*C MW
+
+|Information
+|Geographic identifier indicating the zone covered on earth by the product
 
 |Category
 |Product information
@@ -491,73 +503,70 @@ a|`/gmd:MD_Metadata/gmd:identificationInfo/\*/gmd:extent/*/gmd:geographicElement
 
 The optional geographic identifier indicates the area covered by the product. It can be used when the identifier is a well-known name (within a targeted user community), a codified acronym for an area (such as a region), or a feature (such as a water storage or coastline section). If the geographicIdentifier block is used, a code must be provided.
 
-The geographicIdentifier can be expressed in two ways:
+The `geographicIdentifier` can be expressed in two ways:
 
-. With just the geographicIdentifier code and a link to the related codelist (authority):
-
+- With just the `geographicIdentifier` code and a link to the related codelist (authority):
 ```xml
 <gmd:extent>
    <gmd:EX_Extent id="geographicExtent">
       <gmd:geographicElement>
-         <gmd:EX_GeographicDescription id="SouthAustralia__allGensRegister">
-            <gmd:geographicIdentifier>
-               <gmd:MD_Identifier>                        
-                  <gmd:code>
-                     <gco:CharacterString>
-                           South Australia (SA)
-                            (http://find.ga.gov.au/FIND/profileinfo/anzlic-allgens.xml#SA)
-                     </gco:CharacterString>
-                  </gmd:code>
-               </gmd:MD_Identifier>
-            </gmd:geographicIdentifier>
-         </gmd:EX_GeographicDescription>
+	 <gmd:EX_GeographicDescription id="SouthAustralia__allGensRegister">
+	    <gmd:geographicIdentifier>
+	       <gmd:MD_Identifier>                        
+		  <gmd:code>
+		     <gco:CharacterString>
+			   South Australia (SA)
+			    (http://find.ga.gov.au/FIND/profileinfo/anzlic-allgens.xml#SA)
+		     </gco:CharacterString>
+		  </gmd:code>
+	       </gmd:MD_Identifier>
+	    </gmd:geographicIdentifier>
+	 </gmd:EX_GeographicDescription>
       </gmd:geographicElement>
    </gmd:EX_Extent>
 </gmd:extent>
 ```
-
-. With the geographicIdentifier code, as well as a link to the related codelist, using a CI _ Citation group:
-
+- With the `geographicIdentifier` code, as well as a link to the related codelist, using a `CI_Citation` group:
 ```xml
 <gmd:extent>
    <gmd:EX_Extent id="geographicExtent">
      <gmd:geographicElement>
        <gmd:EX_GeographicDescription id="SouthAustralia__allGensRegister">
-          <gmd:geographicIdentifier>
-             <gmd:MD_Identifier>
-                <gmd:authority>
-                   <gmd:CI_Citation>
-                      <gmd:title>
-                         <gco:CharacterString>
-                         ANZLIC Geographic Extent Name Register
-                         (http://find.ga.gov.au/FIND/profileinfo/anzlic-allgens.xml) 
-                         </gco:CharacterString>
-                      </gmd:title>
-                      <gmd:alternateTitle>
-                         <gco:CharacterString>
-                         ANZLIC AllGens / subcategory: anzlic-sla_2001edition 
-                         </gco:CharacterString>
-                      </gmd:alternateTitle>
-                      <gmd:date>
-                         <gmd:CI_Date>
-                            <gmd:date>
-                               <gco:Date>2011-10-25</gco:Date>
-                            </gmd:date>
-                            <gmd:dateType>
-                               <gmd:CI_DateTypeCode 
+	  <gmd:geographicIdentifier>
+	     <gmd:MD_Identifier>
+		<gmd:authority>
+		   <gmd:CI_Citation>
+		      <gmd:title>
+			 <gco:CharacterString>
+			 ANZLIC Geographic Extent Name Register
+			 (http://find.ga.gov.au/FIND/profileinfo/anzlic-allgens.xml) 
+			 </gco:CharacterString>
+		      </gmd:title>
+		      <gmd:alternateTitle>
+			 <gco:CharacterString>
+			 ANZLIC AllGens / subcategory: anzlic-sla_2001edition 
+			 </gco:CharacterString>
+		      </gmd:alternateTitle>
+		      <gmd:date>
+			 <gmd:CI_Date>
+			    <gmd:date>
+			       <gco:Date>2011-10-25</gco:Date>
+			    </gmd:date>
+			    <gmd:dateType>
+			       <gmd:CI_DateTypeCode 
 codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
-                            </gmd:dateType>
-                         </gmd:CI_Date>
-                      </gmd:date>
-                   </gmd:CI_Citation>
-                </gmd:authority>
-                <gmd:code>
-                   <gco:CharacterString>South Australia (SA) 
-                          (http://find.ga.gov.au/FIND/profileinfo/anzlic-allgens.xml#SA) 
-                   </gco:CharacterString>
-                </gmd:code>
-             </gmd:MD_Identifier>
-          </gmd:geographicIdentifier>
+			    </gmd:dateType>
+			 </gmd:CI_Date>
+		      </gmd:date>
+		   </gmd:CI_Citation>
+		</gmd:authority>
+		<gmd:code>
+		   <gco:CharacterString>South Australia (SA) 
+			  (http://find.ga.gov.au/FIND/profileinfo/anzlic-allgens.xml#SA) 
+		   </gco:CharacterString>
+		</gmd:code>
+	     </gmd:MD_Identifier>
+	  </gmd:geographicIdentifier>
        </gmd:EX_GeographicDescription>
     </gmd:geographicElement>
   </gmd:EX_Extent>
@@ -571,27 +580,28 @@ In WIS metadata records, references to stations for a GTS bulletin should point 
 ==== Descriptive keywords
 
 Descriptive keywords are additional “controlled” terms which further classify (thus increasing searching accuracy for) the products. The following general rules apply for keywords in a WCMP record:
-. Terms from the same keyword thesaurus/codelist and of the same KeywordTypeCode shall be grouped into a single instance of the <gmd:descriptiveKeywords> class;
-. All WCMP metadata records shall have at least one WMO_CategoryCode keyword, and the related KeywordTypeCode will be “theme”;
-. All WCMP records for GTS data must contain a keyword from the WMO_DistributionScopeCode codelist and must be accompanied by the KeywordTypeCode “dataCentre”;
-. A WCMP metadata record describing data for global exchange via the WIS shall indicate the scope of distribution using the keyword “GlobalExchange” of type “dataCentre”;
-. Where data concern WMO stations, the related WIGOS station identifiers should be recorded as keywords(see 5.8.1.8.3);
-. Any data parameter term added as a keyword should be accompanied by the KeywordTypeCode “dataParam”.
+
+. Terms from the same keyword thesaurus/codelist and of the same `KeywordTypeCode` shall be grouped into a single instance of the `<gmd:descriptiveKeywords>` class;
+. All WCMP metadata records shall have at least one `WMO_CategoryCode` keyword, and the related `KeywordTypeCode` will be `"theme"`;
+. All WCMP records for GTS data must contain a keyword from the `WMO_DistributionScopeCode` codelist and must be accompanied by the `KeywordTypeCode = "dataCentre"`;
+. A WCMP metadata record describing data for global exchange via the WIS shall indicate the scope of distribution using the keyword `"GlobalExchange"` of type `"dataCentre"`;
+. Where data concern WMO stations, the related WIGOS station identifiers should be recorded as keywords (see 5.8.1.8.3);
+. Any data parameter term added as a keyword should be accompanied by the `KeywordTypeCode = "dataParam"`.
 
 ===== WMO_CategoryCode keyword
 
 .WMO_CategoryCode keyword
+[cols="1,1"]
 |===
-||
-
-|Template value
-|WCMP-WMO-CATEGORY-CODE*M
-
-|Information
-|One or more WMO_CategoryCode keywords for classifying the product
 
 |Necessity
 |Mandatory for WCMP 1.3
+
+|Template value
+|ADD-WCMP-WMO-CATEGORY-CODE*M
+
+|Information
+|One or more `WMO_CategoryCode` keywords for classifying the product
 
 |Category
 |Product information
@@ -604,13 +614,14 @@ a|
 
 |===
 
-Any WCMP metadata record shall have at least one WMO_CategoryCode keyword, and the related KeywordTypeCode will be “theme”.
+Any WCMP metadata record shall have at least one `WMO_CategoryCode` keyword, and the related `KeywordTypeCode` will be `"theme"`.
 
-The WMO_CategoryCode list of terms is occasionally revised. For the latest list of terms, see: http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode.
+The `WMO_CategoryCode` list of terms is occasionally revised. For the latest list of terms, see: http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode.
 
-At the time of writing, the WMO_CategoryCode list of terms includes: 
+At the time of writing, the `WMO_CategoryCode` list of terms includes: 
 
 .WMO_CategoryCode list of terms
+[cols="1,1"]
 |===
 |WMO_CategoryCode | Term
 
@@ -700,8 +711,9 @@ At the time of writing, the WMO_CategoryCode list of terms includes:
 
 |===
 
-The example below, for a satellite product, uses the terms “satelliteObservation” and “meteorology” as keywords from the WMO_CategoryCode thesaurus/codelist:
+The example below, for a satellite product, uses the terms `"satelliteObservation"` and `"meteorology"` as keywords from the `WMO_CategoryCode` thesaurus/codelist:
 
+====== Example: Descriptive keywords / WMO_CategoryCode keyword
 ```xml
 <gmd:descriptiveKeywords>
   <gmd:MD_Keywords>
@@ -738,17 +750,17 @@ The example below, for a satellite product, uses the terms “satelliteObservati
 ===== WMO_DistributionScopeCode keywords 
 
 .WMO_DistributionScopeCode keywords
+[cols="1,1"]
 |===
-||
+
+|Necessity
+|Conditional. Mandatory for WCMP 1.3 for GTS data
 
 |Template value
 |ADD-DISTRIBUTION-SCOPE*C
 
 |Information
 |Scope of distribution of data within the WIS
-
-|Necessity
-|Conditional. Mandatory for WCMP 1.3 for GTS data
 
 |Category
 |Product information
@@ -761,24 +773,25 @@ a|
 
 |===
 
-Any WCMP record for GTS data must contain a WMO_DistributionScopeCode keyword. The scope of distribution for data within WIS shall be expressed with a term from the WMO _ DistributionScopeCode vocabulary, using the KeywordTypeCode “datacentre”. The keyword will be one of the following terms from the WMO_DistributionScopeCode vocabulary (a metadata record may not contain more than one of these keywords):
+Any WCMP record for GTS data must contain a `WMO_DistributionScopeCode` keyword. The scope of distribution for data within WIS shall be expressed with a term from the `WMO_DistributionScopeCode` vocabulary, using the `KeywordTypeCode = "datacentre"`. The keyword will be one of the following terms from the `WMO_DistributionScopeCode` vocabulary (a metadata record may not contain more than one of these keywords):
 
 . GlobalExchange
 . RegionalExchange
 . OriginatingCentre
 
-The requirements for a WIS Discovery Metadata record describing products for global exchange via the WIS are more stringent. Such a record shall contain, in the “resourceConstraints” section, the keyword “GlobalExchange” from the WMO_DistributionScopeCode thesaurus (codelist), with KeywordTypeCode “dataCentre”; it must also include a term from both the WMO_DataLicenseCode and WMO_GTSProductCategoryCode thesauri (see section 5.8.1.10 for details).
+The requirements for a WIS Discovery Metadata record describing products for global exchange via the WIS are more stringent. Such a record shall contain, in the `resourceConstraints` section, the keyword `"GlobalExchange"` from the `WMO_DistributionScopeCode` thesaurus (codelist), with `KeywordTypeCode = "dataCentre"`; it must also include a term from both the `WMO_DataLicenseCode` and `WMO_GTSProductCategoryCode` thesauri (see section 5.8.1.10 for details).
 
-The GTS is the part of the WIS concerned with rapid, near-real-time information exchange. The Global Information System Centres are required to retain at least 24h of information exchanged globally using the GTS.
+The GTS is the part of the WIS concerned with rapid, near-real-time information exchange. The GISCs are required to retain at least 24h of information exchanged globally using the GTS.
 
-A keyword from the WMO_DistributionScopeCode codelist is used to indicate whether the product described by a metadata record is or is not delivered via the GTS and GISCs, and, within the GTS, whether it is exchanged globally or regionally:
+A keyword from the `WMO_DistributionScopeCode` codelist is used to indicate whether the product described by a metadata record is or is not delivered via the GTS and GISCs, and, within the GTS, whether it is exchanged globally or regionally:
 
-. Metadata marked “GlobalExchange” or “RegionalExchange” describe product delivered via the GTS. Products are transmitted from an originating NC or DCPC to the principal GISC, distributed to all (or some) GISCs, then placed on the GISC caches;
-. Metadata marked “RegionalExchange” describe products that, while transmitted on the GTS, might be simply exchanged between two WMO Members (by bilateral agreement). Some examples are regional warnings or voluminous NWP products;
-. The metadata marked “OriginatingCentre” indicate non-GTS products and include, for instance, products delivered to users from a DCPC.
+. Metadata marked `"GlobalExchange"` or `"RegionalExchange"` describe product delivered via the GTS. Products are transmitted from an originating NC or DCPC to the principal GISC, distributed to all (or some) GISCs, then placed on the GISC caches;
+. Metadata marked `"RegionalExchange"` describe products that, while transmitted on the GTS, might be simply exchanged between two WMO Members (by bilateral agreement). Some examples are regional warnings or voluminous NWP products;
+. The metadata marked `"OriginatingCentre"` indicate non-GTS products and include, for instance, products delivered to users from a DCPC.
 
 Below is an example for globally exchanged GTS products:
 
+====== Example: Descriptive keywords / WMO_DistributionScopeCode keywords 
 ```xml
 <gmd:descriptiveKeywords>
     <gmd:MD_Keywords>
@@ -812,17 +825,19 @@ Below is an example for globally exchanged GTS products:
 ===== WIGOS Station Identifier keywords
 
 .WIGOS Station Identifier keywords
+[cols="1,1"]
 |===
-||
-
-|Template value
-|ADD WIGOS STATION IDENTIFIER CODE*O; ADD WIGOS STN ID CODE AUTHORITY*O
-
-|Information
-|Where a product includes data from stations that have been assigned a WIGOS station identifier, include this as a keyword
 
 |Necessity
 |Optional for WCMP 1.3
+
+|Template value
+a|
+ADD WIGOS STATION IDENTIFIER CODE*O +
+ADD WIGOS STN ID CODE AUTHORITY*O
+
+|Information
+|Where a product includes data from stations that have been assigned a WIGOS station identifier, include this as a keyword
 
 |Category
 |Product information
@@ -835,10 +850,9 @@ a|
 
 |===
 
-Whereas metadata records previously included WMO station numbers as keywords, the WIGOS Station Identifier should now be used. The related KeywordTypeCode should be “place”.
+Whereas metadata records previously included WMO station numbers as keywords, the WIGOS Station Identifier should now be used. The related `KeywordTypeCode` should be `"place"`.
 
-Below is an example including WIGOS station identifiers as keywords:
-
+====== Example: Descriptive keywords / WIGOS Station Identifier keywords
 ```xml
 <gmd:descriptiveKeywords>
    <gmd:MD_Keywords>
@@ -884,17 +898,17 @@ Below is an example including WIGOS station identifiers as keywords:
 ===== Data parameters 
 
 .Data parameters
+[cols="1,1"]
 |===
-||
+
+|Necessity
+|Optional for WCMP 1.3
 
 |Template value
 |ADD-DATA-PARAMETER*O
 
 |Information
 |Data parameter keywords for classifying the product
-
-|Necessity
-|Optional for WCMP 1.3
 
 |Category
 |Product information
@@ -905,10 +919,9 @@ a|
 . `/gmd:MD_Metadata/gmd:identificationInfo/\*/gmd:descriptiveKeywords/*/gmd:type/*/@codeListValue="dataParam"`
 |===
 
-Where feasible, a list of the data parameters may be added as keywords. These should be added under a separate “descriptiveKeywords” block and should use the KeywordTypeCode “dataParam”.
+Where feasible, a list of the data parameters may be added as keywords. These should be added under a separate `"descriptiveKeywords"` block and should use the `KeywordTypeCode = "dataParam"`.
 
-Below is an example of a data parameter as a keyword:
-
+======= Example: Descriptive keywords / Data parameters
 ```xml
 <gmd:descriptiveKeywords>
    <gmd:MD_Keywords>
@@ -942,17 +955,17 @@ Below is an example of a data parameter as a keyword:
 ==== Product sample visualization URL
 
 .Product sample visualization URL
+[cols="1,1"]
 |===
-||
+
+|Necessity
+|Optional for WCMP 1.3, but used by WIS portal to display products
 
 |Template value
 |ADD-PRODUCT-IMAGERY-URL*O
 
 |Information
 |URL to a sample data visualization
-
-|Necessity
-|Optional for WCMP 1.3, but used by WIS portal to display products
 
 |Category
 |Product information
@@ -966,6 +979,7 @@ The addition of a link to the product visualization is suggested, when possible.
 
 Below is an example based on EUMETSAT Seviri Level 1.5: 
 
+====== Example: Product sample visualization URL
 ```xml
 <gmd:graphicOverview>
    <gmd:MD_BrowseGraphic>
@@ -985,19 +999,19 @@ Below is an example based on EUMETSAT Seviri Level 1.5:
 ==== Data policy information
 
 .Data policy information
+[cols="1,1"]
 |===
-||
+
+|Necessity
+a|Mandatory for WCMP 1.3, for data intended for global exchange on the GTS. 
+  Otherwise, highly recommended, since the absence of a policy can result in users assuming that there are no limitations on data use.
+  To avoid uncertainty, where there are no limitations, use the data policy `"NoLimitation"`.
 
 |Template value
 |ADD-DATA-POLICY-CODE*C
 
 |Information
 |Data usage and access limitations
-
-|Necessity
-a|Mandatory for WCMP 1.3, for data intended for global exchange on the GTS. 
-  Otherwise, highly recommended, since the absence of a policy can result in users assuming that there are no limitations on data use.
-  To avoid uncertainty, where there are no limitations, use the data policy “NoLimitation”.
 
 |Category
 |Product information
@@ -1019,22 +1033,24 @@ For more comprehensive information, please refer to the documentation on WCMP co
 
 When adding the data policy information, two different parts of the metadata record have to be filled: 
 
-. resourceConstraints, which contains the data policy information; 
-. Scope of distribution, using one of the following terms: “GlobalExchange”, “RegionalExchange” or “OriginatingCentre” (to be inserted as a keyword, as explained in Section 5.8.1.8.2). 
+- `resourceConstraints`, which contains the data policy information; 
+- Scope of distribution, using one of the following terms: `"GlobalExchange"`, `"RegionalExchange"` or `"OriginatingCentre"` (to be inserted as a keyword, as explained in Section 5.8.1.8.2). 
 
-Each of the three examples below shows the resourceConstraints part of the information that is to be added to the metadata record. 
+Each of the three examples below shows the `resourceConstraints` part of the information that is to be added to the metadata record. 
 
-Within the “resourceConstraints” section, the DataLicenseCode term is added into an “otherConstraints” field and an explanation of the data policy is typically given in an additional “otherConstraints” field:
+Within the `resourceConstraints` section, a term from the `DataLicenseCode` codelist is added into an `otherConstraints` field and an explanation of the data policy is typically given in an additional `otherConstraints` field:
 
-`/gmd:MD_Metadata/gmd:identificationInfo/\*/gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints/*/text()`
+```xml
+/gmd:MD_Metadata/gmd:identificationInfo/\*/gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints/*/text()
+```
 
-Allowable terms from the DataLicenseCode codelist include: “WMOAdditional”, “WMOEssential”, “WMOOther” or “NoLimitation”. All of these terms are defined at http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_DataLicenseCode.
+Allowable terms from the `DataLicenseCode` codelist include: `"WMOAdditional"`, `"WMOEssential"`, `"WMOOther"` or `"NoLimitation"`. All of these terms are defined at http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_DataLicenseCode.
 
-Example 1: Non-GTS product with a policy of no constraints on use or distribution
+===== Example 1: Non-GTS product with a policy of no constraints on use or distribution
 
 Publicly available datasets are those for which there are no limitations on distribution or use.
 
-The “useLimitation” field in the “resourceConstraints” block should contain “No conditions apply”, and an “otherConstraints” field should contain the phrase “NoLimitation”.
+The `useLimitation` field in the `resourceConstraints` block should contain `"No conditions apply"`, and an `otherConstraints` field should contain the phrase `"NoLimitation"`.
 
 ```xml
 <!-- Example of publicly available, unrestricted data -->
@@ -1057,7 +1073,7 @@ The “useLimitation” field in the “resourceConstraints” block should cont
 </gmd:resourceConstraints>
 ```
 
-In addition, the scope of distribution should ideally be stated as a keyword, and for non-GTS products it should be “OriginatingCentre”.
+In addition, the scope of distribution should ideally be stated as a keyword, and for non-GTS products it should be `"OriginatingCentre"`.
 
 ```xml
 <!-- Scope of distribution for non GTS products: OriginatingCentre -->
@@ -1079,13 +1095,13 @@ In addition, the scope of distribution should ideally be stated as a keyword, an
     .. .. .. etc    (see Section 5.8.1.8.2 for full details)
 ```
 
-Example 2: Non-GTS product with a policy applicable in the WMO context
+===== Example 2: Non-GTS product with a policy applicable in the WMO context
 
-This example describes a product that is not distributed on the GTS and has a single data policy applicable in the WMO context. Note that policies that are applicable in the WMO context, and therefore flagged in an “otherConstraints” field with the term “WMOOther”, will be presented by the GISCs to users when they discover the data. Global Information System Centres have no obligation to show the other data policies.
+This example describes a product that is not distributed on the GTS and has a single data policy applicable in the WMO context. Note that policies that are applicable in the WMO context, and therefore flagged in an `otherConstraints` field with the term `"WMOOther"`, will be presented by the GISCs to users when they discover the data. GISCs have no obligation to show the other data policies.
 
-A term from the WMO_DataLicenseCode codelist (available at http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_DataLicenseCode) should be added to an “otherConstraints” field.
+A term from the `WMO_DataLicenseCode` codelist (available at http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_DataLicenseCode) should be added to an `otherConstraints` field.
 
-Note:	The data policy term “WMOOther” can also be used for data that is delivered via the GTS.
+Note:	The data policy term `"WMOOther"` can also be used for data that is delivered via the GTS.
 
 ```xml
 <gmd:resourceConstraints>
@@ -1119,25 +1135,25 @@ Ordnance Survey Open Data License [https://www.ordnancesurvey.co.uk/docs/licence
 </gmd:resourceConstraints>
 ```
 
-The scope of distribution should, ideally, be added as a keyword using the term “OriginatingCentre”.
+The scope of distribution should, ideally, be added as a keyword using the term `"OriginatingCentre"`.
 
 Please refer to the encoding of scope of distribution, provided under Example 1 above or in section 5.8.1.8.2.
 
-Example 3: GTS data intended for global exchange
+===== Example 3: GTS data intended for global exchange
 
-This example describes data distributed via the GTS and available from the cache at a GISC. For data delivered via the GTS, the data policy term to be added to the “otherConstraints” field can only be “WMOAdditional” or “WMOEssential” – both of these terms are defined at http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_DataLicenseCode.
+This example describes data distributed via the GTS and available from the cache at a GISC. For data delivered via the GTS, the data policy term to be added to the `otherConstraints` field can only be `"WMOAdditional"` or `"WMOEssential"` – both of these terms are defined at http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_DataLicenseCode.
 
-In the example below, the code used is “WMOEssential”.
+In the example below, the code used is `"WMOEssential"`.
 
-WMO policies for data and products (licence conditions) are defined by Resolution 40 (Cg-XII), Resolution 25 (Cg-XIII) and Resolution 60 (Cg-17). Data and products exchanged on a free and unrestricted basis are marked as “WMOEssential”; data classed as “WMOAdditional” have restrictions on commercial activities. Operational meteorological information for aviation is not included in these resolutions but is controlled by the International Civil Aviation Organization (ICAO); this information is an example of “WMOOther” data. 
+WMO policies for data and products (licence conditions) are defined by Resolution 40 (Cg-XII), Resolution 25 (Cg-XIII) and Resolution 60 (Cg-17). Data and products exchanged on a free and unrestricted basis are marked as `"WMOEssential"`; data classed as `"WMOAdditional"` have restrictions on commercial activities. Operational meteorological information for aviation is not included in these resolutions but is controlled by the International Civil Aviation Organization (ICAO); this information is an example of `"WMOOther"` data. 
 
-Only one term from the WMO_DataLicenseCode codelist may be used within a metadata record. As well as assigning one of these terms, it is expected, where the term used is “WMOOther” or “WMOAdditional”, that further clarification of the licence constraints will also be provided (either directly in the metadata record or else via a URL).
+Only one term from the `WMO_DataLicenseCode` codelist may be used within a metadata record. As well as assigning one of these terms, it is expected, where the term used is `"WMOOther"` or `"WMOAdditional"`, that further clarification of the licence constraints will also be provided (either directly in the metadata record or else via a URL).
 
-For data circulating on the GTS, “WMOAdditional” is used to qualify products under the WMOAdditional data policy; “WMOEssential” is used for products made available under the WMOEssential data policy; and “WMOOther” can be used (where applicable) for other products, regardless of whether the data is being delivered via the GTS, GISC or otherwise.
+For data circulating on the GTS, `"WMOAdditional"` is used to qualify products under the WMOAdditional data policy; `"WMOEssential"` is used for products made available under the WMO Essential data policy; and “WMOOther” can be used (where applicable) for other products, regardless of whether the data is being delivered via the GTS, GISC or otherwise.
 
-Where data is for global exchange on the GTS (which is signified by the WMO _ DistributionScopeCode keyword), both a WMO_DataLicenseCode and a WMO _ GTSProductCategoryCode term must be provided, under “resourceConstraints”. The terms from the WMO_GTSProductCategoryCode codelist to be used are: “GTSPriority1”, “GTSPriority2”, “GTSPriority3” and “GTSPriority4”.
+Where data is for global exchange on the GTS (which is signified by the `WMO_DistributionScopeCode` keyword), both a `WMO_DataLicenseCode` and a `WMO_GTSProductCategoryCode` term must be provided, under `resourceConstraints`. The terms from the `WMO_GTSProductCategoryCode` codelist to be used are: `"GTSPriority1"`, `"GTSPriority2"`, `"GTSPriority3"` and `"GTSPriority4"`.
 
-Below is the “resourceConstraints” element for a WMOEssential GTS product intended for global exchange:
+Below is the `resourceConstraints` element for a `"WMOEssential"` GTS product intended for global exchange:
 
 ```xml
 <!--   Data intended for WMOEssential data intended for Global exchange -->
@@ -1172,7 +1188,7 @@ codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Sch
 </gmd:resourceConstraints>
 ```
 
-In addition, the scope of distribution of data marked as “GlobalExchange” has to be added as a keyword (with KeywordTypeCode “dataCentre”).
+In addition, the scope of distribution of data marked as `"GlobalExchange"` has to be added as a keyword (with `KeywordTypeCode = "dataCentre"`).
 
 ```xml
 <!-- keyword for stating the scope of distribution: Global Exchange   -->
@@ -1191,17 +1207,22 @@ In addition, the scope of distribution of data marked as “GlobalExchange” ha
 ==== Distribution information
 
 .Distribution information
+[cols="1,1"]
 |===
-||
-
-|Template value
-|ADD URL TO DATA ACCESS SERVICE*HR MW, ADD DISTRIBUTOR SHORTNAME*HR (e.g.:EUM), ADD DISTRIBUTOR EMAIL ADDRESS*HR, ADD FORMAT NAME*O MW, ADD FORMAT VERSION*O MW
-
-|Information
-|Resource format, distributor information and resource transfer options (URLs)
 
 |Necessity
 |Highly recommended for WCMP 1.3
+
+|Template value
+a|
+ADD URL TO DATA ACCESS SERVICE*HR MW +
+ADD DISTRIBUTOR SHORTNAME*HR +
+ADD DISTRIBUTOR EMAIL ADDRESS*HR +
+ADD FORMAT NAME*O MW +
+ADD FORMAT VERSION*O MW
+
+|Information
+|Resource format, distributor information (as short, e.g.:EUM) and resource transfer options (URLs)
 
 |Category
 |Product information
@@ -1213,8 +1234,9 @@ a|
 
 |===
 
-Below is an example of a GRIB product made available via an FTP server (for readability, distributor details are not included in this snippet, but can be found in the template record):
+Below is an example of a GRIB product made available via an FTP server (for readability, distributor details are not included in this snippet):
 
+====== Example: Distribution information
 ```xml
 <gmd:distributionInfo>
     <gmd:MD_Distribution>
@@ -1261,17 +1283,17 @@ Below is an example of a GRIB product made available via an FTP server (for read
 ==== Party to be recognized as the originator of the information
 
 .Party to be recognized as the originator of the information
+[cols="1,1"]
 |===
-||
+
+|Necessity
+|Optional for WCMP 1.3
 
 |Template value
 |ADD-CITED-RESPONSIBLE-PARTY-ORGANISATION*O-MW
 
 |Information
 |Party that should be cited as the originator (that is, data author) of the resource.
-
-|Necessity
-|Optional for WCMP 1.3
 
 |Category
 |Product information
@@ -1281,10 +1303,11 @@ a|`/gmd:MD_Metadata/gmd:distributionInfo/\*/gmd:distributionFormat/*/gmd:formatD
 
 |===
 
-When the data owners wish to be cited in references to their data, they can stipulate this in the “citedResponsibleParty” block, using the role “originator”.
+When the data owners wish to be cited in references to their data, they can stipulate this in the `citedResponsibleParty` block, using the role `"originator"`.
 
 Below is an example:
 
+====== Example: Party to be recognized as the originator of the information
 ```xml
 <gmd:identificationInfo>
 <gmd:MD_DataIdentification>
@@ -1312,22 +1335,23 @@ Below is an example:
 </gmd:identificationInfo>
 ```
 
-Further details on how the item should be cited can be added to the “otherCitationDetails” block.
+Further details on how the item should be cited can be added to the `otherCitationDetails` block.
 
 ==== Frequency of resource updates 
 
 .Frequency of resource updates
+[cols="1,1"]
 |===
-||
-
-|Template value
-|ADD PRODUCT UPDATE FREQ PERIOD*O, ADD PRODUCT UPDATE FREQ CODE*O MW
-
-|Information
-|Frequency of resource update
 
 |Necessity
 |Optional for WCMP 1.3
+
+|Template value
+a|ADD PRODUCT UPDATE FREQ PERIOD*O +
+ADD PRODUCT UPDATE FREQ CODE*O MW
+
+|Information
+|Frequency of resource update
 
 |Category
 |Product information
@@ -1337,10 +1361,11 @@ a|`/gmd:MD_Metadata/gmd:identificationInfo/\*/gmd:resourceMaintenance/*/gmd:main
 
 |===
 
-If the block on resource maintenance and update frequency is used, the MD_MaintenanceFrequencyCode is mandatory.
+If the block on resource maintenance and update frequency is used, the `MD_MaintenanceFrequencyCode` is mandatory.
 
 The example below shows a product  that is available every 6 hours starting at 03 UTC.
 
+====== Example: Frequency of resource updates 
 ```xml
 <gmd:resourceMaintenance>
    <gmd:MD_MaintenanceInformation>
@@ -1364,17 +1389,17 @@ In addition to the mandatory elements included in section 5.8.1 above, the follo
 ==== Metadata record unique identifier
 
 .Metadata record unique identifier
+[cols="1,1"]
 |===
-||
+
+|Necessity
+|Mandatory for WCMP 1.3
 
 |Template value
 |ADD-WCMP-IDENTIFIER*M
 
 |Information
 |Unique identifier (UID) for individual WIS discovery metadata records
-
-|Necessity
-|Mandatory for WCMP 1.3
 
 |Category
 |WIS technical information
@@ -1384,7 +1409,7 @@ a|`/gmd:MD_Metadata/gmd:fileIdentifier/*/text()`
 
 |===
 
-The WCMP UID (fileIdentifier) has to be globally unique, that is, no two WIS metadata records can have the same WCMP UID.
+The WCMP UID (`fileIdentifier`) has to be globally unique, that is, no two WIS metadata records can have the same WCMP UID.
 
 In the absence of any system, defined by the organization creating a metadata record, that ensures uniqueness of the WCMP UID, this should be structured as follows:
 
@@ -1392,23 +1417,23 @@ In the absence of any system, defined by the organization creating a metadata re
 
 where:
 
-* “:” is used as a separator;
-* urn:x-wmo:md: is mandatory;
-* DataProviderInternetDomainName:: designates the citation authority, based on the reversed Internet domain name of the data provider (for example, int.eumetsat, gov.noaa); please note the recommended use of two colons “::”. For products exchanged on the GTS, the required form is “int.wmo.wis::”.
-* ProductUID is a unique identifier whose structure is defined by the organization responsible for the metadata record.
+* `:` is used as a separator;
+* `urn:x-wmo:md:` is mandatory;
+* `DataProviderInternetDomainName::` designates the citation authority, based on the reversed Internet domain name of the data provider (for example, int.eumetsat, gov.noaa); please note the recommended use of two colons `::`. For products exchanged on the GTS, the required form is `int.wmo.wis::`.
+* `ProductUID` is a unique identifier whose structure is defined by the organization responsible for the metadata record.
 
 Examples:
 
-* UID for northern hemisphere satellite cloud information chart from Japan: urn:x-wmo:md:jp.go.jma.wis.dcpc-sat::WAID
-* UID for an outgoing long-wave radiation product from the FY-2D satellite: urn:x-wmo:md:cn.gov.cma::NSMC.FY2D.OLR_MLT_OTG.BAWX
+* UID for northern hemisphere satellite cloud information chart from Japan: `urn:x-wmo:md:jp.go.jma.wis.dcpc-sat::WAID`
+* UID for an outgoing long-wave radiation product from the FY-2D satellite: `urn:x-wmo:md:cn.gov.cma::NSMC.FY2D.OLR_MLT_OTG.BAWX``
 
-Unique identifier for GTS products
+===== Unique identifier for GTS products
 
 Additional rules apply to metadata records describing products distributed through the GTS. The file identifier for bulletin metadata has the following structure:
 
 	urn:x-wmo:md:int.wmo.wis::{uid}
 
-where {uid} is a unique identifier derived from the GTS bulletin or file name.
+where `{uid}` is a unique identifier derived from the GTS bulletin or file name.
 
 Further background information on constructing a file identifier for products distributed through the GTS is available in the WMO Core Metadata Profile version 1.3, Part 1, section 9.2.
 
@@ -1423,17 +1448,17 @@ An example of file identifier for Meteo France Numerical Weather Prediction Mode
 ==== Metadata modification - DateStamp
 
 .Metadata modification - DateStamp
+[cols="1,1"]
 |===
-||
+
+|Necessity
+|Mandatory for WCMP 1.3
 
 |Template value
 |ADD-METADATA-LAST-MODIFICATION-DATE*M
 
 |Information
 |Date when the metadata record was last modified
-
-|Necessity
-|Mandatory for WCMP 1.3
 
 |Category
 |WIS technical information
@@ -1443,22 +1468,22 @@ a|`/gmd:MD_Metadata/gmd:dateStamp`
 
 |===
 
-This shows when the metadata record was last modified and has the following date pattern: YYYY MM DDThh:mm:ss, for example 2015 12 29T11:45:55.
+This shows when the metadata record was last modified and has the following date pattern: `YYYY-MM-DDThh:mm:ss`, for example `2015-12-29T11:45:55`.
 
 ==== Product creation date
 
 .Product creation date
+[cols="1,1"]
 |===
-||
+
+|Necessity
+|Mandatory for WCMP 1.3
 
 |Template value
 |ADD-PRODUCT-CREATION-DATE*M
 
 |Information
 |Creation date of the product
-
-|Necessity
-|Mandatory for WCMP 1.3
 
 |Category
 |WIS technical information
@@ -1469,10 +1494,9 @@ a|`/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:citation/*/gmd:date/*/gmd:dateT
 
 |===
 
-This shows when the product was created and has the following date pattern: YYYY MM DD or YYYY MM DDThh:mm:ss. See also section 5.8.1.5 for details of the date/time format.
+This shows when the product was created and has the following date pattern: `YYYY-MM-DD` or `YYYY-MM-DDThh:mm:ss`. See also section 5.8.1.5 for details of the date/time format.
 
-Example:
-
+====== Example: Product creation date
 ```xml
 <gmd:date>
    <gmd:CI_Date>
