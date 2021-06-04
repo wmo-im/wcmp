@@ -2,11 +2,11 @@
 
 This annex defines criteria and other elements to consider when creating a metadata record that represents a collection of products.
 
-To understand the notion of collection, it is important to distinguish between a dataset and a temporal subset of a dataset. Meteorological data is often transient (for example, observations, forecasts and NWP products) and continuously updated. A dataset is typically seen as an aggregate of temporal instances or subsets (the collection) and, as explained below, metadata for a dataset is not typically set at the instance level. This is so even when a new instance or subset of a dataset is produced daily, and when only the latest day of data is ever available (in that case, the `temporalExtent` of the dataset is “latest 24 hours only”).
+To understand the notion of collection, it is important to distinguish between a dataset and a temporal subset of a dataset. Meteorological data is often transient (for example, observations, forecasts and NWP products) and continuously updated. A dataset is typically seen as an aggregate of temporal instances or subsets (the collection) and, as explained below, metadata for a dataset is not typically set at the instance level. This is so even when a new instance or subset of a dataset is produced daily, and when only the latest day of data is ever available (in that case, the temporalExtent of the dataset is “latest 24 hours only”).
 
 The criteria to be considered when creating the collection metadata record include:
 
-==== Size of dataset instances:
+. Size of dataset instances:
 
 An important consideration, in terms of dataset granularity, is how the dataset instances will be made available to end users; for instance, push or pull services, with filter capabilities or not.
 
@@ -24,13 +24,13 @@ Note that it is also possible to define an aggregate of two subsets, for instanc
 
 where Dataset 0 is an aggregate of Dataset 1 and Dataset 2;
 
-==== Content consistency:
+. Content consistency:
 
 It is recommended, if possible, not to blend multiple data categories or topics in the same dataset, which would result in a heterogeneous aggregate. For example, an aggregate of satellite observations and weather forecasts would typically not make sense (unless they had been combined for a particular purpose); whereas an aggregate of lake pollution and river pollution data makes sense, especially if the data processing has been similar and the data license is the same.
 
 More generally, dataset heterogeneity in terms of content can result in very vague descriptions in the metadata, which will in turn affect data discoverability on the WIS;
 
-==== Update frequency and other temporal characteristics:
+. Update frequency and other temporal characteristics:
 
 The refresh rate of data also has to be taken into account, in terms of dataset granularity, because this will have an impact on catalogues.
 
@@ -38,15 +38,15 @@ Setting the dataset/metadata granularity at the temporal instance level instead 
 
 It is also recommended not to blend data of different refresh rates in the same dataset, because it will not be possible to specify the update frequency in discovery metadata records;
 
-==== Data policy and distribution scope:
+. Data policy and distribution scope:
 
-A dataset shall be homogeneous in terms of data policy, including WMO distribution policy, which is described through `WMO_DistributionScopeCode`, `WMO_DataLicenseCode`, `WMO_GTSProductCategoryCode` and `MD_RestrictionCode` codelists. The Manual on WIS, Appendix C, Part C1, section 9.3 states: “The presence of more than one WMO data-policy statement in a single metadata record yields an ambiguous state; a WIS discovery metadata record describing data for global exchange shall declare only a single WMO data policy.”;
+A dataset shall be homogeneous in terms of data policy, including WMO distribution policy, which is described through WMO_DistributionScopeCode, WMO_DataLicenseCode, WMO_GTSProductCategoryCode and MD_RestrictionCode codelists. The Manual on WIS, Appendix C, Part C1, section 9.3 states: “The presence of more than one WMO data-policy statement in a single metadata record yields an ambiguous state; a WIS discovery metadata record describing data for global exchange shall declare only a single WMO data policy.”;
 
-==== Spatial extent:
+. Spatial extent:
 
 Except for global datasets, a coarse granularity is likely to affect the discoverability of data on the basis of a spatial criterion, especially if the areas where data are available are disjoint. For example, synoptic observations from the French Overseas Departments of Guyana, Martinique, Reunion and Guadeloupe are dispatched in different datasets.
 
-=== Field hierarchy and cardinality
+Field hierarchy and cardinality
 
 Below is a nested list of fields likely to be used in a WCMP record, together with their cardinality.
 
@@ -58,8 +58,9 @@ The cardinality notation [x..y] indicates the minimum and maximum allowable time
 
 For instance, the notation:
 
-- [0..n] means that the element is optional, but can also be used any number of times;
-- [1..2] means that it is mandatory (there must be at least one) and may be used a maximum of two times. 
+[0..n] means that the element is optional, but can also be used any number of times;
+
+[1..2] means that it is mandatory (there must be at least one) and may be used a maximum of two times. 
 
 ```
 1	MD_Metadata_ ._ .ISO[1..1] 
@@ -72,9 +73,7 @@ For instance, the notation:
 8	
 9	_ .contact_ ._ .ISO[1..n]
 10	_ ._ .CI_ResponsibleParty
-
 see lines 66-99, for all fields available for CI_ResponsibleParty
-
 11	_ ._ ._ .individualName_ .char_ ._ .ISO[0..1]
 12	_ ._ ._ .organisationName_ .char_ ._ .ISO[0..1]
 13	_ ._ ._ .contactInfo_ ._ .ISO[0..1]
@@ -121,9 +120,7 @@ see lines 66-99, for all fields available for CI_ResponsibleParty
 54	_ ._ ._ ._ ._ ._ .MD_Identifier_ ._ .
 55	_ ._ ._ ._ ._ ._ ._ .authority_ ._ .ISO[0..1]
 56	_ ._ ._ ._ ._ ._ ._ ._ .CI_Citation_ ._ .
-
 see lines 43-111, for all fields available for CI_Citation
-
 57	_ ._ ._ ._ ._ ._ ._ ._ ._ .title_ .char_ ._ .ISO[1..1]
 58	_ ._ ._ ._ ._ ._ ._ ._ ._ .alternateTitle_ .char_ ._ .ISO[0..n]
 59	_ ._ ._ ._ ._ ._ ._ ._ ._ .DATE_ ._ .ISO[1..n]
@@ -225,9 +222,7 @@ see lines 43-111, for all fields available for CI_Citation
 154	_ ._ ._ ._ ._ .type_ .CODE:MD_KeywordTypeCode_ ._ .ISO[0..1]
 155	_ ._ ._ ._ ._ .thesaurusName_ ._ .ISO[0..1]
 156	_ ._ ._ ._ ._ ._ .CI_Citation_ ._ .
-
 see lines 43-111, for all fields available for CI_Citation
-
 157	_ ._ ._ ._ ._ ._ ._ .title_ .char_ ._ .ISO[1..1]
 158	_ ._ ._ ._ ._ ._ ._ .DATE_ ._ .ISO[1..1]
 159	_ ._ ._ ._ ._ ._ ._ ._ .CI_Date_ ._ .
@@ -240,9 +235,7 @@ see lines 43-111, for all fields available for CI_Citation
 166	_ ._ ._ ._ ._ .userDeterminedLimitations_ .char_ ._ .ISO[0..n]
 167	_ ._ ._ ._ ._ .userContactInfo_ ._ .ISO[1..n]
 168	_ ._ ._ ._ ._ ._ .CI_ResponsibleParty_ ._ .
-
 see lines 66-99, for all fields available for CI_ResponsibleParty
-
 169	 _ ._ ._ ._ ._ ._ ._ .individualName_ .char_ ._ .ISO[0..1]
 170	_ ._ ._ ._ ._ ._ ._ .organisationName_ .char_ ._ .ISO[0..1]
 171	_ ._ ._ ._ ._ ._ ._ .role_ .CODE:CI_RoleCode_ ._ .ISO[1..1]
@@ -270,9 +263,7 @@ see lines 66-99, for all fields available for CI_ResponsibleParty
 193	
 194	_ ._ ._ ._ ._ .aggregateDataSetName_ ._ .ISO[0..1]
 195	_ ._ ._ ._ ._ ._ .CI_Citation_ ._ .
-
 see lines 43-111, for all fields availablefor CI_Citation
-
 196	_ ._ ._ ._ ._ ._ ._ .title_ .char_ ._ .ISO[1..1]
 197	_ ._ ._ ._ ._ ._ ._ .DATE_ ._ .ISO[1..1]
 198	_ ._ ._ ._ ._ ._ ._ ._ .CI_Date_ ._ .
@@ -283,9 +274,7 @@ see lines 43-111, for all fields availablefor CI_Citation
 203	_ ._ ._ ._ ._ ._ .MD_Identifier_ . 
 204	_ ._ ._ ._ ._ ._ ._ .authority_ ._ .ISO[0..1]
 205	_ ._ ._ ._ ._ ._ ._ ._ .CI_Citation_ ._ .
-
 see lines 43-111, for all fields available for CI_Citation
-
 206	_ ._ ._ ._ ._ ._ ._ ._ ._ .title_ .char_ ._ .ISO[1..1]
 207	_ ._ ._ ._ ._ ._ ._ ._ ._ .DATE_ ._ .ISO[1..1]
 208	_ ._ ._ ._ ._ ._ ._ ._ ._ ._ .CI_Date_ ._ .
@@ -368,9 +357,7 @@ see lines 43-111, for all fields available for CI_Citation
 284	_ ._ ._ ._ ._ ._ .MD_Distributor_ .
 285	_ ._ ._ ._ ._ ._ ._ .distributorContact_ ._ .ISO[1..1]
 286	_ ._ ._ ._ ._ ._ ._ ._ .CI_ResponsibleParty_ . 
-
 see lines 66-99, for all fields available for CI_ResponsibleParty
-
 287	_ ._ ._ ._ ._ ._ ._ ._ ._ .individualName_ .char_ ._ .ISO[0..1]
 288	_ ._ ._ ._ ._ ._ ._ ._ ._ .organisationName_ .char_ ._ .ISO[0..1]
 289	_ ._ ._ ._ ._ ._ ._ ._ ._ .role_ .CODE:CI_RoleCode_ ._ .ISO[1..1]
@@ -430,9 +417,7 @@ see lines 66-99, for all fields available for CI_ResponsibleParty
 343	_ ._ .MD_ApplicationSchemaInformation_ .
 344	_ ._ ._ .name_ ._ .ISO[1..1]
 345	_ ._ ._ ._ .CI_Citation_ ._ . 
-
 see lines 43-111, for all fields available for CI_Citation
-
 346	_ ._ ._ .schemaLanguage_ .char_ .
 347	_ ._ ._ .constraintLanguage_ .char_ ._ .ISO[1..1]
 348	   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
