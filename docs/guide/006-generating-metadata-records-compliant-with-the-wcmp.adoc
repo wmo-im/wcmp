@@ -2,7 +2,7 @@
 
 This part of the Guide is intended to help product specialists create WIS metadata records that are compliant with the WCMP 1.3. It provides practical guidance on key information needed in WCMP metadata creation (such as describing how and where to insert the necessary product information into a template record, and the WIS specific information required in the XML metadata record), while abstracting (as much as possible) the WCMP standard, the ISO 19115 standard and its XML mapping (ISO 19139).
 
-Section 5.8 defines a set of recommendations for adding each individual piece of information regarding a product (for example, title, abstract, party responsible for the product, access to the product).
+Section 5.8 below defines a set of recommendations for adding each individual piece of information regarding a product (for example, title, abstract, party responsible for the product, access to the product).
 
 Although metadata authors will not normally need to work with XML directly because the GISC provides form-based editing tools, this part of the Guide uses an approach based on an XML template. A metadata author who needs to work directly with XML should use a copy of the template XML record(s) (see section 5.1) in conjunction with this part of the Guide, especially section 5.8. 
 
@@ -10,44 +10,3 @@ The template-based approach allows a person without any knowledge of ISO 19115 t
 
 The template files can also be used as the foundation for building a Web-based editing tool where the user completes a web form, and the content is used to overwrite the placeholders and create the final WCMP 1.3 compliant metadata record. Such tools are provided by the GISCs.
 
-=== Template-based principle
-
-The template XML files are metadata records encoded as XML. These contain placeholders, that is generic text that should be replaced with information related to the specific product described by the WIS discovery metadata record.
-
-Placeholders in the templates are all in capital letters, as in the following example:
-----
-ADD-ORGANISATION-NAME*M
-----
-is a placeholder that might appear in the XML template as: 
-----
-<xmlfieldname>ADD-ORGANISATION-NAME*M</xmlfieldname>
-----
-
-Metadata content discussed in this part of the Guide (and for which there are placeholders) includes all mandatory WCMP content and some key content that is optional. The elements can be identified as follows:
-[loweralpha]
-. *Mandatory *M*
-    * Example: element described in _5.8.1.1 - Product Title_
-. *Highly recommended *HR*
-    * Example: element described in _5.8.1.5 - Temporal Extent_, which, while optional, is highly recommended  
-. *Conditionally mandatory *C*
-    * Example 1: information described in _5.8.1.6 - Geographical Information_, which is mandatory only if the dataset is geospatial
-    * Example 2: element described in _5.8.1.10 - Data Policy Information_, which, while optional, is mandatory if the product is GTS data
-. *Likely to be needed *O*
-    * Example: element described in _5.8.1.7 - Geographic Identifier_
-
-Note: Other ISO 19115 elements, while not mentioned in the WCMP 1.3 documentation, may also be useful and can be used within a WCMP record. An example might be the DataQuality section, or the SupplementalInformation field. For brevity, however, these have been omitted here.
-
-Note that many optional subsections of a WCMP record contain elements that are mandatory only if that subsection is used. These are marked with “-MW”, meaning mandatory within subsection. + 
-An example of that is the identifier, authority and title segments, as shown in lines 53−57 in the hierarchical list of fields contained in the annex to this Part (see excerpt below), where identifier is optional ([0..n]) and, even if it is used, authority is also optional ([0..n]); however, if authority is used, then title is mandatory ([1..1]).
-
-----
-53_. _. _. _. _.identifier _. _.ISO[0..n]
-54 _. _. _. _. _. _.MD _ Identifier
-55 _. _. _. _. _. _. _.authority _. _.ISO[0..1]
-56 _. _. _. _. _. _. _. _.CI _ Citation
-57 _. _. _. _. _. _. _. _. _.title _.char _. _.ISO[1..1]
-----
-
-The cardinality notation [x..y] indicates the minimum and maximum allowable times that the element may be used, within that part of the hierarchy or tree. For instance, [0..n] means that the element is optional but can be used any number of times; the notation [1..2] means that it is mandatory and may be used a maximum of two times. Refer to the annex to this Part for a hierarchical list of the main elements and their cardinality. Placeholders for WCMP mandatory content end with *M.
-
-Where the metadata author chooses not to populate an optional field, the related XML block should be removed.
