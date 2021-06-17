@@ -4,12 +4,6 @@ Metadata records play a very important role in the WIS by providing the informat
 
 This part of the Guide is intended for metadata authors and product or infrastructure specialists who create WCMP 1.3 metadata records for making their datasets discoverable within the WIS catalogue(s). It will also assist those who wish to create high-quality WIS metadata records for data that will be ingested and distributed by a GISC.
 
-The WCMP templates and relevant documentation listed below should be used together with the guidance information provided in this part of the Guide, which also contains a set of recommendations to be followed in order to provide the right level and granularity of product information in the WCMP metadata records:
+The WCMP 1.3 is defined in Appendix C of the Manual on WMO Information Systems (WMO-No. 1060): https://library.wmo.int/index.php?lvl=notice_display&id=9254.  
 
-- WCMP 1.3 Template XML records: Template records containing placeholders (to be replaced with information related to the specific product described by the WIS discovery metadata record) are available from https://old.wmo.int/wiswiki/tiki-index.php%3Fpage=MDG_Guide.html. A valid example of an XML record, with field content (to be replaced) is also available there;
-- WIS Wiki Page on WIS discovery metadata: https://community.wmo.int/activity-areas/wis/wcmp;
-- WCMP documentation: 
-* Part 1 - Conformance Requirements provides the basic definition of the Core Profile : http://wis.wmo.int/WCMPpart1; 
-* Part 2 - Abstract Test Suite, Data Dictionary and Code Lists describes the constraints on how metadata may be written and defines the definitions of terms used within the metadata : http://wis.wmo.int/WCMPPart2;
-- Additional guidance WCMP documentation: https://old.wmo.int/wiswiki/tiki-index.php%3Fpage=IndexForMetadataGuidance.html ;
-- Additional examples of WCMP metadata (for particular product types): https://old.wmo.int/wiswiki/tiki-index.php%3Fpage=MDG_EG.html
+The WCMP homepage on WMO Community Platform the contains resources that complements this guide, such as templates, examples, links to validation tools and additional guidance: https://community.wmo.int/activity-areas/wis/wcmp.  
