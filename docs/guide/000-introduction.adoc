@@ -4,6 +4,8 @@ Metadata records play a very important role in the WIS by providing the informat
 
 This part of the Guide is intended for metadata authors and product or infrastructure specialists who create WCMP 1.3 metadata records for making their datasets discoverable within the WIS catalogue(s). It will also assist those who wish to create high-quality WIS metadata records for data that will be ingested and distributed by a GISC.
 
+The WCMP templates and relevant documentation should be used together with the guidance information provided in this part of the Guide, which also contains a set of recommendations to be followed in order to provide the right level and granularity of product information in the WCMP metadata records.
+
 The WCMP 1.3 is defined in Appendix C of the Manual on WMO Information Systems (WMO-No. 1060): https://library.wmo.int/index.php?lvl=notice_display&id=9254.  
 
 The WCMP homepage on WMO Community Platform the contains resources that complements this guide, such as templates, examples, links to validation tools and additional guidance: https://community.wmo.int/activity-areas/wis/wcmp.  
