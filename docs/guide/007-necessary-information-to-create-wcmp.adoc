@@ -326,23 +326,24 @@ The encoding of a duration as `[(- or +) PnYnMnDTnhnmns]` allows the expression 
 
 |[DateX] to [DateY]
 a|
-`beginPosition: 2005-10-01`
-`endPosition: 2014-10-20`
++`beginPosition: 2005-10-01`+
++`endPosition: 2014-10-20`+
 
 |[DateX] to [now]
-a|`beginPosition: 2005-10-01`
-`endPosition: now`
+a|
++`beginPosition: 2005-10-01`+
++`endPosition: now`+
 
 |[Now] plus [period]
-a| `beginPosition: now` 
-`endPosition: after`
-`duration: P7D (short)` or `duration: P0Y0M7DT0h0m0s (long)` (+7 days)
+a| 
++`beginPosition: now`+ 
++`endPosition: after`+
++`duration: P7D (short)` or `duration: P0Y0M7DT0h0m0s (long)` (+7 days)+
 
 |===
 
 Where it is not possible to accurately capture the time period in the `temporalExtent` (using the start date, end date and duration), record details that are as close as possible, and then explain the period in words, using the description field.
 
-The following example shows a dataset with a known start date and a known end date:
 
 ====== Example: [DateX] to [DateY]
 ```xml
@@ -358,7 +359,7 @@ The following example shows a dataset with a known start date and a known end da
 </gmd:temporalElement>
 ```
 
-It is also possible to describe an ongoing dataset with a known start date, but no known end date. In that case, the `endPosition` should contain the attribute `indeterminatePosition="now"`. For instance, where a dataset is from 2005-10-01 onwards, it would be encoded as follows:
+It is also possible to describe an ongoing dataset with a known start date, but no known end date. In that case, the `endPosition` should contain the attribute `indeterminatePosition="now"`. 
 
 ====== Example: [DateX] to [now]
 ```xml
@@ -376,7 +377,7 @@ It is also possible to describe an ongoing dataset with a known start date, but 
 
 For a `TimePeriod`, the begin and end positions must always be included whereas duration is optional. For more information on encoding of duration, see https://en.wikipedia.org/wiki/ISO_8601#Durations.
 
-The `EX_TemporalExtent` options for a `TimePeriod` hence include `beginPosition`, `endPosition` and `duration`, e.g.:
+The `EX_TemporalExtent` options for a `TimePeriod` hence include `beginPosition`, `endPosition` and `duration`.
 
 . `<gml:beginPosition> ..   …  …</gml:beginPosition>`
 . `<gml:endPosition> ..   …  …</gml:endPosition>`
