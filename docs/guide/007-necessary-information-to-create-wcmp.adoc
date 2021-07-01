@@ -781,7 +781,7 @@ A keyword from the `WMO_DistributionScopeCode` codelist is used to indicate whet
 . Metadata marked `"RegionalExchange"` describe products that, while transmitted on the GTS, might be simply exchanged between two WMO Members (by bilateral agreement). Some examples are regional warnings or voluminous NWP products;
 . The metadata marked `"OriginatingCentre"` indicate non-GTS products and include, for instance, products delivered to users from a DCPC.
 
-Below is an example for globally exchanged GTS products:
+Below is an example for globally exchanged GTS products.
 
 ====== Example: Descriptive keywords / WMO_DistributionScopeCode keywords 
 ```xml
@@ -1296,8 +1296,6 @@ a|`/gmd:MD_Metadata/gmd:distributionInfo/\*/gmd:distributionFormat/*/gmd:formatD
 |===
 
 When the data owners wish to be cited in references to their data, they can stipulate this in the `citedResponsibleParty` block, using the role `"originator"`.
-
-Below is an example:
 
 ====== Example: Party to be recognized as the originator of the information
 ```xml
