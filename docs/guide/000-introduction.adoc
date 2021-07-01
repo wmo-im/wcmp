@@ -6,6 +6,6 @@ This part of the Guide is intended for metadata authors and product or infrastru
 
 The WCMP templates and relevant documentation should be used together with the guidance information provided in this part of the Guide, which also contains a set of recommendations to be followed in order to provide the right level and granularity of product information in the WCMP metadata records.
 
-The WCMP 1.3 is defined in Appendix C of the Manual on WMO Information Systems (WMO-No. 1060): https://library.wmo.int/index.php?lvl=notice_display&id=9254.  
+The link:https://library.wmo.int/index.php?lvl=notice_display&id=9254[WCMP 1.3] is defined in Appendix C of the Manual on WMO Information Systems (WMO-No. 1060).  
 
-The WCMP homepage on WMO Community Platform the contains resources that complements this guide, such as templates, examples, links to validation tools and additional guidance: https://community.wmo.int/activity-areas/wis/wcmp.  
+The link:https://community.wmo.int/activity-areas/wis/wcmp[WCMP homepage] on WMO Community Platform the contains resources that complements this guide, such as templates, examples, links to validation tools and additional guidance.  
