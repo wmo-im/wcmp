@@ -22,6 +22,10 @@ is a placeholder that might appear in the XML template as:
 ----
 <xmlfieldname>ADD-ORGANISATION-NAME*M</xmlfieldname>
 ----
+As well as placeholders, the template files contain hints and comments, formatted as follows:
+----
+	<!--  this is a comment : use this XML block, if ….., otherwise, remove it    -->
+----
 
 Metadata content discussed in this part of the Guide (and for which there are placeholders) includes all mandatory WCMP content and some key content that is optional. The elements can be identified as follows:
 [loweralpha]
