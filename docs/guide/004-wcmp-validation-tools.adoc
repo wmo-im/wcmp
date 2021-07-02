@@ -6,19 +6,6 @@ A set of ISO and WCMP validation tools can be used to ensure that a created WCMP
 
 In most cases, a metadata author will validate a metadata record using a validation tool. That tool may be either a web service or locally installed software. Usually, metadata records to be validated may be stored either locally or at a URL accessible to the validation tool.
 
-Online validation services can automatically evaluate the content of the metadata in terms of completeness, accuracy and conformance. Some validation tools, such as the one developed by the National Oceanic and Atmospheric Administration (NOAA) (http://www.ngdc.noaa.gov/docucomp/recordServices) may give a score based on different aspects, including content and quality of metadata.
+Online validation services can automatically evaluate the content of the metadata in terms of completeness, accuracy and conformance. 
 
-It is recommended to test the metadata with one of the available tools. It is also always possible to seek assistance from your principal GISC. 
-
-Below is a list of web services and tools used to validate WCMP 1.3 and ISO 19115/19139 metadata records.
-
-=== WCMP 1.3 validation services and tools:
-
-. NOAA's WMO validation service: https://www.ngdc.noaa.gov/docucomp/validationServicesWmo;
-GeoNetwork-ANZMEST, with WCMP validation tool: https://sourceforge.net/projects/anzmest/files/bom-releases/.  This directory contains the Australian Bureau of Meteorology releases of ANZMEST 2.10.x (based on GeoNetwork), which include the WCMP 1.3 editing and validation tool.  For instructions on running the software and validation tool, see the WIS Wiki page on validation tools below;
-. WIS Wiki page on validation tools: http://wis.wmo.int/MD-Validate.
-
-=== ISO 19115/19139 validation services and tools:
-. NOAA ISO validation page: https://www.ngdc.noaa.gov/docucomp/recordServices;
-. GeoNetwork-ANZMEST – BOM branch: https://sourceforge.net/projects/anzmest/files/bom-releases/ (includes 19115:2006, 19115:INSPIRE).
-
+It is recommended to test the metadata with one of the available tools listed on the WCMP homepage. It is also always possible to seek assistance from your principal GISC. 

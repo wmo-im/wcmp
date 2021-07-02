@@ -1,4 +1,0 @@
-== Technical Document
-
-More details on the WCMP metadata can be found at http://wis.wmo.int/MD_Index.
-
