@@ -45,14 +45,14 @@ a|`gmd:accessConstraints`
 a|Controlled vocabulary. `MD_RestrictionCode`, access constraints applied to assure the protection of privacy or intellectual property, and any special restrictions or limitations on obtaining the resource
 
 a|`gmd:useConstraints`
-a|Controlled vocabularys. `MD_RestrictionCode`, restrictions on the use of a resource
+a|Controlled vocabularies. `MD_RestrictionCode`, restrictions on the use of a resource
 
 a|`gmd:otherRestrictions`
 |Free text
 
 |===
 
-The Manual and Guide to  WIS (No. 1060/1061) recommendations for data policy implementation are as follows:
+The Manual on the WMO Information System (WMO-No. 1060, WMO-No. 1061) recommendations for data policy implementation are as follows:
 
 [%header,cols=2*]
 |===
