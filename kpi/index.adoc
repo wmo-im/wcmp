@@ -35,7 +35,7 @@ toc::[]
 <<<
 
 include::000-overview.adoc[]
-include::001-compliance.adoc[]
+include::001-wcmp-1.3-part2-compliance.adoc[]
 include::002-good-quality-title.adoc[]
 include::003-good-quality-abstract.adoc[]
 include::004-temporal-information.adoc[]
@@ -47,3 +47,4 @@ include::009-data-policy.adoc[]
 include::010-distribution-information.adoc[]
 include::011-codelists-validation.adoc[]
 include::012-doi-citation.adoc[]
+include::013-file-identifier.adoc[]
