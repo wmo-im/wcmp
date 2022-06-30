@@ -1,10 +1,6 @@
 == KPI-013: File identifier
 
-=== WCMP element(s)
-
-* `/gmd:MD_Metadata/gmd:fileIdentifier/gco:CharacterString`
-
-=== What is being measured
+=== Measurement
 
 Accordance of the structure of the metadata record identification with the recommendation defined in chapter 8.1.2 of the Manual on the WMO Information System (WMO-No. 1060).
 
@@ -12,7 +8,7 @@ Accordance of the structure of the metadata record identification with the recom
 
 The value of the fileIdentifier element, i.e. identifier of the metadata record, shall be unique. Achieving global uniqueness in a distributed environment is not trivial, but the structure recommended in the Manual on WIS significantly simplifies management of the identifiers and reduces chance of conflicts/duplicates.
 
-=== Rules for implementation
+=== Rules
 
 The WMO Core Metadata Profile recommends the use of a URI for `gmd:fileIdentifier` attributes. The URI should be structured as follows:
 
@@ -31,3 +27,6 @@ e.g. “int.wmo.wis”, “gov.noaa”, “edu.ucar.ncar”, “cn.gov.cma” or
 
 Use metadata record identification (`gmd:fileIdentifier`) in the form of URI.
 
+=== WCMP element(s)
+
+* `/gmd:MD_Metadata/gmd:fileIdentifier/gco:CharacterString`

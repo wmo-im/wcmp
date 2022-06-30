@@ -1,10 +1,6 @@
 == KPI-2: Good quality title
 
-=== WCMP element(s)
-
-* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:citation/gmd:CI_Citation/gmd:title`
-
-=== What is being measured
+=== Measurement
 
 The title field shall always be populated and follow the principles of
 WCMP guidance.  The length shall not be too short or too long, contain less
@@ -16,7 +12,7 @@ Title is the first element of metadata information displayed and helps with
 initial identification. Meaningful and relevant information makes it easier
 for users to understand the resource.
 
-=== Rules for implementation
+=== Rules
 
 .Good quality title implementation rules
 |===
@@ -70,3 +66,5 @@ Temperature” or “SLSTR L1B radiances and brightness temperatures”. Please 
 the Guidance on WIS Discovery Metadatafootnote:[https://library.wmo.int/index.php?lvl=notice_display&id=6856#.X2TSLZMzYUF]
 for more information.
 
+=== WCMP element(s)
+* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:citation/gmd:CI_Citation/gmd:title`

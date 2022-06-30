@@ -3,6 +3,59 @@
 Metadata records should contain information regarding how to access the data
 which it is describing.
 
+=== Measurement
+
+The presence of distribution information and supporting elements.
+
+* format (`//gmd:distributionInfo//gmd:distributionFormat/gmd:MD_Format`)
+  That can rely on existing WMO supported formats
+* 1..n `gmd:transferOptions` (`//gmd:distributionInfo//gmd:transferOptions//gmd:onLine`),
+  including a `gmd:linkage` with a URL to access the data
+* distributor contact information (organization, email)
+
+=== Rationale for measurement
+
+Distribution information provides the necessary information for accessing the
+data, supported formats, and contact information for the data distributor.
+
+=== Rules
+
+By detecting the presence of the distribution format and transferOptions
+(multiple options are possible). See page 35 of the WMO Core Profile Metadata
+Guidance.
+
+.Distribution information implementation rules
+[cols="1a,2"]
+|===
+|Rule |Score
+
+|`gmd:MD_Format` is included
+|1
+
+|format specification has an Anchor with a resolvable HTTP URL
+|1
+
+|distributor contact organization is included
+|1
+
+|distributor contact email is included
+|1
+
+|1..n transfer options are present
+|1
+
+|===
+
+*Total possible score: 5 (100%)*
+
+=== Guidance to score well on this assessment
+
+* Specify format/medium information and a link to the format specification
+* Specify 1..n transfer options as well as a distributor contact. Note that a
+  distributor contact does not have to be the same as the main point of
+  contact, principal investigator
+* Specify an email for the distributor
+
 === WCMP element(s)
 
 * `//gmd:distributionInfo//gmd:distributionFormat/gmd:MD_Format`
@@ -98,57 +151,3 @@ which it is describing.
   </gmd:MD_Distribution>
 </gmd:distributionInfo>
 ```
-
-=== What is being measured
-
-The presence of distribution information and supporting elements.
-
-* format (`//gmd:distributionInfo//gmd:distributionFormat/gmd:MD_Format`)
-  That can rely on existing WMO supported formats
-* 1..n `gmd:transferOptions` (`//gmd:distributionInfo//gmd:transferOptions//gmd:onLine`),
-  including a `gmd:linkage` with a URL to access the data
-* distributor contact information (organization, email)
-
-=== Rationale for measurement
-
-Distribution information provides the necessary information for accessing the
-data, supported formats, and contact information for the data distributor.
-
-=== Rules for implementation
-
-By detecting the presence of the distribution format and transferOptions
-(multiple options are possible). See page 35 of the WMO Core Profile Metadata
-Guidance.
-
-.Distribution information implementation rules
-[cols="1a,2"]
-|===
-|Rule |Score
-
-|`gmd:MD_Format` is included
-|1
-
-|format specification has an Anchor with a resolvable HTTP URL
-|1
-
-|distributor contact organization is included
-|1
-
-|distributor contact email is included
-|1
-
-|1..n transfer options are present
-|1
-
-|===
-
-*Total possible score: 5 (100%)*
-
-=== Guidance to score well on this assessment
-
-* Specify format/medium information and a link to the format specification
-* Specify 1..n transfer options as well as a distributor contact. Note that a
-  distributor contact does not have to be the same as the main point of
-  contact, principal investigator
-* Specify an email for the distributor
-

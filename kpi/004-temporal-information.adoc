@@ -1,11 +1,5 @@
 == KPI-4: Temporal information
 
-=== WCMP Element(s)
-
-* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent`
-* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceMaintenance//gmd:maintenanceAndUpdateFrequency`
-* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:status`
-
 === What is being measured
 
 * Temporal extent: This element describes the period of time that the available product covers
@@ -122,3 +116,7 @@ update frequency, `gmd:MD_MaintenanceFrequencyCode` can be set to `asNeeded`:
 
 Ensure that the Temporal Extent and the Update Frequency is present in the metadata record.
 
+=== WCMP Element(s)
+* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent`
+* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceMaintenance//gmd:maintenanceAndUpdateFrequency`
+* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:status`

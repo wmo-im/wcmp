@@ -1,12 +1,6 @@
 == KPI-6: Keywords
 
-=== WCMP element(s)
-
-* `//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword`
-* `//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:type`
-* `//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName`
-
-=== What is being measured
+=== Measurement
 
 * presence of keywords
 * grouping of similar keywords
@@ -26,7 +20,7 @@ Keywords are indexed by search engines to narrow down full text searches,
 adding to the user experience and making datasets easier to discover. Keywords
 can be user-defined or specified from controlled vocabularies.
 
-=== Rules for implementation
+=== Rules
 
 ==== Well defined keywords examples
 
@@ -131,3 +125,8 @@ Examples of controlled vocabularies:
 * https://cfconventions.org/standard-names.html[Climate and Forecast (CF) Standard Names]
 * https://canada.multites.net/cst[Government of Canada Core Subject Thesaurus (CST)]
 
+=== WCMP element(s)
+
+* `//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword`
+* `//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:type`
+* `//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName`

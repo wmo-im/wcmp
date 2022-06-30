@@ -1,18 +1,6 @@
 == KPI-9: Data policy
 
-=== WCMP element(s)
-
-Data policy
-
-* `//gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceConstraints`
-
-Distribution scope
-
-* `//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword`
-* `//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:type`
-* `//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName`
-
-=== What is being measured
+=== Measurement
 
 * Definition of data policy encoded with `WMO_DataLicenceCode` in `gmd:otherConstraints`
 * Definition of `gmd:accessConstraints` with `MD_RestrictionCode` = `gmd:otherConstraints`
@@ -29,7 +17,7 @@ the data within WIS and when applicable the GTS priority.
 
 Data policy Information is expressed via `gmd:resourceConstraints/gmd:MD_LegalConstraints`
 
-=== Rules for implementation
+=== Rules
 
 The following table summarises the relevant elements to define data policy
 
@@ -255,3 +243,14 @@ If the codelist implementation is not clear there should be additional free text
 
 Further guidance on data policy implementation can be found in the Guide to WMO Information System (WMO No. 1061, Section 5.8.1.10).footnote:[https://library.wmo.int/doc_num.php?explnum_id=10257]
 
+=== WCMP element(s)
+
+Data policy
+
+* `//gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceConstraints`
+
+Distribution scope
+
+* `//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword`
+* `//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:type`
+* `//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName`
