@@ -1,11 +1,6 @@
 == KPI-XXX: my KPI
 
-=== WCMP element(s)
-
-* `//XPath1`
-* `//XPath2`
-
-=== What is being measured
+=== Measurement
 
 Text description of measurement.
 
@@ -13,7 +8,7 @@ Text description of measurement.
 
 Why should this measurement take place.
 
-=== Rules for implementation
+=== Rules
 
 - use XPath and pseudo-code (if then else)
 - provide total possible score
@@ -23,3 +18,7 @@ Why should this measurement take place.
 === Guidance to score well on this assessment
 
 Recommendations and hints/advice.
+
+=== WCMP element(s)
+* `//XPath1`
+* `//XPath2`

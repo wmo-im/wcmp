@@ -1,10 +1,6 @@
 == KPI-1: WCMP 1.3, Part 2 Compliance
 
-=== WCMP element(s)
-
-All WCMP elements specified in the WCMP 1.3, Part C2 – Abstract Test Suite, Data Dictionary and Code Lists.footnote:[https://wis.wmo.int/2013/metadata/version_1-3-0/WMO_Core_Metadata_Profile_v1.3_Part_2.pdf]
-
-=== What is being measured
+=== Measurement
 
 All requirements specified in WCMP 1.3, Part 2.
 
@@ -12,7 +8,7 @@ All requirements specified in WCMP 1.3, Part 2.
 
 WCMP 1.3, Part 2 forms the basis of all KPIs.
 
-=== Rules for implementation
+=== Rules
 
 . WCMP 1.3, Part C2, 2.1 Abstract tests for XML encoding
 
@@ -65,3 +61,5 @@ a|Requirement 9.3.2: A WIS Discovery Metadata record describing data for global 
 
 Use WCMP templates and/or tools to generate the metadata record (e.g. Excel to WIS).
 
+=== WCMP element(s)
+All WCMP elements specified in the WCMP 1.3, Part C2 - Abstract Test Suite, Data Dictionary and Code Lists in the Manual on WIS (WMO-No. 1060).
