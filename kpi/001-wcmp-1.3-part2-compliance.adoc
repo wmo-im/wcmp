@@ -1,9 +1,11 @@
 == KPI-1: WCMP 1.3, Part 2 Compliance
 
 === Measurement
-All requirements specified in the ABSTRACT TEST SUITE in Manual on WIS (WMO-No. 1060), Part C2, section 2. 
+
+Most requirements specified in the abstract test suite in Manual on WIS (WMO-No. 1060), Part C2, section 2.
 
 === Rational for measurement
+
 Compliance with the requirements of the abstract test suite ensures that the metadata record is valid and supports base level information for discovery and access.  
 
 === Rules
@@ -14,16 +16,7 @@ WCMP 1.3, Part C2, 2.1 Abstract tests for XML encoding
 |Rule |Score
 
 |Requirement 6.1.1: Each WIS Discovery Metadata record shall validate without error against the XML schemas defined in ISO/TS 19139:2007.
-|1
-
-|Requirement 6.1.2: Each WIS Discovery Metadata record shall validate without error against the rule-based constraints listed in ISO/TS 19139:2007 Annex A (Table A.1).
-|1
-
-|Requirement 6.2.1: Each WIS Discovery Metadata record shall explicitly name all namespaces used within the record; use of default namespaces is prohibited.
-|1
-
-a|Requirement 6.3.1: Each WIS Discovery Metadata record shall declare the following XML namespace for GML: `\http://www.opengis.net/gml/3.2`.
-|1
+|Pass/Fail
 
 a|Requirement 8.1.1: Each WIS Discovery Metadata record shall include one `gmd:MD_Metadata/gmd:fileIdentifier` attribute.
 |1
@@ -53,11 +46,11 @@ a|Requirement 9.3.2: A WIS Discovery Metadata record describing data for global 
 |1
 |===
 
-*Total possible score: 13 (100%)*
+*Total possible score: 9 (100%)*
 
 === Guidance to score well on this assessment
 
 Use WCMP templates and/or tools to generate the metadata record (e.g. Excel to WIS).
 
 === WCMP element(s)
-All WCMP elements specified in the WCMP 1.3, Part C2 - Abstract Test Suite, Data Dictionary and Code Lists in the Manual on WIS (WMO-No. 1060).
+Elements specified in the WCMP 1.3, Part C2 - Abstract Test Suite, Data Dictionary and Code Lists in the Manual on WIS (WMO-No. 1060).
