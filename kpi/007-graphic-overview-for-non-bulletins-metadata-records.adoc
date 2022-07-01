@@ -1,28 +1,28 @@
 == KPI-7: Graphic overview for non bulletins metadata records
 
 === Measurement
-The presence of `gmd:graphicOverview` is checked that it contains a URL to
-a common web image file type.footnote:[https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#Common_image_file_types]
+The `gmd:graphicOverview` element for a non-bulletin metadata record is present and it contains a URL to
+a common web image file type.footnote:[https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#Common_image_file_types] 
 
 === Rationale for measurement
 
 Product graphic overviews provide the user with a high level preview of the
-product which can assist in a high level assessment and/or evaluation as part
+product which can assist in a high level assessment as part
 of search results presentation.
 
 === Rules
 
-.Graphic overview for non bulletins metadata records implementation rules
+.Graphic overview implementation rules
 |===
 |Rule |Score
 
-|graphic overview element is present
+|The graphic overview element is present.
 |1
 
-|graphic overview URL resolves successfully
+|The graphic overview URL resolves successfully.
 |1
 
-|graphic overview URL content is a common web image file type
+|The URL in this element is a common web image file type
 (check MIME type, content header/magic number)
 |1
 |===
@@ -33,18 +33,10 @@ of search results presentation.
 
 In addition to the presence of the graphic overview image it would also be
 valuable to provide consistent image dimensions (e.g. 800x800 pixels) such that
-all images are normalized and scaling/alignment of overivew images can be
+all images are normalized and scaling/alignment of overview images can be
 applied consistently by web applications rendering search results.
 
-Examples of catalogues using such information are here:
-
-* https://gisc.dwd.de[GISC DWD]
-* https://navigator.eumetsat.int/search?query=MSG%20RGB[EUMETSAT Product Navigator]
-
-=== WCMP element(s)
-
-* `//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview/gmd:MD_BrowseGraphic/gmd:fileName/gmx:Anchor/@xlink:href`
-
+==== XML
 ```xml
 <gmd:graphicOverview>
   <gmd:MD_BrowseGraphic>
@@ -54,4 +46,16 @@ Examples of catalogues using such information are here:
   </gmd:MD_BrowseGraphic>
 </gmd:graphicOverview>
 ```
+==== Examples of catalogues using images
+
+* https://gisc.dwd.de[GISC DWD]
+* https://navigator.eumetsat.int/search?query=MSG%20RGB[EUMETSAT Product Navigator]
+
+==== Guidelines and examples in this guide
+* 5.8.1.9	Product sample visualization URL
+
+=== WCMP element(s)
+
+* `//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview/gmd:MD_BrowseGraphic/gmd:fileName/gmx:Anchor/@xlink:href`
+
 
