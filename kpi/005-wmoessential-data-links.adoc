@@ -7,7 +7,7 @@ Ensure that distribution URLs are included when the WMO_DataLicenseCode of
 
 === Rationale for measurement
 
-All `WMOEssential` data should have 1..n distribution links to the data.
+Products that qualify as WMOEssential should be available with "free and unrestricted international exchange", tnd herefore, should have 1 to many distribution links present in the metadata.
 
 === Rules
 
