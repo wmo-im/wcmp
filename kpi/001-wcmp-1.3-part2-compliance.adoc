@@ -6,7 +6,7 @@ Most requirements specified in the abstract test suite in Manual on WIS (WMO-No.
 
 === Rational for measurement
 
-Compliance with the requirements of the abstract test suite ensures that the metadata record is valid and supports base level information for discovery and access.  
+Compliance with the requirements of the abstract test suite ensures that the metadata record is valid and supports base level information for discovery and access. The metadata should pass requirement 6.1.1 before further evaluations are performed. 
 
 === Rules
 
