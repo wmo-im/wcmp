@@ -11,13 +11,10 @@ link protocol throughout WIS Metadata.
 === Rationale for measurement
 
 Broken links damage the user experience and gives the impression to users that
-a website is not maintained (88% of the online consumers are less likely to
-return to a site after a bad experience.footnote:[https://review42.com/web-design-statistics])
-In addition, having numerous broken links affects the reputation and rank of
-your website when indexed by mass market search engines.
+a website is not maintained. 
 
 HTTPS is increasingly becoming a requirement for numerous agencies as well as the
-suggested protocol vs. HTTP.  Having non-HTTPS links in a WCMP document often leads to mixed
+suggested protocol vs. HTTP.  Having non-HTTPS links in metadata records often leads to mixed
 content errors in web applications deployed via HTTPS for example, and using AJAX/XHR design
 patterns.  HTTPS supports secure, authoritative and trustworthy links as part of WIS Metadata.
 
@@ -27,9 +24,9 @@ patterns.  HTTPS supports secure, authoritative and trustworthy links as part of
 |===
 |Rule |Score
 
-|Each valid link present
+|Each valid link.
 |1
-|Each valid HTTPS link present
+|Each valid HTTPS link.
 |1
 |===
 
@@ -39,15 +36,8 @@ patterns.  HTTPS supports secure, authoritative and trustworthy links as part of
 
 Ensure that all links resolve and are accessible via HTTPS.
 
-=== WCMP element(s)
 
-Any element or attribute content with linked information (URLs).
-
-* `//gmd:URL`
-* `//gmd:graphicOverview`
-* `//gmx:Anchor/@xlink:href`
-* `//@codeList`
-
+==== XML examples
 ```xml
 <gmd:CI_OnlineResource>
  <gmd:linkage>
@@ -77,3 +67,12 @@ Any element or attribute content with linked information (URLs).
   <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision" codeSpace="ISOTC211/19115">revision</gmd:CI_DateTypeCode>
 </gmd:dateType>
 ```
+=== WCMP element(s)
+
+Any element or attribute content with linked information (URLs).
+
+* `//gmd:URL`
+* `//gmd:graphicOverview`
+* `//gmx:Anchor/@xlink:href`
+* `//@codeList`
+
