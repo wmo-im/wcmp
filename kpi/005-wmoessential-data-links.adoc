@@ -2,14 +2,29 @@
 
 === Measurement
 
-Ensure that distribution URLs are included when the DataLicenseCode of
-`WMOEssential` is indicated in the constraint section.
+Ensure that distribution URLs are included when the WMO_DataLicenseCode of
+`WMOEssential` is indicated in the resource constraint section.
 
 === Rationale for measurement
 
 All `WMOEssential` data should have 1..n distribution links to the data.
 
 === Rules
+
+.WMOEssential data links implementation rules
+|===
+|Rule |Score
+
+a|`DataLicenseCode` is `WMOEssential` and 1..n distribution links are present
+|1
+
+|===
+
+*Total possible score: 1 (100%)*
+
+=== Guidance to score well on this assessment
+
+If the data described is categorized as `WMOEssential`, provide a link to the data.
 
 ```xml
 <gmd:resourceConstraints>
@@ -41,21 +56,8 @@ All `WMOEssential` data should have 1..n distribution links to the data.
   </gmd:onLine>
 </gmd:MD_DigitalTransferOptions>
 ```
-
-.WMOEssential data links implementation rules
-|===
-|Rule |Score
-
-a|`DataLicenseCode` is `WMOEssential` and 1..n distribution links are present
-|1
-
-|===
-
-*Total possible score: 1 (100%)*
-
-=== Guidance to score well on this assessment
-
-If the data described is categorized as `WMOEssential`, provide a link to the data.
+==== Guidelines and examples from this guide
+* 5.8.1.10 Data policy information
 
 === WCMP element(s)
 
