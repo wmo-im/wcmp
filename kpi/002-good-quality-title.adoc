@@ -4,7 +4,7 @@
 
 The title field shall always be populated and follow the principles of
 WCMP guidance.  The length shall not be too short or too long, contain less
-than 3 acronyms and represented in title case.  Spelling and grammar are correct.
+than 3 acronyms and represented in title case.  Spelling and grammar should be correct.
 
 === Rationale for measurement
 
@@ -18,28 +18,28 @@ for users to understand the resource.
 |===
 |Rule |Score
 
-|title is present
+|Title is present.
 |1
 
-|title has 3 words or more
+|Title has 3 words or more.
 |1
 
-|title has 150 characters or less
+|Title has 150 characters or less.
 |1
 
-|title only has printable characters (numbers and letters)
+|Title only has printable characters (numbers and letters).
 |1
 
-|words in title are represented in "Title Case"
+|Words in title are represented in "Title Case".
 |1
 
-|title contains less than 3 acronyms (words with all upper case)
+|Title contains less than 3 acronyms (words with all upper case).
 |1
 
-a|title does not contain bulletin header (regular expression: `[A-Z]{4}\d{2}[\s_]*[A-Z]{4}`)
+a|Title does not contain bulletin header (regular expression: `[A-Z]{4}\d{2}[\s_]*[A-Z]{4}`).
 |1
 
-|title passes a basic spellcheck
+|Title passes a basic spellcheck.
 |1
 |===
 
@@ -47,7 +47,7 @@ a|title does not contain bulletin header (regular expression: `[A-Z]{4}\d{2}[\s_
 
 === Guidance to score well on this assessment
 
-In the context of WIS Product catalogues, the product title and abstract are
+In the context of WIS product catalogues, the product title and abstract are
 the two most relevant elements in the WCMP metadata record.  These two elements
 are presented to the users in search results as well as the product description
 page, and need to focus on highlighting the product’s key characteristics to
