@@ -1,112 +1,34 @@
 == KPI-4: Temporal information
 
-=== What is being measured
+=== Measurement
 
-* Temporal extent: This element describes the period of time that the available product covers
-* Data update frequency: The temporal frequency at which the data is updated (i.e. every x hours, days, etc.)
-* Status of dataset
+The temporal extent, frequency of resource updates and status elements are present. 
 
 === Rationale for measurement
 
-Temporal information is a significant characteristic of weather/climate/water
-data and as such is critical for users to know which period(s) of time is/are
-covered by products and how often new products are received.
+Temporal information is a significant characteristic of WMO
+data and it is critical for users to know the time periods that are
+covered by the products, how often new products are available and the status.
 
-=== Rules for implementation
-
-The TemporalExtent is present in `gmd:temporalElement`:
-
-```xml
-  <gmd:temporalElement>
-    <gmd:EX_TemporalExtent>
-      <gmd:extent>
-        <gml:TimePeriod gml:id="boundingTemporalExtentPeriod">
-          <gml:beginPosition>2005-10-01</gml:beginPosition>
-          <gml:endPosition>2014-10-20</gml:endPosition>
-        </gml:TimePeriod>
-      </gmd:extent>
-    </gmd:EX_TemporalExtent>
-  </gmd:temporalElement>
-```
-
-In the case of an ongoing dataset with a known start date and unknown end
-date, the end date must be indicated with `now`.  For instance,
-where a dataset is from 2005-10-01 onwards:
-
-```xml
-  <gmd:temporalElement>
-     <gmd:EX_TemporalExtent>
-       <gmd:extent>
-         <gml:TimePeriod gml:id="boundingTemporalExtentPeriod">
-           <gml:beginPosition>2005-10-01</gml:beginPosition>
-           <gml:endPosition indeterminatePosition="now"/>
-         </gml:TimePeriod>
-       </gmd:extent>
-     </gmd:EX_TemporalExtent>
-  </gmd:temporalElement>
-```
-
-It is also recommended to identify a dataset status / progress using the `gmd:MD_ProgressCode`
-codelist.  The following example provides an ongoing dataset progress/status:
-
-```xml
-  <gmd:status>
-    <gmd:MD_ProgressCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ProgressCode" codeSpace="ISOTC211/19115" codeListValue="onGoing">onGoing</gmd:MD_ProgressCode>
-  </gmd:status>
-```
-
-The Data Update Frequency is present in `gmd:maintenanceAndUpdateFrequency`:
-
-Below is an example of a GTS bulletin which is updated every 6 hours.
-
-```xml
-  <gmd:resourceMaintenance>
-    <gmd:MD_MaintenanceInformation>
-      <gmd:maintenanceAndUpdateFrequency>
-        <gmd:MD_MaintenanceFrequencyCode codeListValue="irregular" codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_MaintenanceFrequencyCode"/>
-      </gmd:maintenanceAndUpdateFrequency>
-      <gmd:userDefinedMaintenanceFrequency>
-        <gts:TM_PeriodDuration>PT6H</gts:TM_PeriodDuration>
-      </gmd:userDefinedMaintenanceFrequency>
-      <gmd:maintenanceNote>
-        <!-- DRAFT – Guidance on WIS Discovery Metadata (following CBS-16), p38 -->
-        <gco:CharacterString>Instances of bulletin SIKB20NGTT are available every 6 hours starting at 03 UTC.</gco:CharacterString>
-      </gmd:maintenanceNote>
-    </gmd:MD_MaintenanceInformation>
-  </gmd:resourceMaintenance>
-```
-
-If it is not relevant or necessary to provide information regarding the data
-update frequency, `gmd:MD_MaintenanceFrequencyCode` can be set to `asNeeded`:
-
-```xml
-  <gmd:resourceMaintenance>
-      <gmd:MD_MaintenanceInformation>
-        <gmd:maintenanceAndUpdateFrequency>
-          <gmd:MD_MaintenanceFrequencyCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_MaintenanceFrequencyCode" codeListValue="asNeeded"/>
-        </gmd:maintenanceAndUpdateFrequency>
-      </gmd:MD_MaintenanceInformation>
-  </gmd:resourceMaintenance>
-```
+=== Rules
 
 .Temporal information implementation rules
-
 |===
 |Rule |Score
 
-|The Temporal Extent is present
+|The temporal extent elements are present.
 |1
 
-|The begin and end components are present in the temporal extent
+|The begin position and end position elements are present in the temporal extent.
 |1
 
-|The begin date time is less than or equal to the end date time
+|The begin date time is less than or equal to the end date time.
 |1
 
-|The Data Update Frequency is present
+|The frequency of resource updates elements are present.
 |1
 
-|The Data Status is present
+|The status element is present.
 |1
 |===
 
@@ -114,9 +36,26 @@ update frequency, `gmd:MD_MaintenanceFrequencyCode` can be set to `asNeeded`:
 
 === Guidance to score well on this assessment
 
+FIX this section: 
 Ensure that the Temporal Extent and the Update Frequency is present in the metadata record.
 
+It is also recommended to identify a dataset status / progress using the gmd:MD_ProgressCode codelist. The following example provides an ongoing dataset progress/status:
+
+```xml
+  <gmd:status>
+    <gmd:MD_ProgressCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ProgressCode" codeSpace="ISOTC211/19115" codeListValue="onGoing">onGoing</gmd:MD_ProgressCode>
+  </gmd:status>
+```
+
+If it is not relevant or necessary to provide information regarding the data
+update frequency, `gmd:MD_MaintenanceFrequencyCode` can be set to `asNeeded`:
+
+==== Guidelines and examples in this guide
+* 5.8.1.5 Temporal extent
+* 5.8.1.13 Frequency of resource updates
+
 === WCMP Element(s)
+
 * `/gmd:MD_Metadata/gmd:identificationInfo//gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent`
 * `/gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceMaintenance//gmd:maintenanceAndUpdateFrequency`
 * `/gmd:MD_Metadata/gmd:identificationInfo//gmd:status`
