@@ -2,15 +2,13 @@
 
 === Measurement
 
-* Temporal extent: This element describes the period of time that the available product covers
-* Data update frequency: The temporal frequency at which the data is updated (i.e. every x hours, days, etc.)
-* Status of dataset
+The temporal extent, frequency of resource updates and status elements are present. 
 
 === Rationale for measurement
 
-Temporal information is a significant characteristic of weather/climate/water
-data and as such is critical for users to know which period(s) of time is/are
-covered by products and how often new products are received.
+Temporal information is a significant characteristic of WMO
+data and it is critical for users to know the time periods that are
+covered by the products, how often new products are available and the status.
 
 === Rules
 
@@ -19,27 +17,37 @@ covered by products and how often new products are received.
 |===
 |Rule |Score
 
-|The Temporal Extent is present
+|The temporal extent elements are present.
 |1
 
-|The begin and end components are present in the temporal extent
+|The begin position and end position elements are present in the temporal extent.
 |1
 
-|The begin date time is less than or equal to the end date time
+|The begin date time is less than or equal to the end date time.
 |1
 
-|The Data Update Frequency is present
+|The frequency of resource updates elements are present.
 |1
 
-|The Data Status is present
+|The status element is present.
 |1
 |===
 
 *Total possible score: 5 (100%)*
 
-=== Guidance
+=== Guidance (FIX this section)
 
 Ensure that the Temporal Extent and the Update Frequency is present in the metadata record.
+
+It is also recommended to identify a dataset status / progress using the gmd:MD_ProgressCode codelist. The following example provides an ongoing dataset progress/status:
+
+```xml
+  <gmd:status>
+    <gmd:MD_ProgressCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ProgressCode" codeSpace="ISOTC211/19115" codeListValue="onGoing">onGoing</gmd:MD_ProgressCode>
+  </gmd:status>
+```
+If it is not relevant or necessary to provide information regarding the data
+update frequency, `gmd:MD_MaintenanceFrequencyCode` can be set to `asNeeded`:
 
 ==== XML Examples
 The TemporalExtent is present in `gmd:temporalElement`:
@@ -118,6 +126,9 @@ update frequency, `gmd:MD_MaintenanceFrequencyCode` can be set to `asNeeded`:
 ```
 
 ==== WMO Guidelines
+
+* 5.8.1.5 Temporal extent
+* 5.8.1.13 Frequency of resource updates
 
 === XPaths
 
