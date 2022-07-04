@@ -1,10 +1,6 @@
 == KPI-2: Good quality title
 
-=== WCMP element(s)
-
-* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:citation/gmd:CI_Citation/gmd:title`
-
-=== What is being measured
+=== Measurement
 
 The title field shall always be populated and follow the principles of
 WCMP guidance.  The length shall not be too short or too long, contain less
@@ -16,7 +12,7 @@ Title is the first element of metadata information displayed and helps with
 initial identification. Meaningful and relevant information makes it easier
 for users to understand the resource.
 
-=== Rules for implementation
+=== Rules
 
 .Good quality title implementation rules
 |===
@@ -49,7 +45,7 @@ a|title does not contain bulletin header (regular expression: `[A-Z]{4}\d{2}[\s_
 
 *Total possible score: 8 (100%)*
 
-=== Guidance to score well on this assessment
+=== Guidance
 
 In the context of WIS Product catalogues, the product title and abstract are
 the two most relevant elements in the WCMP metadata record.  These two elements
@@ -70,3 +66,10 @@ Temperature” or “SLSTR L1B radiances and brightness temperatures”. Please 
 the Guidance on WIS Discovery Metadatafootnote:[https://library.wmo.int/index.php?lvl=notice_display&id=6856#.X2TSLZMzYUF]
 for more information.
 
+==== XML Examples
+
+==== WMO Guidelines
+
+=== XPaths
+
+* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:citation/gmd:CI_Citation/gmd:title`

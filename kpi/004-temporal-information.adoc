@@ -1,12 +1,6 @@
 == KPI-4: Temporal information
 
-=== WCMP Element(s)
-
-* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent`
-* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceMaintenance//gmd:maintenanceAndUpdateFrequency`
-* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:status`
-
-=== What is being measured
+=== Measurement
 
 * Temporal extent: This element describes the period of time that the available product covers
 * Data update frequency: The temporal frequency at which the data is updated (i.e. every x hours, days, etc.)
@@ -18,8 +12,36 @@ Temporal information is a significant characteristic of weather/climate/water
 data and as such is critical for users to know which period(s) of time is/are
 covered by products and how often new products are received.
 
-=== Rules for implementation
+=== Rules
 
+.Temporal information implementation rules
+
+|===
+|Rule |Score
+
+|The Temporal Extent is present
+|1
+
+|The begin and end components are present in the temporal extent
+|1
+
+|The begin date time is less than or equal to the end date time
+|1
+
+|The Data Update Frequency is present
+|1
+
+|The Data Status is present
+|1
+|===
+
+*Total possible score: 5 (100%)*
+
+=== Guidance
+
+Ensure that the Temporal Extent and the Update Frequency is present in the metadata record.
+
+==== XML Examples
 The TemporalExtent is present in `gmd:temporalElement`:
 
 ```xml
@@ -95,30 +117,10 @@ update frequency, `gmd:MD_MaintenanceFrequencyCode` can be set to `asNeeded`:
   </gmd:resourceMaintenance>
 ```
 
-.Temporal information implementation rules
+==== WMO Guidelines
 
-|===
-|Rule |Score
+=== XPaths
 
-|The Temporal Extent is present
-|1
-
-|The begin and end components are present in the temporal extent
-|1
-
-|The begin date time is less than or equal to the end date time
-|1
-
-|The Data Update Frequency is present
-|1
-
-|The Data Status is present
-|1
-|===
-
-*Total possible score: 5 (100%)*
-
-=== Guidance to score well on this assessment
-
-Ensure that the Temporal Extent and the Update Frequency is present in the metadata record.
-
+* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent`
+* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceMaintenance//gmd:maintenanceAndUpdateFrequency`
+* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:status`

@@ -1,11 +1,6 @@
 == KPI-5: WMOEssential data links
 
-=== WCMP element(s)
-
-* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints`
-* `/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:linkage`
-
-=== What is being measured
+=== Measurement
 
 Ensure that distribution URLs are included when the DataLicenseCode of
 `WMOEssential` is indicated in the constraint section.
@@ -14,7 +9,23 @@ Ensure that distribution URLs are included when the DataLicenseCode of
 
 All `WMOEssential` data should have 1..n distribution links to the data.
 
-=== Rules for implementation
+=== Rules
+
+
+.WMOEssential data links implementation rules
+|===
+|Rule |Score
+
+a|`DataLicenseCode` is `WMOEssential` and 1..n distribution links are present
+|1
+
+|===
+
+*Total possible score: 1 (100%)*
+
+=== Guidance
+
+==== XML Examples
 
 ```xml
 <gmd:resourceConstraints>
@@ -47,18 +58,11 @@ All `WMOEssential` data should have 1..n distribution links to the data.
 </gmd:MD_DigitalTransferOptions>
 ```
 
-.WMOEssential data links implementation rules
-|===
-|Rule |Score
-
-a|`DataLicenseCode` is `WMOEssential` and 1..n distribution links are present
-|1
-
-|===
-
-*Total possible score: 1 (100%)*
-
-=== Guidance to score well on this assessment
+==== WMO Guidelines
 
 If the data described is categorized as `WMOEssential`, provide a link to the data.
 
+=== XPaths
+
+* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints`
+* `/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:linkage`

@@ -1,10 +1,6 @@
 == KPI-3: Good quality abstract
 
-=== WCMP element(s)
-
-* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:abstract`
-
-=== What is being measured
+=== Measurement
 
 The abstract field length shall not be too short or too long and contain no
 HTML markup.  Spelling and grammar are correct.  Bulletin templates should
@@ -19,7 +15,7 @@ results. Fulsome and meaningful abstract information allows for users to both
 understand and properly evaluate a metadata record and its respective resource
 in support of data access, visualization and exploitation.
 
-=== Rules for implementation
+=== Rules
 
 .Good quality abstract implementation rules
 |===
@@ -40,7 +36,7 @@ in support of data access, visualization and exploitation.
 
 *Total possible score: 3 (100%)*
 
-=== Guidance to score well on this assessment
+=== Guidance
 
 ==== WCMP 1.3 Part 1 Guidance
 
@@ -86,7 +82,12 @@ the abstract, consider the following recommendations:
 * Dictionary by Merriam-Webster: America's most-trusted online dictionaryfootnote:[https://www.merriam-webster.com]
 * Cambridge Dictionary | English Dictionary, Translations & Thesaurusfootnote:[https://dictionary.cambridge.org]
 
+==== XML Examples
+
 ==== WMO Guidelines
 
 References of good abstract examples can be found in the Guide to WMO Information System (WMO No. 1061, Section 5.8.1.2)footnote:[https://library.wmo.int/doc_num.php?explnum_id=10257], product abstract.
 
+=== XPaths
+
+* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:abstract`
