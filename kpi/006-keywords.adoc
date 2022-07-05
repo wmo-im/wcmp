@@ -48,6 +48,19 @@ based on the number of keywords and individual scoring.
 
 === Guidance
 
+A high score will be provided for full referenced term, keyword type and
+thesaurus. Additional recommendations for keywords implementation are found at
+the Guide to WMO Information System (WMO- No. 1061,Section 5.8.1.8).footnote:[https://library.wmo.int/index.php?lvl=notice_display&id=6856]
+
+Examples of controlled vocabularies:
+
+* https://codes.wmo.int[WMO Codes Registry]
+* https://wis.wmo.int/2012/codelists/WMOCodeLists.xml[WMO Codelists]
+* https://www.eionet.europa.eu/gemet/en/inspire-themes[General Multilingual Environmental Thesaurus (GEMET) - INSPIRE Spatial Data Themes]
+* https://earthdata.nasa.gov/earth-observation-data/find-data/gcmd/gcmd-keywords[Global Change Master Directory (GCMD)]
+* https://cfconventions.org/standard-names.html[Climate and Forecast (CF) Standard Names]
+* https://canada.multites.net/cst[Government of Canada Core Subject Thesaurus (CST)]
+
 ==== XML Examples
 
 ==== Well defined keywords examples
@@ -115,19 +128,6 @@ Less prefered is to use a `gco:CharacterString` element. Such thesaurus referenc
 ```
 
 ==== WMO Guidelines
-
-A high score will be provided for full referenced term, keyword type and
-thesaurus. Additional recommendations for keywords implementation are found at
-the Guide to WMO Information System (WMO- No. 1061,Section 5.8.1.8).footnote:[https://library.wmo.int/index.php?lvl=notice_display&id=6856]
-
-Examples of controlled vocabularies:
-
-* https://codes.wmo.int[WMO Codes Registry]
-* https://wis.wmo.int/2012/codelists/WMOCodeLists.xml[WMO Codelists]
-* https://www.eionet.europa.eu/gemet/en/inspire-themes[General Multilingual Environmental Thesaurus (GEMET) - INSPIRE Spatial Data Themes]
-* https://earthdata.nasa.gov/earth-observation-data/find-data/gcmd/gcmd-keywords[Global Change Master Directory (GCMD)]
-* https://cfconventions.org/standard-names.html[Climate and Forecast (CF) Standard Names]
-* https://canada.multites.net/cst[Government of Canada Core Subject Thesaurus (CST)]
 
 === XPaths
 
