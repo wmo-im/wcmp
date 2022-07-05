@@ -48,7 +48,7 @@ Title is the first element of metadata information displayed and helps with init
 
 ==== WMO Guidelines
 
-Guidance and examples for titles can be found in the section 5.8.1.1 above.
+* 5.8.1.1	Product title
 
 === XPaths
 
