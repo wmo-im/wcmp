@@ -2,13 +2,11 @@
 
 === Measurement
 
-* presence of keywords
-* grouping of similar keywords
-* reference to controlled vocabularies
+Keywords are present, grouped by similarity and referenced to controlled vocabularies or thesaurus. 
 
 In addition to measure well-defined references to dictionaries and keyword
 types, compliance to WCMP 1.3 defines a set of rules that apply to different
-sets of keywords.
+sets of keywords that are not included in this measurement.
 
 === Rationale for measurement
 
@@ -26,17 +24,17 @@ can be user-defined or specified from controlled vocabularies.
 |===
 |Rule |Score
 
-a|`gmd:keywords` is present
+a|Keywords are present.
 |1
 
-a|`gmd:type` is present
+a|Type of keyword is present.
 
 |1
 
-a|`gmd:thesaurusName` is present
+a|Thesuarus name is present.
 |1
 
-a| Keywords terms and thesaurus are present via `gmx:Anchor`
+a| Keywords terms and thesauri are present via `gmx:Anchor` element.
 |1
 
 |===
@@ -48,16 +46,29 @@ based on the number of keywords and individual scoring.
 
 === Guidance
 
+A high score will be provided for full referenced term, keyword type and
+thesaurus. 
+
+Examples of controlled vocabularies:
+
+* https://codes.wmo.int[WMO Codes Registry]
+* https://wis.wmo.int/2012/codelists/WMOCodeLists.xml[WMO Codelists]
+* https://www.eionet.europa.eu/gemet/en/inspire-themes[General Multilingual Environmental Thesaurus (GEMET) - INSPIRE Spatial Data Themes]
+* https://earthdata.nasa.gov/earth-observation-data/find-data/gcmd/gcmd-keywords[Global Change Master Directory (GCMD)]
+* https://cfconventions.org/standard-names.html[Climate and Forecast (CF) Standard Names]
+* https://canada.multites.net/cst[Government of Canada Core Subject Thesaurus (CST)]
+
 ==== XML Examples
 
 ==== Well defined keywords examples
 
-Used keyword references URL of a code registry using an Anchor element.
+The keywords value is included in an Anchor element with a resolvable HTTP URL. 
 
 ```xml
   <gmd:MD_Keywords>
     <gmd:keyword>
-     <gmx:Anchor xlink:href="http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_meteorology">meteorology</gmx:Anchor>
+     <gmx:Anchor 
+        xlink:href="http://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode_meteorology">meteorology<gmx:Anchor>
     </gmd:keyword>
   </gmd:MD_Keywords>
 ```
@@ -92,7 +103,7 @@ Keywords reference a thesaurus using an Anchor element with a resolvable HTTP UR
 </gmd:thesaurusName>
 ```
 
-Less prefered is to use a `gco:CharacterString` element. Such thesaurus references are still quite common, and formaly valid, but are considered deprecated.
+Less preferred is to use a `gco:CharacterString` element. Such thesaurus references are still quite common, and formaly valid, but are considered deprecated.
 
 ```xml
 <gmd:thesaurusName>
@@ -116,18 +127,7 @@ Less prefered is to use a `gco:CharacterString` element. Such thesaurus referenc
 
 ==== WMO Guidelines
 
-A high score will be provided for full referenced term, keyword type and
-thesaurus. Additional recommendations for keywords implementation are found at
-the Guide to WMO Information System (WMO- No. 1061,Section 5.8.1.8).footnote:[https://library.wmo.int/index.php?lvl=notice_display&id=6856]
-
-Examples of controlled vocabularies:
-
-* https://codes.wmo.int[WMO Codes Registry]
-* https://wis.wmo.int/2012/codelists/WMOCodeLists.xml[WMO Codelists]
-* https://www.eionet.europa.eu/gemet/en/inspire-themes[General Multilingual Environmental Thesaurus (GEMET) - INSPIRE Spatial Data Themes]
-* https://earthdata.nasa.gov/earth-observation-data/find-data/gcmd/gcmd-keywords[Global Change Master Directory (GCMD)]
-* https://cfconventions.org/standard-names.html[Climate and Forecast (CF) Standard Names]
-* https://canada.multites.net/cst[Government of Canada Core Subject Thesaurus (CST)]
+*5.8.1.8 Descriptive keywords
 
 === XPaths
 
