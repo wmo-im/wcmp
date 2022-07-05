@@ -2,12 +2,12 @@
 
 === Measurement
 
-Ensure that distribution URLs are included when the DataLicenseCode of
-`WMOEssential` is indicated in the constraint section.
+Check that distribution URLs are included when the 'WMO_DataLicenseCode' 
+of 'WMOEssential' is indicated in the resource constraint section.
 
 === Rationale for measurement
 
-All `WMOEssential` data should have 1..n distribution links to the data.
+Products that qualify as WMOEssential should be available with "free and unrestricted international exchange", and therefore, should have 1 to many distribution links present in the metadata.
 
 === Rules
 
@@ -16,7 +16,7 @@ All `WMOEssential` data should have 1..n distribution links to the data.
 |===
 |Rule |Score
 
-a|`DataLicenseCode` is `WMOEssential` and 1..n distribution links are present
+a|1..n distribution links are present when `WMO_DataLicenseCode` is `WMOEssential`. 
 |1
 
 |===
@@ -60,7 +60,7 @@ a|`DataLicenseCode` is `WMOEssential` and 1..n distribution links are present
 
 ==== WMO Guidelines
 
-If the data described is categorized as `WMOEssential`, provide a link to the data.
+* 5.8.1.10 Data policy information
 
 === XPaths
 
