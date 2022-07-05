@@ -2,14 +2,11 @@
 
 === Measurement
 
-The presence of `gmd:graphicOverview` is checked that it contains a URL to
-a common web image file type.footnote:[https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#Common_image_file_types]
+The gmd:graphicOverview element for a non-bulletin metadata record is present and it contains a URL to a common web image file type.[1]
 
 === Rationale for measurement
 
-Product graphic overviews provide the user with a high level preview of the
-product which can assist in a high level assessment and/or evaluation as part
-of search results presentation.
+Product graphic overviews provide the user with a high level preview of the product which can assist in a high level assessment as part of search results presentation.
 
 === Rules
 
@@ -17,13 +14,13 @@ of search results presentation.
 |===
 |Rule |Score
 
-|graphic overview element is present
+|The graphic overview element is present.
 |1
 
-|graphic overview URL resolves successfully
+|The graphic overview URL resolves successfully.
 |1
 
-|graphic overview URL content is a common web image file type
+|The URL in this element is a common web image file type
 (check MIME type, content header/magic number)
 |1
 |===
@@ -43,17 +40,21 @@ Examples of catalogues using such information are here:
 * https://navigator.eumetsat.int/search?query=MSG%20RGB[EUMETSAT Product Navigator]
 
 ==== XML Examples
+
 ```xml
 <gmd:graphicOverview>
   <gmd:MD_BrowseGraphic>
      <gmd:fileName>
-        <gmx:Anchor xlink:href="https://navigator.eumetsat.int/preview/meteosat-msg_naturalenhncd.jpg">Meteosat MSG Natural Enhanced Color</gmx:Anchor>
+        <gmx:Anchor 
+         xlink:href="https://navigator.eumetsat.int/preview/meteosat-msg_naturalenhncd.jpg">Meteosat MSG Natural Enhanced Color<gmx:Anchor>
      </gmd:fileName>
   </gmd:MD_BrowseGraphic>
 </gmd:graphicOverview>
 ```
 
 ==== WMO Guidelines
+
+* 5.8.1.9	Product sample visualization URL
 
 === XPaths
 
