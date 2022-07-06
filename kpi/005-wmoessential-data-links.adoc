@@ -7,10 +7,9 @@ of 'WMOEssential' is indicated in the resource constraint section.
 
 === Rationale for measurement
 
-Products that qualify as WMOEssential should be available with "free and unrestricted international exchange", and therefore, should have 1 to many distribution links present in the metadata.
+Products that qualify as WMOEssential should be available with "free and unrestricted international exchange", and therefore, should have at least one distribution link present in the metadata.
 
 === Rules
-
 
 .WMOEssential data links implementation rules
 |===
@@ -24,6 +23,8 @@ a|1..n distribution links are present when `WMO_DataLicenseCode` is `WMOEssentia
 *Total possible score: 1 (100%)*
 
 === Guidance
+
+If the data described is categorized as `WMOEssential`, provide a link to the data.
 
 ==== XML Examples
 
