@@ -4,7 +4,7 @@
 
 The length of the content in the abstract element is not too short or too long. The spelling and grammar are correct and does not contain HTML markup. Bulletin templates are not used to populate the abstract.
 
-=== Rationale for measurement
+==== Rationale
 
 To faciliate ease of understanding and discovery.
 
@@ -16,16 +16,16 @@ Abstract is a key element of metadata information displayed as part of search re
 |===
 |Rule |Score
 
-|Abstract has between 16 and 2048 characters.
+|3.1: Abstract has between 16 and 2048 characters.
 |1
 
-|Abstract does not contain HTML markup.
+|3.2: Abstract does not contain HTML markup.
 |1
 
-|Abstract passes a basic spellcheck.
+|3.3: Abstract passes a basic spellcheck.
 |1
 
-|Abstract contains bulletin template.
+|3.4: Abstract contains bulletin template.
 |-1
 |===
 
@@ -37,16 +37,16 @@ The abstract should provide a clear and concise statement that enables the
 reader to understand the content of the dataset. For guidance when completing
 the abstract, consider the following recommendations:
 
-* State the 'things' that are recorded.
-* State the key aspects recorded about these things.
-* State what form the data takes.
-* State any other limiting information, such as time period of validity of the data.
-* Add purpose of data resource where relevant (e.g. for survey data).
-* Aim to be understood by non-experts.
-* Do not include general background information.
-* Avoid jargon and unexplained abbreviations.
+(a)	State what the “things” are that are recorded.
+(b)	State the key aspects recorded about these things.
+(c)	State what form the data takes.
+(d)	State any other limiting information, such as time period of validity of the data.
+(e)	Add purpose of data resource where relevant (e.g. for survey data).
+(f)	Aim to be understood by non experts.
+(g)	Do not include general background information.
+(h)	Avoid jargon and unexplained abbreviations.
 
-==== Relevant recommendations
+Further recommendations: 
 
 * Avoid adding a scientific abstract.
 * Limit information in the abstract to the specific resource that is being
@@ -69,17 +69,18 @@ the abstract, consider the following recommendations:
 * Avoid using future verb tense when possible. Write using present or past
   tenses.
 
-==== Spell checking recommendations
+Spell checking recommendations:
 
 * Dictionary by Merriam-Webster: https://www.merriam-webster.com
 * Cambridge Dictionary: https://dictionary.cambridge.org
 
-==== WMO Guidelines
+==== WMO References
 
-* 5.8.1.2	Product abstract
+* G2W: 5.8.1.2	Product abstract
+* Manual on WIS, Appendix C, 8.2	Provision of information to support discovery within the WIS DAR metadata (WIS discovery metadata) catalogue
 
 ==== XML Examples
 
-=== XPaths
+==== XPaths
 
 * `/gmd:MD_Metadata/gmd:identificationInfo//gmd:abstract`
