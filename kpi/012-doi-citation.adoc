@@ -2,8 +2,7 @@
 
 === Measurement
 
-Whether DOI information is available, can be successfully identified,
-and provides citation instructions.
+A Digital Object Identifier (DOI) and citation instructions are present. 
 
 === Rationale for measurement
 
@@ -18,13 +17,13 @@ already existing work.
 |===
 |Rule |Score
 
-|if DOI anchor is present
+|12.1: A DOI value is present in the `MD_Identifier' section of the data citation and encoded in the `Anchor` element. 
 |1
 
-|title is equal to 'DOI'
+|12.2: The xlink attribute `title` is equal to 'DOI'.
 |1
 
-|if DOI citation is present as a constraint and includes the same DOI in the anchor
+|12.3: A DOI citation, with the same DOI as above, is present in the `otherConstraints` element of a `resourceConstraints` section.  
 |1
 |===
 
@@ -32,8 +31,8 @@ already existing work.
 
 === Guidance
 
-* Provide the DOI identifier with a `doi:` prefix (e.g. `doi:<doi-identifier>`)
-* Provide a 'Cite as' template in `gmd:otherConstraints`
+* Preface the DOI identifier `doi:`, for example, `doi:<doi-identifier>`.
+* Preface the DOI citation with 'Cite as'. 
 
 ==== XML Examples
 
