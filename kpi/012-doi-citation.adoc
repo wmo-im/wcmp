@@ -17,7 +17,7 @@ already existing work.
 |===
 |Rule |Score
 
-|12.1: A DOI value is present in the `MD_Identifier' section of the data citation and encoded in the `Anchor` element. 
+|12.1: A DOI is present in the `MD_Identifier' section of the data citation and encoded in the `Anchor` element. 
 |1
 
 |12.2: The xlink attribute `title` is equal to 'DOI'.
@@ -31,8 +31,8 @@ already existing work.
 
 === Guidance
 
-* Preface the DOI identifier `doi:`, for example, `doi:<doi-identifier>`.
-* Preface the DOI citation with 'Cite as'. 
+* Preface the DOI value with `doi:`, for example, `doi:<doi-identifier>`.
+* Preface the DOI citation with 'Cite as:'. 
 
 ==== XML Examples
 

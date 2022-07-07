@@ -7,8 +7,6 @@ Each code value is an exact match to the code in one of the authoritative codeli
 * ISO Codelists : https://standards.iso.org/iso/19139/resources/gmxCodelists.xml
 * WMO Codelists/ISO extensions: https://wis.wmo.int/2012/codelists/WMOCodeLists.xml
 
-~Presence of valid terms from the referred codelist element.~
-
 === Rationale for measurement
 
 WCMP records can reference codelists from a number of locations, for example, online copies of the authoritative sources.
@@ -22,6 +20,7 @@ the authoritative codelists.
 === Rules
 
 .Codelists validation implementation rules
+
 |===
 |Rule |Score
 
