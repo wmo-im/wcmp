@@ -49,7 +49,6 @@ Title is the first element of metadata information displayed and helps with init
 
 ==== XML Examples
 
-
 ==== XPaths
 
 * `/gmd:MD_Metadata/gmd:identificationInfo//gmd:citation/gmd:CI_Citation/gmd:title`
