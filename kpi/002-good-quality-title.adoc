@@ -2,9 +2,9 @@
 
 === Measurement
 
-The title element is populated and follow the principles of WCMP guidance. The length is not too short or too long, contains less than 3 acronyms and is represented in title case. Spelling and grammar are correct.
+The title of the dataset follows the principles of the WCMP guidance. The length is not too short or too long, contains less than 3 acronyms and is represented in title case. Spelling and grammar are correct.
 
-=== Rationale for measurement
+==== Rationale for measurement
 
 Title is the first element of metadata information displayed and helps with initial identification. Meaningful and relevant information makes it easier for users to understand the resource.
 
@@ -14,42 +14,42 @@ Title is the first element of metadata information displayed and helps with init
 |===
 |Rule |Score
 
-|Title is present.
+|2.1: The `title` element is not empty in the `CI_Citation` section of `MD_DataIdentfication` .
 |1
 
-|Title has 3 words or more.
+|2.2: The title has 3 words or more.
 |1
 
-|Title has 150 characters or less.
+|2.3: The title has 150 characters or less.
 |1
 
-|Title only has printable characters (numbers and letters).
+|2.4: The title only has printable characters (numbers and letters).
 |1
 
-|Words in title are represented in "Title Case".
+|2.5: Words in the title are represented in "Title Case".
 |1
 
-|Title contains less than 3 acronyms (words with all upper case).
+|2.6: The title contains less than 3 acronyms (words with all upper case).
 |1
 
-|Title does not contain bulletin header (regular expression: `[A-Z]{4}\d{2}[\s_]*[A-Z]{4}`).
+|2.7: The title does not contain bulletin header (regular expression: `[A-Z]{4}\d{2}[\s_]*[A-Z]{4}`).
 |1
 
-|Title passes a basic spellcheck.
+|2.8: The title passes a basic spellcheck.
 |1
 |===
-
 
 *Total possible score: 8 (100%)*
 
 === Guidance
 
+==== WMO References
+
+* 5.8.1.1	Product title
+
 ==== XML Examples
 
-==== WMO Guidelines
 
-Guidance and examples for titles can be found in the section 5.8.1.1 above.
-
-=== XPaths
+==== XPaths
 
 * `/gmd:MD_Metadata/gmd:identificationInfo//gmd:citation/gmd:CI_Citation/gmd:title`
