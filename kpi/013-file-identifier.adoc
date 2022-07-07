@@ -2,11 +2,11 @@
 
 === Measurement
 
-Accordance of the structure of the metadata record identification with the recommendation defined in chapter 8.1.2 of the Manual on the WMO Information System (WMO-No. 1060).
+The `fileIdentifier` element is present and **conforms to the recommendations in the Manual on WIS. 
 
 === Rationale for measurement
 
-The value of the fileIdentifier element, i.e. identifier of the metadata record, shall be unique. Achieving global uniqueness in a distributed environment is not trivial, but the structure recommended in the Manual on WIS significantly simplifies management of the identifiers and reduces chance of conflicts/duplicates.
+The value of the fileIdentifier element, i.e. identifier of the metadata record, **shall be unique. Achieving global uniqueness in a distributed environment is not trivial, but the structure recommended in the Manual on WIS significantly simplifies management of the identifiers and reduces chance of conflicts/duplicates.
 
 === Rules
 
@@ -24,12 +24,13 @@ e.g. “int.wmo.wis”, “gov.noaa”, “edu.ucar.ncar”, “cn.gov.cma” or
 *Total possible score: 1 (100%)*
 
 === Guidance
-
-==== XML Examples
+Use metadata record identification (`gmd:fileIdentifier`) in the form of URI.
 
 ==== WMO Guidelines
 
-Use metadata record identification (`gmd:fileIdentifier`) in the form of URI.
+Accordance of the structure of the metadata record identification with the recommendation defined in chapter 8.1.2 of the Manual on the WMO Information System (WMO-No. 1060).
+
+==== XML Examples
 
 === XPaths
 
