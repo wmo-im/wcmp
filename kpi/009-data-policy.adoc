@@ -1,7 +1,7 @@
 == KPI-9: Data policy
 
 === Measurement
-WMO codes list values and distribution information to represent applicable data policies are present and encoded correctly in resource constraints and keyword sections. 
+Codes list values to represent the applicable WMO data policies are present and encoded correctly in resource constraints and keyword sections. 
 
 === Rationale for measurement
 
