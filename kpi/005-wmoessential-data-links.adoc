@@ -2,20 +2,20 @@
 
 === Measurement
 
-Check that distribution URLs are included when the 'WMO_DataLicenseCode' 
-of 'WMOEssential' is indicated in the resource constraint section.
+The distribution URLs are present when the 'WMO_DataLicenseCode' code value is 
+ 'WMOEssential'.
 
-=== Rationale for measurement
+==== Rationale for measurement
 
 Products that qualify as WMOEssential should be available with "free and unrestricted international exchange", and therefore, should have at least one distribution link present in the metadata.
 
-=== Rules
+=== Measurement Rules
 
 .WMOEssential data links implementation rules
 |===
 |Rule |Score
 
-a|1..n distribution links are present when `WMO_DataLicenseCode` is `WMOEssential`. 
+|One to many distribution links are present when `WMO_DataLicenseCode` is `WMOEssential`. 
 |1
 
 |===
@@ -24,7 +24,9 @@ a|1..n distribution links are present when `WMO_DataLicenseCode` is `WMOEssentia
 
 === Guidance
 
-If the data described is categorized as `WMOEssential`, provide a link to the data.
+==== WMO References
+
+* 5.8.1.10 Data policy information
 
 ==== XML Examples
 
@@ -59,11 +61,7 @@ If the data described is categorized as `WMOEssential`, provide a link to the da
 </gmd:MD_DigitalTransferOptions>
 ```
 
-==== WMO Guidelines
-
-* 5.8.1.10 Data policy information
-
-=== XPaths
+==== XPaths
 
 * `/gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints`
 * `/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:linkage`
