@@ -41,8 +41,7 @@ a|6.4: Keywords and thesaurus names are implemented in the `Anchor` element .
 
 === Guidance
 
-A high score will be provided for full referenced term, keyword type and
-thesaurus. 
+A high score will be provided for full referenced term, keyword type and thesaurus. 
 
 Examples of controlled vocabularies:
 
@@ -54,9 +53,9 @@ Examples of controlled vocabularies:
 * https://canada.multites.net/cst[Government of Canada Core Subject Thesaurus (CST)]
 
 
-==== WMO Guidelines
+==== WMO References
 
-*5.8.1.8 Descriptive keywords
+* 5.8.1.8 Descriptive keywords
 
 ==== XML Examples
 
@@ -100,7 +99,6 @@ The thesaurus name is included in an `Anchor` element with a resolvable HTTP URL
   </gmd:CI_Citation>
 </gmd:thesaurusName>
 ```
-
 ==== XPaths
 
 * `//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword`
