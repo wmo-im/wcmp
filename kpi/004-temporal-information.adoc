@@ -70,5 +70,7 @@ Example for dataset maintenance with 'asNeeded' code value.
 ==== XPaths
 
 * `/gmd:MD_Metadata/gmd:identificationInfo//gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent`
+* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent//gml:beginPosition`
+* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent//gml:endPosition`
 * `/gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceMaintenance//gmd:maintenanceAndUpdateFrequency`
 * `/gmd:MD_Metadata/gmd:identificationInfo//gmd:status`
