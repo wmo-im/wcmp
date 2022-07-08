@@ -2,19 +2,14 @@
 
 === Measurement
 
-The number of broken links in each individual metadata record.  Broken links
-include links which, when accessed, result in a 4xx or 5xx HTTP error.footnote:[https://httpstatuses.com]
-
-Also being measured is the use of HTTPS (with a valid SSL certificate) as the
-link protocol throughout WIS Metadata.
+Links are valid (no 4xx or 5xx HTTP status errors) and available through the HTTPS protocol. 
 
 === Rationale for measurement
 
 Broken links damage the user experience and gives the impression to users that
 a website is not maintained. 
 
-HTTPS is increasingly becoming a requirement for numerous agencies as well as the
-suggested protocol instead of HTTP.  Metadata records with non-HTTPS links often leads to mixed
+HTTPS is increasingly becoming a requirement for numerous agencies.  Metadata records with non-HTTPS links often leads to mixed
 content errors in web applications deployed via HTTPS. HTTPS supports secure, authoritative and trustworthy links as part of WIS metadata.
 
 === Rules
@@ -24,17 +19,21 @@ content errors in web applications deployed via HTTPS. HTTPS supports secure, au
 |===
 |Rule |Score
 
-|Each valid link.
+|8.1: The link resolves, when it is present in `URL` element, `fileName` element, `href` attribute, or `codeList` attribute. 
 |1
-|Each valid HTTPS link.
+|8.2: Each link is a valid HTTPS URL.
 |1
 |===
 
-*Total possible score: (valid links + valid HTTPS links) / (total links * 2) (100%)*
+*Total possible score: (resolved links + valid HTTPS links) / (total links * 2) (100%)*
 
 === Guidance
 
-Ensure that all links resolve and are accessible via HTTPS.
+Ensure that all links kept up to date in the metadata and are accessible via HTTPS. Don't put URLs in the abstract or other elements that are intended for free text. 
+
+For more information about HTTP status errors, visit https://httpstatuses.com.
+
+==== WMO Guidelines
 
 ==== XML Examples
 
@@ -68,13 +67,11 @@ Ensure that all links resolve and are accessible via HTTPS.
 </gmd:dateType>
 ```
 
-==== WMO Guidelines
-
-=== XPaths
+==== XPaths
 
 Any element or attribute content with linked information (URLs).
 
 * `//gmd:URL`
-* `//gmd:graphicOverview`
+* `//gmd:graphicOverview//gmd:fileName`
 * `//gmx:Anchor/@xlink:href`
 * `//@codeList`
