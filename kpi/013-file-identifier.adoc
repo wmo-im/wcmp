@@ -1,37 +1,40 @@
 == KPI-013: File identifier
 
-=== Measurement
+=== Measurement (DRAFT)
+The identifier for the metadata record has a reverse URI that is followed by a double colon "::".
 
-The `fileIdentifier` element is present and **conforms to the recommendations in the Manual on WIS. 
-
-=== Rationale for measurement
+==== Rationale for measurement (DRAFT)
+The ATS tests for for the presence of fileIdentifiers and whether it follows the recommendations for datasets for Global exchange. This measurement assesses the additional recommendations for all types of records.  
 
 The value of the fileIdentifier element, i.e. identifier of the metadata record, **shall be unique. Achieving global uniqueness in a distributed environment is not trivial, but the structure recommended in the Manual on WIS significantly simplifies management of the identifiers and reduces chance of conflicts/duplicates.
 
-=== Rules
+=== Rules (DRAFT)
 
-The WMO Core Metadata Profile recommends the use of a URI for `gmd:fileIdentifier` attributes. The URI should be structured as follows:
+.KPI-13
+|====
+| Rule | Score
+| The fileIdentifier is prefaced with the reversed Internet domain name of the data provider. | 1
+| The fileIdentifier contains a double colon (`::`) | 1 
+|====
 
-* Fixed string `urn:x-wmo:md:`
+*Total possible score: 2 (100%)*
 
-* Citation authority based on the Internet domain name of the data-provider organization,
-e.g. “int.wmo.wis”, “gov.noaa”, “edu.ucar.ncar”, “cn.gov.cma” or “uk.gov.metoffice”
+=== Guidance (DRAFT)
 
-* Double separator colons: `::`
+ATS requirements already in place: 
 
-* Unique identifier (in scope of the citation authority)
+* The `fileIdentifier` is present. -- ATS 8.1.1
+* Fixed string `urn:x-wmo:md:` for global exchange-- ATS 9.2.1
 
-*Total possible score: 1 (100%)*
-
-=== Guidance
 Use metadata record identification (`gmd:fileIdentifier`) in the form of URI.
 
-==== WMO Guidelines
+==== WMO References
 
-Accordance of the structure of the metadata record identification with the recommendation defined in chapter 8.1.2 of the Manual on the WMO Information System (WMO-No. 1060).
+MoW: Appendix C, 8.1	Unique identification of WIS discovery metadata records
+G2W: 5.8.2.1	Metadata record unique identifier
 
 ==== XML Examples
 
-=== XPaths
+==== XPaths
 
 * `/gmd:MD_Metadata/gmd:fileIdentifier/gco:CharacterString`
