@@ -4,7 +4,7 @@
 
 The temporal extent, frequency of resource updates and status elements are present. 
 
-=== Rationale for measurement
+==== Rationale for measurement
 
 Temporal information is a significant characteristic of WMO
 data and it is critical for users to know the time periods that are
@@ -17,31 +17,33 @@ covered by the products, how often new products are available and the status.
 |===
 |Rule |Score
 
-|The temporal extent elements are present.
+|The temporal `extent` section is present.
 |1
 
-|The begin position and end position elements are present in the temporal extent.
+|The `beginPosition` and `endPosition` elements are present in the temporal extent.
 |1
 
 |The begin date time is less than or equal to the end date time.
 |1
 
-|The frequency of resource updates elements are present.
+|The `maintenanceAndUpdateFrequency` elements are present.
 |1
 
-|The status element is present.
+|The `status` element is present.
 |1
 |===
 
 *Total possible score: 5 (100%)*
 
-=== Guidance (FIX this section)
-
-Ensure that the Temporal Extent and the Update Frequency is present in the metadata record.
+=== Guidance
 
 If it is not relevant or necessary to provide information regarding the data
 update frequency, `gmd:MD_MaintenanceFrequencyCode` can be set to `asNeeded`:
 
+==== WMO Guidelines
+
+* 5.8.1.5 Temporal extent
+* 5.8.1.13 Frequency of resource updates
 
 ==== XML Examples
 
@@ -54,7 +56,7 @@ codelist for ongoing datasets.
   </gmd:status>
 ```
 
-Example for dataset maintenance of 'asNeeded' codelist. 
+Example for dataset maintenance with 'asNeeded' code value. 
 ```xml
   <gmd:resourceMaintenance>
       <gmd:MD_MaintenanceInformation>
@@ -65,12 +67,7 @@ Example for dataset maintenance of 'asNeeded' codelist.
   </gmd:resourceMaintenance>
 ```
 
-==== WMO Guidelines
-
-* 5.8.1.5 Temporal extent
-* 5.8.1.13 Frequency of resource updates
-
-=== XPaths
+==== XPaths
 
 * `/gmd:MD_Metadata/gmd:identificationInfo//gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent`
 * `/gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceMaintenance//gmd:maintenanceAndUpdateFrequency`
