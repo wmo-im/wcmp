@@ -7,7 +7,7 @@ data formats, and contact details are present.
 
 === Rationale for measurement
 
-Distribution information allows the user to understand what formats are available, where to get it and who to contact. 
+Distribution information allows the user to understand what formats are available, where to get it and who to contact for distribution details. 
 
 === Rules
 
@@ -39,7 +39,7 @@ Distribution information allows the user to understand what formats are availabl
 
 * Include the relevant WMO data formats in the `MD_Format` sections with a link to the specification of the data format. 
 * Include all relevant URLs in the `MD_DigitalTransferOptions` section for accessing the data.  
-* A distributor contact does not have to be the same as the main point of contact, principal investigator and should always have
+* A distributor contact does not have to be the same as the other contacts in the metadata and should always have a contact email.  
 
 ==== WMO References
 * 5.8.1.11	Distribution information
