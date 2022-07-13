@@ -16,19 +16,19 @@ Distribution information allows the user to understand what formats are availabl
 |===
 |Rule |Score
 
-|10.1: The `MD_Format` section is present.
+|10.1: The `gmd:MD_Format` section is present.
 |1
 
-|10.2: The `specification` element in the 'MD_Format' section has an `Anchor` with a resolvable HTTP URL.
+|10.2: The `gmd:specification` element in the `gmd:MD_Format` section has an `gmx:Anchor` with a resolvable HTTP URL.
 |1
 
-|10.3: The `organisationName` element in the `MD_Distributor` section is present. 
+|10.3: The `gmd:organisationName` element in the `gmd:MD_Distributor` section is present. 
 |1
 
-|10.4: The `electronicMailAddress` in the `MD_Distributor` section is present. 
+|10.4: The `gmd:electronicMailAddress` in the `gmd:MD_Distributor` section is present. 
 |1
 
-|10.5: One to many `MD_DigitalTransferOptions` options are present. 
+|10.5: One to many `gmd:MD_DigitalTransferOptions` options are present. 
  |1
 
 |===
@@ -37,8 +37,8 @@ Distribution information allows the user to understand what formats are availabl
 
 === Guidance
 
-* Include the relevant WMO data formats in the `MD_Format` sections with a link to the specification of the data format. 
-* Include all relevant URLs in the `MD_DigitalTransferOptions` section for accessing the data.  
+* Include the relevant WMO data formats in the `gmd:MD_Format` sections with a link to the specification of the data format. 
+* Include all relevant URLs in the `gmd:MD_DigitalTransferOptions` section for accessing the data.  
 * A distributor contact does not have to be the same as the other contacts in the metadata and should always have a contact email.  
 
 ==== WMO References
