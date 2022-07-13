@@ -1,54 +1,89 @@
 == KPI-9: Data policy
 
 === Measurement
-Codes list values to represent the applicable WMO data policies are present and encoded correctly in resource constraints and keyword sections. 
+
+Distribution URLs are present when the `WMO_DataLicenseCode` code value is  `WMOEssential`. 
+
+##Codes list values to represent the applicable WMO data policies are present and encoded correctly in resource constraints and keyword class. 
 
 === Rationale for measurement
 
-Data policy provides information to the users about how the data should be handled and  
-the conditions of use for the resource published should be clear to the user.
-Data providers also have the obligation to define the scope of the distribution of
-the data within WIS and, when applicable, the GTS priority. 
+KPI-1 evaluates the the record for compliance with Abstract Test Suite requirements 9.1.1, 9.3.1 and 9.3.2. This KPI evaluates additional practices that support information associated with the identification of the these data policies.
+
+In addition, products that qualify as available with "free and unrestricted international exchange", which is identified by the  `WMOEssential` code, should have at least one distribution link present in the metadata.
+
+
+##Requirement 9.1.1: A WIS discovery metadata record describing data for global exchange via the WIS shall indicate the scope of distribution using the keyword “GlobalExchange” of type “dataCentre” from thesaurus WMO_DistributionScopeCode.
+
+##Requirement 9.3.1: A WIS discovery metadata record describing data for global exchange via the WIS shall indicate the WMO data license as legal constraint (type: “otherConstraints”) using one and only one term from the WMO_DataLicenseCode code list.
+
+##Requirement 9.3.2: A WIS discovery metadata record describing data for global exchange via the WIS shall indicate the GTS priority as legal constraint (type: “otherConstraints”) using one and only one term from the WMO_GTSProductCategoryCode code list.
 
 === Rules
 
 .Data policy implementation rules
 |===
+
 |Rule |Score
 
-|9.1: A `WMO_DataLicenseCode` value is present in the `gmd:otherConstraints` element of the `gmd:MD_LegalConstraints` section.
+|One to many distribution links are present when `WMO_DataLicenseCode` is `WMOEssential`. 
 |1
 
-|9.2: The code value `otherRestrictions` is present in the `gmd:MD_RestrictionCode` element of the`gmd:accessConstraints`and`gmd:useConstraints`sections. 
+|The code value `otherRestrictions` is present in the `gmd:MD_RestrictionCode` element of the`gmd:MD_LegalConstraints` class when there is a `WMO_DataLicenseCode` or `WMO_GTSProductCategoryCode` in the `gmd:otherConstraints` element. 
 |1
 
-|9.3: A `WMO_DistributionScopeCode` value is present in a `gmd:keywords` element, the code value `dataCentre` is present in the associated `gmd:MD_KeywordTypeCode` element and `WMO_DistributionScopeCode` is present in the  `gmd:title` element for a the thesaurus name. 
+|The `WMO_DataLicenseCode`, `WMO_GTSProductCategoryCode`, `WMO_DistributionScopeCode`, `WMO_DistributionScopeCode` code values are implemented in the `gmx:Anchor` element, instead of the `gco:CharacterString` element.
 |1
 
-|9.4: A `WMO_GTSProductCategoryCode` value is present in the `gmd:otherConstraints` element of the `gmd:MD_LegalConstraints` section when the `WMO_DistributionScopeCode` value described in 9.3 is `GlobalExchange` or `RegionalExchange`.
-|1
-
-|9.5: The `WMO_DataLicenseCode` (in `gmd:otherConstraints`), `WMO_GTSProductCategoryCode` (in `gmd:otherConstraints`), 
-`WMO_DistributionScopeCode` (in `gmd:keywords`), `WMO_DistributionScopeCode` (in Thesaurus title) are implemented in the Anchor element, instead of the CharacterString element.
-|1
 |===
 
-*Total possible score: 5 (100%)*
-
-Note: Other possible `gmd:resourceConstraints` elements may exist and not comply to these rules.
-The score checks that there is at least one `gmd:resourceConstraints` section that complies to
-the rules.
+*Total possible score: 3 (100%)*
 
 === Guidance
-
-If the codelist implementation is not clear enough there can be additional free text explanations in the `gmd:useLimitation` element or in addition `gmd:otherConstraints` elements. 
+The KPI checks that there is at least one `gmd:resourceConstraints` class that complies to
+the rules and other `gmd:resourceConstraints` classes may exist. For example, additional free text explanations can be added to a `gmd:useLimitation` element or in additional `gmd:MD_LegalConstraint` classes.
 
 ==== WMO Guidelines
 
-* Manual on WIS: Appendix C, 9.3	Defining WMO data policy and GTS priority for data published for global exchange
+* Manual on WIS 
+** Appendix C, 9.3	Defining WMO data policy and GTS priority for data published for global exchange
+** Abstract Test Suite 
 * Guide to WIS: 5.8.1.10	Data policy information
 
 ==== XML Examples
+
+```xml
+<gmd:resourceConstraints>
+  <gmd:MD_LegalConstraints>
+    <gmd:otherConstraints>
+      <gmx:Anchor xlink:href="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_DataLicenseCode_WMOEssential">WMOEssential</gmx:Anchor>
+    </gmd:otherConstraints>
+  </gmd:MD_LegalConstraints>
+</gmd:resourceConstraints>
+```
+
+```xml
+<gmd:MD_DigitalTransferOptions>
+  <gmd:onLine>
+    <gmd:CI_OnlineResource>
+      <gmd:linkage>
+        <gmd:URL>https://opendata.dwd.de/weather/wmc/icon-eps/data/grib</gmd:URL>
+      </gmd:linkage>
+      <gmd:protocol>
+        <gco:CharacterString>http</gco:CharacterString>
+      </gmd:protocol>
+      <gmd:name>
+        <gco:CharacterString>GISC Offenbach, Deutscher Wetterdienst</gco:CharacterString>
+      </gmd:name>
+      <gmd:description>
+        <gco:CharacterString>WMO Information System, download products/data through GISC Offenbach, Deutscher Wetterdienst</gco:CharacterString>
+      </gmd:description>
+    </gmd:CI_OnlineResource>
+  </gmd:onLine>
+</gmd:MD_DigitalTransferOptions>
+```
+
+
 
 Example for a code value that is implemented with the `gmx:Anchor` element, instead of the `gco:CharacterString` element. 
 
@@ -73,7 +108,7 @@ Example for `gmd:otherRestrictions` code value.
 </gmd:resourceConstraints>
 ```
 
-Example of keyword section with `WMO_DistributionScopeCode` and `gmd:KeywordTypeCode` = `dataCentre`.
+Example of keyword class with `WMO_DistributionScopeCode` and `gmd:KeywordTypeCode` = `dataCentre`.
 
 ```xml
 <gmd:MD_Keywords>
@@ -103,7 +138,7 @@ Example of keyword section with `WMO_DistributionScopeCode` and `gmd:KeywordType
 </gmd:MD_Keywords>
 ```
 
-Example of `WMO_GTSProductCategoryCode` in `gmd:resourceConstraints` section. 
+Example of `WMO_GTSProductCategoryCode` in `gmd:resourceConstraints` class. 
 
 ```xml
 <gmd:resourceConstraints>
@@ -116,10 +151,8 @@ Example of `WMO_GTSProductCategoryCode` in `gmd:resourceConstraints` section.
 ```
 
 === XPaths
-
+* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints`
+* `/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:linkage`
 * `//gmd:identificationInfo//gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints`
 * `//gmd:identificationInfo//gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:accessConstraints/gmd:MD_RestrictionCode`
 * `//gmd:identificationInfo//gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:useConstraints/gmd:MD_RestrictionCode`
-* `//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword`
-* `//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:type`
-* `//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName`
