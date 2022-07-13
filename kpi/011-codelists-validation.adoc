@@ -2,55 +2,45 @@
 
 === Measurement
 
-Presence of valid terms from the referred codelist element.
+Each code value in the metadata is an exact match to the code in one of the authoritative codelists below.
 
-=== Rationale for measurement
+* ISO Codelists: https://standards.iso.org/iso/19139/resources/gmxCodelists.xml
+* WMO Codelists/ISO extensions: https://wis.wmo.int/2012/codelists/WMOCodeLists.xml
 
-WCMP records can reference codelists from a number of locations
-(e.g. online copies of the authoritative sources).
+==== Rationale for measurement
 
-To ensure that the terms themselves are always consistent with the official sources,
-this KPI will validate that the terms referred to in WCMP records are consistent with
-the authoritative codelists referred in this KPI.
-
-In many cases terms are included but are not identical to the official definitions
-on the codelists (e.g. spelling mistakes, case sensitivity errors, etc.).
-
-Software applications may look for exact matches to codelists and handle metadata
-incorrectly if not properly referenced.
+WCMP records can reference codelists from a number of locations, for example, online copies of the authoritative sources.
+In many cases codes are included but are not identical to the official values
+on the codelists (e.g. spelling mistakes, case sensitivity errors, etc.). Software applications may look for exact matches to codelists and handle metadata incorrectly if they are not properly referenced.
 
 === Rules
-
 
 .Codelists validation implementation rules
 |===
 |Rule |Score
 
-|codelist referred terms are checked against authoritative sources with an exact match
+|11.1:  Code value is valid against authoritative codelists with an exact match.
 |1
 
 |===
 
-*Total possible score: 1 per valid codelist value (100%)*
-
-To assess how many valid codelist values are indicated and provide a total
-percentage based on the total number of codelist values.
+*Total possible score: valid codes / total codes (100%)*
 
 === Guidance
 
-Ensure that codelists referenced terms are indicated across the entire
-record, from authoritative sources.
-
-==== XML Examples
+An exact match means that there are no differences with spacing or capitilization. For example, 
+`Other restrictions` and `other_restrictions` will not validate. Only the code value `otherRestrictions` from the `MD_RestrictionCode` codelist will validate. 
 
 ==== WMO Guidelines
 
-WMO/ISO Codelists referenced in WCMP
+==== XML Examples
+
+==== XPaths
 
 [%header,cols=3*]
 |===
-|codelist
-|WCMP Element
+|Codelist
+|XPath
 |Authoritative list
 
 a|`CI_DateTypeCode`
@@ -95,14 +85,4 @@ a|`//gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/[gco:CharacterString\|g
 
 |===
 
-=== XPaths
 
-WCMP elements will vary depending on whether they are:
-
-* ISO Codelists (`gmxCodelists.xml`)
-* WMO Codelists / ISO extensions (`WMOCodeLists.xml`)
-
-Authoritative codelists are found at the following locations:
-
-* ISO: https://standards.iso.org/iso/19139/resources/gmxCodelists.xml
-* WMO: https://wis.wmo.int/2012/codelists/WMOCodeLists.xml
