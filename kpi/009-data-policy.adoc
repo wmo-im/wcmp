@@ -16,20 +16,20 @@ the data within WIS and, when applicable, the GTS priority.
 |===
 |Rule |Score
 
-|9.1: A `WMO_DataLicenseCode` value is present in the `otherConstraints` element of the MD_LegalConstraints section.
+|9.1: A `WMO_DataLicenseCode` value is present in the `gmd:otherConstraints` element of the `gmd:MD_LegalConstraints` section.
 |1
 
-|9.2: The code value `otherRestrictions` is present in the MD_RestrictionCode element of the accessConstraints and useConstraints sections. 
+|9.2: The code value `otherRestrictions` is present in the `gmd:MD_RestrictionCode` element of the`gmd:accessConstraints`and`gmd:useConstraints`sections. 
 |1
 
-|9.3: A `WMO_DistributionScopeCode` value is present in a keywords element, the code value `dataCentre` is present in the associated `MD_KeywordTypeCode` element and `WMO_DistributionScopeCode` is present in the thesaurus title element. 
+|9.3: A `WMO_DistributionScopeCode` value is present in a `gmd:keywords` element, the code value `dataCentre` is present in the associated `gmd:MD_KeywordTypeCode` element and `WMO_DistributionScopeCode` is present in the  `gmd:title` element for a the thesaurus name. 
 |1
 
-|9.4: A `WMO_GTSProductCategoryCode` value is present in the `otherConstraints` element of the MD_LegalConstraints section when the `WMO_DistributionScopeCode` value described in 9.3 is `GlobalExchange` or `RegionalExchange`.
+|9.4: A `WMO_GTSProductCategoryCode` value is present in the `gmd:otherConstraints` element of the `gmd:MD_LegalConstraints` section when the `WMO_DistributionScopeCode` value described in 9.3 is `GlobalExchange` or `RegionalExchange`.
 |1
 
 |9.5: The `WMO_DataLicenseCode` (in `gmd:otherConstraints`), `WMO_GTSProductCategoryCode` (in `gmd:otherConstraints`), 
-`WMO_DistributionScopeCode` (in Keywords), `WMO_DistributionScopeCode` (in Thesaurus title) are implemented in the Anchor element, instead of the CharacterString element.
+`WMO_DistributionScopeCode` (in `gmd:keywords`), `WMO_DistributionScopeCode` (in Thesaurus title) are implemented in the Anchor element, instead of the CharacterString element.
 |1
 |===
 
@@ -41,16 +41,16 @@ the rules.
 
 === Guidance
 
-If the codelist implementation is not clear enough there can be additional free text explanations in the useLimitation element or in addition otherConstraints elements. 
+If the codelist implementation is not clear enough there can be additional free text explanations in the `gmd:useLimitation` element or in addition `gmd:otherConstraints` elements. 
 
 ==== WMO Guidelines
 
-* MoW: Appendix C, 9.3	Defining WMO data policy and GTS priority for data published for global exchange
-* G2W: 5.8.1.10	Data policy information
+* Manual on WIS: Appendix C, 9.3	Defining WMO data policy and GTS priority for data published for global exchange
+* Guide to WIS: 5.8.1.10	Data policy information
 
 ==== XML Examples
 
-Example for a code value that is implemented with the Anchor element, instead of the CharacterString element. 
+Example for a code value that is implemented with the `gmx:Anchor` element, instead of the `gco:CharacterString` element. 
 
 ```xml
 <gmd:resourceConstraints>
@@ -61,7 +61,7 @@ Example for a code value that is implemented with the Anchor element, instead of
   </gmd:MD_LegalConstraints>
 </gmd:resourceConstraints>
 ```
-Example for `otherRestrictions` code value. 
+Example for `gmd:otherRestrictions` code value. 
 
 ```xml
 <gmd:resourceConstraints>
@@ -103,7 +103,7 @@ Example of keyword section with `WMO_DistributionScopeCode` and `gmd:KeywordType
 </gmd:MD_Keywords>
 ```
 
-Example of `WMO_GTSProductCategoryCode` in `resourceConstraints` section. 
+Example of `WMO_GTSProductCategoryCode` in `gmd:resourceConstraints` section. 
 
 ```xml
 <gmd:resourceConstraints>
