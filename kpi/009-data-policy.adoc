@@ -2,9 +2,7 @@
 
 === Measurement
 
-Distribution URLs are present when the `WMO_DataLicenseCode` code value is  `WMOEssential`. 
-
-##Codes list values to represent the applicable WMO data policies are present and encoded correctly in resource constraints and keyword class. 
+Distribution URLs are present when the `WMO_DataLicenseCode` code value is  `WMOEssential`, codes values encoded with `gmx:Anchor` elements for resource constraints and keywords. 
 
 === Rationale for measurement
 
@@ -12,7 +10,7 @@ KPI-1 evaluates the the record for compliance with Abstract Test Suite requireme
 
 In addition, products that qualify as available with "free and unrestricted international exchange", which is identified by the  `WMOEssential` code, should have at least one distribution link present in the metadata.
 
-
+_(to be deleted)_
 ##Requirement 9.1.1: A WIS discovery metadata record describing data for global exchange via the WIS shall indicate the scope of distribution using the keyword “GlobalExchange” of type “dataCentre” from thesaurus WMO_DistributionScopeCode.
 
 ##Requirement 9.3.1: A WIS discovery metadata record describing data for global exchange via the WIS shall indicate the WMO data license as legal constraint (type: “otherConstraints”) using one and only one term from the WMO_DataLicenseCode code list.
@@ -41,7 +39,7 @@ In addition, products that qualify as available with "free and unrestricted inte
 
 === Guidance
 The KPI checks that there is at least one `gmd:resourceConstraints` class that complies to
-the rules and other `gmd:resourceConstraints` classes may exist. For example, additional free text explanations can be added to a `gmd:useLimitation` element or in additional `gmd:MD_LegalConstraint` classes.
+the rules, but other `gmd:resourceConstraints` classes may exist. For example, additional free text explanations can be added to a `gmd:useLimitation` element or in additional `gmd:MD_LegalConstraint` classes.
 
 ==== WMO Guidelines
 
@@ -83,8 +81,6 @@ the rules and other `gmd:resourceConstraints` classes may exist. For example, ad
 </gmd:MD_DigitalTransferOptions>
 ```
 
-
-
 Example for a code value that is implemented with the `gmx:Anchor` element, instead of the `gco:CharacterString` element. 
 
 ```xml
@@ -104,48 +100,6 @@ Example for `gmd:otherRestrictions` code value.
     <gmd:useConstraints>
       <gmd:MD_RestrictionCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</gmd:MD_RestrictionCode>
     </gmd:useConstraints>
-  </gmd:MD_LegalConstraints>
-</gmd:resourceConstraints>
-```
-
-Example of keyword class with `WMO_DistributionScopeCode` and `gmd:KeywordTypeCode` = `dataCentre`.
-
-```xml
-<gmd:MD_Keywords>
-  <gmd:keyword>
-    <gmx:Anchor xlink:href="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_DistributionScopeCode_GlobalExchange">GlobalExchange</gmx:Anchor>
-  </gmd:keyword>
-  <gmd:type>
-    <gmd:MD_KeywordTypeCode codeList="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#MD_KeywordTypeCode" codeListValue="dataCenter">dataCenter</gmd:MD_KeywordTypeCode>
-  </gmd:type>
-  <gmd:thesaurusName>
-    <gmd:CI_Citation>
-      <gmd:title>
-        <gmx:Anchor xlink:href="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_DistributionScopeCode">WMO_DistributionScopeCode</gmx:Anchor>
-      </gmd:title>
-      <gmd:date>
-        <gmd:CI_Date>
-          <gmd:date>
-            <gco:Date>2012-06-27</gco:Date>
-          </gmd:date>
-          <gmd:dateType>
-            <gmd:CI_DateTypeCode codeList="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#CI_DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
-          </gmd:dateType>
-        </gmd:CI_Date>
-      </gmd:date>
-    </gmd:CI_Citation>
-  </gmd:thesaurusName>
-</gmd:MD_Keywords>
-```
-
-Example of `WMO_GTSProductCategoryCode` in `gmd:resourceConstraints` class. 
-
-```xml
-<gmd:resourceConstraints>
-  <gmd:MD_LegalConstraints>
-   <gmd:otherConstraints>
-      <gmx:Anchor xlink:href="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_GTSProductCategoryCode_GTSPriority3">GTSPriority3</gmx:Anchor>
-   </gmd:otherConstraints>
   </gmd:MD_LegalConstraints>
 </gmd:resourceConstraints>
 ```
