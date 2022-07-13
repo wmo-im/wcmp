@@ -1,48 +1,35 @@
 == KPI-10: Distribution information
 
-Metadata records should contain information regarding how to access the data
-which it is describing.
-
 === Measurement
 
-The presence of distribution information and supporting elements.
-
-* format (`//gmd:distributionInfo//gmd:distributionFormat/gmd:MD_Format`)
-  That can rely on existing WMO supported formats
-* 1..n `gmd:transferOptions` (`//gmd:distributionInfo//gmd:transferOptions//gmd:onLine`),
-  including a `gmd:linkage` with a URL to access the data
-* distributor contact information (organization, email)
+Distribution information for accessing the data, 
+data formats, and contact details are present.
 
 === Rationale for measurement
 
-Distribution information provides the necessary information for accessing the
-data, supported formats, and contact information for the data distributor.
+Distribution information allows the user to understand what formats are available, where to get it and who to contact for distribution details. 
 
 === Rules
-
-By detecting the presence of the distribution format and transferOptions
-(multiple options are possible). See page 35 of the WMO Core Profile Metadata
-Guidance.
 
 .Distribution information implementation rules
 [cols="1a,2"]
 |===
 |Rule |Score
 
-|`gmd:MD_Format` is included
+|10.1: The `gmd:MD_Format` section is present.
 |1
 
-|format specification has an Anchor with a resolvable HTTP URL
+|10.2: The `gmd:specification` element in the `gmd:MD_Format` section has an `gmx:Anchor` with a resolvable HTTP URL.
 |1
 
-|distributor contact organization is included
+|10.3: The `gmd:organisationName` element in the `gmd:MD_Distributor` section is present. 
 |1
 
-|distributor contact email is included
+|10.4: The `gmd:electronicMailAddress` in the `gmd:MD_Distributor` section is present. 
 |1
 
-|1..n transfer options are present
-|1
+|10.5: One to many `gmd:MD_DigitalTransferOptions` options are present. 
+ |1
 
 |===
 
@@ -50,11 +37,12 @@ Guidance.
 
 === Guidance
 
-* Specify format/medium information and a link to the format specification
-* Specify 1..n transfer options as well as a distributor contact. Note that a
-  distributor contact does not have to be the same as the main point of
-  contact, principal investigator
-* Specify an email for the distributor
+* Include the relevant WMO data formats in the `gmd:MD_Format` sections with a link to the specification of the data format. 
+* Include all relevant URLs in the `gmd:MD_DigitalTransferOptions` section for accessing the data.  
+* A distributor contact does not have to be the same as the other contacts in the metadata and should always have a contact email.  
+
+==== WMO References
+* 5.8.1.11	Distribution information
 
 ==== XML Examples
 ```xml
@@ -77,9 +65,6 @@ Guidance.
       <gmd:MD_Distributor>
         <gmd:distributorContact>
           <gmd:CI_ResponsibleParty>
-            <gmd:individualName>
-              <gco:CharacterString>Lastname, Firstname</gco:CharacterString>
-            </gmd:individualName>
             <gmd:organisationName>
               <gco:CharacterString>NMC FRANCE - Météo-France</gco:CharacterString>
             </gmd:organisationName>
@@ -144,8 +129,6 @@ Guidance.
   </gmd:MD_Distribution>
 </gmd:distributionInfo>
 ```
-
-==== WMO Guidelines
 
 === XPaths
 
