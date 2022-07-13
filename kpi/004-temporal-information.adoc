@@ -17,19 +17,19 @@ covered by the products, how often new products are available and the status.
 |===
 |Rule |Score
 
-|The temporal `extent` section is present.
+|The `gmd:temporalExtent` section is present.
 |1
 
-|The `beginPosition` and `endPosition` elements are present in the temporal extent.
+|The `gml:beginPosition` and `gml:endPosition` elements are present.
 |1
 
 |The begin date time is less than or equal to the end date time.
 |1
 
-|The `maintenanceAndUpdateFrequency` elements are present.
+|The `gmd:maintenanceAndUpdateFrequency` elements are present.
 |1
 
-|The `status` element is present.
+|The `gmd:status` element is present.
 |1
 |===
 
