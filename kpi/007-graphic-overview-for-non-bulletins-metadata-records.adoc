@@ -2,7 +2,7 @@
 
 === Measurement
 
-When the `graphicOverview` section is present it contains a URL to a common web image file type.
+When the `gmd:graphicOverview` section is present it contains a URL to a common web image file type.
 
 ==== Rationale for measurement
 
@@ -14,18 +14,15 @@ Images provide the user with a high level preview of the product which can assis
 |===
 |Rule |Score
 
-|The URL in the `graphicOverview` section resolves successfully.
+|The URL in the `gmd:graphicOverview` section resolves successfully.
 |1
 
-|The URL in this element is a common web image file type[1]
-|1
-
-|The URL in the `graphicOverview` section is included in the `Anchor` element.
+|The URL in this element is a common web image file type.[1]
 |1
 
 |===
 
-*Total possible score: 3 (100%)*
+*Total possible score: 2 (100%)*
 
 === Guidance
 
