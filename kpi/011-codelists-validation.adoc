@@ -4,7 +4,7 @@
 
 Each code value in the metadata is an exact match to the code in one of the authoritative codelists below.
 
-* ISO Codelists : https://standards.iso.org/iso/19139/resources/gmxCodelists.xml
+* ISO Codelists: https://standards.iso.org/iso/19139/resources/gmxCodelists.xml
 * WMO Codelists/ISO extensions: https://wis.wmo.int/2012/codelists/WMOCodeLists.xml
 
 ==== Rationale for measurement
@@ -16,7 +16,6 @@ on the codelists (e.g. spelling mistakes, case sensitivity errors, etc.). Softwa
 === Rules
 
 .Codelists validation implementation rules
-
 |===
 |Rule |Score
 
