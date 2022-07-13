@@ -22,17 +22,17 @@ can be user-defined or specified from controlled vocabularies.
 |===
 |Rule |Score
 
-|6.1: There are one to many `keyword` elements present.
+|6.1: There are one to many `gmd:keyword` elements present.
 |1
 
 a|6.2: The `MD_KeywordTypeCodeType` is present.
 
 |1
 
-a|6.3: The `title` element for the thesuarus name is present.
+a|6.3: The `gmd:title` element for the thesuarus name is present.
 |1
 
-a|6.4: Keywords and thesaurus names are implemented in the `Anchor` element .
+a|6.4: Keywords and thesaurus names are implemented in the `gmx:Anchor` element .
 |1
 
 |===
@@ -60,7 +60,7 @@ Examples of controlled vocabularies:
 
 ==== XML Examples
 
-The `keyword` value is included in an `Anchor` element with a resolvable HTTP URL. 
+The `keyword` value is included in a `gmx:Anchor` element with a resolvable HTTP URL. 
 
 ```xml
   <gmd:MD_Keywords>
@@ -71,7 +71,7 @@ The `keyword` value is included in an `Anchor` element with a resolvable HTTP UR
   </gmd:MD_Keywords>
 ```
 
-The `type` of keyword is given in `MD_KeywordTypeCode` element, the "codelist" indicates URL of the code list.
+The `gmd:type` of keyword is given in `MD_KeywordTypeCode` element, the "codelist" indicates URL of the code list.
 
 ```xml
 <gmd:type>
@@ -79,7 +79,7 @@ The `type` of keyword is given in `MD_KeywordTypeCode` element, the "codelist" i
 </gmd:type>
 ```
 
-The thesaurus name is included in an `Anchor` element with a resolvable HTTP URL.
+The thesaurus name is included in an `gmx:Anchor` element with a resolvable HTTP URL.
 
 ```xml
 <gmd:thesaurusName>
