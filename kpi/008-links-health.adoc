@@ -2,7 +2,7 @@
 
 === Measurement
 
-Links are valid (no 4xx or 5xx HTTP status errors) and available through the HTTPS protocol. 
+Links are valid (no 4xx or 5xx HTTP status errors) and are available through the HTTPS protocol. 
 
 === Rationale for measurement
 
@@ -19,7 +19,7 @@ content errors in web applications deployed via HTTPS. HTTPS supports secure, au
 |===
 |Rule |Score
 
-|8.1: The link resolves, when it is present in `URL` element, `fileName` element, `href` attribute, or `codeList` attribute. 
+|8.1: The link resolves, when it is present in `gmd:URL` element, `gmd:fileName` element, `xlink:href` attribute, or `codeList` attribute. 
 |1
 |8.2: Each link is a valid HTTPS URL.
 |1
