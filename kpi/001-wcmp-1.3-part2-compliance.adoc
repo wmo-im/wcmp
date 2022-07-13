@@ -26,7 +26,7 @@ Compliance with the requirements of the abstract test suite ensure that the meta
 |Requirement 8.2.2: Keywords from `WMO_CategoryCode` code list shall be defined as keyword type `theme`.
 |1
 
-|Requirement 8.2.3: All keywords sourced from a particular keyword thesaurus shall be grouped into a single instance of the `MD_Keywords` class.
+|Requirement 8.2.3: All keywords sourced from a particular keyword thesaurus shall be grouped into a single instance of the `gmd:MD_Keywords` class.
 |1
 
 |Requirement 8.2.4: Each WIS Discovery Metadata record describing geographic data shall include the description of at least one geographic bounding box defining the spatial extent of the data.
