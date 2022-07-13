@@ -6,15 +6,15 @@ The identifier for the metadata record has a reverse URI that is followed by a d
 ==== Rationale for measurement (DRAFT)
 The ATS tests for for the presence of fileIdentifiers and whether it follows the recommendations for datasets for Global exchange. This measurement assesses the additional recommendations for all types of records.  
 
-The value of the fileIdentifier element, i.e. identifier of the metadata record, **shall be unique. Achieving global uniqueness in a distributed environment is not trivial, but the structure recommended in the Manual on WIS significantly simplifies management of the identifiers and reduces chance of conflicts/duplicates.
+The identifier of the metadata record, **shall be unique. Achieving global uniqueness in a distributed environment is not trivial, but the structure recommended in the Manual on WIS significantly simplifies management of the identifiers and reduces chance of conflicts/duplicates.
 
 === Rules (DRAFT)
 
 .KPI-13
 |====
 | Rule | Score
-| The fileIdentifier is prefaced with the reversed Internet domain name of the data provider. | 1
-| The fileIdentifier contains a double colon (`::`) | 1 
+| The `gmd:fileIdentifier` is prefaced with the reversed Internet domain name of the data provider. | 1
+| The `gmd:fileIdentifier` contains a double colon (`::`) | 1 
 |====
 
 *Total possible score: 2 (100%)*
@@ -23,7 +23,7 @@ The value of the fileIdentifier element, i.e. identifier of the metadata record,
 
 ATS requirements already in place: 
 
-* The `fileIdentifier` is present. -- ATS 8.1.1
+* The `gm:fileIdentifier` is present. -- ATS 8.1.1
 * Fixed string `urn:x-wmo:md:` for global exchange-- ATS 9.2.1
 
 Use metadata record identification (`gmd:fileIdentifier`) in the form of URI.
