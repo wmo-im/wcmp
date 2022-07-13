@@ -2,7 +2,7 @@
 
 === Measurement
 
-Keywords are present, grouped by type and referenced to controlled vocabularies or thesaurus. 
+Keywords are present, grouped by type and referenced to controlled vocabularies or thesauri. 
 
 Note, WCMP 1.3 defines other rules for keywords that are not included in this measurement.
 
@@ -37,11 +37,11 @@ a|6.4: Keywords and thesaurus names are implemented in the `gmx:Anchor` element 
 
 |===
 
-*Total possible score: 4 per (100%)* 
+*Total possible score: 4 (100%) (4 for each `gmd:MD_Keywords` class /  count of `gmd:MD_Keywords` classes)* 
 
 === Guidance
 
-A high score will be provided for full referenced term, keyword type and thesaurus. 
+A high score will be provided if each `gmd:MD_Keywords` class contains vocabulary terms from a thesaurus, a thesaurus name and the keyword type. 
 
 Examples of controlled vocabularies:
 
