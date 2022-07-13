@@ -14,7 +14,7 @@ Title is the first element of metadata information displayed and helps with init
 |===
 |Rule |Score
 
-|2.1: The `title` element is not empty in the `CI_Citation` section of `MD_DataIdentfication` .
+|2.1: The `gmd:title` element is not empty in the `gmd:CI_Citation` section of `gmd:MD_DataIdentfication` .
 |1
 
 |2.2: The title has 3 words or more.
