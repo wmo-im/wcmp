@@ -16,5 +16,5 @@ jobs:
     steps:
       - name: Install dependencies
         run: |
-          apt-get update -y \
-          && apt-get install -y asciidoctor ruby-asciidoctor-pdf pandoc
+          sudo apt-get update -y \
+          && sudo apt-get install -y asciidoctor ruby-asciidoctor-pdf pandoc
