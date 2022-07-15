@@ -1,0 +1,59 @@
+== KPI-7: Graphic overview
+
+=== Measurement
+
+When the `gmd:graphicOverview` section is present it contains a URL to a common web image file type.
+
+==== Rationale for measurement
+
+Images provide the user with a high level preview of the product which can assist in a visual assessment in the search results presentation in catalogues.
+
+=== Rules
+
+.Graphic overview implementation rules
+|===
+|Rule |Score
+
+|The URL in the `gmd:graphicOverview` section resolves successfully.
+|1
+
+|The URL in this element is a common web image file type.[1]
+|1
+
+|===
+
+*Total possible score: 2 (100%)*
+
+=== Guidance
+
+In addition to the presence of the graphic overview image it would also be
+valuable to provide consistent image dimensions (e.g. 800x800 pixels) such that
+all images are normalized and scaling/alignment of overview images can be
+applied consistently by web applications rendering search results.
+
+Examples of catalogues using graphic overview images are here:
+
+* https://gisc.dwd.de[GISC DWD]
+* https://navigator.eumetsat.int/search?query=MSG%20RGB[EUMETSAT Product Navigator]
+
+
+==== WMO Guidelines
+
+* 5.8.1.9	Product sample visualization URL
+
+==== XML Examples
+
+```xml
+<gmd:graphicOverview>
+  <gmd:MD_BrowseGraphic>
+     <gmd:fileName>
+        <gmx:Anchor 
+         xlink:href="https://navigator.eumetsat.int/preview/meteosat-msg_naturalenhncd.jpg">Meteosat MSG Natural Enhanced Color<gmx:Anchor>
+     </gmd:fileName>
+  </gmd:MD_BrowseGraphic>
+</gmd:graphicOverview>
+```
+
+==== XPaths
+
+* `//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview/gmd:MD_BrowseGraphic/gmd:fileName`
