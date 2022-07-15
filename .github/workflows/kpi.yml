@@ -1,12 +1,11 @@
 name: Build KPI documentation
 
-
-#on:
-#  push:
-#    branches:
-#      - master
-#    paths:
-#      - 'kpi/**'
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'kpi/**'
 
 on: [ push, pull_request ]
 
