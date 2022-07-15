@@ -1,3 +1,5 @@
+[![Build Status](https://github.com/wmo-im/wcmp/workflows/KPI%20documentation/badge.svg)](https://github.com/wmo-im/wcmp/actions)
+
 # WMO Core Metadata Profile Specification
 The WMO Core Metadata Profile Specification (WCMP) defines the content, structure and encoding of discovery metadata published
 within the WIS discovery, access and retrieval (DAR) catalogue.

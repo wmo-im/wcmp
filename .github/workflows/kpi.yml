@@ -1,4 +1,4 @@
-name: Build KPI documentation
+name: KPI documentation
 
 on:
   push:
