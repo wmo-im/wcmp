@@ -37,7 +37,7 @@ jobs:
         run: | 
           git config --global user.email "tomkralidis@gmail.com"
           git config --global user.name "Tom Kralidis"
-          mv /tmp/kpi .
+          mv -f /tmp/kpi .
           git add .
           git commit -am "update WMCP 1.3 KPI build"
           git push
