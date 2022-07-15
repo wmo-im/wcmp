@@ -1,16 +1,9 @@
 == 5.9 Key Performance Indicators of WCMP 1.3
 Key Performance Indicators (KPIs) support the evaluation of WCMP 1.3. KPIs provide measurable and valuable quality assessment rules over and above the rules put forth by WCMP 1.3 and ISO 19115:2003/19139:2007.
-The core driver of WCMP KPIs is continuous improvement and useability of discovery metadata as part of the WMO Information System (WIS) and provide evaluations in support of the transition to WIS 2.0. 
-
-=== How to use
+The core driver of WCMP KPIs is continuous improvement and useability of discovery metadata and provide evaluations in support of the transition to WIS 2.0. 
 
 The KPIs in are designed to help metadata providers in the curation of discovery metadata, as well as GISCs to measure the quality of metadata from NCs and DCPCs. In order to improve quality, metadata providers can use the KPIs to build into their metadata generation and consumers should use the KPIs in order to quality assess discovery metadata and provide subsequent feedback to providers.
 
-=== Scoring
+Each KPI assesses a number of criteria asssociated with metadata quality, resulting in a raw score, as well as a percentage. This approach supports weighted rubric scoring.
 
-Each KPI assesses a number of criteria asssociated with metadata quality,
-resulting in a raw score, as well as a percentage. This approach supports
-weighted rubric scoring.
-
-=== Implementation
-Information about tools and resources to implement the KPIs can be found at https://community.wmo.int/activity-areas/wis/wis-metadata-kpis. 
+Information about KPI tools and resources can be found at https://community.wmo.int/activity-areas/wis/wis-metadata-kpis. 

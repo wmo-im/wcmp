@@ -11,21 +11,19 @@ To faciliate ease of understanding and discovery.
 Abstract is a key element of metadata information displayed as part of search results. Complete and meaningful abstract information allows for users to both understand and properly evaluate a metadata record and its respective resource in support of data access, visualization and exploitation.
 
 === Rules
-
-.Good quality abstract implementation rules
 |===
-|Rule |Score
+| |Rule |Score
 
-|3.1: Abstract has between 16 and 2048 characters.
+|3.1 | Abstract has between 16 and 2048 characters.
 |1
 
-|3.2: Abstract does not contain HTML markup.
+|3.2 | Abstract does not contain HTML markup.
 |1
 
-|3.3: Abstract passes a basic spellcheck.
+|3.3 | Abstract passes a basic spellcheck.
 |1
 
-|3.4: Abstract contains bulletin template.
+|3.4 | Abstract contains bulletin template.
 |-1
 |===
 
@@ -37,14 +35,14 @@ The abstract should provide a clear and concise statement that enables the
 reader to understand the content of the dataset. For guidance when completing
 the abstract, consider the following recommendations:
 
-(a)	State what the “things” are that are recorded.
-(b)	State the key aspects recorded about these things.
-(c)	State what form the data takes.
-(d)	State any other limiting information, such as time period of validity of the data.
-(e)	Add purpose of data resource where relevant (e.g. for survey data).
-(f)	Aim to be understood by non experts.
-(g)	Do not include general background information.
-(h)	Avoid jargon and unexplained abbreviations.
+  (a)	State what the “things” are that are recorded.
+  (b)	State the key aspects recorded about these things.
+  (c)	State what form the data takes.
+  (d)	State any other limiting information, such as time period of validity of the data.
+  (e)	Add purpose of data resource where relevant (e.g. for survey data).
+  (f)	Aim to be understood by non experts.
+  (g)	Do not include general background information.
+  (h)	Avoid jargon and unexplained abbreviations.
 
 Further recommendations: 
 
@@ -76,7 +74,7 @@ Spell checking recommendations:
 
 ==== WMO References
 
-* G2W: 5.8.1.2	Product abstract
+* 5.8.1.2	Product abstract
 * Manual on WIS, Appendix C, 8.2	Provision of information to support discovery within the WIS DAR metadata (WIS discovery metadata) catalogue
 
 ==== XML Examples

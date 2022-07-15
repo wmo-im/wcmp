@@ -9,33 +9,31 @@ The title of the dataset follows the principles of the WCMP guidance. The length
 Title is the first element of metadata information displayed and helps with initial identification. Meaningful and relevant information makes it easier for users to understand the resource.
 
 === Rules
-
-.Good quality title implementation rules
 |===
-|Rule |Score
+| |Rule |Score
 
-|2.1: The `gmd:title` element is not empty in the `gmd:CI_Citation` section of `gmd:MD_DataIdentfication` .
+|2.1 | The `gmd:title` element is not empty in the `gmd:CI_Citation` class of `gmd:MD_DataIdentfication` .
 |1
 
-|2.2: The title has 3 words or more.
+|2.2 | The title has 3 words or more.
 |1
 
-|2.3: The title has 150 characters or less.
+|2.3 | The title has 150 characters or less.
 |1
 
-|2.4: The title only has printable characters (numbers and letters).
+|2.4 | The title only has printable characters (numbers and letters).
 |1
 
-|2.5: Words in the title are represented in "Title Case".
+|2.5 | Words in the title are represented in "Title Case".
 |1
 
-|2.6: The title contains less than 3 acronyms (words with all upper case).
+|2.6 | The title contains less than 3 acronyms (words with all upper case).
 |1
 
-|2.7: The title does not contain bulletin header (regular expression: `[A-Z]{4}\d{2}[\s_]*[A-Z]{4}`).
+|2.7 | The title does not contain bulletin header (regular expression: `[A-Z]{4}\d{2}[\s_]*[A-Z]{4}`).
 |1
 
-|2.8: The title passes a basic spellcheck.
+|2.8 | The title passes a basic spellcheck.
 |1
 |===
 

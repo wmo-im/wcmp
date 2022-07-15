@@ -11,25 +11,22 @@ data and it is critical for users to know the time periods that are
 covered by the products, how often new products are available and the status.
 
 === Rules
-
-.Temporal information implementation rules
-
 |===
-|Rule |Score
+| | Rule |Score
 
-|The `gmd:temporalExtent` section is present.
+|4.1 | The `gmd:EX_TemporalExtent` class is present.
 |1
 
-|The `gml:beginPosition` and `gml:endPosition` elements are present.
+|4.2 | The `gml:beginPosition` and `gml:endPosition` elements are present.
 |1
 
-|The begin date time is less than or equal to the end date time.
+|4.3 | The begin date time is less than or equal to the end date time.
 |1
 
-|The `gmd:maintenanceAndUpdateFrequency` elements are present.
+|4.4 | The `gmd:maintenanceAndUpdateFrequency` elements are present.
 |1
 
-|The `gmd:status` element is present.
+|4.5 | The `gmd:status` element is present.
 |1
 |===
 
@@ -40,7 +37,7 @@ covered by the products, how often new products are available and the status.
 If it is not relevant or necessary to provide information regarding the data
 update frequency, `gmd:MD_MaintenanceFrequencyCode` can be set to `asNeeded`:
 
-==== WMO Guidelines
+==== WMO References
 
 * 5.8.1.5 Temporal extent
 * 5.8.1.13 Frequency of resource updates

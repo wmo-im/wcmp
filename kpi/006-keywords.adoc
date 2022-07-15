@@ -17,22 +17,20 @@ adding to the user experience and making datasets easier to discover. Keywords
 can be user-defined or specified from controlled vocabularies.
 
 === Rules
-
-.Keywords implementation rules
 |===
-|Rule |Score
+| |Rule |Score
 
-|6.1: There are one to many `gmd:keyword` elements present.
+|6.1 | There are one to many `gmd:keyword` elements present.
 |1
 
-a|6.2: The `MD_KeywordTypeCodeType` is present.
+|6.2 | The `MD_KeywordTypeCodeType` is present.
 
 |1
 
-a|6.3: The `gmd:title` element for the thesuarus name is present.
+|6.3 | The `gmd:title` element for the thesuarus name is present.
 |1
 
-a|6.4: Keywords and thesaurus names are implemented in the `gmx:Anchor` element .
+|6.4 | Keywords and thesaurus names are implemented in the `gmx:Anchor` element .
 |1
 
 |===
@@ -40,8 +38,6 @@ a|6.4: Keywords and thesaurus names are implemented in the `gmx:Anchor` element 
 *Total possible score: 4 (100%) (4 for each `gmd:MD_Keywords` class /  count of `gmd:MD_Keywords` classes)* 
 
 === Guidance
-
-A high score will be provided if each `gmd:MD_Keywords` class contains vocabulary terms from a thesaurus, a thesaurus name and the keyword type. 
 
 Examples of controlled vocabularies:
 

@@ -1,7 +1,7 @@
 :title: WMO Core Metadata Profile 1.3, Key Performance Indicators
 :titletext: {title}
 :version: 1.3.1
-:date: 2021-03-10
+:date: 2022-07-15
 :copyright: Copyright © 2021 World Meteorological Organization (WMO)
 :doctype: book
 :encoding: utf-8
@@ -33,13 +33,12 @@
 <<<
 toc::[]
 <<<
-
+include::000-intro1061.adoc[]
 include::000-overview.adoc[]
 include::001-wcmp-1.3-part2-compliance.adoc[]
 include::002-good-quality-title.adoc[]
 include::003-good-quality-abstract.adoc[]
 include::004-temporal-information.adoc[]
-include::005-wmoessential-data-links.adoc[]
 include::006-keywords.adoc[]
 include::007-graphic-overview.adoc[]
 include::008-links-health.adoc[]

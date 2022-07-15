@@ -14,12 +14,10 @@ In many cases codes are included but are not identical to the official values
 on the codelists (e.g. spelling mistakes, case sensitivity errors, etc.). Software applications may look for exact matches to codelists and handle metadata incorrectly if they are not properly referenced.
 
 === Rules
-
-.Codelists validation implementation rules
 |===
-|Rule |Score
+| |Rule |Score
 
-|11.1:  Code value is valid against authoritative codelists with an exact match.
+|11.1| Code value is valid against authoritative codelists with an exact match.
 |1
 
 |===
@@ -31,7 +29,7 @@ on the codelists (e.g. spelling mistakes, case sensitivity errors, etc.). Softwa
 An exact match means that there are no differences with spacing or capitilization. For example, 
 `Other restrictions` and `other_restrictions` will not validate. Only the code value `otherRestrictions` from the `MD_RestrictionCode` codelist will validate. 
 
-==== WMO Guidelines
+==== WMO References
 
 ==== XML Examples
 

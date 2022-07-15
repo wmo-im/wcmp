@@ -13,17 +13,16 @@ already existing work.
 
 === Rules
 
-.DOI citation implementation rules
 |===
-|Rule |Score
+| |Rule |Score
 
-|12.1: A DOI is present in the `gmd:MD_Identifier` section of the data citation and encoded in the `gmx:Anchor` element. 
+|12.1| A DOI is present in the `gmd:MD_Identifier` class of the data citation and encoded in the `gmx:Anchor` element. 
 |1
 
-|12.2: The value in the `xlink:title` attribute is 'DOI'.
+|12.2| The value in the `xlink:title` attribute is 'DOI'.
 |1
 
-|12.3: A DOI citation, with the same DOI as above, is present in the `gmd:otherConstraints` element of a `gmd:resourceConstraints` section.  
+|12.3| A DOI citation, with the same DOI as above, is present in the `gmd:otherConstraints` element.  
 |1
 |===
 

@@ -13,15 +13,12 @@ HTTPS is increasingly becoming a requirement for numerous agencies.  Metadata re
 content errors in web applications deployed via HTTPS. HTTPS supports secure, authoritative and trustworthy links as part of WIS metadata.
 
 === Rules
-
-.Links health implementation rules
-
 |===
-|Rule |Score
+| |Rule |Score
 
-|8.1: The link resolves, when it is present in `gmd:URL` element, `gmd:fileName` element, `xlink:href` attribute, or `codeList` attribute. 
+|8.1| The link resolves, when it is present in `gmd:URL` element, `gmd:fileName` element, `xlink:href` attribute, or `codeList` attribute. 
 |1
-|8.2: Each link is a valid HTTPS URL.
+|8.2| Each link is a valid HTTPS URL.
 |1
 |===
 
@@ -33,7 +30,7 @@ Ensure that all links kept up to date in the metadata and are accessible via HTT
 
 For more information about HTTP status errors, visit https://httpstatuses.com.
 
-==== WMO Guidelines
+==== WMO References
 
 ==== XML Examples
 
@@ -68,8 +65,6 @@ For more information about HTTP status errors, visit https://httpstatuses.com.
 ```
 
 ==== XPaths
-
-Any element or attribute content with linked information (URLs).
 
 * `//gmd:URL`
 * `//gmd:graphicOverview//gmd:fileName`

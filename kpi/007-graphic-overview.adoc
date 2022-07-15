@@ -2,24 +2,21 @@
 
 === Measurement
 
-When the `gmd:graphicOverview` section is present it contains a URL to a common web image file type.
+When the `gmd:graphicOverview` class is present it contains a URL to a common web image file type.
 
 ==== Rationale for measurement
 
 Images provide the user with a high level preview of the product which can assist in a visual assessment in the search results presentation in catalogues.
 
 === Rules
-
-.Graphic overview implementation rules
 |===
-|Rule |Score
+| | Rule | Score
 
-|The URL in the `gmd:graphicOverview` section resolves successfully.
+| 7.1 | The URL in the `gmd:graphicOverview` class resolves successfully.
 |1
 
-|The URL in this element is a common web image file type.[1]
+| 7.2 | The URL in this element is a common web image file type.[1]
 |1
-
 |===
 
 *Total possible score: 2 (100%)*
@@ -37,7 +34,7 @@ Examples of catalogues using graphic overview images are here:
 * https://navigator.eumetsat.int/search?query=MSG%20RGB[EUMETSAT Product Navigator]
 
 
-==== WMO Guidelines
+==== WMO References
 
 * 5.8.1.9	Product sample visualization URL
 
