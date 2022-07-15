@@ -27,5 +27,5 @@ jobs:
         run: |
           mkdir -p /tmp/kpi \
           && asciidoctor --trace -o /tmp/kpi/${FILE_BASENAME}.html kpi/index.adoc \
-          && asciidoctor --trace --backend docbook --out-file - index.adoc | pandoc --from docbook --to docx --output /tmp/kpi/${FILE_BASENAME}.docx \
+          && asciidoctor --trace --backend docbook --out-file - kpi/index.adoc | pandoc --from docbook --to docx --output /tmp/kpi/${FILE_BASENAME}.docx \
           && asciidoctor --trace -r asciidoctor-pdf --trace -b pdf -o /tmp/kpi/${FILE_BASENAME}.pdf kpi/index.adoc
