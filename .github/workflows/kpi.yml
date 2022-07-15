@@ -35,6 +35,7 @@ jobs:
           ref: gh-pages
       - name: update gh-pages branch and publish
         run: | 
+          git checkout gh-pages
           git config --global user.email "tomkralidis@gmail.com"
           git config --global user.name "Tom Kralidis"
           mv -f /tmp/kpi .
