@@ -7,8 +7,6 @@ on:
     paths:
       - 'kpi/**'
 
-on: [ push, pull_request ]
-
 env:
   FILE_BASENAME: wcmp-1.3-kpi-DRAFT
 
