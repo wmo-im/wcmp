@@ -1,7 +1,7 @@
-name: Build KPI documentation
+name: Test KPI documentation build
 
 on:
-  push:
+  pull_request:
     paths:
     - 'kpi/**'
 
@@ -25,16 +25,3 @@ jobs:
           && asciidoctor --trace -o /tmp/kpi/${FILE_BASENAME}.html kpi/index.adoc \
           && asciidoctor --trace --backend docbook --out-file - kpi/index.adoc | pandoc --from docbook --to docx --output /tmp/kpi/${FILE_BASENAME}.docx \
           && asciidoctor --trace -r asciidoctor-pdf --trace -b pdf -o /tmp/kpi/${FILE_BASENAME}.pdf kpi/index.adoc
-      - name: checkout gh-pages branch
-        uses: actions/checkout@v3
-        with:
-          ref: gh-pages
-      - name: update gh-pages branch and publish
-        run: | 
-          git checkout gh-pages
-          git config --global user.email "tomkralidis@gmail.com"
-          git config --global user.name "Tom Kralidis"
-          mv -f /tmp/kpi/* kpi
-          git add .
-          git commit -am "update WMCP 1.3 KPI build"
-          git push
