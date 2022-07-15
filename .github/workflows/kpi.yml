@@ -31,7 +31,8 @@ jobs:
           && asciidoctor --trace -r asciidoctor-pdf --trace -b pdf -o /tmp/kpi/${FILE_BASENAME}.pdf kpi/index.adoc
       - name: checkout gh-pages branch
         uses: actions/checkout@v3
-        ref: gh-pages
+        with:
+          ref: gh-pages
       - name: update gh-pages branch and publish
         run: | 
           git config --global user.email "tomkralidis@gmail.com"
