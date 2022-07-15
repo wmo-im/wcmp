@@ -100,3 +100,4 @@ The thesaurus name is included in an `gmx:Anchor` element with a resolvable HTTP
 * `//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword`
 * `//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:type`
 * `//gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName`
+

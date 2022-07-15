@@ -108,3 +108,4 @@ Example for `gmd:otherRestrictions` code value.
 * `//gmd:identificationInfo//gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints`
 * `//gmd:identificationInfo//gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:accessConstraints/gmd:MD_RestrictionCode`
 * `//gmd:identificationInfo//gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:useConstraints/gmd:MD_RestrictionCode`
+

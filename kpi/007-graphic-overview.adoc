@@ -54,3 +54,4 @@ Examples of catalogues using graphic overview images are here:
 ==== XPaths
 
 * `//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview/gmd:MD_BrowseGraphic/gmd:fileName`
+

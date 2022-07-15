@@ -6,4 +6,5 @@ The KPIs in are designed to help metadata providers in the curation of discovery
 
 Each KPI assesses a number of criteria asssociated with metadata quality, resulting in a raw score, as well as a percentage. This approach supports weighted rubric scoring.
 
-Information about KPI tools and resources can be found at https://community.wmo.int/activity-areas/wis/wis-metadata-kpis. 
+Information about KPI tools and resources can be found at https://community.wmo.int/activity-areas/wis/wis-metadata-kpis.
+

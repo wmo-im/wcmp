@@ -58,3 +58,4 @@ already existing work.
 * `/gmd:MD_Metadata/gmd:identificationInfo//gmd:citation//gmd:identifier//gmd:code/gmx:Anchor/@xlink:href`
 * `/gmd:MD_Metadata/gmd:identificationInfo//gmd:citation//gmd:identifier//gmd:code/gmx:Anchor/@xlink:title`
 * `/gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceConstraints//gmd:otherConstraints/gco:CharacterString`
+

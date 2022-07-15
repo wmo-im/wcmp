@@ -71,3 +71,4 @@ Example for dataset maintenance with 'asNeeded' code value.
 * `/gmd:MD_Metadata/gmd:identificationInfo//gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent//gml:endPosition`
 * `/gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceMaintenance//gmd:maintenanceAndUpdateFrequency`
 * `/gmd:MD_Metadata/gmd:identificationInfo//gmd:status`
+
