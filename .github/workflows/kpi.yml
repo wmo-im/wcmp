@@ -9,6 +9,9 @@ name: Build KPI documentation
 
 on: [ push, pull_request ]
 
+env:
+  FILE_BASENAME: wcmp-1.3-kpi-DRAFT
+
 jobs:
   build-kpi:
     name: Generate KPI documentation
@@ -18,3 +21,11 @@ jobs:
         run: |
           sudo apt-get update -y \
           && sudo apt-get install -y asciidoctor ruby-asciidoctor-pdf pandoc
+      - name: checkout repository
+        uses: actions/checkout@v2
+      - name: build KPI documentation
+        run: |
+          mkdir -p /tmp/kpi \
+          && asciidoctor --trace -o /tmp/kpi/${FILE_BASENAME}.html kpi/index.adoc \
+          && asciidoctor --trace --backend docbook --out-file - index.adoc | pandoc --from docbook --to docx --output /tmp/kpi/${FILE_BASENAME}.docx \
+          && asciidoctor --trace -r asciidoctor-pdf --trace -b pdf -o /tmp/kpi/${FILE_BASENAME}.pdf kpi/index.adoc
