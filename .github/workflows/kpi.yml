@@ -1,11 +1,6 @@
 name: Build KPI documentation
 
-on:
-  push:
-    branches:
-      - master
-    paths:
-      - 'kpi/**'
+on: [ push, pull_request ]
 
 env:
   FILE_BASENAME: wcmp-1.3-kpi-DRAFT
