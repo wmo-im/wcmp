@@ -1,0 +1,20 @@
+name: Build KPI documentation
+
+#on:
+#  push:
+#    branches:
+#      - master
+#    paths:
+#      - 'kpi/**'
+
+on: [ push, pull_request ]
+
+jobs:
+  build-kpi:
+    name: Generate KPI documentation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies
+        run: |
+          apt-get update -y \
+          && apt-get install -y asciidoctor ruby-asciidoctor-pdf pandoc
