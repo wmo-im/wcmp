@@ -34,18 +34,18 @@ covered by the products, how often new products are available and the status.
 
 === Guidance
 
-If it is not relevant or necessary to provide information regarding the data
+If it is not relevant or necessary to provide information regarding the product
 update frequency, `gmd:MD_MaintenanceFrequencyCode` can be set to `asNeeded`:
 
-==== WMO References
+==== References
 
 * 5.8.1.5 Temporal extent
 * 5.8.1.13 Frequency of resource updates
 
 ==== XML Examples
 
-Example for the dataset status / progress using the `gmd:MD_ProgressCode`
-codelist for ongoing datasets. 
+Example for the product status using the `gmd:MD_ProgressCode`
+codelist. 
 
 ```xml
   <gmd:status>
@@ -53,7 +53,8 @@ codelist for ongoing datasets.
   </gmd:status>
 ```
 
-Example for dataset maintenance with 'asNeeded' code value. 
+Example for product maintenance with 'asNeeded' code value. 
+
 ```xml
   <gmd:resourceMaintenance>
       <gmd:MD_MaintenanceInformation>

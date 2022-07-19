@@ -2,11 +2,11 @@
 
 === Measurement
 
-The title of the dataset follows the principles of the WCMP guidance. The length is not too short or too long, contains less than 3 acronyms and is represented in title case. Spelling and grammar are correct.
+The title of the product follows the principles of the WCMP guidance. The length is not too short or too long, contains less than 3 acronyms and is represented in title case. Spelling and grammar are correct.
 
 ==== Rationale for measurement
 
-Title is the first element of metadata information displayed and helps with initial identification. Meaningful and relevant information makes it easier for users to understand the resource.
+The title is the first element of metadata information displayed and helps with initial identification. Meaningful and relevant information makes it easier for users to understand the resource.
 
 === Rules
 |===
@@ -41,11 +41,9 @@ Title is the first element of metadata information displayed and helps with init
 
 === Guidance
 
-==== WMO References
+==== References
 
 * 5.8.1.1	Product title
-
-==== XML Examples
 
 ==== XPaths
 

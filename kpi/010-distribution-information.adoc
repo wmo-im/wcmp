@@ -7,7 +7,7 @@ data formats, and contact details are present.
 
 === Rationale for measurement
 
-Distribution information allows the user to understand what formats are available, where to get it and who to contact for distribution details. 
+Distribution information allows the user to understand what formats are available, where to get them and who to contact for distribution details. 
 
 === Rules
 |===
@@ -38,7 +38,7 @@ Distribution information allows the user to understand what formats are availabl
 * Include all relevant URLs in the `gmd:MD_DigitalTransferOptions` class for accessing the data.  
 * A distributor contact does not have to be the same as the other contacts in the metadata and should always have a contact email.  
 
-==== WMO References
+==== References
 * 5.8.1.11	Distribution information
 
 ==== XML Examples

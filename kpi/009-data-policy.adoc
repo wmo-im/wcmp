@@ -6,16 +6,9 @@ Distribution URLs are present when the `WMO_DataLicenseCode` code value is  `WMO
 
 === Rationale for measurement
 
-KPI-1 evaluates the the record for compliance with Abstract Test Suite requirements 9.1.1, 9.3.1 and 9.3.2. This KPI evaluates additional practices that support information associated with the identification of the these data policies.
+KPI-1 evaluates a metadata record for compliance with Abstract Test Suite requirements 9.1.1, 9.3.1 and 9.3.2. This KPI evaluates additional practices that support information associated with the identification of the the data policies.
 
 In addition, products that qualify as available with "free and unrestricted international exchange", which is identified by the  `WMOEssential` code, should have at least one distribution link present in the metadata.
-
-_(to be deleted)_
-##Requirement 9.1.1: A WIS discovery metadata record describing data for global exchange via the WIS shall indicate the scope of distribution using the keyword “GlobalExchange” of type “dataCentre” from thesaurus WMO_DistributionScopeCode.
-
-##Requirement 9.3.1: A WIS discovery metadata record describing data for global exchange via the WIS shall indicate the WMO data license as legal constraint (type: “otherConstraints”) using one and only one term from the WMO_DataLicenseCode code list.
-
-##Requirement 9.3.2: A WIS discovery metadata record describing data for global exchange via the WIS shall indicate the GTS priority as legal constraint (type: “otherConstraints”) using one and only one term from the WMO_GTSProductCategoryCode code list.
 
 === Rules
 |===
@@ -39,7 +32,7 @@ _(to be deleted)_
 The KPI checks that there is at least one `gmd:resourceConstraints` class that complies to
 the rules, but other `gmd:resourceConstraints` classes may exist. For example, additional free text explanations can be added to a `gmd:useLimitation` element or in additional `gmd:MD_LegalConstraint` classes.
 
-==== WMO References
+==== References
 
 * Manual on WIS 
 ** Appendix C, 9.3	Defining WMO data policy and GTS priority for data published for global exchange

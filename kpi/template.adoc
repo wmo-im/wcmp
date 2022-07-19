@@ -24,7 +24,7 @@ Why should this measurement take place.
 
 Recommendations and hints/advice.
 
-==== WMO References
+==== References
 
 List of relevant chapters in Manual on WIS and Guide to WIS.
 

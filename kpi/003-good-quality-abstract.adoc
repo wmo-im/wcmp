@@ -6,9 +6,7 @@ The length of the content in the abstract element is not too short or too long. 
 
 ==== Rationale
 
-To faciliate ease of understanding and discovery.
-
-Abstract is a key element of metadata information displayed as part of search results. Complete and meaningful abstract information allows for users to both understand and properly evaluate a metadata record and its respective resource in support of data access, visualization and exploitation.
+The abstract is a key element of metadata information displayed as part of search results and must faciliate ease of understanding and discovery. Complete and meaningful abstract information allows users to understand and properly evaluate a metadata record and its respective resource in support of product access, visualization and exploitation.
 
 === Rules
 |===
@@ -32,17 +30,17 @@ Abstract is a key element of metadata information displayed as part of search re
 === Guidance
 
 The abstract should provide a clear and concise statement that enables the
-reader to understand the content of the dataset. For guidance when completing
+reader to understand the content of the product. For guidance when completing
 the abstract, consider the following recommendations:
 
-  (a)	State what the “things” are that are recorded.
-  (b)	State the key aspects recorded about these things.
-  (c)	State what form the data takes.
-  (d)	State any other limiting information, such as time period of validity of the data.
-  (e)	Add purpose of data resource where relevant (e.g. for survey data).
-  (f)	Aim to be understood by non experts.
-  (g)	Do not include general background information.
-  (h)	Avoid jargon and unexplained abbreviations.
+*  State what the “things” are that are recorded.
+*  State the key aspects recorded about these things.
+*  State what form the data takes.
+*  State any other limiting information, such as time period of validity of the data.
+*  Add purpose of data resource where relevant (e.g. for survey data).
+*  Aim to be understood by non-experts.
+*  Do not include general background information.
+*  Avoid jargon and unexplained abbreviations.
 
 Further recommendations: 
 
@@ -72,7 +70,7 @@ Spell checking recommendations:
 * Dictionary by Merriam-Webster: https://www.merriam-webster.com
 * Cambridge Dictionary: https://dictionary.cambridge.org
 
-==== WMO References
+==== References
 
 * 5.8.1.2	Product abstract
 * Manual on WIS, Appendix C, 8.2	Provision of information to support discovery within the WIS DAR metadata (WIS discovery metadata) catalogue

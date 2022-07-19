@@ -9,7 +9,7 @@ Each code value in the metadata is an exact match to the code in one of the auth
 
 ==== Rationale for measurement
 
-WCMP records can reference codelists from a number of locations, for example, online copies of the authoritative sources.
+WCMP records can reference codelists from several locations, for example, online copies of the authoritative sources.
 In many cases codes are included but are not identical to the official values
 on the codelists (e.g. spelling mistakes, case sensitivity errors, etc.). Software applications may look for exact matches to codelists and handle metadata incorrectly if they are not properly referenced.
 
@@ -26,12 +26,8 @@ on the codelists (e.g. spelling mistakes, case sensitivity errors, etc.). Softwa
 
 === Guidance
 
-An exact match means that there are no differences with spacing or capitilization. For example, 
+An exact match means that there are no differences with spacing or capitalization. For example, 
 `Other restrictions` and `other_restrictions` will not validate. Only the code value `otherRestrictions` from the `MD_RestrictionCode` codelist will validate. 
-
-==== WMO References
-
-==== XML Examples
 
 ==== XPaths
 

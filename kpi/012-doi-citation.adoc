@@ -6,7 +6,7 @@ A Digital Object Identifier (DOI) and citation instructions are present.
 
 === Rationale for measurement
 
-DOIs are persistent identifiers that allow data to be accessible and citable.
+DOIs are persistent identifiers that allow products to be accessible and citable.
 They make research data easier to access, reuse and verify, thereby making it
 easier to build on previous work, conduct new research and avoid duplicating
 already existing work.
@@ -50,8 +50,6 @@ already existing work.
     <gco:CharacterString>Cite as: WMO/GAW Ozone Monitoring Community, World Meteorological Organization-Global Atmosphere Watch Program (WMO-GAW)/World Ozone and Ultraviolet Radiation Data Centre (WOUDC) [Data]. Retrieved [YYYY-MM-DD], from https://woudc.org. A list of all contributors is available on the website. doi:10.14287/10000004</gco:CharacterString>
   </gmd:otherConstraints>
 ```
-
-==== WMO Guidelines
 
 === XPaths
 

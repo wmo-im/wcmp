@@ -4,7 +4,7 @@
 
 Keywords are present, grouped by type and referenced to controlled vocabularies or thesauri. 
 
-Note, WCMP 1.3 defines other rules for keywords that are not included in this measurement.
+WCMP 1.3 defines other rules for keywords that are not included in this measurement.
 
 ==== Rationale for measurement
 
@@ -13,7 +13,7 @@ controlled vocabularies will ultimately help the end user to search for
 well-known domain related terms.
 
 Keywords are indexed by search engines to narrow down full text searches,
-adding to the user experience and making datasets easier to discover. Keywords
+adding to the user experience and making products easier to discover. Keywords
 can be user-defined or specified from controlled vocabularies.
 
 === Rules
@@ -49,7 +49,7 @@ Examples of controlled vocabularies:
 * https://canada.multites.net/cst[Government of Canada Core Subject Thesaurus (CST)]
 
 
-==== WMO References
+==== References
 
 * 5.8.1.8 Descriptive keywords
 

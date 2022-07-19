@@ -33,8 +33,8 @@
 <<<
 toc::[]
 <<<
-include::000-intro1061.adoc[]
 include::000-overview.adoc[]
+include::000-intro1061.adoc[]
 include::001-wcmp-1.3-part2-compliance.adoc[]
 include::002-good-quality-title.adoc[]
 include::003-good-quality-abstract.adoc[]

@@ -6,7 +6,7 @@ When the `gmd:graphicOverview` class is present it contains a URL to a common we
 
 ==== Rationale for measurement
 
-Images provide the user with a high level preview of the product which can assist in a visual assessment in the search results presentation in catalogues.
+Images provide the user with a high-level preview of the product which can assist in a visual assessment in the search results presentation in catalogues.
 
 === Rules
 |===
@@ -34,7 +34,7 @@ Examples of catalogues using graphic overview images are here:
 * https://navigator.eumetsat.int/search?query=MSG%20RGB[EUMETSAT Product Navigator]
 
 
-==== WMO References
+==== References
 
 * 5.8.1.9	Product sample visualization URL
 

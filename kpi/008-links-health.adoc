@@ -26,11 +26,9 @@ content errors in web applications deployed via HTTPS. HTTPS supports secure, au
 
 === Guidance
 
-Ensure that all links kept up to date in the metadata and are accessible via HTTPS. Don't put URLs in the abstract or other elements that are intended for free text. 
+Ensure that all links are up to date in the metadata and are accessible via HTTPS. Don't put URLs in the abstract or other elements that are intended for free text. 
 
 For more information about HTTP status errors, visit https://httpstatuses.com.
-
-==== WMO References
 
 ==== XML Examples
 

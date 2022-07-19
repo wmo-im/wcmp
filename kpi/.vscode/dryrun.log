@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Volumes/cS-volume/wcmp/kpi'
+asciidoctor --trace -o wcmp-kpi-.html index.adoc
+make: Leaving directory `/Volumes/cS-volume/wcmp/kpi'
+ 
