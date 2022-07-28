@@ -13,15 +13,15 @@ In addition, products that qualify as available with "free and unrestricted inte
 === Rules
 |===
 
-|Rule |Score
+| |Rule |Score
 
-|One to many distribution links are present when `WMO_DataLicenseCode` is `WMOEssential`. 
+| 9.1 |One to many distribution links are present when `WMO_DataLicenseCode` is `WMOEssential`. 
 |1
 
-|The code value `otherRestrictions` is present in the `gmd:MD_RestrictionCode` element of the`gmd:MD_LegalConstraints` class when there is a `WMO_DataLicenseCode` or `WMO_GTSProductCategoryCode` in the `gmd:otherConstraints` element. 
-|1
+| 9.2 |The code value `otherRestrictions` is present in the `gmd:MD_RestrictionCode` element of the`gmd:MD_LegalConstraints` class when there is a `WMO_DataLicenseCode` or `WMO_GTSProductCategoryCode` in the `gmd:otherConstraints` element. 
+| |1
 
-|The `WMO_DataLicenseCode`, `WMO_GTSProductCategoryCode`, `WMO_DistributionScopeCode`, `WMO_DistributionScopeCode` code values are implemented in the `gmx:Anchor` element, instead of the `gco:CharacterString` element.
+| 9.3 |The `WMO_DataLicenseCode`, `WMO_GTSProductCategoryCode`, `WMO_DistributionScopeCode`, `WMO_DistributionScopeCode` code values are implemented in the `gmx:Anchor` element, instead of the `gco:CharacterString` element.
 |1
 
 |===
