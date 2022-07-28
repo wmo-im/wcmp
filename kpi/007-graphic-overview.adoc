@@ -2,7 +2,7 @@
 
 === Measurement
 
-When the `gmd:graphicOverview` class is present it contains a URL to a common web image file type.
+When the `gmd:graphicOverview` is present it contains a URL to a common web image file type.
 
 ==== Rationale for measurement
 
@@ -12,10 +12,10 @@ Images provide the user with a high-level preview of the product which can assis
 |===
 | | Rule | Score
 
-| 7.1 | The URL in the `gmd:graphicOverview` class resolves successfully.
+| 7.1 | The URL in the `gmd:graphicOverview` resolves successfully.
 |1
 
-| 7.2 | The URL in this element is a common web image file type.[1]
+| 7.2 | The URL in this element is a common web image file type.
 |1
 |===
 

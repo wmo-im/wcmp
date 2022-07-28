@@ -6,7 +6,7 @@ The length of the content in the abstract element is not too short or too long. 
 
 ==== Rationale
 
-The abstract is a key element of metadata information displayed as part of search results and must faciliate ease of understanding and discovery. Complete and meaningful abstract information allows users to understand and properly evaluate a metadata record and its respective resource in support of product access, visualization and exploitation.
+The abstract must facilitate ease of understanding and discovery. The abstract is a critical element of metadata information displayed as part of search results. Complete and meaningful abstract information allows users to understand and properly evaluate a metadata record and its respective resource in support of product access, visualization and exploitation.
 
 === Rules
 |===

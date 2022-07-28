@@ -6,7 +6,7 @@ Distribution URLs are present when the `WMO_DataLicenseCode` code value is  `WMO
 
 === Rationale for measurement
 
-KPI-1 evaluates a metadata record for compliance with Abstract Test Suite requirements 9.1.1, 9.3.1 and 9.3.2. This KPI evaluates additional practices that support information associated with the identification of the the data policies.
+KPI-1 evaluates a metadata record for compliance with Abstract Test Suite requirements 9.1.1, 9.3.1 and 9.3.2. This KPI evaluates additional practices that support information associated with the identification of the data policies.
 
 In addition, products that qualify as available with "free and unrestricted international exchange", which is identified by the  `WMOEssential` code, should have at least one distribution link present in the metadata.
 
