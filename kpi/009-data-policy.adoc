@@ -1,11 +1,13 @@
 == KPI-9: Data policy and exchange
 
 === Measurement
-This KPI extends ATS requirements 9.1.1, 9.3.1 and 9.3.2 for all types of data, not just data that are for global exchange. 
+This KPI extends ATS requirements 9.1.1, 9.3.1 and 9.3.2 to evaluate data that is not only global exchange.
 
 Distribution URLs are present when the `WMO_DataLicenseCode` code value is `WMOEssential`, keyword section is complete for `WMO_DistributionScopeCode` values and codes are encoded with `gmx:Anchor` elements for resource constraints and keywords. 
 
 === Rationale for measurement
+
+Data policy provides information to the users about how the data should be handled. Data providers also have the obligation to define the scope of the distribution of the data within WIS and when applicable the GTS priority.
 
 === Rules
 |===
