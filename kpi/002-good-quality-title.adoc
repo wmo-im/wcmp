@@ -1,72 +1,51 @@
 == KPI-2: Good quality title
 
-=== WCMP element(s)
+=== Measurement
 
-* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:citation/gmd:CI_Citation/gmd:title`
+The title of the product follows the principles of the WCMP guidance. The length is not too short or too long, contains less than 3 acronyms and is represented in title case. Spelling and grammar are correct.
 
-=== What is being measured
+==== Rationale for measurement
 
-The title field shall always be populated and follow the principles of
-WCMP guidance.  The length shall not be too short or too long, contain less
-than 3 acronyms and represented in title case.  Spelling and grammar are correct.
+The title is the first element of metadata information displayed and helps with initial identification. Meaningful and relevant information makes it easier for users to understand the resource.
 
-=== Rationale for measurement
-
-Title is the first element of metadata information displayed and helps with
-initial identification. Meaningful and relevant information makes it easier
-for users to understand the resource.
-
-=== Rules for implementation
-
-.Good quality title implementation rules
+=== Rules
 |===
-|Rule |Score
+| |Rule |Score
 
-|title is present
+|2.1 | The `gmd:title` element is not empty in the `gmd:CI_Citation` class of `gmd:MD_DataIdentfication` .
 |1
 
-|title has 3 words or more
+|2.2 | The title has 3 words or more.
 |1
 
-|title has 150 characters or less
+|2.3 | The title has 150 characters or less.
 |1
 
-|title only has printable characters (numbers and letters)
+|2.4 | The title only has printable characters (numbers and letters).
 |1
 
-|words in title are represented in "Title Case"
+|2.5 | Words in the title are represented in "Title Case".
 |1
 
-|title contains less than 3 acronyms (words with all upper case)
+|2.6 | The title contains less than 3 acronyms (words with all upper case).
 |1
 
-a|title does not contain bulletin header (regular expression: `[A-Z]{4}\d{2}[\s_]*[A-Z]{4}`)
+|2.7 | The title does not contain bulletin header (regular expression: `[A-Z]{4}\d{2}[\s_]*[A-Z]{4}`).
 |1
 
-|title passes a basic spellcheck
+|2.8 | The title passes a basic spellcheck.
 |1
 |===
 
 *Total possible score: 8 (100%)*
 
-=== Guidance to score well on this assessment
+=== Guidance
 
-In the context of WIS Product catalogues, the product title and abstract are
-the two most relevant elements in the WCMP metadata record.  These two elements
-are presented to the users in search results as well as the product description
-page, and need to focus on highlighting the product’s key characteristics to
-assist users with relevant product search results.
+==== References
 
-The title should be as specific about the product as possible. For example, if
-the product only contains one parameter, this can be stated in the title;
-however, if the product contains numerous parameters, then a more general term
-should be used in the title, and the parameters stated elsewhere in the
-metadata record (abstract, keywords, etc.).
+* 5.8.1.1	Product title
 
-For a satellite product offering one main data parameter, the title will
-typically define which parameter is contained in the product, and from which
-instrument or instrument type it originates. For example, "AMSR-2 Sea Surface
-Temperature” or “SLSTR L1B radiances and brightness temperatures”. Please see
-the Guidance on WIS Discovery Metadatafootnote:[https://library.wmo.int/index.php?lvl=notice_display&id=6856#.X2TSLZMzYUF]
-for more information.
+==== XPaths
+
+* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:citation/gmd:CI_Citation/gmd:title`
 

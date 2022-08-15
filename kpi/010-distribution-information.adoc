@@ -1,16 +1,47 @@
 == KPI-10: Distribution information
 
-Metadata records should contain information regarding how to access the data
-which it is describing.
+=== Measurement
 
-=== WCMP element(s)
+Distribution information for accessing the data, 
+data formats, and contact details are present.
 
-* `//gmd:distributionInfo//gmd:distributionFormat/gmd:MD_Format`
-* `//gmd:distributionInfo//gmd:MD_DigitalTransferOptions//gmd:onLine//gmd:URL`
-* `//gmd:distributionInfo//gmd:MD_Distributor//gmd:organisationName`
-* `//gmd:distributionInfo//gmd:MD_Distributor//gmd:contactInfo//gmd:electronicMailAddress/gco:CharacterString`
+=== Rationale for measurement
 
+Distribution information allows the user to understand what formats are available, where to get them and who to contact for distribution details. 
 
+=== Rules
+|===
+| |Rule |Score
+
+|10.1| The `gmd:MD_Format` class is present.
+|1
+
+|10.2| The `gmd:specification` element in the `gmd:MD_Format` class has an `gmx:Anchor` with a resolvable HTTP URL.
+|1
+
+|10.3| The `gmd:organisationName` element in the `gmd:MD_Distributor` class is present. 
+|1
+
+|10.4| The `gmd:electronicMailAddress` in the `gmd:MD_Distributor` class is present. 
+|1
+
+|10.5| One to many `gmd:MD_DigitalTransferOptions` options are present. 
+ |1
+
+|===
+
+*Total possible score: 5 (100%)*
+
+=== Guidance
+
+* Include the relevant WMO data formats in the `gmd:MD_Format` classes with a link to the specification of the data format. 
+* Include all relevant URLs in the `gmd:MD_DigitalTransferOptions` class for accessing the data.  
+* A distributor contact does not have to be the same as the other contacts in the metadata and should always have a contact email.  
+
+==== References
+* 5.8.1.11	Distribution information
+
+==== XML Examples
 ```xml
 <gmd:distributionInfo>
   <gmd:MD_Distribution>
@@ -31,9 +62,6 @@ which it is describing.
       <gmd:MD_Distributor>
         <gmd:distributorContact>
           <gmd:CI_ResponsibleParty>
-            <gmd:individualName>
-              <gco:CharacterString>Lastname, Firstname</gco:CharacterString>
-            </gmd:individualName>
             <gmd:organisationName>
               <gco:CharacterString>NMC FRANCE - Météo-France</gco:CharacterString>
             </gmd:organisationName>
@@ -99,56 +127,10 @@ which it is describing.
 </gmd:distributionInfo>
 ```
 
-=== What is being measured
+=== XPaths
 
-The presence of distribution information and supporting elements.
-
-* format (`//gmd:distributionInfo//gmd:distributionFormat/gmd:MD_Format`)
-  That can rely on existing WMO supported formats
-* 1..n `gmd:transferOptions` (`//gmd:distributionInfo//gmd:transferOptions//gmd:onLine`),
-  including a `gmd:linkage` with a URL to access the data
-* distributor contact information (organization, email)
-
-=== Rationale for measurement
-
-Distribution information provides the necessary information for accessing the
-data, supported formats, and contact information for the data distributor.
-
-=== Rules for implementation
-
-By detecting the presence of the distribution format and transferOptions
-(multiple options are possible). See page 35 of the WMO Core Profile Metadata
-Guidance.
-
-.Distribution information implementation rules
-[cols="1a,2"]
-|===
-|Rule |Score
-
-|`gmd:MD_Format` is included
-|1
-
-|format specification has an Anchor with a resolvable HTTP URL
-|1
-
-|distributor contact organization is included
-|1
-
-|distributor contact email is included
-|1
-
-|1..n transfer options are present
-|1
-
-|===
-
-*Total possible score: 5 (100%)*
-
-=== Guidance to score well on this assessment
-
-* Specify format/medium information and a link to the format specification
-* Specify 1..n transfer options as well as a distributor contact. Note that a
-  distributor contact does not have to be the same as the main point of
-  contact, principal investigator
-* Specify an email for the distributor
+* `//gmd:distributionInfo//gmd:distributionFormat/gmd:MD_Format`
+* `//gmd:distributionInfo//gmd:MD_DigitalTransferOptions//gmd:onLine//gmd:URL`
+* `//gmd:distributionInfo//gmd:MD_Distributor//gmd:organisationName`
+* `//gmd:distributionInfo//gmd:MD_Distributor//gmd:contactInfo//gmd:electronicMailAddress/gco:CharacterString`
 

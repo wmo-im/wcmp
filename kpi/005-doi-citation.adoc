@@ -1,0 +1,59 @@
+== KPI-5: DOI citation
+
+=== Measurement
+
+A Digital Object Identifier (DOI) and citation instructions are present. 
+
+=== Rationale for measurement
+
+DOIs are persistent identifiers that allow products to be accessible and citable.
+They make research data easier to access, reuse and verify, thereby making it
+easier to build on previous work, conduct new research and avoid duplicating
+already existing work.
+
+=== Rules
+
+|===
+| |Rule |Score
+
+|5.1| A DOI is present in the `gmd:MD_Identifier` class of the data citation and encoded in the `gmx:Anchor` element. 
+|1
+
+|5.2| The value in the `xlink:title` attribute is 'DOI'.
+|1
+
+|5.3| A DOI citation, with the same DOI as above, is present in the `gmd:otherConstraints` element.  
+|1
+|===
+
+*Total possible score: 3 (100%)*
+
+=== Guidance
+
+* Preface the DOI value with `doi:`, for example, `doi:<doi-identifier>`.
+* Preface the DOI citation with 'Cite as:'. 
+
+==== XML Examples
+
+```xml
+  <gmd:identifier>
+    <gmd:MD_Identifier>
+      <gmd:code>
+        <gmx:Anchor xlink:actuate="onRequest" xlink:href="https://dx.doi.org/10.14287/10000004" xlink:title="DOI">doi:10.14287/10000004</gmx:Anchor>
+      </gmd:code>
+    </gmd:MD_Identifier>
+  </gmd:identifier>
+```
+
+```xml
+  <gmd:otherConstraints>
+    <gco:CharacterString>Cite as: WMO/GAW Ozone Monitoring Community, World Meteorological Organization-Global Atmosphere Watch Program (WMO-GAW)/World Ozone and Ultraviolet Radiation Data Centre (WOUDC) [Data]. Retrieved [YYYY-MM-DD], from https://woudc.org. A list of all contributors is available on the website. doi:10.14287/10000004</gco:CharacterString>
+  </gmd:otherConstraints>
+```
+
+=== XPaths
+
+* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:citation//gmd:identifier//gmd:code/gmx:Anchor/@xlink:href`
+* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:citation//gmd:identifier//gmd:code/gmx:Anchor/@xlink:title`
+* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceConstraints//gmd:otherConstraints/gco:CharacterString`
+

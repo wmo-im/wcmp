@@ -1,92 +1,83 @@
 == KPI-3: Good quality abstract
 
-=== WCMP element(s)
+=== Measurement
 
-* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:abstract`
+The length of the content in the abstract element is not too short or too long. The spelling and grammar are correct and does not contain HTML markup. Bulletin templates are not used to populate the abstract.
 
-=== What is being measured
+==== Rationale
 
-The abstract field length shall not be too short or too long and contain no
-HTML markup.  Spelling and grammar are correct.  Bulletin templates should
-not be used to populate the abstract.
+The abstract must facilitate ease of understanding and discovery. The abstract is a critical element of metadata information displayed as part of search results. Complete and meaningful abstract information allows users to understand and properly evaluate a metadata record and its respective resource in support of product access, visualization and exploitation.
 
-=== Rationale for measurement
-
-To faciliate ease of understanding and discovery.
-
-Abstract is a key element of metadata information displayed as part of search
-results. Fulsome and meaningful abstract information allows for users to both
-understand and properly evaluate a metadata record and its respective resource
-in support of data access, visualization and exploitation.
-
-=== Rules for implementation
-
-.Good quality abstract implementation rules
+=== Rules
 |===
-|Rule |Score
+| |Rule |Score
 
-|abstract has between 16 and 2048 characters
+|3.1 | Abstract has between 16 and 2048 characters.
 |1
 
-|abstract contains no markup (HTML)
+|3.2 | Abstract does not contain HTML markup.
 |1
 
-|abstract passes a basic spellcheck
+|3.3 | Abstract passes a basic spellcheck.
 |1
 
-|abstract contains bulletin template
-|-1
+|3.4 | Abstract does not contain a bulletin template.
+|1
 |===
 
-*Total possible score: 3 (100%)*
+*Total possible score: 4 (100%)*
 
-=== Guidance to score well on this assessment
-
-==== WCMP 1.3 Part 1 Guidance
+=== Guidance
 
 The abstract should provide a clear and concise statement that enables the
-reader to understand the content of the dataset. For guidance when completing
+reader to understand the content of the product. For guidance when completing
 the abstract, consider the following recommendations:
 
-* State the 'things' that are recorded
-* State the key aspects recorded about these things
-* State what form the data takes
-* State any other limiting information, such as time period of validity of the
-  data
-* Add purpose of data resource where relevant (e.g. for survey data)
-* Aim to be understood by non-experts
-* Do not include general background information
-* Avoid jargon and unexplained abbreviations
+*  State what the “things” are that are recorded.
+*  State the key aspects recorded about these things.
+*  State what form the data takes.
+*  State any other limiting information, such as time period of validity of the data.
+*  Add purpose of data resource where relevant (e.g. for survey data).
+*  Aim to be understood by non-experts.
+*  Do not include general background information.
+*  Avoid jargon and unexplained abbreviations.
 
-==== Relevant recommendations
+Further recommendations: 
 
-* Avoid adding a scientific abstract
+* Avoid adding a scientific abstract.
 * Limit information in the abstract to the specific resource that is being
-  described
+  described.
 * Describe the contents of the resource and the key aspects and/or attributes
-  that are represented
+  that are represented.
 * Explain briefly what is unique about this resource and, if appropriate, how
-  it differs from similar resources
-* Avoid citing external sources to this resource
+  it differs from similar resources.
+* Avoid citing external sources to this resource.
 * Avoid spelling out commonly used acronym which are already understood by the
-  general public
-* Spell out uncommon acronyms only once
+  general public.
+* Spell out uncommon acronyms only once.
 * Avoid including HTML/CSV tables, extra spaces or other markup to control
-  display of text.  Use simple paragraph(s) only
+  display of text.  Use simple paragraph(s) only.
 * Avoid copying text from a journal article verbatim. This can lead to copyright
   violation concerns. Additionally, abstracts for journal articles are not
   intended to describe the provided resource and do not meet the metadata
   requirements. Related papers can be referenced from and/or tied to the
-  metadata
+  metadata.
 * Avoid using future verb tense when possible. Write using present or past
-  tenses
+  tenses.
 
-==== Spell checking recommendations
+Spell checking recommendations:
 
-* Dictionary by Merriam-Webster: America's most-trusted online dictionaryfootnote:[https://www.merriam-webster.com]
-* Cambridge Dictionary | English Dictionary, Translations & Thesaurusfootnote:[https://dictionary.cambridge.org]
+* Dictionary by Merriam-Webster: https://www.merriam-webster.com
+* Cambridge Dictionary: https://dictionary.cambridge.org
 
-==== WMO Guidelines
+==== References
 
-References of good abstract examples can be found in the Guide to WMO Information System (WMO No. 1061, Section 5.8.1.2)footnote:[https://library.wmo.int/doc_num.php?explnum_id=10257], product abstract.
+* 5.8.1.2	Product abstract
+* Manual on WIS, Appendix C, 8.2	Provision of information to support discovery within the WIS DAR metadata (WIS discovery metadata) catalogue
+
+==== XML Examples
+
+==== XPaths
+
+* `/gmd:MD_Metadata/gmd:identificationInfo//gmd:abstract`
 

@@ -1,0 +1,16 @@
+== 5.9 Key Performance Indicators of WIS Metadata Records
+5.9.1   The Key Performance Indicators (KPIs) of WIS metadata records support the evaluation of the WIS catalogue as a tool to discover and access data shared through WIS. For that purpose, they provide measurable rules to assess compliance to WCMP 1.3 and ISO 19115:2003/19139:2007 and evaluate the metadata's quality and effectiveness for discovery purposes. The primary aim of the KPIs is to provide a quantitative assessment of the WIS metadata records to be communicated to the data publisher for appropriate corrective actions resulting in a continuous improvement of the users' discovery experience.
+
+5.9.2   The WIS metadata KPIs are designed to help data publishers in the curation of discovery metadata. They should be computed at different stages of the publication process and by various participants to ensure an effective improvement process and reduce the number of metadata records with poor KPI scoring present in the WIS catalogue. The metadata KPIs should be computed.
+
+    1.	by the data publisher before providing the metadata to the relevant GISC,
+    2.	by the GISC before inserting the data in the WIS catalogue,
+    3.	by the Secretariat or relevant GISCs to analyze the content of the WIS      catalogue and provide a summary and specific indications to the publishers on how to improve the metadata.
+
+5.9.3	GISCs should perform the regular computation of metadata KPIs when new metadata are published and periodically on the entire catalogue. In addition, GISCs should request NCs and DCPCs in the area of responsibility to perform corrective actions to improve the quality of WIS metadata records when KPIs scores indicate doing so.
+
+5.9.4	The WMO Secretariat shall provide, at least twice a year, a WIS metadata KPIs report providing an overview of the quality of the metadata in the available WIS catalogues. GISCs and data publishers will be notified of the publication of the report and requested to address issues concerning low KPI scores.
+
+5.9.5	Tools to compute the WIS metadata KPIs are available at https://github.com/wmo-im/pywcmp, they are provided as open-source for the benefit of data publishers and GISCs to encourage the monitoring of compliance and quality at all the metadata publication stages.  
+
+5.9.6   Each KPI assesses a number of criteria associated with metadata quality, resulting in a raw score, as well as a percentage.
