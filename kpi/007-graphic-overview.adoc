@@ -17,9 +17,12 @@ Images provide the user with a high-level preview of the product which can assis
 
 | 7.2 | The URL in this element is a common web image file type.[1]
 |1
+
+| 7.3 | The URL is implemented in the `gmx:Anchor` element.
+|1
 |===
 
-*Total possible score: 2 (100%)*
+*Total possible score: 3 (100%)*
 
 === Guidance
 
